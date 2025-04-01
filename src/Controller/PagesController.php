@@ -60,6 +60,8 @@ class PagesController extends AppController
             $subpage = $path[1];
         }
         $this->set(compact('page', 'subpage'));
+        
+        $this->viewBuilder()->setLayout('site');
 
         try {
             return $this->render(implode('/', $path));
@@ -70,4 +72,12 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    public function manutencao()
+    {
+        $this->viewBuilder()->setLayout('manutencao');
+        $this->render('manutencao'); // Garante que a view correta será carregada
+    }
 }
+
+

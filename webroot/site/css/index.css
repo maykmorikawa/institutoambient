@@ -1,0 +1,31 @@
+.row>*{position:relative;}
+.logo-index{max-width:350px;width:100%;margin:0 auto 45px auto;}
+.demo-grid{padding-right:15px;padding-left:15px;transition:all 0.2s ease-in-out;}
+.demo-grid:hover, .demo-grid:focus{transform:translateY(-5px);}
+.demo-grid img{box-shadow:0px 0px 25px 0px rgba(0, 0, 0, .15);margin-bottom:30px;}
+.demo-grid h3{text-align:center;font-weight:600;font-size:18px;margin-bottom:0;line-height:normal;}
+
+.intro-listing{margin:0 0 50px 0;padding:0;}
+.intro-listing li{display:inline-block;margin:5px;}
+.intro-listing li a{color:#fff;background-color:#34da89;font-size:14px;padding:5px 20px;line-height:1.6;border:1px solid rgba(134, 188, 66, 0.1);border-radius:3px;}
+.intro-listing li a:hover{background-color:#EE8600;color:#fff;}
+.intro-listing li:last-child{margin-right:0;}
+
+.core-features-section .row{margin-top:-2.9rem;}
+.card-features{box-shadow:0px 5px 35px 0px rgba(148, 146, 245, 0.15);background:#fff;height:100%;width:100%;}
+
+.quotes:before{position:absolute;content:"\f10e";font-family:"Font Awesome 5 Free";font-weight:700;right:18px;font-size:110px;bottom:-26px;color:rgba(40, 110, 251, 0.05);line-height:1;font-style:italic;}
+.page-title{line-height:1.8;font-size:18px;}
+
+.elements-gallery{margin-top:-30px;}
+.elements-gallery a{width:125px;height:125px;text-align:center;margin-bottom:25px;border:1px solid rgba(0, 0, 0, 0.075);display:table-cell;vertical-align:middle;font-size:16px;transition:all 0.2s ease-in-out;padding:10px;background:#fff;}
+.elements-gallery .d-table{width:100%;margin-top:30px;}
+.elements-gallery a:hover, .elements-gallery a:focus{transform:translateY(-5px);background:#34da89;color:#fff;border-color:#fff;}
+.elements-gallery i{display:block;margin-bottom:15px;font-size:24px;color:#002a5c;}
+.elements-gallery a:hover i, .elements-gallery a:focus i{color:#fff;}
+
+.features-row{text-align:center;margin-bottom:50px;margin-top:-2.2rem;}
+.feature-box{background:#34da89;height:100%;color:rgba(255, 255, 255, 0.9);font-size:16px;line-height:30px;padding:35px;transition:all 0.2s ease-in-out;border-radius:2px;}
+.feature-box p{margin-bottom:0;}
+.feature-box:hover{transform:translateY(-5px);}
+.feature-box h3{color:#fff;font-weight:600;font-size:24px;}

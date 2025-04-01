@@ -1,0 +1,151 @@
+.processo {
+    background-color: transparent !important;
+    margin-top: -150px;
+    position: relative;
+    z-index: 9;
+    border-radius: 1% !important;
+    text-align: center;
+    /* Centraliza conteúdo inline */
+}
+
+.processo img {
+    max-width: 60%;
+    /* Responsivo */
+    height: auto;
+    /* Mantém a proporção */
+    display: block;
+    /* Remove espaços extras */
+    margin: -10 auto;
+    /* Centraliza horizontalmente */
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza conteúdo */
+    text-align: center;
+}
+
+
+.botoes-section {
+    text-align: center;
+    padding: 0px 0;
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.botao {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Importante para o efeito */
+    overflow: hidden; /* Para evitar que a fumaça saia do botão */
+}
+
+/* Botões azuis */
+.botao-azul {
+    background-color: #04047C;
+    color: white;
+}
+
+.botao-azul:hover {
+    background-color: #04047C;
+}
+
+/* Botões amarelos */
+.botao-amarelo {
+    background-color: #D39300;
+    color: #1C24A4;
+}
+
+.botao-amarelo:hover {
+    background-color: #D39300;
+}
+
+/* Fumaça no hover */
+.botao-azul::before,
+.botao-amarelo::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: -150%;
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 3.4), transparent);
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Ativação da fumaça no hover */
+.botao-azul:hover::before,
+.botao-amarelo:hover::before {
+    animation: smoke 1.2s ease-out forwards;
+    opacity: 1;
+}
+
+/* Animação da fumaça */
+@keyframes smoke {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateX(0%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+}
+
+/* Layout em telas grandes (desktop) */
+@media (min-width: 768px) {
+    .botao:first-child,
+    .botao:last-child {
+        margin-top: -40px;
+    }
+
+    .botao:nth-child(2),
+    .botao:nth-child(3) {
+        margin-top: 40px;
+    }
+}
+
+/* Ajuste para telas menores (tablets e celulares) */
+@media (max-width: 767px) {
+    .botoes-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .botao:first-child,
+    .botao:last-child,
+    .botao:nth-child(2),
+    .botao:nth-child(3) {
+        margin-top: 0;
+    }
+}
