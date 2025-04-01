@@ -233,14 +233,14 @@
     </div>
 </section>
 
-<!-- TESTIMONIAL
+<!-- TESTEMUNHOS
         ================================================== -->
 <section class="z-index-9">
     <div class="bg-img section-bg" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/bg/bg-02.jpg"></div>
     <div class="container position-relative z-index-9">
         <div class="mb-2-6 mb-lg-6 text-center wow fadeIn" data-wow-delay="100ms">
-            <span class="d-block mb-2 text-white text-uppercase fw-bold">Testimonials</span>
-            <h2 class="text-white mb-0 h1">Get ready for the unforeseen</h2>
+            <span class="d-block mb-2 text-white text-uppercase fw-bold">Testemunhos</span>
+            <h2 class="text-white mb-0 h1">O que as pessoas estão falando do Instituto Ambiente?</h2>
         </div>
         <div class="bg-primary p-1-9 p-lg-6 testimonial-style1 position-relative rounded wow fadeIn"
             data-wow-delay="200ms">
