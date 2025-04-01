@@ -2,15 +2,16 @@ on:
     push:
       branches: [main]
       
-  name: 🚀 Deploy website on push
-  jobs:
+name: 🚀 Deploy website on push
+
+jobs:
     web-deploy:
       name: 🎉 Deploy
       runs-on: ubuntu-latest
       steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
-      
+        
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -18,16 +19,3 @@ on:
           username: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
           server-dir: public_html/
-          #exclude: |
-            #src/Controller/cmd/
-            #templates/cmd
-            #templates/cmd/element
-            #templates/cmd/layout
-            #templates/cmd/layout/email
-            #templates/cmd/layout/email/html
-            #templates/cmd/layout/email/text
-            #templates/cmd/Users
-            #templates/cmd/Pages
-          #delete: false
-          #continue-on-error: true 
-  
