@@ -249,7 +249,7 @@
             <div class="testimonial-carousel owl-carousel owl-theme">
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
-                        <i class="ti-quote-right text-white display-3"></i>
+                        <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
                         <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Your company is truly upstanding
                             and is behind its product 100%. We've used insurance for the last five years. It fits our
                             needs perfectly. I didn't even need training. Nice work on your insurance. It's incredible.
@@ -260,7 +260,7 @@
                 </div>
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
-                        <i class="ti-quote-right text-white display-3"></i>
+                        <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
                         <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Thanks insurance! Best. Product.
                             Ever! Wow what great service, I love it! Keep up the excellent work. Insurance is the most
                             valuable business resource we have EVER purchased. Insurance is great. Thank You!</p>
@@ -270,7 +270,7 @@
                 </div>
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
-                        <i class="ti-quote-right text-white display-3"></i>
+                        <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
                         <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">It's exactly what I've been looking
                             for. Insurance is the most valuable business resource we have EVER purchased. Insurance is
                             exactly what our business has been lacking. I am so pleased with this product.</p>
