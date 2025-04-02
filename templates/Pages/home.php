@@ -22,7 +22,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
                         <span class="text-primary mb-3 d-block fw-bold display-md-28">Valorizamos a colaboração coletiva para</span>
-                        <h1 class="text-white display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Promover qualidade de vida nas cidades ola</h1>
+                        <h1 class="text-white display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Promover qualidade de vida nas cidades mayk</h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
                     </div>
                 </div>
