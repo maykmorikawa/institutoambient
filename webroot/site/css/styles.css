@@ -2284,7 +2284,7 @@ pre[class*="language-"] {
     background: rgba(74, 131, 253, 0.09);
     top: 0; }
     .icon-box .box-circle.primary {
-      background: rgba(52, 218, 137, 0.09); }
+      background: rgba(0 28 172 / 42%); }
 
 /* card-style9 */
 .card-style9 .media span {

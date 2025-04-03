@@ -7,8 +7,8 @@
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary mb-3 d-block fw-bold display-md-28">Desenvolvimento</span>
-                        <h1 class="text-white display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Social com
+                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Desenvolvimento</span>
+                        <h1 class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">Social com
                             Sustentabilidade</h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
 
@@ -21,8 +21,8 @@
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary mb-3 d-block fw-bold display-md-28">Valorizamos a colaboração coletiva para</span>
-                        <h1 class="text-white display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Promover qualidade de vida nas cidades  salvo mayk</h1>
+                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Valorizamos a colaboração </span>
+                        <h1 class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">Para melhorar a vida dos cidadãos.</h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
                     </div>
                 </div>
@@ -46,10 +46,71 @@
         </div>
     </div>
 </section>
+
+<!-- SERVICE
+        ================================================== -->
+<section class="pt-0">
+    <div class="container">
+        <div class="row mt-n2-2">
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-md-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative" alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="service-details.html">Instituto</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta de serviços de qualidade, impulsionando mudanças sociais.</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-car.png" class="z-index-9 position-relative" alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="service-details.html">Saúde</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo da gestão com profissionais especializados</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="600ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-health.png" class="z-index-9 position-relative" alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="service-details.html">Educação</a></h3>
+                        <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e capacitação em diversas modalidades educacionais, abrangendo da infância à educação superior, profissional, digital e socioambiental.</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="800ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-home.png" class="z-index-9 position-relative" alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="service-details.html">Sustentabilidade</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e projetos de gestão ambiental e sustentabilidade.</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- BOTÕES 
         ================================================== -->
 
-<section class="botoes-section">
+<!--<section class="botoes-section">
     <div class="container">
         <div class="botoes-container">
             <button class="botao botao-azul">Instituto</button>
@@ -58,7 +119,7 @@
             <button class="botao botao-azul">Sustentabilidade</button>
         </div>
     </div>
-</section>
+</section>-->
 <!-- PRESIDENTE
         ================================================== -->
 <section class="aboutus">
