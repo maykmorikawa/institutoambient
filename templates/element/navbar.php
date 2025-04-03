@@ -28,7 +28,7 @@
                         <nav class="navbar navbar-expand-lg navbar-light p-0">
                             <div class="navbar-header navbar-header-custom">
                                 <!-- start logo -->
-                                <a href="#" class="navbar-brand"><img id="logo" src="webroot/site/img/logos/logo-inner.png"
+                                <a href="#" class="navbar-brand"><img id="logo" src="<?= WWW; ?>/site/img/logos/logo-inner.png"
                                         alt="logo" /></a>
                                 <!-- end logo -->
                             </div>

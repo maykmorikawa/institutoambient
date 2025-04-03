@@ -7,8 +7,11 @@
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Desenvolvimento</span>
-                        <h1 class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">Social com
+                        <span
+                            class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Desenvolvimento</span>
+                        <h1
+                            class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">
+                            Social com
                             Sustentabilidade</h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
 
@@ -21,8 +24,11 @@
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Valorizamos a colaboração </span>
-                        <h1 class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">Para melhorar a vida dos cidadãos.</h1>
+                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Valorizamos
+                            a colaboração </span>
+                        <h1
+                            class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">
+                            Para melhorar a vida dos cidadãos.</h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
                     </div>
                 </div>
@@ -56,12 +62,16 @@
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-md-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative" alt="">
+                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative"
+                                alt="">
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="service-details.html">Instituto</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta de serviços de qualidade, impulsionando mudanças sociais.</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
+                            transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
+                            de serviços de qualidade, impulsionando mudanças sociais.</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
             </div>
@@ -69,12 +79,16 @@
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-car.png" class="z-index-9 position-relative" alt="">
+                            <img src="<?= WWW; ?>/site/img/content/icon-car.png" class="z-index-9 position-relative"
+                                alt="">
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="service-details.html">Saúde</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo da gestão com profissionais especializados</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                        <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas
+                            de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo
+                            da gestão com profissionais especializados</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                            <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
             </div>
@@ -82,12 +96,16 @@
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-health.png" class="z-index-9 position-relative" alt="">
+                            <img src="<?= WWW; ?>/site/img/content/icon-health.png" class="z-index-9 position-relative"
+                                alt="">
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="service-details.html">Educação</a></h3>
-                        <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e capacitação em diversas modalidades educacionais, abrangendo da infância à educação superior, profissional, digital e socioambiental.</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                        <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e
+                            capacitação em diversas modalidades educacionais, abrangendo da infância à educação
+                            superior, profissional, digital e socioambiental.</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                            <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
             </div>
@@ -95,12 +113,16 @@
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-home.png" class="z-index-9 position-relative" alt="">
+                            <img src="<?= WWW; ?>/site/img/content/icon-home.png" class="z-index-9 position-relative"
+                                alt="">
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="service-details.html">Sustentabilidade</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e projetos de gestão ambiental e sustentabilidade.</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                        <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
+                            econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
+                            projetos de gestão ambiental e sustentabilidade.</p>
+                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
             </div>
@@ -181,7 +203,8 @@
 
                         </div>
                         <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Missão</a></h3>
-                        <p class="mb-0 position-relative">Promover a conservação ambiental e a sustentabilidade, incentivando práticas responsáveis que beneficiem tanto as pessoas quanto a natureza.</p>
+                        <p class="mb-0 position-relative">Promover a conservação ambiental e a sustentabilidade,
+                            incentivando práticas responsáveis que beneficiem tanto as pessoas quanto a natureza.</p>
                     </div>
                 </div>
             </div>
@@ -190,10 +213,12 @@
                     <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
                         <div class="hover-bg"><img src="i<?= WWW; ?>/site/img/service/service-2.jpg" alt="..."></div>
                         <div class="service-icon text-center display-20">
-                            <i class="fas fa-hand-sparkles display-25 display-sm-22 display-lg-20 position-relative"></i>
+                            <i
+                                class="fas fa-hand-sparkles display-25 display-sm-22 display-lg-20 position-relative"></i>
                         </div>
                         <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Visão</a></h3>
-                        <p class="mb-0 position-relative">Ser referência na proteção dos recursos naturais e na construção de sociedades mais sustentáveis, inspirando mudanças positivas no mundo.</p>
+                        <p class="mb-0 position-relative">Ser referência na proteção dos recursos naturais e na
+                            construção de sociedades mais sustentáveis, inspirando mudanças positivas no mundo.</p>
                     </div>
                 </div>
             </div>
@@ -205,7 +230,9 @@
                             <i class="icon-heart display-25 display-sm-22 display-lg-20 position-relative"></i>
                         </div>
                         <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Valores</a></h3>
-                        <p class="mb-0 position-relative">🌱 Sustentabilidade,🤝colaboração e 💚 compromisso social guiam nossas ações para equilibrar desenvolvimento e preservação ambiental. Atuamos com 🔎 transparência e promovemos a 🌎 educação ambiental para formar agentes de mudança.</p>
+                        <p class="mb-0 position-relative">🌱 Sustentabilidade,🤝colaboração e 💚 compromisso social
+                            guiam nossas ações para equilibrar desenvolvimento e preservação ambiental. Atuamos com 🔎
+                            transparência e promovemos a 🌎 educação ambiental para formar agentes de mudança.</p>
                     </div>
                 </div>
             </div>
@@ -226,7 +253,10 @@
                 <h2 class="mb-0">Confira alguns de nossos projetos:</h2>
             </div>
             <div class="col-lg-7">
-                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">O Instituto Ambiente tem experiência na realização de diagnósticos para atender as necessidades de seus parceiros. Para estimular a consciência cidadã, a educação e melhorar a qualidade de vida dos brasileiros, realiza ações diversas.</p>
+                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">O Instituto
+                    Ambiente tem experiência na realização de diagnósticos para atender as necessidades de seus
+                    parceiros. Para estimular a consciência cidadã, a educação e melhorar a qualidade de vida dos
+                    brasileiros, realiza ações diversas.</p>
             </div>
         </div>
         <div class="row mt-n1-9">
@@ -305,13 +335,17 @@
         </div>
         <div class="bg-primary p-1-9 p-lg-6 testimonial-style1 position-relative rounded wow fadeIn"
             data-wow-delay="200ms">
-            <img src="<?= WWW; ?>/site/img/content/dots2.png" class="position-absolute bottom-n60 right-n10 ani-left-right"
-                alt="...">
+            <img src="<?= WWW; ?>/site/img/content/dots2.png"
+                class="position-absolute bottom-n60 right-n10 ani-left-right" alt="...">
             <div class="testimonial-carousel owl-carousel owl-theme">
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">O Instituto Ambienta foi uma experiência transformadora para mim! Participei de um curso de educação ambiental e aprendi muito sobre sustentabilidade e conservação da natureza. Os professores são extremamente capacitados e apaixonados pelo que fazem. Sem dúvida, foi um aprendizado que levarei para a vida toda!</p>
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">O Instituto Ambienta foi uma
+                            experiência transformadora para mim! Participei de um curso de educação ambiental e aprendi
+                            muito sobre sustentabilidade e conservação da natureza. Os professores são extremamente
+                            capacitados e apaixonados pelo que fazem. Sem dúvida, foi um aprendizado que levarei para a
+                            vida toda!</p>
                         <h6 class="mb-1 text-white font-weight-400">Ana Paula S.</h6>
                         <p class="mb-0 text-white opacity8 small">Estudante de Biologia</p>
                     </div>
@@ -319,7 +353,11 @@
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Conheci o Instituto Ambienta através de um projeto de responsabilidade socioambiental da minha empresa, e fiquei impressionado com o impacto positivo que eles geram. O trabalho deles na conscientização ecológica e preservação do meio ambiente é essencial. Recomendo para qualquer empresa ou pessoa que queira fazer a diferença!</p>
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Conheci o Instituto Ambienta
+                            através de um projeto de responsabilidade socioambiental da minha empresa, e fiquei
+                            impressionado com o impacto positivo que eles geram. O trabalho deles na conscientização
+                            ecológica e preservação do meio ambiente é essencial. Recomendo para qualquer empresa ou
+                            pessoa que queira fazer a diferença!</p>
                         <h6 class="mb-1 text-white font-weight-400">Carlos M</h6>
                         <p class="mb-0 text-white opacity8 small">Empresário</p>
                     </div>
@@ -327,7 +365,11 @@
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Ser voluntária no Instituto Ambienta foi uma das melhores decisões da minha vida. O ambiente é acolhedor, e cada projeto tem um impacto real na comunidade. Aprendi sobre reciclagem, reflorestamento e educação ambiental, além de conhecer pessoas incríveis que compartilham o mesmo propósito. Sou muito grata por fazer parte dessa missão!</p>
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Ser voluntária no Instituto
+                            Ambienta foi uma das melhores decisões da minha vida. O ambiente é acolhedor, e cada projeto
+                            tem um impacto real na comunidade. Aprendi sobre reciclagem, reflorestamento e educação
+                            ambiental, além de conhecer pessoas incríveis que compartilham o mesmo propósito. Sou muito
+                            grata por fazer parte dessa missão!</p>
                         <h6 class="mb-1 text-white font-weight-400">Mariana R. </h6>
                         <p class="mb-0 text-white opacity8 small">Voluntária</p>
                     </div>
@@ -344,10 +386,14 @@
         <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <div class="col-lg-5 mb-3 mb-lg-0">
                 <span class="d-block mb-2 text-secondary text-uppercase fw-bold">Notícias em Destaque</span>
-                <h2 class="mb-0">Fique por dentro das últimas novidades sobre meio ambiente, sustentabilidade e ações ecológicas!</h2>
+                <h2 class="mb-0">Fique por dentro das últimas novidades sobre meio ambiente, sustentabilidade e ações
+                    ecológicas!</h2>
             </div>
             <div class="col-lg-7">
-                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">No Instituto Ambienta, trazemos informações atualizadas sobre projetos ambientais, eventos, pesquisas e iniciativas que fazem a diferença. Acompanhe nossas notícias e contribua para um futuro mais sustentável!</p>
+                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">No Instituto
+                    Ambienta, trazemos informações atualizadas sobre projetos ambientais, eventos, pesquisas e
+                    iniciativas que fazem a diferença. Acompanhe nossas notícias e contribua para um futuro mais
+                    sustentável!</p>
             </div>
         </div>
         <div class="row mt-n1-9 g-xl-5">
@@ -357,13 +403,14 @@
                         <img src="<?= WWW; ?>/site/img/blog/blog-01.jpg" alt="...">
                     </div>
                     <div class="card-body p-xl-1-9 p-4">
-                        <h3 class="h5 mb-3"><a href="blog-details.html">Visita às Reformas dos Espaços do Projeto LADO A LADO.</a></h3>
+                        <h3 class="h5 mb-3"><a href="blog-details.html">Visita às Reformas dos Espaços do Projeto LADO A
+                                LADO.</a></h3>
                         <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
                     </div>
                     <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                         <div class="d-flex justify-content-between">
                             <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Abril 3, 2025</span>
-                            
+
                         </div>
                     </div>
                 </article>
@@ -380,7 +427,7 @@
                     <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                         <div class="d-flex justify-content-between">
                             <span class="display-30"><i class="ti-calendar me-1 text-primary"></i>Abril 1, 2025</span>
-                            
+
                         </div>
                     </div>
                 </article>
@@ -391,13 +438,15 @@
                         <img src="<?= WWW; ?>/site/img/blog/blog-03.jpg" alt="...">
                     </div>
                     <div class="card-body p-xl-1-9 p-4">
-                        <h3 class="h5 mb-3"><a href="blog-details.html">O presidente, Murilo Monteiro, realizou visita institucional à CODEM, acompanhado do Sr. Mauro Neto, representante da Prefeitura de Belém</a></h3>
+                        <h3 class="h5 mb-3"><a href="blog-details.html">O presidente, Murilo Monteiro, realizou visita
+                                institucional à CODEM, acompanhado do Sr. Mauro Neto, representante da Prefeitura de
+                                Belém</a></h3>
                         <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
                     </div>
                     <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                         <div class="d-flex justify-content-between">
                             <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Abril 1, 2025</span>
-                            
+
                         </div>
                     </div>
                 </article>
@@ -406,56 +455,84 @@
     </div>
 </section>
 
-<!-- CLIENT
+<!-- PAREIROS
         ================================================== -->
-<section>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 bg-img cover-background px-lg-4 pt-6 pb-lg-4 mb-2-6 mb-md-0 wow fadeIn"
-                data-wow-delay="200ms" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/partners/map.png">
-                <div class="media d-block text-center">
-                    <div class="client-count">
-                        <h3 class="text-secondary"><span class="countup">78</span><sup
-                                class="pe-2 text-secondary font-weight-500">+</sup></h3>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="mb-0">Partners in world wide</h4>
+
+<section id="features" class="core-features-section bg-light">
+    <div class="px-1-6 px-md-6 px-lg-7 px-xl-14 px-xxl-22">
+        <div class="text-center mb-6 mb-lg-8">
+            <h2 class="mb-0">Nossos Parceiros</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-1.png" class="mb-3" alt="COMAC">
+                        
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 wow fadeIn" data-wow-delay="400ms">
-                <div class="row text-center">
-                    <div class="col-6 col-md-4 border-bottom border-end py-4 py-lg-3">
-                        <div class="p-xl-4 p-md-2">
-                            <img src="<?= WWW; ?>/site/img/partners/partner-1.png" alt="...">
-                        </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-2.png" class="mb-3" alt="UNIVERSIDADE DO ESTADO DO PARÁ">
+                        
                     </div>
-                    <div class="col-6 col-md-4 border-bottom border-md-end py-4 py-lg-3">
-                        <div class="p-xl-4 p-md-2">
-                            <img src="<?= WWW; ?>/site/img/partners/partner-2.png" alt="...">
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-3.png" class="mb-3" alt="PERNOH">
+                        
                     </div>
-                    <div
-                        class="col-6 col-md-4 border-bottom borders-end border-color-light-black border-md-end-0 py-4 py-lg-3">
-                        <div class="p-xl-4 p-md-2">
-                            <img src="<?= WWW; ?>/site/img/partners/partner-3.png" alt="...">
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-4.png" class="mb-3" alt="FUNDAÇÃO ACOLHER">
+                        
                     </div>
-                    <div
-                        class="col-6 col-md-4 border-color-light-black borders-bottom border-md-bottom-0 border-md-end py-4 py-lg-3">
-                        <div class="p-xl-4 p-md-2">
-                            <img src="<?= WWW; ?>/site/img/partners/partner-4.png" alt="...">
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-5.png" class="mb-3" alt="MINISTERIO PÚBLICO DO TRABALHO">
+                        
                     </div>
-                    <div class="col-6 col-md-4 border-end py-4 py-lg-3">
-                        <div class="p-xl-4 p-md-2">
-                            <img src="<?= WWW; ?>/site/img/partners/partner-5.png" alt="...">
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-6.png" class="mb-3" alt="MINISTERIO PÚBLICO DO ESTADO DO PARA">
+                        
                     </div>
-                    <div class="col-6 col-md-4 py-4 py-lg-3">
-                        <div class="p-xl-4 p-md-2">
-                            <img src="<?= WWW; ?>/site/img/partners/partner-6.png" alt="...">
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-7.png" class="mb-3" alt="TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-8.png" class="mb-3" alt="FUNDAÇÃO PAPA JOÃO XXIII">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-9.png" class="mb-3" alt="CONSELHO TUTELAR DE BELÉM">
+                        
                     </div>
                 </div>
             </div>
