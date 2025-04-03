@@ -311,32 +311,25 @@
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Your company is truly upstanding
-                            and is behind its product 100%. We've used insurance for the last five years. It fits our
-                            needs perfectly. I didn't even need training. Nice work on your insurance. It's incredible.
-                        </p>
-                        <h6 class="mb-1 text-white font-weight-400">Georgia Holden</h6>
-                        <p class="mb-0 text-white opacity8 small">Senior Marketer</p>
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">O Instituto Ambienta foi uma experiência transformadora para mim! Participei de um curso de educação ambiental e aprendi muito sobre sustentabilidade e conservação da natureza. Os professores são extremamente capacitados e apaixonados pelo que fazem. Sem dúvida, foi um aprendizado que levarei para a vida toda!</p>
+                        <h6 class="mb-1 text-white font-weight-400">Ana Paula S.</h6>
+                        <p class="mb-0 text-white opacity8 small">Estudante de Biologia</p>
                     </div>
                 </div>
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Thanks insurance! Best. Product.
-                            Ever! Wow what great service, I love it! Keep up the excellent work. Insurance is the most
-                            valuable business resource we have EVER purchased. Insurance is great. Thank You!</p>
-                        <h6 class="mb-1 text-white font-weight-400">Hayden Welch</h6>
-                        <p class="mb-0 text-white opacity8 small">Designer</p>
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Conheci o Instituto Ambienta através de um projeto de responsabilidade socioambiental da minha empresa, e fiquei impressionado com o impacto positivo que eles geram. O trabalho deles na conscientização ecológica e preservação do meio ambiente é essencial. Recomendo para qualquer empresa ou pessoa que queira fazer a diferença!</p>
+                        <h6 class="mb-1 text-white font-weight-400">Carlos M</h6>
+                        <p class="mb-0 text-white opacity8 small">Empresário</p>
                     </div>
                 </div>
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">It's exactly what I've been looking
-                            for. Insurance is the most valuable business resource we have EVER purchased. Insurance is
-                            exactly what our business has been lacking. I am so pleased with this product.</p>
-                        <h6 class="mb-1 text-white font-weight-400">Lucas Azevedo</h6>
-                        <p class="mb-0 text-white opacity8 small">Developer</p>
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Ser voluntária no Instituto Ambienta foi uma das melhores decisões da minha vida. O ambiente é acolhedor, e cada projeto tem um impacto real na comunidade. Aprendi sobre reciclagem, reflorestamento e educação ambiental, além de conhecer pessoas incríveis que compartilham o mesmo propósito. Sou muito grata por fazer parte dessa missão!</p>
+                        <h6 class="mb-1 text-white font-weight-400">Mariana R. </h6>
+                        <p class="mb-0 text-white opacity8 small">Voluntária</p>
                     </div>
                 </div>
             </div>
@@ -350,13 +343,11 @@
     <div class="container">
         <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <div class="col-lg-5 mb-3 mb-lg-0">
-                <span class="d-block mb-2 text-secondary text-uppercase fw-bold">our blog</span>
-                <h2 class="mb-0">Latest news to get all new insurance policies</h2>
+                <span class="d-block mb-2 text-secondary text-uppercase fw-bold">Notícias em Destaque</span>
+                <h2 class="mb-0">Fique por dentro das últimas novidades sobre meio ambiente, sustentabilidade e ações ecológicas!</h2>
             </div>
             <div class="col-lg-7">
-                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">It is a long
-                    established fact that a reader will be distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">No Instituto Ambienta, trazemos informações atualizadas sobre projetos ambientais, eventos, pesquisas e iniciativas que fazem a diferença. Acompanhe nossas notícias e contribua para um futuro mais sustentável!</p>
             </div>
         </div>
         <div class="row mt-n1-9 g-xl-5">
@@ -366,14 +357,13 @@
                         <img src="<?= WWW; ?>/site/img/blog/blog-01.jpg" alt="...">
                     </div>
                     <div class="card-body p-xl-1-9 p-4">
-                        <h3 class="h5 mb-3"><a href="blog-details.html">Here's what people are saying about
-                                insurance.</a></h3>
-                        <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">read more</a>
+                        <h3 class="h5 mb-3"><a href="blog-details.html">Visita às Reformas dos Espaços do Projeto LADO A LADO.</a></h3>
+                        <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
                     </div>
                     <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                         <div class="d-flex justify-content-between">
-                            <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Mar 8, 2021</span>
-                            <a href="#!" class="display-30"><i class="ti-heart me-1 text-primary"></i> 13 Comment</a>
+                            <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Abril 3, 2025</span>
+                            
                         </div>
                     </div>
                 </article>
@@ -384,14 +374,13 @@
                         <img src="<?= WWW; ?>/site/img/blog/blog-02.jpg" alt="...">
                     </div>
                     <div class="card-body p-xl-1-9 p-4">
-                        <h3 class="h5 mb-3"><a href="blog-details.html">You will never believe these truth behind
-                                insurance.</a></h3>
-                        <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">read more</a>
+                        <h3 class="h5 mb-3"><a href="blog-details.html">IA RECEBE VISITA DA XIFIX TECNOLOGIA.</a></h3>
+                        <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
                     </div>
                     <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                         <div class="d-flex justify-content-between">
-                            <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Mar 1, 2021</span>
-                            <a href="#!" class="display-31"><i class="ti-heart me-1 text-primary"></i> 8 Comment</a>
+                            <span class="display-30"><i class="ti-calendar me-1 text-primary"></i>Abril 1, 2025</span>
+                            
                         </div>
                     </div>
                 </article>
@@ -402,14 +391,13 @@
                         <img src="<?= WWW; ?>/site/img/blog/blog-03.jpg" alt="...">
                     </div>
                     <div class="card-body p-xl-1-9 p-4">
-                        <h3 class="h5 mb-3"><a href="blog-details.html">How to have fantastic insurance with minimal
-                                spending.</a></h3>
-                        <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">read more</a>
+                        <h3 class="h5 mb-3"><a href="blog-details.html">O presidente, Murilo Monteiro, realizou visita institucional à CODEM, acompanhado do Sr. Mauro Neto, representante da Prefeitura de Belém</a></h3>
+                        <a href="blog-details.html" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
                     </div>
                     <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                         <div class="d-flex justify-content-between">
-                            <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Feb 25, 2021</span>
-                            <a href="#!" class="display-31"><i class="ti-heart me-1 text-primary"></i> 1 Comment</a>
+                            <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> Abril 1, 2025</span>
+                            
                         </div>
                     </div>
                 </article>
