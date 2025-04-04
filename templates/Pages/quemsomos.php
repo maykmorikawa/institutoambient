@@ -314,102 +314,27 @@
 
 <section>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0015a0;
-            color: white;
-            text-align: center;
-        }
+    <script src="https://unpkg.com/gojs/release/go.js"></script>
+    <div id="organograma" style="width:100%; height:600px;"></div>
+    <script>
+        var $ = go.GraphObject.make;
+        var myDiagram = $(go.Diagram, "organograma", { layout: $(go.TreeLayout) });
 
-        .container {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
+        myDiagram.nodeTemplate = $(go.Node, "Auto",
+            $(go.Shape, "RoundedRectangle", { fill: "lightblue" }),
+            $(go.TextBlock, { margin: 5 }, new go.Binding("text", "name"))
+        );
 
-        .organograma {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        myDiagram.model = new go.TreeModel([
+            { key: "Administração", name: "Conselho de Administração" },
+            { key: "Estatutária", parent: "Administração", name: "Diretoria Estatutária" },
+            { key: "Executiva", parent: "Estatutária", name: "Diretoria Executiva" },
+            { key: "Técnica", parent: "Executiva", name: "Assessoria Técnica" },
+            { key: "Financeira", parent: "Técnica", name: "Diretoria Administrativo-Financeira" },
+            { key: "Social", parent: "Técnica", name: "Diretoria de Assistência Social" },
+            { key: "Educação", parent: "Executiva", name: "Diretoria de Educação" },
+            { key: "Saúde", parent: "Executiva", name: "Diretoria de Saúde" }
+        ]);
+    </script>
 
-        .box {
-            background-color: #ffcc00;
-            color: black;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .linha {
-            width: 2px;
-            height: 20px;
-            background-color: white;
-            margin: auto;
-        }
-
-        .nivel {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .sub-box {
-            background-color: #0044cc;
-            color: white;
-            padding: 10px 15px;
-            margin: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .linha-horizontal {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: 80%;
-            margin: 10px auto;
-        }
-
-        .linha-horizontal::before,
-        .linha-horizontal::after {
-            content: "";
-            flex-grow: 1;
-            height: 2px;
-            background-color: white;
-        }
-    </style>
-
-
-    <div class="container">
-        <div class="organograma">
-            <div class="box">Conselho de Administração</div>
-            <div class="linha"></div>
-            <div class="box">Diretoria Estatutária</div>
-            <div class="linha"></div>
-            <div class="box">Diretoria Executiva</div>
-
-            <div class="nivel">
-                <div class="sub-box">Secretaria Executiva</div>
-                <div class="sub-box">Assessoria Técnica</div>
-                <div class="sub-box">Controle Interno</div>
-            </div>
-
-            <div class="linha-horizontal"></div>
-
-            <div class="nivel">
-                <div class="sub-box">Diretoria Administrativo-Financeira</div>
-                <div class="sub-box">Diretoria de Assistência Social</div>
-                <div class="sub-box">Diretoria de Educação</div>
-                <div class="sub-box">Diretoria de Meio Ambiente</div>
-                <div class="sub-box">Diretoria de Saúde</div>
-                <div class="sub-box">Diretoria de Compliance e Risco</div>
-            </div>
-        </div>
-    </div>
 </section>
