@@ -110,26 +110,6 @@
                         <p>Nossa maior patente é a dignidade da pessoa humana, prevista no Art. I, da
                             Constituição de 1988.
                         </p>
-
-                        <ul class="list-style1 mb-0">
-
-                            <li>Equidade como ideal de justiça</li>
-
-                            <li>Ética e transparência</li>
-
-                            <li>Humanização com valorização</li>
-
-                            <li>Justiça e transparência nas decisões tomadas</li>
-
-                            <li>Qualidade dos serviços</li>
-                            <li>Legitimidade</li>
-                            <li>Responsabilidade social </li>
-                            <li>Respeito ao meio ambiente</li>
-                            <li>Valorização e reconhecimento dos profissionais </li>
-                            <li>Valorização do conhecimento</li>
-
-                        </ul>
-
                     </div>
 
                     <div class="col-lg-12 mb-2-9">
