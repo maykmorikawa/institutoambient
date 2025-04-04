@@ -133,6 +133,7 @@
                     </div>
 
                     <div class="col-lg-12 mb-2-9">
+                        <h2 class="mb-3">Pricípios norteadores das ações</h2>
 
                         <div id="accordion" class="accordion-style">
 
@@ -144,8 +145,7 @@
 
                                         <button class="btn btn-link" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">What should I include in my personal
-                                            statement?</button>
+                                            aria-controls="collapseOne">Equidade como ideal de justiça!</button>
                                     </h5>
 
                                 </div>
@@ -154,10 +154,9 @@
                                     data-bs-parent="#accordion">
 
                                     <div class="card-body">
-
-                                        It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                        that it has a more-or-less normal distribution of letters.
+                                        Em todos os níveis e serviços
+                                        prestados, proporcionando
+                                        tratamento igual a todos.
 
                                     </div>
 
@@ -173,7 +172,7 @@
 
                                         <button class="btn btn-link collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Do you support banking loan?</button>
+                                            aria-controls="collapseTwo">Ética e transparência!</button>
                                     </h5>
 
                                 </div>
@@ -183,9 +182,161 @@
 
                                     <div class="card-body">
 
-                                        Neque porro quisquam est quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        Para uma gestão comprometida
+                                        com a conduta ideal para o sucesso
+                                        com integridade, valorizando os
+                                        colaboradores e respeitando a
+                                        diversidade e/ou os métodos de
+                                        trabalho;
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card mb-3">
+
+                                <div class="card-header" id="headingTwo">
+
+                                    <h5 class="mb-0">
+
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">Legitimidade!</button>
+                                    </h5>
+
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordion">
+
+                                    <div class="card-body">
+
+                                        E como virtude da norma e como
+                                        valor que remete à consciência dos
+                                        servidores para além da restrita e
+                                        formal observância das leis;
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card mb-3">
+
+                                <div class="card-header" id="headingTwo">
+
+                                    <h5 class="mb-0">
+
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">Responsabilidade social !</button>
+                                    </h5>
+
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordion">
+
+                                    <div class="card-body">
+
+                                        Atuando em consonância com os
+                                        paradigmas da sustentabilidade,
+                                        considerando as influências e
+                                        consequências sociais, econômicas,
+                                        culturais, tecnológicas e ambientais;
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card mb-3">
+
+                                <div class="card-header" id="headingTwo">
+
+                                    <h5 class="mb-0">
+
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">Respeito ao meio ambiente!</button>
+                                    </h5>
+
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordion">
+
+                                    <div class="card-body">
+
+                                        Promovendo mudança de atitude
+                                        em relação à utilização dos recursos
+                                        naturais, incorporando o conceito
+                                        de sustentabilidade nos processos
+                                        produtivos e nas ações cotidianas;
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card mb-3">
+
+                                <div class="card-header" id="headingTwo">
+
+                                    <h5 class="mb-0">
+
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">Valorização e reconhecimento dos
+                                            profissionais!</button>
+                                    </h5>
+
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordion">
+
+                                    <div class="card-body">
+
+                                        Com ações que proporcionem o
+                                        bem-estar, a qualidade de vida e o
+                                        desenvolvimento profissional, bem como
+                                        uma ambiência organizacional
+                                        motivadora, com respeito e
+                                        reconhecimento
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card mb-3">
+
+                                <div class="card-header" id="headingTwo">
+
+                                    <h5 class="mb-0">
+
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">Valorização do conhecimento!</button>
+                                    </h5>
+
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordion">
+
+                                    <div class="card-body">
+
+                                        Com investimento na capacitação
+                                        contínua de pessoas, incentivando e
+                                        valorizando as competências.
 
                                     </div>
 
@@ -201,8 +352,7 @@
 
                                         <button class="btn btn-link collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">What do I get when my account is paid
-                                            off?</button>
+                                            aria-controls="collapseThree">Qualidade dos serviços!</button>
                                     </h5>
 
                                 </div>
@@ -212,89 +362,17 @@
 
                                     <div class="card-body">
 
-                                        It was popularised in the 1960s with the release of Letraset sheets containing
-                                        Lorem Ipsum passages, and more recently with desktop publishing software like
-                                        Aldus PageMaker including versions of Lorem Ipsum.
+                                        Como um dever inerente aos
+                                        servidores públicos, construída
+                                        conscientemente por agregar
+                                        esforços de todos os níveis da
+                                        organização, onde os servidores
+                                        merecem respeito e confiança dos
+                                        cidadãos;
 
                                     </div>
 
                                 </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 mb-2-9">
-
-                        <div class="media">
-
-                            <i class="ti-panel display-23 text-primary"></i>
-
-                            <div class="media-body ps-3 ps-ms-4">
-
-                                <h4 class="h5 mb-2">Coverage & Policies</h4>
-
-                                <p class="mb-0">It is a long established fact that a reader will be distracted by the
-                                    readable.</p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 mb-2-9">
-
-                        <div class="media">
-
-                            <i class="ti-announcement display-23 text-primary"></i>
-
-                            <div class="media-body ps-3 ps-ms-4">
-
-                                <h4 class="h5 mb-2">Discount</h4>
-
-                                <p class="mb-0">It is a long established fact that a reader will be distracted by the
-                                    readable.</p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 mb-2-9 mb-md-0">
-
-                        <div class="media">
-
-                            <i class="ti-shine display-23 text-primary"></i>
-
-                            <div class="media-body ps-3 ps-ms-4">
-
-                                <h4 class="h5 mb-2">Falling objects</h4>
-
-                                <p class="mb-0">It is a long established fact that a reader will be distracted by the
-                                    readable.</p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="media">
-
-                            <i class="ti-anchor display-23 text-primary"></i>
-
-                            <div class="media-body ps-3 ps-ms-4">
-
-                                <h4 class="h5 mb-2">Frozen plumbing</h4>
-
-                                <p class="mb-0">It is a long established fact that a reader will be distracted by the
-                                    readable.</p>
 
                             </div>
 
@@ -309,32 +387,5 @@
         </div>
 
     </div>
-
-</section>
-
-<section>
-
-    <script src="https://unpkg.com/gojs/release/go.js"></script>
-    <div id="organograma" style="width:100%; height:600px;"></div>
-    <script>
-        var $ = go.GraphObject.make;
-        var myDiagram = $(go.Diagram, "organograma", { layout: $(go.TreeLayout) });
-
-        myDiagram.nodeTemplate = $(go.Node, "Auto",
-            $(go.Shape, "RoundedRectangle", { fill: "lightblue" }),
-            $(go.TextBlock, { margin: 5 }, new go.Binding("text", "name"))
-        );
-
-        myDiagram.model = new go.TreeModel([
-            { key: "Administração", name: "Conselho de Administração" },
-            { key: "Estatutária", parent: "Administração", name: "Diretoria Estatutária" },
-            { key: "Executiva", parent: "Estatutária", name: "Diretoria Executiva" },
-            { key: "Técnica", parent: "Executiva", name: "Assessoria Técnica" },
-            { key: "Financeira", parent: "Técnica", name: "Diretoria Administrativo-Financeira" },
-            { key: "Social", parent: "Técnica", name: "Diretoria de Assistência Social" },
-            { key: "Educação", parent: "Executiva", name: "Diretoria de Educação" },
-            { key: "Saúde", parent: "Executiva", name: "Diretoria de Saúde" }
-        ]);
-    </script>
 
 </section>
