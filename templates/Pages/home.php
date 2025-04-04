@@ -270,7 +270,7 @@
                         </ul>
                     </div>
                     <div class="card-body p-1-9">
-                        <h3 class="h5">Talentos de Cozinha</h3>
+                        <h3 class="h5">Talentos da Cozinha</h3>
                         <p class="text-primary mb-0">Amazônicas</p>
                     </div>
                 </div>
@@ -315,7 +315,7 @@
                         </ul>
                     </div>
                     <div class="card-body p-1-9">
-                        <h3 class="h5">Curso Proficionalizante</h3>
+                        <h3 class="h5">Curso Profissionalizante</h3>
                         <p class="text-primary mb-0">Cabelereiro para Iniciantes</p>
                     </div>
                 </div>
