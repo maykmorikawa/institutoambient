@@ -138,245 +138,159 @@
                         <div id="accordion" class="accordion-style">
 
                             <div class="card mb-3">
-
                                 <div class="card-header" id="headingOne">
-
                                     <h5 class="mb-0">
-
                                         <button class="btn btn-link" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">Equidade como ideal de justiça!</button>
+                                            aria-controls="collapseOne">
+                                            Equidade como ideal de justiça!
+                                        </button>
                                     </h5>
-
                                 </div>
-
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                     data-bs-parent="#accordion">
-
                                     <div class="card-body">
-                                        Em todos os níveis e serviços
-                                        prestados, proporcionando
-                                        tratamento igual a todos.
-
+                                        Em todos os níveis e serviços prestados, proporcionando tratamento igual a
+                                        todos.
                                     </div>
-
                                 </div>
-
                             </div>
 
                             <div class="card mb-3">
-
                                 <div class="card-header" id="headingTwo">
-
                                     <h5 class="mb-0">
-
                                         <button class="btn btn-link collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Ética e transparência!</button>
+                                            aria-controls="collapseTwo">
+                                            Ética e transparência!
+                                        </button>
                                     </h5>
-
                                 </div>
-
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordion">
-
                                     <div class="card-body">
-
-                                        Para uma gestão comprometida
-                                        com a conduta ideal para o sucesso
-                                        com integridade, valorizando os
-                                        colaboradores e respeitando a
-                                        diversidade e/ou os métodos de
-                                        trabalho;
-
+                                        Para uma gestão comprometida com a conduta ideal para o sucesso com integridade,
+                                        valorizando os colaboradores e respeitando a diversidade.
                                     </div>
-
                                 </div>
-
                             </div>
 
                             <div class="card mb-3">
-
-                                <div class="card-header" id="headingTwo">
-
-                                    <h5 class="mb-0">
-
-                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Legitimidade!</button>
-                                    </h5>
-
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordion">
-
-                                    <div class="card-body">
-
-                                        E como virtude da norma e como
-                                        valor que remete à consciência dos
-                                        servidores para além da restrita e
-                                        formal observância das leis;
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="card mb-3">
-
-                                <div class="card-header" id="headingTwo">
-
-                                    <h5 class="mb-0">
-
-                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Responsabilidade social !</button>
-                                    </h5>
-
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordion">
-
-                                    <div class="card-body">
-
-                                        Atuando em consonância com os
-                                        paradigmas da sustentabilidade,
-                                        considerando as influências e
-                                        consequências sociais, econômicas,
-                                        culturais, tecnológicas e ambientais;
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="card mb-3">
-
-                                <div class="card-header" id="headingTwo">
-
-                                    <h5 class="mb-0">
-
-                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Respeito ao meio ambiente!</button>
-                                    </h5>
-
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordion">
-
-                                    <div class="card-body">
-
-                                        Promovendo mudança de atitude
-                                        em relação à utilização dos recursos
-                                        naturais, incorporando o conceito
-                                        de sustentabilidade nos processos
-                                        produtivos e nas ações cotidianas;
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="card mb-3">
-
-                                <div class="card-header" id="headingTwo">
-
-                                    <h5 class="mb-0">
-
-                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Valorização e reconhecimento dos
-                                            profissionais!</button>
-                                    </h5>
-
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordion">
-
-                                    <div class="card-body">
-
-                                        Com ações que proporcionem o
-                                        bem-estar, a qualidade de vida e o
-                                        desenvolvimento profissional, bem como
-                                        uma ambiência organizacional
-                                        motivadora, com respeito e
-                                        reconhecimento
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="card mb-3">
-
-                                <div class="card-header" id="headingTwo">
-
-                                    <h5 class="mb-0">
-
-                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">Valorização do conhecimento!</button>
-                                    </h5>
-
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordion">
-
-                                    <div class="card-body">
-
-                                        Com investimento na capacitação
-                                        contínua de pessoas, incentivando e
-                                        valorizando as competências.
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="card">
-
                                 <div class="card-header" id="headingThree">
-
                                     <h5 class="mb-0">
-
                                         <button class="btn btn-link collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">Qualidade dos serviços!</button>
+                                            aria-controls="collapseThree">
+                                            Legitimidade!
+                                        </button>
                                     </h5>
-
                                 </div>
-
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordion">
-
                                     <div class="card-body">
-
-                                        Como um dever inerente aos
-                                        servidores públicos, construída
-                                        conscientemente por agregar
-                                        esforços de todos os níveis da
-                                        organização, onde os servidores
-                                        merecem respeito e confiança dos
-                                        cidadãos;
-
+                                        Como virtude da norma e como valor que remete à consciência dos servidores para
+                                        além da restrita e formal observância das leis.
                                     </div>
-
                                 </div>
+                            </div>
 
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            Responsabilidade social!
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Atuando em consonância com os paradigmas da sustentabilidade, considerando as
+                                        influências e consequências sociais, econômicas e ambientais.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingFive">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            Respeito ao meio ambiente!
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Promovendo mudança de atitude em relação à utilização dos recursos naturais,
+                                        incorporando o conceito de sustentabilidade nos processos produtivos.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingSix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSix" aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                            Valorização e reconhecimento dos profissionais!
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Com ações que proporcionem o bem-estar, a qualidade de vida e o desenvolvimento
+                                        profissional, criando uma ambiência organizacional motivadora.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingSeven">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSeven" aria-expanded="false"
+                                            aria-controls="collapseSeven">
+                                            Valorização do conhecimento!
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                                    data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Com investimento na capacitação contínua de pessoas, incentivando e valorizando
+                                        as competências.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingEight">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEight" aria-expanded="false"
+                                            aria-controls="collapseEight">
+                                            Qualidade dos serviços!
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                    data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Como um dever inerente aos servidores públicos, construída conscientemente por
+                                        agregar esforços de todos os níveis da organização.
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
+
 
                     </div>
 
