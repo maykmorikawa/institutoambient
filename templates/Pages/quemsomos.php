@@ -311,3 +311,105 @@
     </div>
 
 </section>
+
+<section>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0015a0;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .organograma {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            background-color: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .linha {
+            width: 2px;
+            height: 20px;
+            background-color: white;
+            margin: auto;
+        }
+
+        .nivel {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .sub-box {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .linha-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .linha-horizontal::before,
+        .linha-horizontal::after {
+            content: "";
+            flex-grow: 1;
+            height: 2px;
+            background-color: white;
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="organograma">
+            <div class="box">Conselho de Administração</div>
+            <div class="linha"></div>
+            <div class="box">Diretoria Estatutária</div>
+            <div class="linha"></div>
+            <div class="box">Diretoria Executiva</div>
+
+            <div class="nivel">
+                <div class="sub-box">Secretaria Executiva</div>
+                <div class="sub-box">Assessoria Técnica</div>
+                <div class="sub-box">Controle Interno</div>
+            </div>
+
+            <div class="linha-horizontal"></div>
+
+            <div class="nivel">
+                <div class="sub-box">Diretoria Administrativo-Financeira</div>
+                <div class="sub-box">Diretoria de Assistência Social</div>
+                <div class="sub-box">Diretoria de Educação</div>
+                <div class="sub-box">Diretoria de Meio Ambiente</div>
+                <div class="sub-box">Diretoria de Saúde</div>
+                <div class="sub-box">Diretoria de Compliance e Risco</div>
+            </div>
+        </div>
+    </div>
+</section>
