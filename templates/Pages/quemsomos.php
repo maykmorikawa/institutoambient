@@ -283,3 +283,60 @@
     </div>
 
 </section>
+
+<!-- Princípios e Compromisso
+        ================================================== -->
+        <section>
+    <div class="container">
+        <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
+            <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossos</span>
+            <h2 class="mb-0 h1">Princípios e Compromisso</h2>
+        </div>
+        <div class="row mt-n1-3">
+            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="200ms">
+                <div class="card card-style1 border-color-light-black h-100">
+                    <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
+                        <div class="hover-bg"><img src="<?= WWW; ?>/site/img/service/service-1.jpg" alt="..."></div>
+                        <div class="service-icon text-center display-20">
+                            <i class="ti-thumb-up display-25 display-sm-22 display-lg-20 position-relative"></i>
+
+                        </div>
+                        <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Missão</a></h3>
+                        <p class="mb-0 position-relative">Promover a conservação ambiental e a sustentabilidade,
+                            incentivando práticas responsáveis que beneficiem tanto as pessoas quanto a natureza.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="350ms">
+                <div class="card card-style1 border-color-light-black h-100">
+                    <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
+                        <div class="hover-bg"><img src="i<?= WWW; ?>/site/img/service/service-2.jpg" alt="..."></div>
+                        <div class="service-icon text-center display-20">
+                            <i
+                                class="fas fa-hand-sparkles display-25 display-sm-22 display-lg-20 position-relative"></i>
+                        </div>
+                        <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Visão</a></h3>
+                        <p class="mb-0 position-relative">Ser referência na proteção dos recursos naturais e na
+                            construção de sociedades mais sustentáveis, inspirando mudanças positivas no mundo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="500ms">
+                <div class="card card-style1 border-color-light-black h-100">
+                    <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
+                        <div class="hover-bg"><img src="<?= WWW; ?>/site/img/service/service-3.jpg" alt="..."></div>
+                        <div class="service-icon text-center display-20">
+                            <i class="icon-heart display-25 display-sm-22 display-lg-20 position-relative"></i>
+                        </div>
+                        <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Valores</a></h3>
+                        <p class="mb-0 position-relative">🌱 Sustentabilidade,🤝colaboração e 💚 compromisso social
+                            guiam nossas ações para equilibrar desenvolvimento e preservação ambiental. Atuamos com 🔎
+                            transparência e promovemos a 🌎 educação ambiental para formar agentes de mudança.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="circle-md right-10 top-15 border-dark-color d-none d-md-block"></div>
+    <div class="bg-img bg-stripes ani-left-right d-none d-md-block" data-background="img/content/bg-stripes.png"></div>
+</section>
