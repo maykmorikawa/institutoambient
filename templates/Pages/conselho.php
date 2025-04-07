@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-12 mb-2-9">
 
-                        <img src="<?= WWW; ?>/site/img/service/service-details.jpg" alt="..." class="rounded">
+                        <img src="<?= WWW; ?>/site/img/bg/bg-01.jpg" alt="..." class="rounded">
 
                     </div>
 
