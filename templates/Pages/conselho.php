@@ -71,10 +71,19 @@
 
                     </div>
                     <div class="col-12 mb-2-9">
-                        <h2>MURILO MONTEIRO DE SOUZA<span class="mb-0 text-primary font-weight-400 h6">- PRESIDENTE</span></h2>
-                        <h2>CARLOS ALBERTO<span class="mb-0 text-primary font-weight-400 h6">- VICE-PRESIDENTE</span></h2>
-                        <h2>MARIADACONCEIÇÃO S.N. FERREIRA<span class="mb-0 text-primary font-weight-400 h6">- DIRETORA ADMINISTRATIVA E FINANCEIRA</span></h2>
-
+                        <div class="col-12 text-center mb-2-9">
+                            <h2>MURILO MONTEIRO DE SOUZA</h2>
+                            <h5<span class="mb-0 text-primary font-weight-400 h6">PRESIDENTE</span></h5>
+                        </div>
+                        <div class="col-12 text-center mb-2-9">
+                            <h2>CARLOS ALBERTO</h2>
+                            <h5<span class="mb-0 text-primary font-weight-400 h6">VICE-PRESIDENTE</span></h5>
+                        </div>
+                        <div class="col-12 text-center mb-2-9">
+                            <h2>MARIA DA CONCEIÇÃO S.N. FERREIRA</h2>
+                            <h5<span class="mb-0 text-primary font-weight-400 h6">DIRETORA ADMINISTRATIVA E FINANCEIRA</span></h5>
+                        </div>
+                        
                     </div>
                     <div class="col-12 mb-2-9">
 
