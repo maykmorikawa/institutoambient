@@ -50,16 +50,23 @@
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
-                                        <li><a href="#">Services 1</a></li>
-                                        <li><a href="#">Services 2</a></li>
-                                        <li><a href="#">Services 3</a></li>
-                                        <li><a href="#">Services Details</a></li>
+                                        <li><a href="#">Dedução de Imposto de Renda</a></li>
+                                        <li><a href="#">Áreas de Atuação</a></li>
+                                        <li><a href="#">Saúde</a></li>
+                                        <li><a href="#">Assistência Social</a></li>
+                                        <li><a href="#">Educação</a></li>
+                                        <li><a href="#">Meio Ambiente</a></li>
+                                        <li><a href="#">Projetos/Programas em Execução</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Noticias</a>
                                     <ul>
                                         <li><a href="#">blog</a></li>
                                         <li><a href="#">Na Mídia</a></li>
+                                        <li><a href="#">Revistas</a></li>
+                                        <li><a href="#">Galeria de Vídeos</a></li>
+                                        <li><a href="#">Imprensa</a></li>
+                                        <li><a href="#">Acesso à Informação</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Contatos</a>  
