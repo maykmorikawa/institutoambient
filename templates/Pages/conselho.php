@@ -13,7 +13,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Conselho Organizacional</h1>
+                    <h1>Conselho</h1>
 
                 </div>
 
