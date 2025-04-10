@@ -18,7 +18,11 @@
             <fieldset>
                 <legend><?= __('Add User') ?></legend>
                 <?php
-                    echo $this->Form->control('profile_id', ['options' => $profiles, 'empty' => true]);
+                echo $this->Form->control('profile_id', [
+                    'type' => 'hidden',
+                    'value' => 2
+                ]);
+                    
                     echo $this->Form->control('name');
                     echo $this->Form->control('email');
                     echo $this->Form->control('password');

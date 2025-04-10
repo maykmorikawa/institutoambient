@@ -43,9 +43,12 @@ class ProfilesTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Users', [
-            'foreignKey' => 'profile_id',
+        $this->hasMany('Users', [
+
+            'foreignKey' => 'profile_id',
+
         ]);
+        
     }
 
     /**

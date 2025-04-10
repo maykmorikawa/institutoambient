@@ -48,12 +48,25 @@ class UsersTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Profiles', [
-            'foreignKey' => 'profile_id',
+        $this->belongsTo('Profiles', [
+
+            'foreignKey' => 'profile_id',
+
         ]);
-        $this->hasMany('Posts', [
-            'foreignKey' => 'user_id',
+        $this->hasMany('Posts', [
+
+            'foreignKey' => 'user_id',
+
         ]);
+        
+
+        $this->hasOne('Students', [
+            'foreignKey' => 'user_id',
+        ]);
+
+        
+        
+        
     }
 
     /**
