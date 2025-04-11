@@ -17,7 +17,7 @@ class UsersController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
-    
+
         // Permitir acesso a login, logout e add sem autenticação
         $this->Authentication->addUnauthenticatedActions(['login', 'logout', 'add']);
     }
@@ -25,20 +25,20 @@ class UsersController extends AppController
 
     public function login()
     {
-        
         $this->request->allowMethod(['get', 'post']);
+
         $result = $this->Authentication->getResult();
 
-        if ($result->isValid()) {
-            $redirect = $this->request->getQuery('redirect', [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home',
-            ]);
-            return $this->redirect($redirect);
-        }
+        if ($this->request->is('post')) {
+            if ($result->isValid()) {
+                $target = $this->request->getQuery('redirect', [
+                    'controller' => 'Pages',
+                    'action' => 'display',
+                    'home',
+                ]);
+                return $this->redirect($target);
+            }
 
-        if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error('Email ou senha inválidos.');
         }
     }
