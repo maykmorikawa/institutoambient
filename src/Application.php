@@ -76,14 +76,10 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
         $middlewareQueue
-            // Coloque AuthenticationMiddleware antes do RoutingMiddleware!
+            ->add(new ErrorHandlerMiddleware(Configure::read('Error')))
+            ->add(new AssetMiddleware())
             ->add(new AuthenticationMiddleware($this))
             ->add(new RoutingMiddleware($this))
-
-            
-
-            // 🔽 RoutingMiddleware vem depois
-
             ->add(new BodyParserMiddleware())
             ->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
@@ -99,7 +95,9 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
      * @return void
      * @link https://book.cakephp.org/5/en/development/dependency-injection.html#dependency-injection
      */
-    public function services(ContainerInterface $container): void {}
+    public function services(ContainerInterface $container): void
+    {
+    }
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $service = new AuthenticationService([
