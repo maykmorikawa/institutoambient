@@ -40,7 +40,7 @@ $cakeDescription = 'Sistema Instituto Ambiente';
         </div>
         <div class="top-nav-links">
             <a target="_blank" rel="noopener" href="/home">SITE</a>
-            <a target="_blank" rel="noopener" href="/logout">API</a>
+            <a target="_blank" rel="noopener" href="/logout">SAIR</a>
         </div>
     </nav>
     <main class="main">
