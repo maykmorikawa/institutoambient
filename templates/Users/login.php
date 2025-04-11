@@ -1,17 +1,9 @@
-<?= $this->Form->create($user) ?>
-<fieldset style="margin-bottom:25px;">
-    <h2>Acessar</h2>
-    <?php
+<h1>Login</h1>
 
-    echo $this->Form->control('email', ['class' => 'form-control', 'label' => 'E-mail']);
+<?= $this->Flash->render() ?>
 
-    echo $this->Form->control('password', ['class' => 'form-control', 'label' => 'Senha']);
-    ?>
-</fieldset>
-<?= $this->Form->button(__('Entrar'), ['class' => 'btn btn-info btn-block']) ?>
+<?= $this->Form->create() ?>
+    <?= $this->Form->control('email') ?>
+    <?= $this->Form->control('password') ?>
+    <?= $this->Form->button('Entrar') ?>
 <?= $this->Form->end() ?>
-<br>
-<hr />
-
-
-<a href="/forget" class='btn btn-warning btn-block'>Esqueci a senha</a>

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\Controller\Controller;
+
 /**
  * Users Controller
  *
@@ -11,49 +13,6 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
-
-
-    public function login()
-    {
-        $this->viewBuilder()->setLayout('login');
-
-        if ($this->request->is('post')) {
-            $user = $this->Auth->identify();
-
-            if ($user) {
-                $this->Auth->setUser($user);
-
-                // Verifica se o profile_id é 3
-                if ($user['profile_id'] == 3) {
-                    // Extrai os links do campo view_links, separando por ponto
-                    $authorizedLinks = explode('.', $user['view_links']);
-
-                    // Pega o primeiro link da lista (assumindo que é numérico)
-                    $firstLink = intval($authorizedLinks[0]);
-
-                    // Verifica se o primeiro link é válido antes de redirecionar
-                    if ($firstLink > 0) {
-                        // Redireciona para a view do primeiro link
-                        return $this->redirect(['controller' => 'Links', 'action' => 'viewdigitador', $firstLink]);
-                    } else {
-                        $this->Flash->error(__('Nenhum link válido associado.'));
-                        return $this->redirect($this->Auth->redirectUrl('/'));
-                    }
-                }
-
-                // Para outros usuários, redireciona para a URL padrão
-                return $this->redirect($this->Auth->redirectUrl('/'));
-            } else {
-                $this->Flash->error(__('Dados incorretos para o acesso.'));
-            }
-        }
-    }
-
-    public function logout()
-    {
-        return $this->redirect($this->Auth->logout());
-    }
-
     /**
      * Index method
      *
