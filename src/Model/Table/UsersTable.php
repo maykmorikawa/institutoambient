@@ -60,15 +60,6 @@ class UsersTable extends Table
             'foreignKey' => 'user_id',
 
         ]);
-        
-
-        $this->hasOne('Students', [
-            'foreignKey' => 'user_id',
-        ]);
-
-        
-        
-        
     }
 
     /**
