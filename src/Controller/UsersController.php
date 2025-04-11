@@ -1,7 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
+
+use Cake\Controller\Controller;
 
 /**
  * Users Controller
@@ -10,6 +13,44 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+    
+        // Permitir acesso a login, logout e add sem autenticação
+        $this->Authentication->addUnauthenticatedActions(['login', 'logout', 'add']);
+    }
+
+
+    public function login()
+    {
+        
+        $this->request->allowMethod(['get', 'post']);
+        $result = $this->Authentication->getResult();
+
+        if ($result->isValid()) {
+            $redirect = $this->request->getQuery('redirect', [
+                'controller' => 'Pages',
+                'action' => 'display',
+                'home',
+            ]);
+            return $this->redirect($redirect);
+        }
+
+        if ($this->request->is('post') && !$result->isValid()) {
+            $this->Flash->error('Email ou senha inválidos.');
+        }
+    }
+
+    public function logout()
+    {
+        $result = $this->Authentication->getResult();
+        if ($result->isValid()) {
+            $this->Authentication->logout();
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        }
+    }
     /**
      * Index method
      *
