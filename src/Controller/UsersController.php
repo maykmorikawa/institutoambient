@@ -142,8 +142,7 @@ class UsersController extends AppController
             }
             $this->Flash->error(__('Erro ao atualizar o usuário.'));
         }
-
-        $profiles = $this->Users->Profiles->find('list', ['limit' => 200])->all();
+        $profiles = $this->Users->Profiles->find('list')->limit(200);
         $this->set(compact('user', 'profiles'));
     }
 
