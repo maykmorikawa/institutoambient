@@ -1,14 +1,12 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App\Model\Table;
 
-
+use Cake\ORM\Query\SelectQuery;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
-
 
 /**
  * Users Model
@@ -51,14 +49,13 @@ class UsersTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->belongsTo('Profiles', [
-
             'foreignKey' => 'profile_id',
-
         ]);
         $this->hasMany('Posts', [
-
             'foreignKey' => 'user_id',
-
+        ]);
+        $this->hasMany('Students', [
+            'foreignKey' => 'user_id',
         ]);
     }
 
@@ -109,6 +106,4 @@ class UsersTable extends Table
 
         return $rules;
     }
-
- 
 }

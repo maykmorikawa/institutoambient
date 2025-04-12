@@ -23,10 +23,10 @@ class UsersTableTest extends TestCase
      *
      * @var list<string>
      */
-    protected array $fixtures = [
-        'app.Users',
-        'app.Profiles',
-        'app.Posts',
+    protected array $fixtures = [
+        'app.Users',
+        'app.Profiles',
+        'app.Posts',
     ];
 
     /**

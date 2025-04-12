@@ -17,16 +17,16 @@ class UsersFixture extends TestFixture
      */
     public function init(): void
     {
-        $this->records = [
-            [
-                'id' => 1,
-                'profile_id' => 1,
-                'name' => 'Lorem ipsum dolor sit amet',
-                'email' => 'Lorem ipsum dolor sit amet',
-                'password' => 'Lorem ipsum dolor sit amet',
-                'created' => '2025-02-26 00:36:19',
-                'modified' => '2025-02-26 00:36:19',
-            ],
+        $this->records = [
+            [
+                'id' => 1,
+                'profile_id' => 1,
+                'name' => 'Lorem ipsum dolor sit amet',
+                'email' => 'Lorem ipsum dolor sit amet',
+                'password' => 'Lorem ipsum dolor sit amet',
+                'created' => '2025-04-12 17:48:59',
+                'modified' => '2025-04-12 17:48:59',
+            ],
         ];
         parent::init();
     }
