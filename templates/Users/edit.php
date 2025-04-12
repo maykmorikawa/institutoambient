@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
@@ -23,14 +24,18 @@
             <fieldset>
                 <legend><?= __('Edit User') ?></legend>
                 <?php
-                    echo $this->Form->control('profile_id', ['options' => $profiles, 'empty' => true]);
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('password');
+                echo $this->Form->control('profile_id', ['options' => $profiles, 'empty' => true]);
+                echo $this->Form->control('name');
+                echo $this->Form->control('email');
+                echo $this->Form->control('password', [
+                    'value' => '', // ⚠️ Deixa o campo vazio
+                    'required' => false // Opcionalmente não obrigatório
+                ]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>
+
         </div>
     </div>
 </div>

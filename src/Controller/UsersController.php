@@ -20,7 +20,7 @@ class UsersController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
-    
+
         // Permitir acesso a login, logout e add sem autenticação
         $this->Authentication->addUnauthenticatedActions(['login', 'logout', 'add']);
     }
@@ -28,7 +28,16 @@ class UsersController extends AppController
 
     public function login()
     {
-        
+        // Se o usuário já estiver logado, redireciona para a página inicial
+        $result = $this->Authentication->getResult();
+        if ($result && $result->isValid() && $this->request->is('get')) {
+            return $this->redirect([
+                'controller' => 'Pages',
+                'action' => 'display',
+                'home',
+            ]);
+        }
+
         $this->request->allowMethod(['get', 'post']);
         $result = $this->Authentication->getResult();
 
@@ -49,8 +58,13 @@ class UsersController extends AppController
     public function logout()
     {
         $result = $this->Authentication->getResult();
+
         if ($result->isValid()) {
             $this->Authentication->logout();
+            $this->Flash->success('Você saiu com sucesso.');
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        } else {
+            $this->Flash->error('Você não está logado.');
             return $this->redirect(['controller' => 'Users', 'action' => 'login']);
         }
     }
@@ -111,19 +125,28 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
-        $user = $this->Users->get($id, contain: []);
+        $user = $this->Users->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+            $data = $this->request->getData();
 
+            // 🔐 Se a senha estiver vazia, não atualiza
+            if (empty($data['password'])) {
+                unset($data['password']);
+            }
+
+            $user = $this->Users->patchEntity($user, $data);
+
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('Usuário atualizado com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('Erro ao atualizar o usuário.'));
         }
-        $profiles = $this->Users->Profiles->find('list', limit: 200)->all();
+
+        $profiles = $this->Users->Profiles->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'profiles'));
     }
+
 
     /**
      * Delete method
