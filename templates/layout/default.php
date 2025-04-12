@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Sistema Instituto Ambiente';
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,8 +39,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="<?= $this->Url->build('/') ?>"><span>Instituto</span>Ambiente</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="#">SITE</a>
-            <a target="_blank" rel="noopener" href="#">API</a>
+            <a target="_blank" rel="noopener" href="/home">SITE</a>
+            <a target="_blank" rel="noopener" href="/logout">SAIR</a>
         </div>
     </nav>
     <main class="main">

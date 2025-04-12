@@ -1,5 +1,6 @@
 <?php
 
+
 declare(strict_types=1);
 
 /**
@@ -15,6 +16,7 @@ declare(strict_types=1);
  * @since     3.3.0
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 
 namespace App;
 
@@ -37,6 +39,14 @@ use Authentication\Identifier\IdentifierInterface;
 use Authentication\AuthenticationServiceProviderInterface;
 
 use Psr\Http\Message\ServerRequestInterface;
+use Authentication\Middleware\AuthenticationMiddleware;
+use Cake\Routing\Router;
+use Authentication\AuthenticationService;
+use Authentication\AuthenticationServiceInterface;
+use Authentication\Identifier\IdentifierInterface;
+use Authentication\AuthenticationServiceProviderInterface;
+
+use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Application setup class.
@@ -47,6 +57,7 @@ use Psr\Http\Message\ServerRequestInterface;
  * @extends \Cake\Http\BaseApplication<\App\Application>
  */
 class Application extends BaseApplication implements AuthenticationServiceProviderInterface
+class Application extends BaseApplication implements AuthenticationServiceProviderInterface
 {
     /**
      * Load all the application configuration and bootstrap logic.
@@ -55,6 +66,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
      */
     public function bootstrap(): void
     {
+        $this->addPlugin('Authentication');
         $this->addPlugin('Authentication');
         // Call parent to load bootstrap from files.
         parent::bootstrap();
