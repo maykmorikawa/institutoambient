@@ -27,11 +27,11 @@ class Tag extends Entity
      *
      * @var array<string, bool>
      */
-    protected array $_accessible = [
-        'name' => true,
-        'slug' => true,
-        'created' => true,
-        'modified' => true,
-        'posts' => true,
+    protected array $_accessible = [
+        'name' => true,
+        'slug' => true,
+        'created' => true,
+        'modified' => true,
+        'posts' => true,
     ];
 }

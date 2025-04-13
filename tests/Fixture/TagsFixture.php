@@ -17,14 +17,14 @@ class TagsFixture extends TestFixture
      */
     public function init(): void
     {
-        $this->records = [
-            [
-                'id' => 1,
-                'name' => 'Lorem ipsum dolor sit amet',
-                'slug' => 'Lorem ipsum dolor sit amet',
-                'created' => '2025-02-26 00:36:12',
-                'modified' => '2025-02-26 00:36:12',
-            ],
+        $this->records = [
+            [
+                'id' => 1,
+                'name' => 'Lorem ipsum dolor sit amet',
+                'slug' => 'Lorem ipsum dolor sit amet',
+                'created' => '2025-04-12 20:37:31',
+                'modified' => '2025-04-12 20:37:31',
+            ],
         ];
         parent::init();
     }

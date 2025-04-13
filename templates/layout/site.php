@@ -12,7 +12,7 @@
         content="Instituto Saúde Cultura Sustentável Instituto Cultura Saúde Sustentável sobre nós MOBILIZAÇÃO E RESPONSABILIDADE SOCIAL O INSTITUTO AMBIENT trabalha de maneira proativa, articulando-se de acordo com o contexto social, orientando a parceria entre as organizações corporativas associadas ao Instituto, com o objetivo de facilitar o desenvolvimento da missão da entidade e consolidar grandes projetos de cunho" />
 
     <!-- title  -->
-    <title>Instituto Ambient - Instituto Ambient</title>
+    <title>Instituto Ambient</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="<?= WWW; ?>/site/img/logos/favicon.png">

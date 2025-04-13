@@ -24,7 +24,7 @@
                     echo $this->Form->control('content');
                     echo $this->Form->control('category_id', ['options' => $categories]);
                     echo $this->Form->control('user_id', ['options' => $users]);
-                    echo $this->Form->control('slug');
+                    
                     echo $this->Form->control('excerpt');
                     echo $this->Form->control('image');
                     echo $this->Form->control('status', [

@@ -47,10 +47,10 @@ class TagsTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsToMany('Posts', [
-            'foreignKey' => 'tag_id',
-            'targetForeignKey' => 'post_id',
-            'joinTable' => 'posts_tags',
+        $this->belongsToMany('Posts', [
+            'foreignKey' => 'tag_id',
+            'targetForeignKey' => 'post_id',
+            'joinTable' => 'posts_tags',
         ]);
     }
 

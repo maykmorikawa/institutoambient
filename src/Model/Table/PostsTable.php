@@ -13,6 +13,7 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\CategoriesTable&\Cake\ORM\Association\BelongsTo $Categories
  * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
+ * @property \App\Model\Table\CommentsTable&\Cake\ORM\Association\HasMany $Comments
  * @property \App\Model\Table\TagsTable&\Cake\ORM\Association\BelongsToMany $Tags
  *
  * @method \App\Model\Entity\Post newEmptyEntity()
@@ -49,21 +50,21 @@ class PostsTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Categories', [
-            'foreignKey' => 'category_id',
-            'joinType' => 'INNER',
+        $this->belongsTo('Categories', [
+            'foreignKey' => 'category_id',
+            'joinType' => 'INNER',
         ]);
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
-            'joinType' => 'INNER',
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER',
         ]);
-        $this->hasMany('Comments', [
-            'foreignKey' => 'post_id',
+        $this->hasMany('Comments', [
+            'foreignKey' => 'post_id',
         ]);
-        $this->belongsToMany('Tags', [
-            'foreignKey' => 'post_id',
-            'targetForeignKey' => 'tag_id',
-            'joinTable' => 'posts_tags',
+        $this->belongsToMany('Tags', [
+            'foreignKey' => 'post_id',
+            'targetForeignKey' => 'tag_id',
+            'joinTable' => 'posts_tags',
         ]);
     }
 

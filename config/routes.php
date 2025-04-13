@@ -88,9 +88,13 @@ return function (RouteBuilder $routes): void {
         // Prefixo Admin
         $routes->prefix('Admin', ['path' => '/admin'], function (RouteBuilder $builder): void {
                 $builder->setRouteClass(DashedRoute::class);
-                $builder->connect('/', ['controller' => 'Dashboard', 'action' => 'index']); // opcional
+                $builder->connect('/', ['controller' => 'Users', 'action' => 'admin']); // opcional
+
+                $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+                $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
                 $builder->fallbacks(DashedRoute::class);
         });
+        
 
         // Fallback geral (redundante mas seguro em casos específicos)
         $routes->fallbacks(DashedRoute::class);

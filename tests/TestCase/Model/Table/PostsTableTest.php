@@ -23,11 +23,12 @@ class PostsTableTest extends TestCase
      *
      * @var list<string>
      */
-    protected array $fixtures = [
-        'app.Posts',
-        'app.Categories',
-        'app.Users',
-        'app.Tags',
+    protected array $fixtures = [
+        'app.Posts',
+        'app.Categories',
+        'app.Users',
+        'app.Comments',
+        'app.Tags',
     ];
 
     /**

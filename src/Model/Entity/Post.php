@@ -23,6 +23,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Category $category
  * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Comment[] $comments
  * @property \App\Model\Entity\Tag[] $tags
  */
 class Post extends Entity
@@ -36,20 +37,21 @@ class Post extends Entity
      *
      * @var array<string, bool>
      */
-    protected array $_accessible = [
-        'title' => true,
-        'content' => true,
-        'category_id' => true,
-        'user_id' => true,
-        'created' => true,
-        'modified' => true,
-        'slug' => true,
-        'excerpt' => true,
-        'image' => true,
-        'status' => true,
-        'published' => true,
-        'category' => true,
-        'user' => true,
-        'tags' => true,
+    protected array $_accessible = [
+        'title' => true,
+        'content' => true,
+        'category_id' => true,
+        'user_id' => true,
+        'created' => true,
+        'modified' => true,
+        'slug' => true,
+        'excerpt' => true,
+        'image' => true,
+        'status' => true,
+        'published' => true,
+        'category' => true,
+        'user' => true,
+        'comments' => true,
+        'tags' => true,
     ];
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -18,9 +19,11 @@ $cakeDescription = 'Sistema Instituto Ambiente';
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= $this->Html->css(['https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css']) ?>
     <title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
@@ -33,6 +36,7 @@ $cakeDescription = 'Sistema Instituto Ambiente';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
@@ -45,11 +49,15 @@ $cakeDescription = 'Sistema Instituto Ambiente';
     </nav>
     <main class="main">
         <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
+                <div class="d-flex">
+                <?= $this->element('navbaradmin'); ?>
+                <?= $this->Flash->render() ?>
+                <?= $this->fetch('content') ?>
+            </div>
         </div>
     </main>
     <footer>
     </footer>
 </body>
+
 </html>
