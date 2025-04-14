@@ -41,7 +41,7 @@
                                 <li>
                                     <a href="#">Institucional</a>
                                     <ul>
-                                        <li><a href="#">O Instituto Ambiente</a></li>
+                                        <li><a href="admin/">O Instituto Ambiente</a></li>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
                                         <li><a href="#">Equipe</a></li>
                                         <li><a href="/conselho">Conselho</a></li>
