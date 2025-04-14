@@ -62,7 +62,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $service = new AuthenticationService([
-            'unauthenticatedRedirect' => Router::url('/login'),
+            'unauthenticatedRedirect' => Router::url('/admin/login'),
             'queryParam' => 'redirect',
         ]);
 
@@ -81,7 +81,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 'username' => 'email',
                 'password' => 'password',
             ],
-            'loginUrl' => '/login',
+            'loginUrl' => '/admin/login',
         ]);
 
         return $service;
