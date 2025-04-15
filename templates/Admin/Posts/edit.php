@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Post $post
@@ -15,7 +16,7 @@
             </div>
             <div class="card-body">
                 <?= $this->Form->create($post) ?>
-                
+
                 <div class="mb-3">
                     <?= $this->Form->control('title', ['class' => 'form-control']) ?>
                 </div>
@@ -27,14 +28,14 @@
                 <div class="mb-3">
                     <?= $this->Form->control('category_id', [
                         'options' => $categories,
-                        'class' => 'form-select'
+                        'class' => 'form-control'
                     ]) ?>
                 </div>
 
                 <div class="mb-3">
                     <?= $this->Form->control('user_id', [
                         'options' => $users,
-                        'class' => 'form-select'
+                        'class' => 'form-control'
                     ]) ?>
                 </div>
 
@@ -51,7 +52,15 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('status', ['class' => 'form-select']) ?>
+                    <?= $this->Form->control('status', [
+                        'label' => 'Status',
+                        'options' => [
+                            'rascunho' => 'Rascunho',
+                            'publicado' => 'Publicado'
+                        ],
+                        'empty' => 'Selecione um status',
+                        'class' => 'form-control'
+                    ]) ?>
                 </div>
 
                 <div class="mb-3">
@@ -61,7 +70,7 @@
                 <div class="mb-3">
                     <?= $this->Form->control('tags._ids', [
                         'options' => $tags,
-                        'class' => 'form-select',
+                        'class' => 'form-control',
                         'multiple' => true,
                         'label' => __('Tags Relacionadas')
                     ]) ?>
