@@ -8,32 +8,71 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Posts'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="posts form content">
-            <?= $this->Form->create($post) ?>
-            <fieldset>
-                <legend><?= __('Add Post') ?></legend>
-                <?php
-                    echo $this->Form->control('title');
-                    echo $this->Form->control('content');
-                    echo $this->Form->control('category_id', ['options' => $categories]);
-                    echo $this->Form->control('user_id', ['options' => $users]);
-                    echo $this->Form->control('slug');
-                    echo $this->Form->control('excerpt');
-                    echo $this->Form->control('image');
-                    echo $this->Form->control('status');
-                    echo $this->Form->control('published', ['empty' => true]);
-                    echo $this->Form->control('tags._ids', ['options' => $tags]);
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= $post->isNew() ? __('Add Post') : __('Edit Post') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($post) ?>
+                
+                <div class="mb-3">
+                    <?= $this->Form->control('title', ['class' => 'form-control']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('content', ['class' => 'form-control', 'rows' => 5]) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('category_id', [
+                        'options' => $categories,
+                        'class' => 'form-select'
+                    ]) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('user_id', [
+                        'options' => $users,
+                        'class' => 'form-select'
+                    ]) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('excerpt', ['class' => 'form-control', 'rows' => 3]) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('image', ['class' => 'form-control']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('status', ['class' => 'form-select']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('published', ['empty' => true, 'class' => 'form-control']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('tags._ids', [
+                        'options' => $tags,
+                        'class' => 'form-select',
+                        'multiple' => true,
+                        'label' => __('Tags Relacionadas')
+                    ]) ?>
+                </div>
+
+                <div class="d-grid">
+                    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
+                </div>
+
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

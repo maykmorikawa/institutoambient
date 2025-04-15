@@ -5,31 +5,59 @@
  * @var string[]|\Cake\Collection\CollectionInterface $posts
  */
 ?>
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $tag->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Tags'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-header">
+                <strong><?= __('Actions') ?></strong>
+            </div>
+            <div class="list-group list-group-flush">
+                <?= $this->Form->postLink(
+                    __('Delete Tag'),
+                    ['action' => 'delete', $tag->id],
+                    [
+                        'confirm' => __('Are you sure you want to delete # {0}?', $tag->id),
+                        'class' => 'list-group-item list-group-item-action text-danger'
+                    ]
+                ) ?>
+                <?= $this->Html->link(__('List Tags'), ['action' => 'index'], ['class' => 'list-group-item list-group-item-action']) ?>
+            </div>
         </div>
-    </aside>
-    <div class="column column-80">
-        <div class="tags form content">
-            <?= $this->Form->create($tag) ?>
-            <fieldset>
-                <legend><?= __('Edit Tag') ?></legend>
-                <?php
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('slug');
-                    echo $this->Form->control('posts._ids', ['options' => $posts]);
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    </div>
+
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Edit Tag') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($tag) ?>
+                <div class="mb-3">
+                    <?= $this->Form->control('name', [
+                        'label' => __('Name'),
+                        'class' => 'form-control'
+                    ]) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('slug', [
+                        'label' => __('Slug'),
+                        'class' => 'form-control'
+                    ]) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->label('posts._ids', __('Related Posts'), ['class' => 'form-label']) ?>
+                    <?= $this->Form->select('posts._ids', $posts, [
+                        'multiple' => true,
+                        'class' => 'form-control',
+                        'size' => 8
+                    ]) ?>
+                </div>
+                <div class="d-grid">
+                    <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary']) ?>
+                </div>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

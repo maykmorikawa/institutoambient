@@ -1,30 +1,50 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Tag $tag
  * @var \Cake\Collection\CollectionInterface|string[] $posts
  */
 ?>
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Tags'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-header">
+                <strong><?= __('Actions') ?></strong>
+            </div>
+            <div class="list-group list-group-flush">
+                <?= $this->Html->link(__('List Tags'), ['action' => 'index'], ['class' => 'list-group-item list-group-item-action']) ?>
+            </div>
         </div>
-    </aside>
-    <div class="column column-80">
-        <div class="tags form content">
-            <?= $this->Form->create($tag) ?>
-            <fieldset>
-                <legend><?= __('Add Tag') ?></legend>
-                <?php
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('slug');
-                    echo $this->Form->control('posts._ids', ['options' => $posts]);
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    </div>
+
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Add Tag') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($tag) ?>
+                <div class="mb-3">
+                    <?= $this->Form->control('name', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->label('posts._ids', __('Related Posts'), ['class' => 'form-label']) ?>
+                    <?= $this->Form->select('posts._ids', $posts, [
+                        'multiple' => true,
+                        'class' => 'form-control',
+                        'size' => 8 // número de itens visíveis
+                    ]) ?>
+                </div>
+                <div>
+                    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
+                </div>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

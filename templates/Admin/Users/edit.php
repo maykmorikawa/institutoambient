@@ -48,6 +48,8 @@
             <?= $this->Form->control('password', [
                 'class' => 'form-control',
                 'label' => 'Senha',
+                'value' => '', // ⚠️ Deixa o campo vazio
+                'required' => false // Opcionalmente não obrigatório
             ]) ?>
         </div>
         <div class="text-end">

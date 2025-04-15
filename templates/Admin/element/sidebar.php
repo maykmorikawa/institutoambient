@@ -76,9 +76,9 @@
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Paginas</h6>
-            <a class="collapse-item" href="users">Users</a>
-            <a class="collapse-item" href="posts">Posts</a>
-            <a class="collapse-item" href="tags">Tags</a>
+            <a class="collapse-item" href="/admin/users">Users</a>
+            <a class="collapse-item" href="/admin/posts">Posts</a>
+            <a class="collapse-item" href="/admin/tags">Tags</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>

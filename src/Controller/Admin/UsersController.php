@@ -38,13 +38,10 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function admin()
-    {
-               
-    }
+    public function admin() {}
     public function index()
     {
-       
+
         $query = $this->Users->find()
             ->contain(['Profiles']);
         $users = $this->paginate($query);
@@ -52,7 +49,7 @@ class UsersController extends AppController
         $this->set(compact('users'));
     }
 
-    
+
 
     /**
      * View method
@@ -63,7 +60,7 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
-        
+
         $user = $this->Users->get($id, contain: ['Profiles', 'Posts']);
         $this->set(compact('user'));
     }
@@ -75,7 +72,7 @@ class UsersController extends AppController
      */
     public function add()
     {
-        
+
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -100,19 +97,32 @@ class UsersController extends AppController
     public function edit($id = null)
     {
         $this->viewBuilder()->setLayout('admin');
-        $user = $this->Users->get($id, contain: []);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
 
+        $user = $this->Users->get($id, contain: []);
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $data = $this->request->getData();
+
+            // 🔐 Se a senha estiver vazia, não atualiza
+            if (empty($data['password'])) {
+                unset($data['password']);
+            }
+
+            $user = $this->Users->patchEntity($user, $data);
+
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('O usuário foi atualizado com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+
+            $this->Flash->error(__('Não foi possível atualizar o usuário. Por favor, tente novamente.'));
         }
+
         $profiles = $this->Users->Profiles->find('list', limit: 200)->all();
         $this->set(compact('user', 'profiles'));
     }
+
+
 
     /**
      * Delete method
@@ -147,9 +157,8 @@ class UsersController extends AppController
         $result = $this->Authentication->getResult();
         if ($result && $result->isValid() && $this->request->is('get')) {
             return $this->redirect([
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home',
+                'controller' => 'Users',
+                'action' => 'admin',
             ]);
         }
 
@@ -158,9 +167,8 @@ class UsersController extends AppController
 
         if ($result->isValid()) {
             $redirect = $this->request->getQuery('redirect', [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home',
+                'controller' => 'Users',
+                'action' => 'admin',
             ]);
             return $this->redirect($redirect);
         }
