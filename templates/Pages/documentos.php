@@ -1,115 +1,108 @@
+<!-- PAGE TITLE
+
+        ================================================== -->
+
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
+    data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
+
+    <div class="container position-unset">
+
+        <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <h1>Trasparencia</h1>
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <ul class="ps-0">
+
+                        <li><a href="home">Home</a></li>
+
+                        <li><a href="#!">Trasparencia</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- LIST STYLES
         ================================================== -->
-        <section>
-            <div class="container">
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row mb-6 mb-lg-8">
+                    <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
+
+                        <div class="inner-title">
+                            <h2 class="mb-0">Style 1</h2>
+                        </div>
+
+                        <ul class="list-style1 mb-0">
+                            <li>We Can Save You Money.</li>
+                            <li>Production or trading of good</li>
+                            <li>Our Life Insurance is Flexible.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 position-relative elements-block">
+
+                        <div class="inner-title">
+                            <h2 class="mb-0">Style 2</h2>
+                        </div>
+
+                        <ul class="list-style2 mb-0">
+                            <li>We Can Save You Money.</li>
+                            <li>Production or trading of good</li>
+                            <li>Our Life Insurance is Flexible.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row mb-6 mb-lg-8">
-                            <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
+                    <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
 
-                                <div class="inner-title">
-                                    <h2 class="mb-0">Style 1</h2>
-                                </div>
-
-                                <ul class="list-style1 mb-0">
-                                    <li>We Can Save You Money.</li>
-                                    <li>Production or trading of good</li>
-                                    <li>Our Life Insurance is Flexible.</li>
-                                </ul>
-
-                                <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section">Copy</a></div>
-                                <div class="source-element"><a class="source-modal" href="#copy-code">Source</a></div>
-
-                                <div id="copy-code" class="mfp-hide white-popup-block popup-copy">
-                                    <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section">copy</a></div>
-                                    <pre id="section"><code class="language-html">
-
-
-                                    </code></pre>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-6 position-relative elements-block">
-
-                                <div class="inner-title">
-                                    <h2 class="mb-0">Style 2</h2>
-                                </div>
-
-                                <ul class="list-style2 mb-0">
-                                    <li>We Can Save You Money.</li>
-                                    <li>Production or trading of good</li>
-                                    <li>Our Life Insurance is Flexible.</li>
-                                </ul>
-
-                                <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section1">Copy</a></div>
-                                <div class="source-element"><a class="source-modal" href="#copy-code1">Source</a></div>
-
-                                <div id="copy-code1" class="mfp-hide white-popup-block popup-copy">
-                                    <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section1">copy</a></div>
-                                    <pre id="section1"><code class="language-html">
-
-                                    </code></pre>
-                                </div>
-
-                            </div>
-
+                        <div class="inner-title">
+                            <h2 class="mb-0">Style 3</h2>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
+                        <ul class="list-style4">
+                            <li>We Can Save You Money.</li>
+                            <li>Production or trading of good</li>
+                            <li>Our Life Insurance is Flexible.</li>
+                        </ul>
+                    </div>
 
-                                <div class="inner-title">
-                                    <h2 class="mb-0">Style 3</h2>
-                                </div>
+                    <div class="col-md-6 position-relative elements-block">
 
-                                <ul class="list-style4">
-                                    <li>We Can Save You Money.</li>
-                                    <li>Production or trading of good</li>
-                                    <li>Our Life Insurance is Flexible.</li>
-                                </ul>
-
-                                <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section2">Copy</a></div>
-                                <div class="source-element"><a class="source-modal" href="#copy-code2">Source</a></div>
-
-                                <div id="copy-code2" class="mfp-hide white-popup-block popup-copy">
-                                    <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section2">copy</a></div>
-                                    <pre id="section2"><code class="language-html">
-
-                                    </code></pre>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-6 position-relative elements-block">
-
-                                <div class="inner-title">
-                                    <h2 class="mb-0">Style 4</h2>
-                                </div>
-
-                                <ul class="list-style5 ps-0">
-                                    <li>We Can Save You Money.</li>
-                                    <li>Production or trading of good</li>
-                                    <li>Our Life Insurance is Flexible.</li>
-                                </ul>
-
-                                <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section3">Copy</a></div>
-                                <div class="source-element"><a class="source-modal" href="#copy-code3">Source</a></div>
-
-                                <div id="copy-code3" class="mfp-hide white-popup-block popup-copy">
-                                    <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section3">copy</a></div>
-                                    <pre id="section3"><code class="language-html">
-
-
-                                    </code></pre>
-                                </div>
-
-                            </div>
-
+                        <div class="inner-title">
+                            <h2 class="mb-0">Style 4</h2>
                         </div>
+
+                        <ul class="list-style5 ps-0">
+                            <li>We Can Save You Money.</li>
+                            <li>Production or trading of good</li>
+                            <li>Our Life Insurance is Flexible.</li>
+                        </ul>
 
                     </div>
 
                 </div>
+
             </div>
-        </section>
+
+        </div>
+    </div>
+</section>
