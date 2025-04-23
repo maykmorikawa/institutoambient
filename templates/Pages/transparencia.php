@@ -42,61 +42,33 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="row mb-6 mb-lg-8">
-                    <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
-
-                        <div class="inner-title">
-                            <h2 class="mb-0">Style 1</h2>
-                        </div>
-
-                        <ul class="list-style1 mb-0">
-                            <li>We Can Save You Money.</li>
-                            <li>Production or trading of good</li>
-                            <li>Our Life Insurance is Flexible.</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-6 position-relative elements-block">
-
-                        <div class="inner-title">
-                            <h2 class="mb-0">Style 2</h2>
-                        </div>
-
-                        <ul class="list-style2 mb-0">
-                            <li>We Can Save You Money.</li>
-                            <li>Production or trading of good</li>
-                            <li>Our Life Insurance is Flexible.</li>
-                        </ul>
-                    </div>
-
-                </div>
-
                 <div class="row">
                     <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
 
                         <div class="inner-title">
-                            <h2 class="mb-0">Style 3</h2>
+                            <h2 class="mb-0">Relatório de Atividades</h2>
                         </div>
 
                         <ul class="list-style4">
-                            <li>We Can Save You Money.</li>
-                            <li>Production or trading of good</li>
-                            <li>Our Life Insurance is Flexible.</li>
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf"><li>Relatório de Atividades IA - 2023</li></a>
+                                
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
 
-                    <div class="col-md-6 position-relative elements-block">
+                    <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
 
                         <div class="inner-title">
-                            <h2 class="mb-0">Style 4</h2>
+                            <h2 class="mb-0">DRE e Balanço</h2>
                         </div>
 
-                        <ul class="list-style5 ps-0">
-                            <li>We Can Save You Money.</li>
-                            <li>Production or trading of good</li>
-                            <li>Our Life Insurance is Flexible.</li>
+                        <ul class="list-style4">
+                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf"><li>DRE e Balanço IA 2022 - 2023</li></a>
+                                
+                            <li></li>
+                            <li></li>
                         </ul>
-
                     </div>
 
                 </div>

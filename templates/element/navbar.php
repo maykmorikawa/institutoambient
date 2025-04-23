@@ -45,7 +45,7 @@
                                         <li><a href="/quem_somos">Quem Somos</a></li>
                                         <li><a href="#">Equipe</a></li>
                                         <li><a href="/conselho">Conselho</a></li>
-                                        <li><a href="#">Transparência</a></li>
+                                        <li><a href="/transparencia">Transparência</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
