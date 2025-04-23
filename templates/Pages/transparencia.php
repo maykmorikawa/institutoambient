@@ -50,8 +50,10 @@
                         </div>
 
                         <ul class="list-style4">
-                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf"><li>Relatório de Atividades IA - 2023</li></a>
-                                
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank">
+                                <li>Relatório de Atividades IA - 2023</li>
+                            </a>
+
                             <li></li>
                             <li></li>
                         </ul>
@@ -64,8 +66,10 @@
                         </div>
 
                         <ul class="list-style4">
-                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf"><li>DRE e Balanço IA 2022 - 2023</li></a>
-                                
+                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
+                                <li>DRE e Balanço IA 2022 - 2023</li>
+                            </a>
+
                             <li></li>
                             <li></li>
                         </ul>
