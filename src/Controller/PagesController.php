@@ -85,9 +85,11 @@ class PagesController extends AppController
     public function transparencia()
     {
     }
-    public function conselho()
+    public function videos()
     {
-        
+    }
+    public function conselho()
+    { 
     }
 }
 
