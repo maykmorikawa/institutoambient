@@ -52,7 +52,7 @@
                     <!-- youtube video section -->
                     <div class="height-300">
 
-                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/bg/bg-07.jpg">
+                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/bg/bg-08.jpg">
                             <div class="opacity-extra-medium bg-black"></div>
                             <div class="inner-border"></div>
                             <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
