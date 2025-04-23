@@ -43,57 +43,22 @@
         <div class="row justify-content-center">
 
             <div class="col-lg-9">
-
                 <div class="mb-6 mb-lg-8 position-relative elements-block">
 
                     <div class="inner-title">
-                        <h2 class="mb-0">Youtube Iframe Video</h2>
+                        <h2 class="mb-0">Youtube Video</h2>
                     </div>
 
-                    <!-- iframe video section -->
-                    <iframe class="w-100 height-300 border-none" src="https://www.youtube.com/embed/mZb_gat5YCY" allow="encrypted-media" allowfullscreen></iframe>
-                    <!-- end iframe video section -->
+                    <!-- youtube video section -->
+                    <div class="height-300">
 
-
-
-
-
-                    <div class="mb-6 mb-lg-8 position-relative elements-block">
-
-                        <div class="inner-title">
-                            <h2 class="mb-0">Youtube Video</h2>
-                        </div>
-
-                        <!-- youtube video section -->
-                        <div class="height-300">
-
-                            <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="img/bg/bg-07.jpg">
-                                <div class="opacity-extra-medium bg-black"></div>
-                                <div class="inner-border"></div>
-                                <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                    <a class="video video_btn" href="https://www.youtube.com/watch?v=3ctoSEQsY54">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative elements-block">
-
-                            <div class="inner-title">
-                                <h2 class="mb-0">Vimeo Video</h2>
-                            </div>
-
-                            <!-- vimeo video section -->
-                            <div class="height-300">
-                                <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="img/bg/bg-07.jpg">
-                                    <div class="opacity-extra-medium bg-black"></div>
-                                    <div class="inner-border"></div>
-                                    <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                        <a class="video video_btn" href="https://vimeo.com/117471268">
-                                            <i class="fa fa-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="img/bg/bg-07.jpg">
+                            <div class="opacity-extra-medium bg-black"></div>
+                            <div class="inner-border"></div>
+                            <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
+                                <a class="video video_btn" href="https://www.youtube.com/watch?v=3ctoSEQsY54">
+                                    <i class="fa fa-play"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
