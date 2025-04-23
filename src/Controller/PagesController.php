@@ -80,7 +80,10 @@ class PagesController extends AppController
     }
     public function quemsomos()
     {
-        
+    }
+
+    public function transparencia()
+    {
     }
     public function conselho()
     {
