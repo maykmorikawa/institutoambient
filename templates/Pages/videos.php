@@ -56,7 +56,7 @@
                             <div class="opacity-extra-medium bg-black"></div>
                             <div class="inner-border"></div>
                             <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                <a class="video video_btn" href="https://youtu.be/U2SBh3FlMcc">
+                                <a class="video video_btn" href="https://youtu.be/U2SBh3FlMcc?si=KWySfdllezPIIelJ">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
