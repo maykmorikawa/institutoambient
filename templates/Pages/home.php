@@ -455,6 +455,49 @@
     </div>
 </section>
 
+
+<section class="pt-0">
+    <div class="container">
+        <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
+            <div class="col-lg-5 mb-3 mb-lg-0">
+                <span class="d-block mb-2 text-secondary text-uppercase fw-bold">Notícias em Destaque</span>
+                <h2 class="mb-0">Fique por dentro das últimas novidades sobre meio ambiente, sustentabilidade e ações
+                    ecológicas!</h2>
+            </div>
+            <div class="col-lg-7">
+                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">No Instituto
+                    Ambienta, trazemos informações atualizadas sobre projetos ambientais, eventos, pesquisas e
+                    iniciativas que fazem a diferença. Acompanhe nossas notícias e contribua para um futuro mais
+                    sustentável!</p>
+            </div>
+        </div>
+        <div class="row mt-n1-9 g-xl-5">
+            <?php foreach ($posts as $post): ?>
+                <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                    <article class="card card-style3 border-0 h-100">
+                        <div class="card-img position-relative">
+                            <?php if (!empty($post->image)): ?>
+                                <img src="<?= WWW; ?>/site/img/blog/<?= h($post->image) ?>" alt="<?= h($post->title) ?>">
+                            <?php else: ?>
+                                <img src="<?= WWW; ?>/site/img/blog/blog-default.jpg" alt="Imagem Padrão">
+                            <?php endif; ?>
+                        </div>
+                        <div class="card-body p-xl-1-9 p-4">
+                            <h3 class="h5 mb-3"><a href="<?= $this->Url->build(['action' => 'view', $post->slug]) ?>"><?= h($post->title) ?></a></h3>
+                            <a href="<?= $this->Url->build(['action' => 'view', $post->slug]) ?>" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
+                        </div>
+                        <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
+                            <div class="d-flex justify-content-between">
+                                <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> <?= $post->published ? $post->published->format('F j, Y') : '' ?></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
 <!-- PAREIROS
         ================================================== -->
 

@@ -91,6 +91,15 @@ class PagesController extends AppController
     public function conselho()
     { 
     }
+
+    public function home()
+    {
+        $this->loadModel('Posts');
+        $posts = $this->Posts->find('all', ['conditions' => ['status' => 'publicado'], 'order' => ['published' => 'DESC']])->all();
+        $this->set(compact('posts'));
+
+        $this->viewBuilder()->setLayout('site'); // Garante que o layout 'site' seja usado
+    }
 }
 
 
