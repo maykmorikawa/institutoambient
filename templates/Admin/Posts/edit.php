@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('content', ['id' => 'content-editor', 'type' => 'textarea']) ?>
+                    <?= $this->Form->control('content', ['id' => 'content-editor','form-control', 'type' => 'textarea']) ?>
                 </div>
 
                 <div class="mb-3">
