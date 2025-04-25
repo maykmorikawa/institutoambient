@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('content', ['class' => 'form-control', 'rows' => 5]) ?>
+                    <?= $this->Form->control('content', ['id' => 'content-editor', 'type' => 'textarea']) ?>
                 </div>
 
                 <div class="mb-3">
@@ -85,3 +85,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#content-editor').summernote({
+            height: 300, // Altura inicial do editor
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['link', 'picture', 'hr']],
+                ['view', ['codeview']]
+            ]
+        });
+    });
+</script>
