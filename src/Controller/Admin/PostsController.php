@@ -46,16 +46,25 @@ class PostsController extends AppController
      */
     public function add()
     {
-        $post = $this->Posts->newEmptyEntity();
         if ($this->request->is('post')) {
+            $post = $this->Posts->newEmptyEntity();
             $post = $this->Posts->patchEntity($post, $this->request->getData());
-            if ($this->Posts->save($post)) {
-                $this->Flash->success(__('The post has been saved.'));
 
+            // Gerenciar o upload da imagem
+            $image = $this->request->getData('image');
+            if (!empty($image) && !$image->getError()) {
+                $filename = time() . '-' . $image->getClientFilename();
+                $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
+                $post->image = 'uploads/' . $filename;
+            }
+
+            if ($this->Posts->save($post)) {
+                $this->Flash->success(__('Post salvo com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The post could not be saved. Please, try again.'));
+            $this->Flash->error(__('Não foi possível salvar o post.'));
         }
+
         $categories = $this->Posts->Categories->find('list', limit: 200)->all();
         $users = $this->Posts->Users->find('list', limit: 200)->all();
         $tags = $this->Posts->Tags->find('list', limit: 200)->all();
