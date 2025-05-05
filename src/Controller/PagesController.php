@@ -95,11 +95,12 @@ class PagesController extends AppController
     }
 
     public function home()
-{
-    $posts = $this->Posts->find('all', conditions: ['status' => 'publicado'], order: ['published' => 'DESC'])->all();
-    $this->set(compact('posts'));
-    $this->viewBuilder()->setLayout('site');
-}
+    {
+        $postsTable = TableRegistry::getTableLocator()->get('Posts'); // Ou $this->Posts se você estiver usando a propriedade carregada
+        $posts = $postsTable->find('all', conditions: ['status' => 'publicado'], order: ['published' => 'DESC'])->all();
+        $this->set(compact('posts'));
+        $this->viewBuilder()->setLayout('site');
+    }
 }
 
 
