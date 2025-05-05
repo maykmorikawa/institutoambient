@@ -95,14 +95,13 @@ class PagesController extends AppController
 
     public function home()
     {
-        $this->loadModel('Posts');
+        $this->loadComponent('RequestHandler'); // Se ainda não estiver carregado
+        $this->Posts = $this->loadModel('Posts');
         $posts = $this->Posts->find('all', [
             'conditions' => ['status' => 'publicado'],
             'order' => ['published' => 'DESC']
         ])->all();
-
         $this->set(compact('posts'));
-        $this->viewBuilder()->setLayout('site');
     }
 }
 
