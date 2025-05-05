@@ -110,8 +110,8 @@ class PostsController extends AppController
             $image = $this->request->getData('image');
             if (!empty($image) && is_object($image) && !$image->getError()) {
                 // Excluir a imagem antiga, se existir (opcional)
-                if (!empty($post->image) && file_exists(WWW_ROOT . 'img/' . $post->image)) {
-                    unlink(WWW_ROOT . 'img/' . $post->image);
+                if (!empty($post->image) && file_exists(WWW_ROOT . 'img/uploads/' . $post->image)) {
+                    unlink(WWW_ROOT . 'img/uploads/' . $post->image);
                 }
                 $filename = time() . '-' . $image->getClientFilename();
                 $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
