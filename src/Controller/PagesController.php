@@ -21,6 +21,8 @@ use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\Http\Response;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\ORM\TableRegistry;
+use App\Controller\AppController;
 
 /**
  * Static content controller
@@ -94,11 +96,10 @@ class PagesController extends AppController
 
     public function home()
     {
-        $this->loadModel('Posts');
-        $posts = $this->Posts->find('all', ['conditions' => ['status' => 'publicado'], 'order' => ['published' => 'DESC']])->all();
+        $postsTable = TableRegistry::getTableLocator()->get('Posts');
+        $posts = $postsTable->find('all', ['conditions' => ['status' => 'publicado'], 'order' => ['published' => 'DESC']])->all();
         $this->set(compact('posts'));
-
-        $this->viewBuilder()->setLayout('site'); // Garante que o layout 'site' seja usado
+        $this->viewBuilder()->setLayout('site');
     }
 }
 
