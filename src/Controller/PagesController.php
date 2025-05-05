@@ -95,7 +95,7 @@ class PagesController extends AppController
 
     public function home()
     {
-        
+        $this->loadModel('Posts');
         $posts = $this->Posts->find('all', [
             'conditions' => ['status' => 'publicado'],
             'order' => ['published' => 'DESC']
