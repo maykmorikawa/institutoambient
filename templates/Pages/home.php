@@ -477,7 +477,7 @@
                     <article class="card card-style3 border-0 h-100">
                         <div class="card-img position-relative">
                             <?php if (!empty($post->image)): ?>
-                        <img src="<?= $this->Url->build('/img/uploads/' . $post->image) ?>" alt="<?= h($post->title) ?>">
+                        <img src="<?= $this->Url->build('/img/' . $post->image) ?>" alt="<?= h($post->title) ?>">
                             <?php else: ?>
                                 <img src="<?= $this->Url->build('/site/img/blog/blog-default.jpg') ?>" alt="Imagem Padrão">
                             <?php endif; ?>
