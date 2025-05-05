@@ -113,6 +113,7 @@ class PostsController extends AppController
                 if (!empty($post->image) && file_exists(WWW_ROOT . 'img/uploads/' . $post->image)) {
                     unlink(WWW_ROOT . 'img/uploads/' . $post->image);
                 }
+                debug($image->image);
                 $filename = time() . '-' . $image->getClientFilename();
                 $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
                 $post->image = 'uploads/' . $filename;
