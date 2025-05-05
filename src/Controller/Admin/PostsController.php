@@ -54,7 +54,7 @@ class PostsController extends AppController
              // Gerar o slug a partir do título
              $slug = Text::slug($data['title']);
              $data['slug'] = $slug; // Adicionar o slug aos dados
-             debug($slug->title);
+             
              $post = $this->Posts->patchEntity($post, $data);
 
             // Gerenciar o upload da imagem

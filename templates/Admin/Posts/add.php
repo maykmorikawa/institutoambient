@@ -39,6 +39,9 @@
                 </div>
 
                 <div class="mb-3">
+                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
                     <?= $this->Form->control('excerpt', ['class' => 'form-control', 'rows' => 3]) ?>
                 </div>
 
