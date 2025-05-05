@@ -16,7 +16,6 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
-use App\Controller\AppController;
 use Cake\Core\Configure;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
@@ -96,12 +95,10 @@ class PagesController extends AppController
     public function home()
     {
         $this->loadModel('Posts');
-        $this->Posts = $this->loadModel('Posts');
-        $posts = $this->Posts->find('all', [
-            'conditions' => ['status' => 'publicado'],
-            'order' => ['published' => 'DESC']
-        ])->all();
+        $posts = $this->Posts->find('all', ['conditions' => ['status' => 'publicado'], 'order' => ['published' => 'DESC']])->all();
         $this->set(compact('posts'));
+
+        $this->viewBuilder()->setLayout('site'); // Garante que o layout 'site' seja usado
     }
 }
 
