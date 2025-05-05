@@ -15,7 +15,7 @@
                 <h4 class="mb-0"><?= $post->isNew() ? __('Add Post') : __('Edit Post') ?></h4>
             </div>
             <div class="card-body">
-                <?= $this->Form->create($post) ?>
+                <?= $this->Form->create($post, ['enctype' => 'multipart/form-data']) ?>
 
                 <div class="mb-3">
                     <?= $this->Form->control('title', ['class' => 'form-control']) ?>
