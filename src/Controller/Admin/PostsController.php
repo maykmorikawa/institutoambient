@@ -48,7 +48,7 @@ class PostsController extends AppController
     {
         if ($this->request->is('post')) {
             $post = $this->Posts->newEmptyEntity();
-            $post = $this->Posts->patchEntity($post, $this->request->getData());
+            $data = $this->request->getData();
 
              // Gerar o slug a partir do título
              $slug = Text::slug($data['title']);
