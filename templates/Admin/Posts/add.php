@@ -27,19 +27,15 @@
                 <div class="mb-3">
                     <?= $this->Form->control('category_id', [
                         'options' => $categories,
-                        'class' => 'form-select'
+                        'class' => 'form-control',
                     ]) ?>
                 </div>
 
                 <div class="mb-3">
                     <?= $this->Form->control('user_id', [
                         'options' => $users,
-                        'class' => 'form-select'
+                        'class' => 'form-control',
                     ]) ?>
-                </div>
-
-                <div class="mb-3">
-                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
                 </div>
 
                 <div class="mb-3">
