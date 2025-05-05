@@ -10,8 +10,8 @@
 <div class="row">
     <div class="col-md-8 offset-md-2">
         <div class="card">
-            <div class="card-header">
-                <h4 class="mb-0"><?= $post->isNew() ? __('Add Post') : __('Edit Post') ?></h4>
+            <div class="card-header">                
+                <h4 class="mb-0"><?= __('Add Post') ?></h4>
             </div>
             <div class="card-body">
                 <?= $this->Form->create($post) ?>
