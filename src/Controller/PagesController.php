@@ -95,11 +95,12 @@ class PagesController extends AppController
 
     public function home()
     {
+        $this->viewBuilder()->setLayout('site');
         $this->loadModel('Posts');
         $posts = $this->Posts->find('all', ['conditions' => ['status' => 'publicado'], 'order' => ['published' => 'DESC']])->all();
         $this->set(compact('posts'));
 
-        $this->viewBuilder()->setLayout('site'); // Garante que o layout 'site' seja usado
+         // Garante que o layout 'site' seja usado
     }
 }
 
