@@ -95,7 +95,7 @@ class PagesController extends AppController
 
     public function home()
     {
-        $this->loadComponent('RequestHandler'); // Se ainda não estiver carregado
+        $this->loadModel('Posts');
         $this->Posts = $this->loadModel('Posts');
         $posts = $this->Posts->find('all', [
             'conditions' => ['status' => 'publicado'],
