@@ -50,6 +50,12 @@ class PostsController extends AppController
             $post = $this->Posts->newEmptyEntity();
             $post = $this->Posts->patchEntity($post, $this->request->getData());
 
+             // Gerar o slug a partir do título
+             $slug = Text::slug($data['title']);
+             $data['slug'] = $slug; // Adicionar o slug aos dados
+
+             $post = $this->Posts->patchEntity($post, $data);
+
             // Gerenciar o upload da imagem
             $image = $this->request->getData('image');
             if (!empty($image) && is_object($image) && !$image->getError()) {
