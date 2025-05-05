@@ -50,7 +50,15 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('status', ['class' => 'form-select']) ?>
+                    <?= $this->Form->control('status', [
+                        'label' => 'Status',
+                        'options' => [
+                            'rascunho' => 'Rascunho',
+                            'publicado' => 'Publicado'
+                        ],
+                        'empty' => 'Selecione um status',
+                        'class' => 'form-control'
+                    ]) ?>
                 </div>
 
                 <div class="mb-3">

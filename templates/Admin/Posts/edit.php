@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('image', ['class' => 'form-control']) ?>
+                    <?= $this->Form->control('image', ['class' => 'form-control','type' => 'file']) ?>
                 </div>
 
                 <div class="mb-3">
