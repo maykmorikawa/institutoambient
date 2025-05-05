@@ -95,12 +95,11 @@ class PagesController extends AppController
     }
 
     public function home()
-    {
-        $postsTable = TableRegistry::getTableLocator()->get('Posts');
-        $posts = $postsTable->find('all', ['conditions' => ['status' => 'publicado'], 'order' => ['published' => 'DESC']])->all();
-        $this->set(compact('posts'));
-        $this->viewBuilder()->setLayout('site');
-    }
+{
+    $posts = $this->Posts->find('all', conditions: ['status' => 'publicado'], order: ['published' => 'DESC'])->all();
+    $this->set(compact('posts'));
+    $this->viewBuilder()->setLayout('site');
+}
 }
 
 
