@@ -67,7 +67,7 @@ class PostsController extends AppController
                 // Houve um erro no upload
                 $this->Flash->error(__('Erro ao fazer o upload da imagem.'));
             }
-
+            debug($post->image);
             if ($this->Posts->save($post)) {
                 $this->Flash->success(__('Post salvo com sucesso.'));
                 return $this->redirect(['action' => 'index']);
