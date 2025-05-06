@@ -78,22 +78,23 @@ class PagesController extends AppController
         }
     }
 
+    
     public function view($slug = null)
     {
         if (!$slug) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
-
-        $post = $this->Posts->findBySlug($slug)->first();
-
+    
+        $post = $this->loadModel('Posts')->findBySlug($slug)->first();
+    
         if (!$post) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
-
+    
         $this->set(compact('post'));
         $this->viewBuilder()->setLayout('site');
     }
-
+    
     public function manutencao()
     {
         $this->viewBuilder()->setLayout('manutencao');

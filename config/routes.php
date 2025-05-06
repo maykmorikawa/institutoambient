@@ -66,11 +66,7 @@ return function (RouteBuilder $routes): void {
           $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
      
           // 🔥 SUA ROTA PERSONALIZADA AQUI
-          $builder->connect(
-          '/noticia/:slug',
-          ['controller' => 'Pages', 'action' => 'view'],
-          ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+']
-          );
+          $builder->connect('/noticia/:slug',['controller' => 'Pages', 'action' => 'view'],['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]);
      
           $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
      
