@@ -24,7 +24,7 @@
 
 use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
-
+use Cake\Routing\Route\Route;
 
 
 /*
@@ -51,7 +51,8 @@ return function (RouteBuilder $routes): void {
      * inconsistently cased URLs when used with `{plugin}`, `{controller}` and
      * `{action}` markers.
      */
-       $routes->setRouteClass(DashedRoute::class);
+       $routes->setRouteClass(Route::class);
+
 
        $routes->scope('/', function (RouteBuilder $builder): void {
               /*
@@ -67,7 +68,11 @@ return function (RouteBuilder $routes): void {
               $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
 
                  // A ROTA PARA VISUALIZAR O POST POR SLUG DEVE VIR ANTES DA ROTA GENÉRICA /pages/*
-              $builder->connect('/noticia/:slug', ['controller' => 'Pages','action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9-]+']);
+              $builder->connect(
+                     '/noticia/:slug',
+                     ['controller' => 'Pages', 'action' => 'view'],
+                     ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]
+              );
               
               
 
