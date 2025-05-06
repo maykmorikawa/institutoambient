@@ -113,9 +113,11 @@ class PostsController extends AppController
                 if (!empty($post->image) && file_exists(WWW_ROOT . 'img/uploads/' . $post->image)) {
                     unlink(WWW_ROOT . 'img/uploads/' . $post->image);
                 }
+               
                 $filename = time() . '-' . $image->getClientFilename();
                 $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
                 $post->image = 'uploads/' . $filename;
+                debug($post->image);
             } elseif (!empty($image) && is_object($image) && $image->getError()) {
                 $this->Flash->error(__('Erro ao fazer o upload da imagem.'));
             } else {
