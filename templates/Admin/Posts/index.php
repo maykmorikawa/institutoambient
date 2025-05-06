@@ -21,7 +21,7 @@
                         <th><?= $this->Paginator->sort('user_id', 'Autor') ?></th>
                         <th><?= $this->Paginator->sort('created', 'Criado em') ?></th>
                         <th><?= $this->Paginator->sort('status') ?></th>
-                        <th><?= $this->Paginator->sort('published', 'Publicado') ?></th>
+                       
                         <th><?= __('Ações') ?></th>
                     </tr>
                 </thead>
@@ -41,16 +41,13 @@
                                     : '<span class="text-muted">-</span>' ?>
                             </td>
                             <td><?= h($post->created->format('d/m/Y H:i')) ?></td>
+                            
                             <td>
-                                <span class="badge bg-<?= $post->status === 'ativo' ? 'success' : 'secondary' ?>">
-                                    <?= h(ucfirst($post->status)) ?>
-                                </span>
+                                <?= $post->status === 'publicado'
+                                    ? '<span class="badge bg-primary text-white"><strong>Sim</strong></span>'
+                                    : '<span class="badge bg-warning text-dark"><strong>Não</strong></span>' ?>
                             </td>
-                            <td>
-                                <?= $post->published
-                                    ? '<span class="badge bg-primary">Sim</span>'
-                                    : '<span class="badge bg-warning text-dark">Não</span>' ?>
-                            </td>
+
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['action' => 'view', $post->id], ['class' => 'btn btn-sm btn-outline-secondary']) ?>
                                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $post->id], ['class' => 'btn btn-sm btn-outline-primary']) ?>

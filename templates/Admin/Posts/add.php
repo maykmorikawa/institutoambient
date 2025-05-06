@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
+                    <?= $this->Form->control('slug', ['required' => false ,'class' => 'form-control']) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('excerpt', ['class' => 'form-control', 'rows' => 3]) ?>

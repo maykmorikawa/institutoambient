@@ -98,7 +98,7 @@ class PostsTable extends Table
         $validator
             ->scalar('slug')
             ->maxLength('slug', 255)
-            ->requirePresence('slug', 'create')
+            
             ->notEmptyString('slug')
             ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 

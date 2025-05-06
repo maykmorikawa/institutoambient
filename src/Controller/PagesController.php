@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -14,6 +15,7 @@ declare(strict_types=1);
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Controller;
 
 use Cake\Core\Configure;
@@ -62,7 +64,7 @@ class PagesController extends AppController
             $subpage = $path[1];
         }
         $this->set(compact('page', 'subpage'));
-        
+
         $this->viewBuilder()->setLayout('site');
 
         try {
@@ -80,27 +82,23 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('manutencao');
         $this->render('manutencao'); // Garante que a view correta será carregada
     }
-    public function quemsomos()
-    {
-    }
+    public function quemsomos() {}
 
-    public function transparencia()
-    {
-    }
-    public function videos()
-    {
-    }
-    public function conselho()
-    { 
-    }
+    public function transparencia() {}
+    public function videos() {}
+    public function conselho() {}
 
     public function home()
     {
-        $postsTable = TableRegistry::getTableLocator()->get('Posts'); // Ou $this->Posts se você estiver usando a propriedade carregada
-        $posts = $postsTable->find('all', conditions: ['status' => 'publicado'], order: ['published' => 'DESC'])->all();
+        $postsTable = TableRegistry::getTableLocator()->get('Posts');
+
+        $posts = $postsTable->find('all', [
+            'conditions' => ['status' => 'publicado'],
+            'order' => ['created' => 'DESC'], // Ou 'published' se esse campo for a data de publicação
+            'limit' => 3
+        ])->all();
+
         $this->set(compact('posts'));
         $this->viewBuilder()->setLayout('site');
     }
 }
-
-
