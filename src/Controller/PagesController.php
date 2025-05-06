@@ -93,8 +93,8 @@ class PagesController extends AppController
         $postsTable = TableRegistry::getTableLocator()->get('Posts');
 
         $posts = $postsTable->find('all', conditions: ['status' => 'publicado'],
-                                          order: ['created' => 'DESC'], // Ou 'published' se esse campo for a data de publicação
-                                          limit: [3])->all();
+                                        order: ['created' => 'DESC'], // Ou 'published' se esse campo for a data de publicação
+                                        limit: 3)->all();
 
         $this->set(compact('posts'));
         $this->viewBuilder()->setLayout('site');
