@@ -91,7 +91,7 @@ class PagesController extends AppController
         }
 
         $this->set(compact('post'));
-        $this->viewBuilder()->setLayout('site'); // Assumindo que você tem um layout chamado 'site'
+        $this->viewBuilder()->setLayout('site');
     }
 
     public function manutencao()
