@@ -51,23 +51,24 @@ return function (RouteBuilder $routes): void {
      * inconsistently cased URLs when used with `{plugin}`, `{controller}` and
      * `{action}` markers.
      */
-        $routes->setRouteClass(DashedRoute::class);
+       $routes->setRouteClass(DashedRoute::class);
 
-        $routes->scope('/', function (RouteBuilder $builder): void {
-                /*
+       $routes->scope('/', function (RouteBuilder $builder): void {
+              /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',
          * its action called 'display', and we pass a param to select the view file
          * to use (in this case, templates/Pages/home.php)...
          */
-                $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
-                $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
-                $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
-                $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
-                $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
-                $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
+              $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
+              $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
+              $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
+              $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
+              $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
+              $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
 
                  // A ROTA PARA VISUALIZAR O POST POR SLUG DEVE VIR ANTES DA ROTA GENÉRICA /pages/*
               $builder->connect('/noticia/:slug', ['controller' => 'Pages','action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9-]+']);
+              
               
 
               $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
