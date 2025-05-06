@@ -23,6 +23,7 @@ class AppController extends Controller
         // Liberar acesso à página pública
         $this->Authentication->addUnauthenticatedActions([
             'display',
+            'home',
             'manutencao' // libera /pages/display/*, inclusive /pages/home
         ]);
     }

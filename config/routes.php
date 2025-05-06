@@ -60,7 +60,7 @@ return function (RouteBuilder $routes): void {
          * to use (in this case, templates/Pages/home.php)...
          */
                 $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
-                $builder->connect('/home', ['controller' => 'Pages', 'action' => 'display', 'home']);
+                $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
                 $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
                 $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
                 $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);

@@ -15,14 +15,14 @@
                 <h4 class="mb-0"><?= $post->isNew() ? __('Add Post') : __('Edit Post') ?></h4>
             </div>
             <div class="card-body">
-                <?= $this->Form->create($post) ?>
+                <?= $this->Form->create($post, ['enctype' => 'multipart/form-data']) ?>
 
                 <div class="mb-3">
                     <?= $this->Form->control('title', ['class' => 'form-control']) ?>
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('content', ['class' => 'form-control', 'rows' => 5]) ?>
+                    <?= $this->Form->control('content', ['id' => 'summernote','class' => 'form-control', 'type' => 'textarea']) ?>
                 </div>
 
                 <div class="mb-3">
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('image', ['class' => 'form-control']) ?>
+                    <?= $this->Form->control('image', ['class' => 'form-control','type' => 'file']) ?>
                 </div>
 
                 <div class="mb-3">
@@ -85,3 +85,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    $<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+  </script>
+</script>

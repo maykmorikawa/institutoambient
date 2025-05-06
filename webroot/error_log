@@ -1,0 +1,471 @@
+[11-Apr-2025 01:00:56 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:00:59 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:01:05 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:01:12 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:01:46 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:01:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:02:38 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:27:28 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:27:41 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:30:12 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:30:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:30:29 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:46:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:46:31 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:47:02 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:47:07 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:49:29 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:54:21 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:55:57 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:57:53 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 01:59:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 04:42:09 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 04:44:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 04:44:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 04:44:35 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 04:50:15 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 06:44:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:16:00 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:16:00 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:16:00 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:16:00 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:21:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:21:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:21:55 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 07:46:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 08:38:10 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:23:39 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:23:41 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:26:19 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:26:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:29:08 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:39:55 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:45:38 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:45:50 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:45:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:48:13 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:48:16 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:48:17 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:54:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 10:55:06 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[11-Apr-2025 11:46:40 America/Fortaleza] PHP Fatal error:  Uncaught Error: Interface "Authentication\AuthenticationServiceProviderInterface" not found in /home2/inst2480/public_html/src/Application.php:49
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(576): include()
+#1 /home2/inst2480/public_html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home2/inst2480...')
+#2 /home2/inst2480/public_html/webroot/index.php(34): Composer\Autoload\ClassLoader->loadClass('App\\Application')
+#3 {main}
+  thrown in /home2/inst2480/public_html/src/Application.php on line 49
+[12-Apr-2025 10:49:28 America/Fortaleza] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in /home2/inst2480/public_html/src/Application.php on line 60
+[12-Apr-2025 10:49:49 America/Fortaleza] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in /home2/inst2480/public_html/src/Application.php on line 60
+[12-Apr-2025 10:49:52 America/Fortaleza] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in /home2/inst2480/public_html/src/Application.php on line 60
+[12-Apr-2025 10:50:07 America/Fortaleza] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in /home2/inst2480/public_html/src/Application.php on line 60
+[12-Apr-2025 10:50:24 America/Fortaleza] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in /home2/inst2480/public_html/src/Application.php on line 60
+[12-Apr-2025 10:54:25 America/Fortaleza] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in /home2/inst2480/public_html/src/Application.php on line 60
+[12-Apr-2025 10:54:29 America/Fortaleza] PHP Fatal error:  Uncaught Cake\Core\Exception\CakeException: Plugin named `Authentication` is already loaded in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php:175
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/BaseApplication.php(146): Cake\Core\PluginCollection->add(Object(Authentication\Plugin))
+#1 /home2/inst2480/public_html/src/Application.php(63): Cake\Http\BaseApplication->addPlugin('Authentication')
+#2 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(123): App\Application->bootstrap()
+#3 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(85): Cake\Http\Server->bootstrap()
+#4 /home2/inst2480/public_html/webroot/index.php(37): Cake\Http\Server->run()
+#5 {main}
+  thrown in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php on line 175
+[12-Apr-2025 10:54:32 America/Fortaleza] PHP Fatal error:  Uncaught Cake\Core\Exception\CakeException: Plugin named `Authentication` is already loaded in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php:175
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/BaseApplication.php(146): Cake\Core\PluginCollection->add(Object(Authentication\Plugin))
+#1 /home2/inst2480/public_html/src/Application.php(63): Cake\Http\BaseApplication->addPlugin('Authentication')
+#2 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(123): App\Application->bootstrap()
+#3 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(85): Cake\Http\Server->bootstrap()
+#4 /home2/inst2480/public_html/webroot/index.php(37): Cake\Http\Server->run()
+#5 {main}
+  thrown in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php on line 175
+[12-Apr-2025 10:54:34 America/Fortaleza] PHP Fatal error:  Uncaught Cake\Core\Exception\CakeException: Plugin named `Authentication` is already loaded in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php:175
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/BaseApplication.php(146): Cake\Core\PluginCollection->add(Object(Authentication\Plugin))
+#1 /home2/inst2480/public_html/src/Application.php(63): Cake\Http\BaseApplication->addPlugin('Authentication')
+#2 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(123): App\Application->bootstrap()
+#3 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(85): Cake\Http\Server->bootstrap()
+#4 /home2/inst2480/public_html/webroot/index.php(37): Cake\Http\Server->run()
+#5 {main}
+  thrown in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php on line 175
+[12-Apr-2025 10:54:35 America/Fortaleza] PHP Fatal error:  Uncaught Cake\Core\Exception\CakeException: Plugin named `Authentication` is already loaded in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php:175
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/BaseApplication.php(146): Cake\Core\PluginCollection->add(Object(Authentication\Plugin))
+#1 /home2/inst2480/public_html/src/Application.php(63): Cake\Http\BaseApplication->addPlugin('Authentication')
+#2 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(123): App\Application->bootstrap()
+#3 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(85): Cake\Http\Server->bootstrap()
+#4 /home2/inst2480/public_html/webroot/index.php(37): Cake\Http\Server->run()
+#5 {main}
+  thrown in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php on line 175
+[12-Apr-2025 10:55:37 America/Fortaleza] PHP Fatal error:  Uncaught Cake\Core\Exception\CakeException: Plugin named `Authentication` is already loaded in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php:175
+Stack trace:
+#0 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/BaseApplication.php(146): Cake\Core\PluginCollection->add(Object(Authentication\Plugin))
+#1 /home2/inst2480/public_html/src/Application.php(63): Cake\Http\BaseApplication->addPlugin('Authentication')
+#2 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(123): App\Application->bootstrap()
+#3 /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Http/Server.php(85): Cake\Http\Server->bootstrap()
+#4 /home2/inst2480/public_html/webroot/index.php(37): Cake\Http\Server->run()
+#5 {main}
+  thrown in /home2/inst2480/public_html/vendor/cakephp/cakephp/src/Core/PluginCollection.php on line 175
