@@ -34,7 +34,7 @@ use Cake\Routing\RouteBuilder;
  */
 
 return function (RouteBuilder $routes): void {
-        /*
+       /*
      * The default class to use for all routes
      *
      * The following route classes are supplied with CakePHP and are appropriate
@@ -51,32 +51,33 @@ return function (RouteBuilder $routes): void {
      * inconsistently cased URLs when used with `{plugin}`, `{controller}` and
      * `{action}` markers.
      */
-        $routes->setRouteClass(DashedRoute::class);
+       $routes->setRouteClass(DashedRoute::class);
 
-        $routes->scope('/', function (RouteBuilder $builder): void {
-                /*
+       $routes->scope('/', function (RouteBuilder $builder): void {
+              /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',
          * its action called 'display', and we pass a param to select the view file
          * to use (in this case, templates/Pages/home.php)...
          */
-                $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
-                $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
-                $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
-                $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
-                $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
-                $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
+              $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
+              $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
+              $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
+              $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
+              $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
+              $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
 
                  // A ROTA PARA VISUALIZAR O POST POR SLUG DEVE VIR ANTES DA ROTA GENÉRICA /pages/*
-                $builder->connect('/pages/view/:slug', ['controller' => 'Pages','action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9-]+']);
+              $builder->connect('/posts/view/:slug', ['controller' => 'Posts','action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9-]+']);
 
-                $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+              
+              $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
-                /*
+              /*
          * ...and connect the rest of 'Pages' controller's URLs.
          */
-                $builder->connect('/pages/*', 'Pages::display');
+              $builder->connect('/pages/*', 'Pages::display');
 
-                /*
+              /*
          * Connect catchall routes for all controllers.
          *
          * The `fallbacks` method is a shortcut for
@@ -89,22 +90,22 @@ return function (RouteBuilder $routes): void {
          * It is NOT recommended to use fallback routes after your initial prototyping phase!
          * See https://book.cakephp.org/5/en/development/routing.html#fallbacks-method for more information
          */
-        });
+       });
 
         // Prefixo Admin
-        $routes->prefix('Admin', ['path' => '/admin'], function (RouteBuilder $builder): void {
-                $builder->setRouteClass(DashedRoute::class);
+       $routes->prefix('Admin', ['path' => '/admin'], function (RouteBuilder $builder): void {
+              $builder->setRouteClass(DashedRoute::class);
                 $builder->connect('/', ['controller' => 'Users', 'action' => 'admin']); // opcional
 
-                $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
-                $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
-                $builder->fallbacks(DashedRoute::class);
-        });
-        
+              $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+              $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
+              $builder->fallbacks(DashedRoute::class);
+       });
+       
 
         // Fallback geral (redundante mas seguro em casos específicos)
-        $routes->fallbacks(DashedRoute::class);
-        /*
+       $routes->fallbacks(DashedRoute::class);
+       /*
      * If you need a different set of middleware or none at all,
      * open new scope and define routes there.
      *

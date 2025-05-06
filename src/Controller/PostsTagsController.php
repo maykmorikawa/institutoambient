@@ -31,10 +31,20 @@ class PostsTagsController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view($slug = null)
     {
-        $postsTag = $this->PostsTags->get($id, contain: ['Posts', 'Tags']);
-        $this->set(compact('postsTag'));
+        if (!$slug) {
+            throw new NotFoundException(__('Post não encontrado.'));
+        }
+
+        $post = $this->Posts->findBySlug($slug)->first();
+
+        if (!$post) {
+            throw new NotFoundException(__('Post não encontrado.'));
+        }
+
+        $this->set(compact('post'));
+        $this->viewBuilder()->setLayout('site'); // Mantenha o layout 'site'
     }
 
     /**
