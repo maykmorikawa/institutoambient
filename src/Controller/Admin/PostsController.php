@@ -78,7 +78,7 @@ class PostsController extends AppController
         $categories = $this->Posts->Categories->find('list', limit: 200)->all();
         $users = $this->Posts->Users->find('list', limit: 200)->all();
         $tags = $this->Posts->Tags->find('list', limit: 200)->all();
-        $this->set(compact('post', 'categories', 'users', 'tags'));
+        $this->set(compact('categories', 'users', 'tags'));
 }
 
     /**
