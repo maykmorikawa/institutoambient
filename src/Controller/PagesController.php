@@ -36,6 +36,22 @@ use App\Controller\AppController;
 class PagesController extends AppController
 {
 
+
+    public function view($slug = null)
+    {
+        if (!$slug) {
+            throw new NotFoundException(__('Post não encontrado.'));
+        }
+
+        $post = $this->Posts->findBySlug($slug)->first();
+
+        if (!$post) {
+            throw new NotFoundException(__('Post não encontrado.'));
+        }
+
+        $this->set(compact('post'));
+        $this->viewBuilder()->setLayout('site');
+    }
     /**
      * Displays a view
      *
@@ -50,23 +66,6 @@ class PagesController extends AppController
      */
     public function display(string ...$path): ?Response
     {
-        public function view($slug = null)
-        {
-            if (!$slug) {
-                throw new NotFoundException(__('Post não encontrado.'));
-            }
-        
-            $post = $this->Posts->findBySlug($slug)->first();
-        
-            if (!$post) {
-                throw new NotFoundException(__('Post não encontrado.'));
-            }
-        
-            $this->set(compact('post'));
-            $this->viewBuilder()->setLayout('site');
-        }
-
-
         if (!$path) {
             return $this->redirect('/');
         }
@@ -94,6 +93,8 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    
     
     
     public function manutencao()
