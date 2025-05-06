@@ -65,9 +65,12 @@ return function (RouteBuilder $routes): void {
                 $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
                 $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
                 $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
-                $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
+                 // A ROTA PARA VISUALIZAR O POST POR SLUG DEVE VIR ANTES DA ROTA GENÉRICA /pages/*
                 $builder->connect('/pages/view/:slug', ['controller' => 'Pages','action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9-]+']);
-                
+
+                $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
                 /*
          * ...and connect the rest of 'Pages' controller's URLs.
          */
