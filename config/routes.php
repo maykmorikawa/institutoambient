@@ -56,7 +56,7 @@ return function (RouteBuilder $routes): void {
 
      $routes->scope('/', function (RouteBuilder $builder): void {
           $builder->setRouteClass(DashedRoute::class);
-      
+     
           // ROTAS ESPECÍFICAS PRIMEIRO
           $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
           $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
@@ -64,20 +64,19 @@ return function (RouteBuilder $routes): void {
           $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
           $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
           $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
-      
+     
           // 🔥 SUA ROTA PERSONALIZADA AQUI
           $builder->connect(
-              '/noticia/:slug',
-              ['controller' => 'Pages', 'action' => 'view'],
-              ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+']
+          '/noticia/:slug',
+          ['controller' => 'Pages', 'action' => 'view'],
+          ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+']
           );
-      
+     
           $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
-      
+     
           // ✅ CHAME O Fallbacks **DENTRO** do escopo
           $builder->fallbacks(DashedRoute::class);
-      });
-
+     
           /*
          * Connect catchall routes for all controllers.
          *
