@@ -84,9 +84,6 @@ class PagesController extends AppController
             throw new NotFoundException(__('Post não encontrado.'));
         }
 
-        // Normalizar slug se necessário
-        $slug = urldecode($slug);
-
         $post = $this->Posts->findBySlug($slug)->first();
 
         if (!$post) {
