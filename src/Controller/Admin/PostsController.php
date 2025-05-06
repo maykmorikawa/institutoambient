@@ -47,16 +47,17 @@ class PostsController extends AppController
      */
     public function add()
     {
+        $post = $this->Posts->newEmptyEntity(); // Certifique-se que $post está definido
+    
         if ($this->request->is('post')) {
-            $post = $this->Posts->newEmptyEntity();
             $data = $this->request->getData();
-
-             // Gerar o slug a partir do título
-             $slug = Text::slug($data['title']);
-             $data['slug'] = $slug; // Adicionar o slug aos dados
-             
-             $post = $this->Posts->patchEntity($post, $data);
-
+    
+            // Gerar o slug a partir do título
+            $slug = Text::slug($data['title']);
+            $data['slug'] = $slug;
+    
+            $post = $this->Posts->patchEntity($post, $data);
+    
             // Gerenciar o upload da imagem
             $image = $this->request->getData('image');
             if (!empty($image) && is_object($image) && !$image->getError()) {
@@ -64,22 +65,23 @@ class PostsController extends AppController
                 $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
                 $post->image = 'uploads/' . $filename;
             } elseif (!empty($image) && is_object($image) && $image->getError()) {
-                // Houve um erro no upload
                 $this->Flash->error(__('Erro ao fazer o upload da imagem.'));
             }
-            
+    
             if ($this->Posts->save($post)) {
                 $this->Flash->success(__('Post salvo com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Não foi possível salvar o post.'));
         }
-
+    
         $categories = $this->Posts->Categories->find('list', limit: 200)->all();
         $users = $this->Posts->Users->find('list', limit: 200)->all();
         $tags = $this->Posts->Tags->find('list', limit: 200)->all();
-        $this->set(compact('categories', 'users', 'tags'));
-}
+    
+        $this->set(compact('post', 'categories', 'users', 'tags'));
+    }
+    
 
     /**
      * Edit method
