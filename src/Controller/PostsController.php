@@ -36,14 +36,14 @@ class PostsController extends AppController
      */
     public function view($slug = null)
     {
-        $this->viewBuilder()->setLayout('site');
+        
         if (!$slug) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
-
+        
         $slug = urldecode($slug);
         $slug = mb_strtolower($slug);
-
+        
         $postsTable = $this->fetchTable('Posts');
 
         $post = $postsTable->find()
@@ -53,7 +53,8 @@ class PostsController extends AppController
         if (!$post) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
-
+        
+        $this->viewBuilder()->setLayout('site');
         $this->set(compact('post'));
     }
 

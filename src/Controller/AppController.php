@@ -25,6 +25,8 @@ class AppController extends Controller
         $this->Authentication->addUnauthenticatedActions([
             'display',
             'home',
+            'noticia',
+            'view',
             'manutencao' // libera /pages/display/*, inclusive /pages/home
         ]);
     }
