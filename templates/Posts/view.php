@@ -1,6 +1,5 @@
-<!-- PAGE TITLE
-        ================================================== -->
-        <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
+<!-- PAGE TITLE ================================================== -->
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">
@@ -9,7 +8,7 @@
                 </div>
                 <div class="col-md-12">
                     <ul class="ps-0">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home">Home</a></li>
                         <li><a href="#!">Blog Details</a></li>
                     </ul>
                 </div>
@@ -18,8 +17,7 @@
     </div>
 </section>
 
-<!-- BLOG DETAILS
-        ================================================== -->
+<!-- BLOG DETAILS ================================================== -->
 <section>
     <div class="container">
         <div class="row">
@@ -88,28 +86,27 @@
                         </div>
                     </div>
                     <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="400ms">
-                        <h3 class="mb-1-6 h5">Recent Posts</h3>
-                        <div class="media mb-4">
-                            <img src="<?= WWW; ?>/site/img/blog/blog-thumb1.jpg" class="rounded" alt="...">
-                            <div class="media-body ms-3">
-                                <h4 class="h6"><a href="#!">Here's what people are saying about insurance.</a></h4>
-                                <p class="mb-0 small">Mar 8, 2021</p>
+                        <h3 class="mb-1-6 h5">Postagens Recentes</h3>
+
+                        <?php foreach ($recentes as $r): ?>
+                            <div class="media mb-4">
+                                <img src="<?= $r->imagem ?? $this->Url->image('/img/' . $r->image) ?>"
+                                    class="rounded img-fluid"
+                                    alt="<?= h($r->title) ?>"
+                                    width="160" height="160"
+                                    style="object-fit: cover;">
+
+                                <div class="media-body ms-3">
+                                    <h4 class="h6">
+                                        <a href="<?= $this->Url->build([h($r->slug)]) ?>">
+                                            <?= h($r->title) ?>
+                                        </a>
+
+                                    </h4>
+                                    <p class="mb-0 small"><?= $r->created->format('M d, Y') ?></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="media mb-4">
-                            <img src="<?= WWW; ?>site/img/blog/blog-thumb2.jpg" class="rounded" alt="...">
-                            <div class="media-body ms-3">
-                                <h4 class="h6"><a href="#!">You will never believe these truth behind insurance.</a></h4>
-                                <p class="mb-0 small">Mar 1, 2021</p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <img src="<?= WWW; ?>/site/blog/blog-thumb3.jpg" class="rounded" alt="...">
-                            <div class="media-body ms-3">
-                                <h4 class="h6"><a href="#!">How to have fantastic insurance with minimal spending.</a></h4>
-                                <p class="mb-0 small">Feb 25, 2021</p>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                     <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="600ms">
                         <h3 class="mb-1-6 h5">Categories</h3>

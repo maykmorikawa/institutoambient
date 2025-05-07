@@ -3,8 +3,10 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+
 use Cake\Http\Exception\NotFoundException;
 use Cake\ORM\Locator\LocatorAwareTrait;
+use Cake\ORM\TableRegistry;
 
 /**
  * Posts Controller
@@ -36,28 +38,37 @@ class PostsController extends AppController
      */
     public function view($slug = null)
     {
-        
         if (!$slug) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
-        
+
         $slug = urldecode($slug);
-        $slug = mb_strtolower($slug);
-        
         $postsTable = $this->fetchTable('Posts');
 
         $post = $postsTable->find()
-            ->where(['LOWER(slug)' => $slug])
+            ->where(['slug' => $slug])
             ->first();
 
         if (!$post) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
-        
+
+        // Buscar os 3 posts recentes, exceto o atual
+        $recentes = $postsTable->find()
+            ->where([
+                'status' => 'publicado',
+                'id !=' => $post->id // Evita repetir o post atual
+            ])
+            ->order(['created' => 'DESC'])
+            ->limit(3)
+            ->all();
+
         $this->viewBuilder()->setLayout('site');
-        $this->set(compact('post'));
+        $this->set(compact('post', 'recentes'));
     }
 
+
+    
 
     /**
      * Add method
