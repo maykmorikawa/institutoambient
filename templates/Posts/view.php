@@ -1,6 +1,6 @@
 <!-- PAGE TITLE
         ================================================== -->
-        <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="img/banner/page-title.jpg">
+        <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">
@@ -64,7 +64,7 @@
                     <!-- Autor do post ou avatar fictício -->
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-center align-items-center mx-auto py-1-9 px-3 bg-light">
-                            <div class="me-3"><img class="rounded-circle w-60px" src="/img/avatar/avatar-01.jpg" alt="..."></div>
+                            <div class="me-3"><img class="rounded-circle w-60px" src="/<?= WWW; ?>/site/img/avatar/avatar-01.jpg" alt="..."></div>
                             <div class="text-start">
                                 <h4 class="h6 mb-0">Postado por <?= h($post->author_name ?? 'Equipe Editorial') ?></h4>
                                 <span class="small text-muted"><?= $post->created->format('d M Y') ?></span>
@@ -90,21 +90,21 @@
                     <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="400ms">
                         <h3 class="mb-1-6 h5">Recent Posts</h3>
                         <div class="media mb-4">
-                            <img src="img/blog/blog-thumb1.jpg" class="rounded" alt="...">
+                            <img src="<?= WWW; ?>/site/img/blog/blog-thumb1.jpg" class="rounded" alt="...">
                             <div class="media-body ms-3">
                                 <h4 class="h6"><a href="#!">Here's what people are saying about insurance.</a></h4>
                                 <p class="mb-0 small">Mar 8, 2021</p>
                             </div>
                         </div>
                         <div class="media mb-4">
-                            <img src="img/blog/blog-thumb2.jpg" class="rounded" alt="...">
+                            <img src="<?= WWW; ?>site/img/blog/blog-thumb2.jpg" class="rounded" alt="...">
                             <div class="media-body ms-3">
                                 <h4 class="h6"><a href="#!">You will never believe these truth behind insurance.</a></h4>
                                 <p class="mb-0 small">Mar 1, 2021</p>
                             </div>
                         </div>
                         <div class="media">
-                            <img src="img/blog/blog-thumb3.jpg" class="rounded" alt="...">
+                            <img src="<?= WWW; ?>/site/blog/blog-thumb3.jpg" class="rounded" alt="...">
                             <div class="media-body ms-3">
                                 <h4 class="h6"><a href="#!">How to have fantastic insurance with minimal spending.</a></h4>
                                 <p class="mb-0 small">Feb 25, 2021</p>
