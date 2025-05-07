@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
-
 use App\Controller\AppController;
 use Cake\Utility\Text; // Esta linha é crucial
 use Cake\Http\Exception\NotFoundException;
@@ -28,7 +27,6 @@ class PostsController extends AppController
 
         $this->set(compact('posts'));
     }
-
     /**
      * View method
      *
@@ -41,7 +39,6 @@ class PostsController extends AppController
         $post = $this->Posts->get($id, contain: ['Categories', 'Users', 'Tags', 'Comments']);
         $this->set(compact('post'));
     }
-
     /**
      * Add method
      *
@@ -76,7 +73,6 @@ class PostsController extends AppController
             }
             $this->Flash->error(__('Não foi possível salvar o post.'));
         }
-
         $categories = $this->Posts->Categories->find('list', limit: 200)->all();
         $users = $this->Posts->Users->find('list', limit: 200)->all();
         $tags = $this->Posts->Tags->find('list', limit: 200)->all();

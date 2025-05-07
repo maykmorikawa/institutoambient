@@ -1,7 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\Http\Exception\NotFoundException;
+use Cake\ORM\Locator\LocatorAwareTrait;
 
 /**
  * Posts Controller
@@ -31,11 +34,29 @@ class PostsController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view($slug = null)
     {
-        $post = $this->Posts->get($id, contain: ['Categories', 'Users', 'Tags']);
+        $this->viewBuilder()->setLayout('site');
+        if (!$slug) {
+            throw new NotFoundException(__('Post não encontrado.'));
+        }
+
+        $slug = urldecode($slug);
+        $slug = mb_strtolower($slug);
+
+        $postsTable = $this->fetchTable('Posts');
+
+        $post = $postsTable->find()
+            ->where(['LOWER(slug)' => $slug])
+            ->first();
+
+        if (!$post) {
+            throw new NotFoundException(__('Post não encontrado.'));
+        }
+
         $this->set(compact('post'));
     }
+
 
     /**
      * Add method

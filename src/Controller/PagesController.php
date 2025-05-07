@@ -35,15 +35,20 @@ use App\Controller\AppController;
  */
 class PagesController extends AppController
 {
-
-
     public function view($slug = null)
     {
         if (!$slug) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
 
-        $post = $this->Posts->findBySlug($slug)->first();
+        $slug = urldecode($slug);
+        $slug = mb_strtolower($slug);
+
+        $postsTable = $this->fetchTable('Posts');
+
+        $post = $postsTable->find()
+            ->where(['LOWER(slug)' => $slug])
+            ->first();
 
         if (!$post) {
             throw new NotFoundException(__('Post não encontrado.'));
