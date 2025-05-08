@@ -124,13 +124,13 @@
                             <h3 class="mb-1-6 h5">Tags</h3>
                             <div class="tags">
                                 <?php foreach ($post->tags as $tag): ?>
-                                    <a href="<?= $this->Url->build([
-                                        'controller' => 'Posts',
-                                        'action' => 'tag',
-                                        'slug' => $tag->slug
+                                <a href="<?= $this->Url->build([
+                                    'controller' => 'Posts',
+                                    'action' => 'tag',
+                                    $tag->slug
                                     ]) ?>">
-                                        <?= h($tag->name) ?>
-                                    </a>
+                                    <?= h($tag->name) ?>
+                                </a>
                                 <?php endforeach; ?>
                             </div>
                         </div>
