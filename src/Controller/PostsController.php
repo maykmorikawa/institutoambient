@@ -68,6 +68,21 @@ class PostsController extends AppController
         $this->set(compact('post', 'recentes'));
     }
 
+    public function tag($slug = null)
+    {
+        $tagsTable = $this->fetchTable('Tags');
+        $tag = $tagsTable->find()->where(['slug' => $slug])->contain(['Posts'])->first();
+
+        if (!$tag) {
+            throw new NotFoundException('Tag não encontrada');
+        }
+
+        $posts = $tag->posts;
+        $this->viewBuilder()->setLayout('site');
+        $this->set(compact('tag', 'posts'));
+    }
+
+
 
     
 
