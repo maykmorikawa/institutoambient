@@ -71,13 +71,20 @@ class PostsController extends AppController
     public function tag($slug = null)
     {
         $tagsTable = $this->fetchTable('Tags');
-        $tag = $tagsTable->find()->where(['slug' => $slug])->contain(['Posts'])->first();
+
+        $tag = $tagsTable->find()
+            ->where(['slug' => $slug])
+            ->contain(['Posts' => function ($q) {
+                return $q->where(['Posts.status' => 'publicado'])->order(['Posts.created' => 'DESC']);
+            }])
+            ->first();
 
         if (!$tag) {
-            throw new NotFoundException('Tag não encontrada');
+            throw new NotFoundException('Tag não encontrada.');
         }
 
         $posts = $tag->posts;
+
         $this->viewBuilder()->setLayout('site');
         $this->set(compact('tag', 'posts'));
     }
