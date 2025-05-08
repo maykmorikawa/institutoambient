@@ -119,19 +119,23 @@
                             <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Corporate (2)</a></li>
                         </ul>
                     </div>
-                    <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="800ms">
-                        <h3 class="mb-1-6 h5">Tags</h3>
-                        <div class="tags">
-                            <a href="#!">agency</a>
-                            <a href="#!">business</a>
-                            <a href="#!">design</a>
-                            <a href="#!">development</a>
-                            <a href="#!">technology</a>
-                            <a href="#!">web</a>
-                            <a href="#!">corporate</a>
-                            <a href="#!">startup</a>
+                    <?php if (!empty($post->tags)): ?>
+                        <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="800ms">
+                            <h3 class="mb-1-6 h5">Tags</h3>
+                            <div class="tags">
+                                <?php foreach ($post->tags as $tag): ?>
+                                    <a href="<?= $this->Url->build([
+                                        'controller' => 'Posts',
+                                        'action' => 'tag',
+                                        'slug' => $tag->slug
+                                    ]) ?>">
+                                        <?= h($tag->name) ?>
+                                    </a>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
+
                     <div class="widget p-4 wow fadeIn" data-wow-delay="1000ms">
                         <h3 class="mb-1-6 h5">Follow Us</h3>
                         <div>

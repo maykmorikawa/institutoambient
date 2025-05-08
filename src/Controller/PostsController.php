@@ -47,6 +47,7 @@ class PostsController extends AppController
 
         $post = $postsTable->find()
             ->where(['slug' => $slug])
+            ->contain(['Tags']) // ← isso traz as tags relacionadas
             ->first();
 
         if (!$post) {
