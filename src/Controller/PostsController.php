@@ -70,6 +70,10 @@ class PostsController extends AppController
 
     public function tag($slug = null)
     {
+        if (empty($slug)) {
+            throw new NotFoundException('Slug de tag não fornecido.');
+        }
+
         $tagsTable = $this->fetchTable('Tags');
 
         $tag = $tagsTable->find()
@@ -88,6 +92,7 @@ class PostsController extends AppController
         $this->viewBuilder()->setLayout('site');
         $this->set(compact('tag', 'posts'));
     }
+
 
 
 
