@@ -70,13 +70,13 @@
             var logodefault = $(".navbar-brand.logodefault img");
             if (scroll <= 50) {
                 $("header").removeClass("scrollHeader").addClass("fixedHeader");
-                logochange.attr('src', 'webroot/site/img/logos/logo-inner.png');
-                logodefault.attr('src', 'webroot/site/img/logos/logo.png');
+                logochange.attr('src', '<?= WWW; ?>/site/img/logos/logo-inner.png');
+                logodefault.attr('src', '<?= WWW; ?>/site/img/logos/logo.png');
             } 
             else {
                 $("header").removeClass("fixedHeader").addClass("scrollHeader");
-                logochange.attr('src', 'webroot/site/img/logos/logo.png');
-                logodefault.attr('src', 'webroot/site/img/logos/logo.png');
+                logochange.attr('src', '<?= WWW; ?>/site/img/logos/logo.png');
+                logodefault.attr('src', '<?= WWW; ?>/site/img/logos/logo.png');
             }
         });
 
