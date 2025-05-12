@@ -93,7 +93,7 @@
                                 <img src="<?= $r->imagem ?? $this->Url->image('/img/' . $r->image) ?>"
                                     class="rounded img-fluid"
                                     alt="<?= h($r->title) ?>"
-                                    width="160" height="160"
+                                    width="80" height="80"
                                     style="object-fit: cover;">
 
                                 <div class="media-body ms-3">
