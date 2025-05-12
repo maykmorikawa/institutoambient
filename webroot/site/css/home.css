@@ -22,9 +22,9 @@
 .media {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     /* Centraliza conteúdo */
-    text-align: center;
+    /* text-align: center;*/
 }
 
 
