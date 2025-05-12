@@ -1,3 +1,22 @@
+<!-- PAGE TITLE ================================================== -->
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
+    <div class="container position-unset">
+        <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Blog Details</h1>
+                </div>
+                <div class="col-md-12">
+                    <ul class="ps-0">
+                        <li><a href="home">Home</a></li>
+                        <li><a href="#!">Blog Details</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- BLOG DETAILS ================================================== -->
 <section>
     <div class="container">
