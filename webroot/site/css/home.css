@@ -20,11 +20,12 @@
 }
 
 .media {
-    display: flex;
-    flex-direction: column;
+    display: flex;    
     align-items: flex-start;
-    /* Centraliza conteúdo */
-    /* text-align: center;*/
+
+    /*Centraliza conteúdo */
+    /*flex-direction: column;
+      text-align: center;*/
 }
 
 
