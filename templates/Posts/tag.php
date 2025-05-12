@@ -41,24 +41,19 @@
                                         <div>
                                             <?= $this->Text->autoParagraph(h($post->content)) ?>
                                         </div>
-
-                                        <?php foreach ($posts as $post): ?>
-                                            <!-- ... conteúdo do post ... -->
-                                            <div class="mt-4">
-                                                <strong>Tags:</strong>
-                                                <?php if (!empty($post->tags)): ?>
-                                                    <?php foreach ($post->tags as $tag): ?>
-                                                        <span class="badge bg-secondary"><?= h($tag->name) ?></span>
-                                                    <?php endforeach; ?>
-                                                <?php else: ?>
-                                                    <span class="text-muted">Nenhuma tag relacionada.</span>
-                                                <?php endif; ?>
-                                            </div>
-                                        <?php endforeach; ?>
-
+                                        <!-- ... conteúdo do post ... -->
+                                        <div class="mt-4">
+                                            <strong>Tags:</strong>
+                                            <?php if (!empty($post->tags)): ?>
+                                                <?php foreach ($post->tags as $tag): ?>
+                                                    <span class="badge bg-secondary"><?= h($tag->name) ?></span>
+                                                <?php endforeach; ?>
+                                            <?php else: ?>
+                                                <span class="text-muted">Nenhuma tag relacionada.</span>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
-
                                 <!-- Autor -->
                                 <div class="d-flex justify-content-center align-items-center mx-auto py-1-9 px-3 bg-light">
                                     <div class="me-3">
