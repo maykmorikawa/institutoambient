@@ -62,7 +62,7 @@
                     <!-- Autor do post ou avatar fictício -->
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-center align-items-center mx-auto py-1-9 px-3 bg-light">
-                            <div class="me-3"><img class="rounded-circle w-60px" src="/<?= WWW; ?>/site/img/avatar/avatar-01.jpg" alt="..."></div>
+                            <div class="me-3"><img class="rounded-circle w-60px" src="/site/img/avatar/avatar-01.jpg" alt="..."></div>
                             <div class="text-start">
                                 <h4 class="h6 mb-0">Postado por <?= h($post->author_name ?? 'Equipe Editorial') ?></h4>
                                 <span class="small text-muted"><?= $post->published->format('d M Y') ?></span>
