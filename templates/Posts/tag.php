@@ -42,16 +42,20 @@
                                             <?= $this->Text->autoParagraph(h($post->content)) ?>
                                         </div>
 
-                                        <div class="mt-4">
-                                            <strong>Tags:</strong>
-                                            <?php if (!empty($post->tags)): ?>
-                                                <?php foreach ($post->tags as $tag): ?>
-                                                    <span class="badge bg-secondary"><?= h($tag->name) ?></span>
-                                                <?php endforeach; ?>
-                                            <?php else: ?>
-                                                <span class="text-muted">Nenhuma tag relacionada.</span>
-                                            <?php endif; ?>
-                                        </div>
+                                        <?php foreach ($posts as $post): ?>
+                                            <!-- ... conteúdo do post ... -->
+                                            <div class="mt-4">
+                                                <strong>Tags:</strong>
+                                                <?php if (!empty($post->tags)): ?>
+                                                    <?php foreach ($post->tags as $tag): ?>
+                                                        <span class="badge bg-secondary"><?= h($tag->name) ?></span>
+                                                    <?php endforeach; ?>
+                                                <?php else: ?>
+                                                    <span class="text-muted">Nenhuma tag relacionada.</span>
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endforeach; ?>
+
                                     </div>
                                 </div>
 

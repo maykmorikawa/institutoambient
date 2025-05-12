@@ -71,31 +71,40 @@ class PostsController extends AppController
 
     public function tag($slug = null)
     {
-        $this->viewBuilder()->setLayout('site');
         if (!$slug) {
             throw new NotFoundException('Slug de tag não fornecido.');
         }
 
         $tagsTable = $this->fetchTable('Tags');
-        $tag = $tagsTable->findBySlug($slug)->contain(['Posts'])->first();
+        $tag = $tagsTable->findBySlug($slug)->first();
 
         if (!$tag) {
             throw new NotFoundException('Tag não encontrada.');
         }
 
-        $posts = $tag->posts;
+        // Busca os posts associados a essa tag e carrega as tags de cada post
+        $posts = $this->Posts->find()
+            ->matching('Tags', function ($q) use ($slug) {
+                return $q->where(['Tags.slug' => $slug]);
+            })
+            ->contain(['Tags']) // ← IMPORTANTE
+            ->order(['Posts.published' => 'DESC'])
+            ->all();
 
+        // Recentes e todas as tags para sidebar
         $recentes = $this->Posts->find()
-            ->where(['status' => 'publicado'])
-            ->order(['created' => 'DESC'])
+            ->contain([])
+            ->order(['published' => 'DESC'])
             ->limit(3)
             ->all();
 
-        $tags = $tagsTable->find()->all();
-                        
+        $tags = $this->Posts->Tags->find()->all();
+
         $this->set(compact('posts', 'recentes', 'tags'));
-        
+        $this->viewBuilder()->setLayout('site');
     }
+
+
 
 
 
