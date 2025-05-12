@@ -1,5 +1,5 @@
 <!-- PAGE TITLE -->
-<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= $this->Url->build('/img/banner/page-title.jpg') ?>">
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">

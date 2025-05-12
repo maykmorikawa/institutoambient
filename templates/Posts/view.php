@@ -108,17 +108,7 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="600ms">
-                        <h3 class="mb-1-6 h5">Categories</h3>
-                        <ul class="list-style5 mb-0 ps-0">
-                            <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Business (6)</a></li>
-                            <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Development (4)</a></li>
-                            <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Technology (3)</a></li>
-                            <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Web (2)</a></li>
-                            <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Business (5)</a></li>
-                            <li><a href="#!"><i class="ti-angle-right text-primary me-2 display-32"></i>Corporate (2)</a></li>
-                        </ul>
-                    </div>
+                    
                     <?php if (!empty($post->tags)): ?>
                         <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="800ms">
                             <h3 class="mb-1-6 h5">Tags</h3>
