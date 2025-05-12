@@ -69,17 +69,19 @@ class PostsController extends AppController
         $this->set(compact('post', 'recentes'));
     }
 
-    public function listblog($slug = null)
+    public function listblog()
     {
         $this->viewBuilder()->setLayout('site');
+
         $query = $this->Posts->find()
-            ->contain(['Categories', 'Users']);
+            ->contain(['Categories', 'Users'])
+            ->order(['published' => 'DESC']); // ← aqui
+
         $posts = $this->paginate($query);
 
         $this->set(compact('posts'));
-        
-        
     }
+
 
     public function tag($slug = null)
     {

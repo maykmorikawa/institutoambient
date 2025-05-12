@@ -61,7 +61,7 @@
                                 </li>
                                 <li><a href="#!">Noticias</a>
                                     <ul>
-                                        <li><a href="#">blog</a></li>
+                                        <li><a href="listar_blogs">blog</a></li>
                                         <li><a href="#">Na Mídia</a></li>
                                         <li><a href="#">Revistas</a></li>
                                         <li><a href="/galeria_de_videos">Galeria de Vídeos</a></li>
