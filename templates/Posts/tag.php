@@ -30,8 +30,12 @@
                             <?php endif; ?>
                             <div class="card-body px-4 py-2-3">
                                 <h2 class="mb-4"><?= h($post->title) ?></h2>
-                                <p class="text-muted">Publicado em: <?= $post->created->format('d/m/Y H:i') ?></p>
-
+                                
+<?php if (!empty($post->created)): ?>
+    <p class="text-muted">Publicado em: <?= $post->created->format('d/m/Y H:i') ?></p>
+<?php else: ?>
+    <p class="text-muted">Data de publicação não disponível</p>
+<?php endif; ?>
                                 <div>
                                     <?= $this->Text->autoParagraph(h($post->content)) ?>
                                 </div>
