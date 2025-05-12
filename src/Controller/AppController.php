@@ -26,6 +26,7 @@ class AppController extends Controller
             'display',
             'home',
             'noticia',
+            'listblog',
             'tag',
             'view',
             'manutencao' // libera /pages/display/*, inclusive /pages/home
