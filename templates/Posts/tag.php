@@ -31,11 +31,11 @@
                             <div class="card-body px-4 py-2-3">
                                 <h2 class="mb-4"><?= h($post->title) ?></h2>
                                 
-<?php if (!empty($post->created)): ?>
-    <p class="text-muted">Publicado em: <?= $post->created->format('d/m/Y H:i') ?></p>
-<?php else: ?>
-    <p class="text-muted">Data de publicação não disponível</p>
-<?php endif; ?>
+                                <?php if (!empty($post->created)): ?>
+                                    <p class="text-muted">Publicado em: <?= $post->created->format('d/m/Y H:i') ?></p>
+                                <?php else: ?>
+                                    <p class="text-muted">Data de publicação não disponível</p>
+                                <?php endif; ?>
                                 <div>
                                     <?= $this->Text->autoParagraph(h($post->content)) ?>
                                 </div>
@@ -69,7 +69,11 @@
                             <div class="me-3"><img class="rounded-circle w-60px" src="/<?= WWW; ?>/site/img/avatar/avatar-01.jpg" alt="..."></div>
                             <div class="text-start">
                                 <h4 class="h6 mb-0">Postado por <?= h($post->author_name ?? 'Equipe Editorial') ?></h4>
+                                <?php if (!empty($post->created)): ?>
                                 <span class="small text-muted"><?= $post->created->format('d M Y') ?></span>
+                                    <?php else: ?>
+                                        <span class="small text-muted">Data não disponível</span>
+                                    <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -107,7 +111,11 @@
                                         </a>
 
                                     </h4>
-                                    <p class="mb-0 small"><?= $r->created->format('M d, Y') ?></p>
+                                    <?php if (!empty($post->created)): ?>
+                                    <span class="small text-muted"><?= $post->created->format('d M Y') ?></span>
+                                    <?php else: ?>
+                                        <span class="small text-muted">Data não disponível</span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
