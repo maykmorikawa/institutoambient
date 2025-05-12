@@ -90,9 +90,9 @@ class PostsController extends AppController
             ->all();
 
         $tags = $tagsTable->find()->all();
-
+        $this->viewBuilder()->setLayout('site');                
         $this->set(compact('posts', 'recentes', 'tags'));
-        $this->viewBuilder()->setLayout('site');
+        
     }
 
 
