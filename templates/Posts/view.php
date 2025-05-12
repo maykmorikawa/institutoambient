@@ -30,7 +30,7 @@
                             <?php endif; ?>
                             <div class="card-body px-4 py-2-3">
                                 <h2 class="mb-4"><?= h($post->title) ?></h2>
-                                <p class="text-muted">Publicado em: <?= $post->created->format('d/m/Y H:i') ?></p>
+                                <p class="text-muted">Publicado em: <?= $post->published->format('d/m/Y H:i') ?></p>
 
                                 <div>
                                     <?= $this->Text->autoParagraph(h($post->content)) ?>
@@ -49,11 +49,11 @@
 
                                 <div class="pt-4">
                                     <h4 class="h6 d-inline-block me-2">Compartilhar:</h4>
-                                    <a href="#!" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#!" class="me-2"><i class="fab fa-twitter"></i></a>
-                                    <a href="#!" class="me-2"><i class="fab fa-instagram"></i></a>
-                                    <a href="#!" class="me-2"><i class="fab fa-youtube"></i></a>
-                                    <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                             <div class="me-3"><img class="rounded-circle w-60px" src="/<?= WWW; ?>/site/img/avatar/avatar-01.jpg" alt="..."></div>
                             <div class="text-start">
                                 <h4 class="h6 mb-0">Postado por <?= h($post->author_name ?? 'Equipe Editorial') ?></h4>
-                                <span class="small text-muted"><?= $post->created->format('d M Y') ?></span>
+                                <span class="small text-muted"><?= $post->published->format('d M Y') ?></span>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                         </a>
 
                                     </h4>
-                                    <p class="mb-0 small"><?= $r->created->format('M d, Y') ?></p>
+                                    <p class="mb-0 small"><?= $r->published->format('M d, Y') ?></p>
                                 </div>
                             </div>
                         <?php endforeach; ?>

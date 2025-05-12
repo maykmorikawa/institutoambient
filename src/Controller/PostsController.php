@@ -60,7 +60,7 @@ class PostsController extends AppController
                 'status' => 'publicado',
                 'id !=' => $post->id // Evita repetir o post atual
             ])
-            ->order(['created' => 'DESC'])
+            ->order(['published' => 'DESC'])
             ->limit(3)
             ->all();
 
