@@ -38,6 +38,7 @@ class PostsController extends AppController
      */
     public function view($slug = null)
     {
+        $this->viewBuilder()->setLayout('site');
         if (!$slug) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
@@ -64,12 +65,13 @@ class PostsController extends AppController
             ->limit(3)
             ->all();
 
-        $this->viewBuilder()->setLayout('site');
+        
         $this->set(compact('post', 'recentes'));
     }
 
     public function tag($slug = null)
     {
+        $this->viewBuilder()->setLayout('site');
         if (!$slug) {
             throw new NotFoundException('Slug de tag não fornecido.');
         }
@@ -90,7 +92,7 @@ class PostsController extends AppController
             ->all();
 
         $tags = $tagsTable->find()->all();
-        $this->viewBuilder()->setLayout('site');                
+                        
         $this->set(compact('posts', 'recentes', 'tags'));
         
     }
