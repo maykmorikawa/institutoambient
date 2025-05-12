@@ -70,18 +70,12 @@ class PostsController extends AppController
 
     public function tag($slug = null)
     {
-        if (empty($slug)) {
+        if (!$slug) {
             throw new NotFoundException('Slug de tag não fornecido.');
         }
 
         $tagsTable = $this->fetchTable('Tags');
-
-        $tag = $tagsTable->find()
-            ->where(['slug' => $slug])
-            ->contain(['Posts' => function ($q) {
-                return $q->where(['Posts.status' => 'publicado'])->order(['Posts.created' => 'DESC']);
-            }])
-            ->first();
+        $tag = $tagsTable->findBySlug($slug)->contain(['Posts'])->first();
 
         if (!$tag) {
             throw new NotFoundException('Tag não encontrada.');
@@ -89,9 +83,18 @@ class PostsController extends AppController
 
         $posts = $tag->posts;
 
+        $recentes = $this->Posts->find()
+            ->where(['status' => 'publicado'])
+            ->order(['created' => 'DESC'])
+            ->limit(3)
+            ->all();
+
+        $tags = $tagsTable->find()->all();
+
+        $this->set(compact('posts', 'recentes', 'tags'));
         $this->viewBuilder()->setLayout('site');
-        $this->set(compact('tag', 'posts'));
     }
+
 
 
 
