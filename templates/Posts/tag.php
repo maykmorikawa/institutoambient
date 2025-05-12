@@ -16,7 +16,7 @@
                                         
                                         <p class="text-muted">
                                             Publicado em: 
-                                            <?= $post->created ? $post->created->format('d/m/Y H:i') : 'Data não disponível' ?>
+                                            <?= $post->published ? $post->published->format('d/m/Y H:i') : 'Data não disponível' ?>
                                         </p>
 
                                         <div>
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="text-start">
                                         <h4 class="h6 mb-0">Postado por <?= h($post->author_name ?? 'Equipe Editorial') ?></h4>
-                                        <span class="small text-muted"><?= $post->created ? $post->created->format('d M Y') : 'Data não disponível' ?></span>
+                                        <span class="small text-muted"><?= $post->published ? $post->published->format('d M Y') : 'Data não disponível' ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                             <?= h($r->title) ?>
                                         </a>
                                     </h4>
-                                    <span class="small text-muted"><?= $r->created ? $r->created->format('d M Y') : 'Data não disponível' ?></span>
+                                    <span class="small text-muted"><?= $r->published ? $r->published->format('d M Y') : 'Data não disponível' ?></span>
                                 </div>
                             </div>
                         <?php endforeach; ?>
