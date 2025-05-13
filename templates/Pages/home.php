@@ -41,10 +41,12 @@
 <section class="p-0 overflow-visible">
     <div class="container">
         <div class="processo">
-            <div class="row">
-                <div class="media align-items-center mb-3 mb-sm-0">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="...">
-                    <div class="media-body ms-4">
+            <div class="row justify-content-center">
+                <div class="col-auto text-center" style="margin-left: 186px;">
+                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="..."
+                         class="img-fluid"
+                         style="width: 550px; height: auto;">
+                    <div class="mt-3">
                         <!-- Conteúdo adicional aqui -->
                     </div>
                 </div>
@@ -52,6 +54,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- SERVICOS
         ================================================== -->
@@ -401,19 +404,23 @@
                     <article class="card card-style3 border-0 h-100">
                         <div class="card-img position-relative">
                             <?php if (!empty($post->image)): ?>
-                        <img src="<?= $this->Url->build('/img/' . $post->image) ?>" alt="<?= h($post->title) ?>">
+                                <img src="<?= $this->Url->build('/img/' . $post->image) ?>" alt="<?= h($post->title) ?>">
                             <?php else: ?>
                                 <img src="<?= $this->Url->build('/site/img/blog/blog-default.jpg') ?>" alt="Imagem Padrão">
                             <?php endif; ?>
                         </div>
                         <div class="card-body p-xl-1-9 p-4">
-                        <h3 class="h5 mb-3"><a href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>"><?= h($post->title) ?></a></h3>
-                            <a href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>" class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
+                            <h3 class="h5 mb-3"><a
+                                    href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>"><?= h($post->title) ?></a>
+                            </h3>
+                            <a href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>"
+                                class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
 
                         </div>
                         <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                             <div class="d-flex justify-content-between">
-                                <span class="display-30"><i class="ti-calendar me-1 text-primary"></i> <?= $post->published ? $post->published->format('F j, Y') : '' ?></span>
+                                <span class="display-30"><i class="ti-calendar me-1 text-primary"></i>
+                                    <?= $post->published ? $post->published->format('F j, Y') : '' ?></span>
                             </div>
                         </div>
                     </article>
@@ -436,15 +443,16 @@
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
                         <img src="<?= WWW; ?>/site/img/icons/icon-1.png" class="mb-3" alt="COMAC">
-                        
+
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-2.png" class="mb-3" alt="UNIVERSIDADE DO ESTADO DO PARÁ">
-                        
+                        <img src="<?= WWW; ?>/site/img/icons/icon-2.png" class="mb-3"
+                            alt="UNIVERSIDADE DO ESTADO DO PARÁ">
+
                     </div>
                 </div>
             </div>
@@ -452,7 +460,7 @@
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
                         <img src="<?= WWW; ?>/site/img/icons/icon-3.png" class="mb-3" alt="PERNOH">
-                        
+
                     </div>
                 </div>
             </div>
@@ -460,31 +468,34 @@
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
                         <img src="<?= WWW; ?>/site/img/icons/icon-4.png" class="mb-3" alt="FUNDAÇÃO ACOLHER">
-                        
+
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-5.png" class="mb-3" alt="MINISTERIO PÚBLICO DO TRABALHO">
-                        
+                        <img src="<?= WWW; ?>/site/img/icons/icon-5.png" class="mb-3"
+                            alt="MINISTERIO PÚBLICO DO TRABALHO">
+
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-6.png" class="mb-3" alt="MINISTERIO PÚBLICO DO ESTADO DO PARA">
-                        
+                        <img src="<?= WWW; ?>/site/img/icons/icon-6.png" class="mb-3"
+                            alt="MINISTERIO PÚBLICO DO ESTADO DO PARA">
+
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-7.png" class="mb-3" alt="TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ">
-                        
+                        <img src="<?= WWW; ?>/site/img/icons/icon-7.png" class="mb-3"
+                            alt="TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ">
+
                     </div>
                 </div>
             </div>
@@ -492,7 +503,7 @@
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
                         <img src="<?= WWW; ?>/site/img/icons/icon-8.png" class="mb-3" alt="FUNDAÇÃO PAPA JOÃO XXIII">
-                       
+
                     </div>
                 </div>
             </div>
@@ -500,7 +511,7 @@
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
                         <img src="<?= WWW; ?>/site/img/icons/icon-9.png" class="mb-3" alt="CONSELHO TUTELAR DE BELÉM">
-                        
+
                     </div>
                 </div>
             </div>
