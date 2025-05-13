@@ -31,6 +31,18 @@
                     <td><?= $this->Number->format($category->id) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Lft') ?></th>
+                    <td><?= $category->lft === null ? '' : $this->Number->format($category->lft) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Rght') ?></th>
+                    <td><?= $category->rght === null ? '' : $this->Number->format($category->rght) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Parent Id') ?></th>
+                    <td><?= $category->parent_id === null ? '' : $this->Number->format($category->parent_id) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Created') ?></th>
                     <td><?= h($category->created) ?></td>
                 </tr>

@@ -11,6 +11,8 @@ use Cake\Validation\Validator;
 /**
  * Categories Model
  *
+ * @property \App\Model\Table\CategoriesTable&\Cake\ORM\Association\BelongsTo $ParentCategories
+ * @property \App\Model\Table\CategoriesTable&\Cake\ORM\Association\HasMany $ChildCategories
  * @property \App\Model\Table\PostsTable&\Cake\ORM\Association\HasMany $Posts
  *
  * @method \App\Model\Entity\Category newEmptyEntity()
@@ -28,6 +30,7 @@ use Cake\Validation\Validator;
  * @method iterable<\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\App\Model\Entity\Category> deleteManyOrFail(iterable $entities, array $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
+ * @mixin \Cake\ORM\Behavior\TreeBehavior
  */
 class CategoriesTable extends Table
 {
@@ -46,10 +49,20 @@ class CategoriesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Tree');
 
+        $this->belongsTo('ParentCategories', [
+            'className' => 'Categories',
+            'foreignKey' => 'parent_id',
+        ]);
+        $this->hasMany('ChildCategories', [
+            'className' => 'Categories',
+            'foreignKey' => 'parent_id',
+        ]);
         $this->hasMany('Posts', [
             'foreignKey' => 'category_id',
         ]);
+        
     }
 
     /**
@@ -77,6 +90,10 @@ class CategoriesTable extends Table
             ->scalar('description')
             ->allowEmptyString('description');
 
+        $validator
+            ->integer('parent_id')
+            ->allowEmptyString('parent_id');
+
         return $validator;
     }
 
@@ -90,7 +107,15 @@ class CategoriesTable extends Table
     public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->isUnique(['slug']), ['errorField' => 'slug']);
+        $rules->add($rules->existsIn(['parent_id'], 'ParentCategories'), ['errorField' => 'parent_id']);
 
         return $rules;
+    }
+
+    public function beforeMarshal(\Cake\Event\EventInterface $event, \ArrayObject $data, \ArrayObject $options)
+    {
+        if (isset($data['parent_id']) && $data['parent_id'] === '') {
+            $data['parent_id'] = null;
+        }
     }
 }

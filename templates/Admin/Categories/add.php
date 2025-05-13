@@ -2,28 +2,49 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Category $category
+ * @var \Cake\Collection\CollectionInterface|string[] $parentCategories
  */
 ?>
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="categories form content">
-            <?= $this->Form->create($category) ?>
-            <fieldset>
-                <legend><?= __('Add Category') ?></legend>
-                <?php
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('slug');
-                    echo $this->Form->control('description');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Add Category') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($category) ?>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('name', ['class' => 'form-control']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('description', [
+                        'class' => 'form-control',
+                        'rows' => 3
+                    ]) ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->Form->control('parent_id', [
+                        'label' => 'Categoria Pai',
+                        'options' => $parentCategories,
+                        'empty' => 'Nenhuma (Categoria Principal)',
+                        'class' => 'form-control'
+                    ]) ?>
+                </div>
+
+                <div class="d-grid">
+                    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
+                </div>
+
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

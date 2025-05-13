@@ -27,8 +27,10 @@
 
                 <div class="mb-3">
                     <?= $this->Form->control('category_id', [
-                        'options' => $categories,
-                        'class' => 'form-control'
+                        'class' => 'form-control',
+                        'label' => 'Categorias',
+                        'options' => $categoryTree,
+                        'empty' => 'Selecione a Categoria'
                     ]) ?>
                 </div>
 

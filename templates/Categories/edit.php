@@ -25,6 +25,9 @@
                     echo $this->Form->control('name');
                     echo $this->Form->control('slug');
                     echo $this->Form->control('description');
+                    echo $this->Form->control('lft');
+                    echo $this->Form->control('rght');
+                    echo $this->Form->control('parent_id');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

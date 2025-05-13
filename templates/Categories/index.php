@@ -16,6 +16,9 @@
                     <th><?= $this->Paginator->sort('slug') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
                     <th><?= $this->Paginator->sort('modified') ?></th>
+                    <th><?= $this->Paginator->sort('lft') ?></th>
+                    <th><?= $this->Paginator->sort('rght') ?></th>
+                    <th><?= $this->Paginator->sort('parent_id') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -27,6 +30,9 @@
                     <td><?= h($category->slug) ?></td>
                     <td><?= h($category->created) ?></td>
                     <td><?= h($category->modified) ?></td>
+                    <td><?= $category->lft === null ? '' : $this->Number->format($category->lft) ?></td>
+                    <td><?= $category->rght === null ? '' : $this->Number->format($category->rght) ?></td>
+                    <td><?= $category->parent_id === null ? '' : $this->Number->format($category->parent_id) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $category->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $category->id]) ?>

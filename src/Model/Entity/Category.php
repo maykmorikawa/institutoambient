@@ -14,7 +14,12 @@ use Cake\ORM\Entity;
  * @property string|null $description
  * @property \Cake\I18n\DateTime|null $created
  * @property \Cake\I18n\DateTime|null $modified
+ * @property int|null $lft
+ * @property int|null $rght
+ * @property int|null $parent_id
  *
+ * @property \App\Model\Entity\Category $parent_category
+ * @property \App\Model\Entity\Category[] $child_categories
  * @property \App\Model\Entity\Post[] $posts
  */
 class Category extends Entity
@@ -34,6 +39,11 @@ class Category extends Entity
         'description' => true,
         'created' => true,
         'modified' => true,
+        'lft' => true,
+        'rght' => true,
+        'parent_id' => true,
+        'parent_category' => true,
+        'child_categories' => true,
         'posts' => true,
     ];
 }
