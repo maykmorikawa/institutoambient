@@ -50,16 +50,6 @@ class CategoriesTable extends Table
         $this->hasMany('Posts', [
             'foreignKey' => 'category_id',
         ]);
-        $this->belongsTo('ParentCategory', [
-            'className' => 'Categories',
-            'foreignKey' => 'parent_id',
-        ]);
-        
-        $this->hasMany('Subcategories', [
-            'className' => 'Categories',
-            'foreignKey' => 'parent_id',
-        ]);
-        
     }
 
     /**

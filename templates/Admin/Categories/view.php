@@ -97,46 +97,6 @@
                 </div>
                 <?php endif; ?>
             </div>
-            <div class="related">
-                <h4><?= __('Related Categories') ?></h4>
-                <?php if (!empty($category->subcategories)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Name') ?></th>
-                            <th><?= __('Slug') ?></th>
-                            <th><?= __('Description') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($category->subcategories as $subcategory) : ?>
-                        <tr>
-                            <td><?= h($subcategory->id) ?></td>
-                            <td><?= h($subcategory->name) ?></td>
-                            <td><?= h($subcategory->slug) ?></td>
-                            <td><?= h($subcategory->description) ?></td>
-                            <td><?= h($subcategory->created) ?></td>
-                            <td><?= h($subcategory->modified) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Categories', 'action' => 'view', $subcategory->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Categories', 'action' => 'edit', $subcategory->id]) ?>
-                                <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['controller' => 'Categories', 'action' => 'delete', $subcategory->id],
-                                    [
-                                        'method' => 'delete',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $subcategory->id),
-                                    ]
-                                ) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
 </div>

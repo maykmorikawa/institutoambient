@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -18,15 +17,11 @@ class CategoriesController extends AppController
      */
     public function index()
     {
-        $query = $this->Categories->find()
-            ->contain(['Subcategories'])
-            ->where(['Categories.parent_id IS' => null]);
-
+        $query = $this->Categories->find();
         $categories = $this->paginate($query);
 
         $this->set(compact('categories'));
     }
-
 
     /**
      * View method

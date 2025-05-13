@@ -2,7 +2,6 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Category $category
- * @var \Cake\Collection\CollectionInterface|string[] $parentCategory
  */
 ?>
 <div class="row">

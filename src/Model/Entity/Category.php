@@ -16,8 +16,6 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\DateTime|null $modified
  *
  * @property \App\Model\Entity\Post[] $posts
- * @property \App\Model\Entity\Category[] $subcategories
- * @property \App\Model\Entity\Category $parent_category
  */
 class Category extends Entity
 {
@@ -37,7 +35,5 @@ class Category extends Entity
         'created' => true,
         'modified' => true,
         'posts' => true,
-        'subcategories' => true,
-        'parent_category' => true,
     ];
 }
