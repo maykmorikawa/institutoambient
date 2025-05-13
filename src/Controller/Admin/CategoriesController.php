@@ -1,8 +1,9 @@
 <?php
-
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Controller\Admin;
+
+use App\Controller\AppController;
 
 /**
  * Categories Controller
@@ -19,14 +20,11 @@ class CategoriesController extends AppController
     public function index()
     {
         $query = $this->Categories->find()
-            ->contain(['Subcategories'])
-            ->where(['Categories.parent_id IS' => null]);
-
+            ->contain(['ParentCategory']);
         $categories = $this->paginate($query);
 
         $this->set(compact('categories'));
     }
-
 
     /**
      * View method
@@ -37,7 +35,7 @@ class CategoriesController extends AppController
      */
     public function view($id = null)
     {
-        $category = $this->Categories->get($id, contain: ['Posts']);
+        $category = $this->Categories->get($id, contain: ['ParentCategory', 'Posts', 'Subcategories']);
         $this->set(compact('category'));
     }
 
@@ -58,7 +56,8 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $this->set(compact('category'));
+        $parentCategory = $this->Categories->ParentCategory->find('list', limit: 200)->all();
+        $this->set(compact('category', 'parentCategory'));
     }
 
     /**
@@ -80,7 +79,8 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $this->set(compact('category'));
+        $parentCategory = $this->Categories->ParentCategory->find('list', limit: 200)->all();
+        $this->set(compact('category', 'parentCategory'));
     }
 
     /**
