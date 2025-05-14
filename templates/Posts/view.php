@@ -1,5 +1,6 @@
 <!-- PAGE TITLE ================================================== -->
-<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
+    data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">
@@ -25,9 +26,29 @@
                 <div class="row">
                     <div class="col-lg-12 mb-2-3">
                         <div class="card card-style7 border-0">
-                            <?php if (!empty($post->image)): ?>
-                                <img src="<?= $this->Url->build('/img/' . $post->image) ?>" class="card-img-top" alt="<?= h($post->title) ?>">
+                            <?php if (!empty($post->post_images)): ?>
+                                <div id="carouselPostImages" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <?php foreach ($post->post_images as $i => $image): ?>
+                                            <div class="carousel-item <?= $i === 0 ? 'active' : '' ?>">
+                                                <img src="<?= $this->Url->build('/img/uploads/' . $image->filename) ?>"
+                                                    class="d-block w-100" alt="<?= h($post->title) ?>">
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                    <?php if (count($post->post_images) > 1): ?>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPostImages"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPostImages"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </button>
+                                    <?php endif; ?>
+                                </div>
                             <?php endif; ?>
+
                             <div class="card-body px-4 py-2-3">
                                 <h2 class="mb-4"><?= h($post->title) ?></h2>
                                 <p class="text-muted">Publicado em: <?= $post->published->format('d/m/Y H:i') ?></p>
@@ -62,7 +83,8 @@
                     <!-- Autor do post ou avatar fictício -->
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-center align-items-center mx-auto py-1-9 px-3 bg-light">
-                            <div class="me-3"><img class="rounded-circle w-60px" src="/site/img/avatar/avatar-01.jpg" alt="..."></div>
+                            <div class="me-3"><img class="rounded-circle w-60px" src="/site/img/avatar/avatar-01.jpg"
+                                    alt="..."></div>
                             <div class="text-start">
                                 <h4 class="h6 mb-0">Postado por <?= h($post->author_name ?? 'Equipe Editorial') ?></h4>
                                 <span class="small text-muted"><?= $post->published->format('d M Y') ?></span>
@@ -91,9 +113,7 @@
                         <?php foreach ($recentes as $r): ?>
                             <div class="media mb-4">
                                 <img src="<?= $r->imagem ?? $this->Url->image('/img/' . $r->image) ?>"
-                                    class="rounded img-fluid"
-                                    alt="<?= h($r->title) ?>"
-                                    width="80" height="80"
+                                    class="rounded img-fluid" alt="<?= h($r->title) ?>" width="80" height="80"
                                     style="object-fit: cover;">
 
                                 <div class="media-body ms-3">
@@ -108,19 +128,19 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    
+
                     <?php if (!empty($post->tags)): ?>
                         <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="800ms">
                             <h3 class="mb-1-6 h5">Tags</h3>
                             <div class="tags">
                                 <?php foreach ($post->tags as $tag): ?>
-                                <a href="<?= $this->Url->build([
-                                    'controller' => 'Posts',
-                                    'action' => 'tag',
-                                    $tag->slug
+                                    <a href="<?= $this->Url->build([
+                                        'controller' => 'Posts',
+                                        'action' => 'tag',
+                                        $tag->slug
                                     ]) ?>">
-                                    <?= h($tag->name) ?>
-                                </a>
+                                        <?= h($tag->name) ?>
+                                    </a>
                                 <?php endforeach; ?>
                             </div>
                         </div>

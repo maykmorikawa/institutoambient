@@ -43,8 +43,7 @@
         <div class="processo">
             <div class="row justify-content-center">
                 <div class="col-auto text-center" style="margin-left: 186px;">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="..."
-                        class="img-fluid"
+                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="..." class="img-fluid"
                         style="width: 550px; height: auto;">
                     <div class="mt-3">
                         <!-- Conteúdo adicional aqui -->
@@ -369,10 +368,20 @@
                 <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
                     <article class="card card-style3 border-0 h-100">
                         <div class="card-img position-relative">
-                            <?php if (!empty($post->image)): ?>
-                                <img src="<?= $this->Url->build('/img/' . $post->image) ?>" alt="<?= h($post->title) ?>">
+                            <?php
+                            $featuredImage = null;
+                            foreach ($post->post_images as $img) {
+                                if ($img->is_featured) {
+                                    $featuredImage = $img;
+                                    break;
+                                }
+                            }
+                            ?>
+                            <?php if ($featuredImage): ?>
+                                <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
+                                    alt="<?= h($post->title) ?>">
                             <?php else: ?>
-                                <img src="<?= $this->Url->build('/site/img/blog/blog-default.jpg') ?>" alt="Imagem Padrão">
+                                <img src="<?= $this->Url->build('/site/img/blog/blog-default.jpg') ?>" alt="Imagem padrão">
                             <?php endif; ?>
                         </div>
                         <div class="card-body p-xl-1-9 p-4">

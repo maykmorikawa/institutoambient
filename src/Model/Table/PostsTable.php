@@ -66,6 +66,19 @@ class PostsTable extends Table
             'targetForeignKey' => 'tag_id',
             'joinTable' => 'posts_tags',
         ]);
+
+        $this->hasMany('PostImages', [
+            'foreignKey' => 'post_id',
+            'dependent' => true,
+            'cascadeCallbacks' => true,
+        ]);
+
+        $this->hasOne('FeaturedImage', [
+            'className' => 'PostImages',
+            'foreignKey' => 'post_id',
+            'conditions' => ['FeaturedImage.is_featured' => true],
+        ]);
+
     }
 
     /**
@@ -98,7 +111,7 @@ class PostsTable extends Table
         $validator
             ->scalar('slug')
             ->maxLength('slug', 255)
-            
+
             ->notEmptyString('slug')
             ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 

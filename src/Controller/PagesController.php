@@ -108,11 +108,19 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('manutencao');
         $this->render('manutencao'); // Garante que a view correta será carregada
     }
-    public function quemsomos() {}
+    public function quemsomos()
+    {
+    }
 
-    public function transparencia() {}
-    public function videos() {}
-    public function conselho() {}
+    public function transparencia()
+    {
+    }
+    public function videos()
+    {
+    }
+    public function conselho()
+    {
+    }
 
 
 
@@ -168,11 +176,16 @@ class PagesController extends AppController
             )->extract('id')->toList();
 
             $postsNoticias = $postsTable->find()
+                ->leftJoinWith('PostImages', function ($q) {
+                    return $q->where(['PostImages.is_featured' => true]);
+                })
+                ->enableAutoFields(true)
+                ->contain(['PostImages']) // ou ['FeaturedImage'] se você criou alias
                 ->where([
-                    'status' => 'publicado',
-                    'category_id IN' => $noticiasSubcategoryIds
+                    'Posts.status' => 'publicado',
+                    'Posts.category_id IN' => $noticiasSubcategoryIds
                 ])
-                ->order(['created' => 'DESC'])
+                ->order(['Posts.created' => 'DESC']) // <– atenção no prefixo
                 ->limit(3)
                 ->all();
         }

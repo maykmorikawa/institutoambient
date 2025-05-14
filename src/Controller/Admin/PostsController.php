@@ -58,19 +58,33 @@ class PostsController extends AppController
             $post = $this->Posts->patchEntity($post, $data);
 
             // Gerenciar o upload da imagem
-            $image = $this->request->getData('image');
-            if (!empty($image) && is_object($image) && !$image->getError()) {
-                $filename = time() . '-' . $image->getClientFilename();
-                $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
-                $post->image = 'uploads/' . $filename;
-            } elseif (!empty($image) && is_object($image) && $image->getError()) {
-                $this->Flash->error(__('Erro ao fazer o upload da imagem.'));
-            }
-
             if ($this->Posts->save($post)) {
+                // Gerenciar múltiplos uploads de imagem
+                $images = $this->request->getData('images');
+                if (!empty($images) && is_array($images)) {
+                    $isFirst = true; // Flag para primeira imagem
+
+                    foreach ($images as $image) {
+                        if ($image && $image->getError() === 0) {
+                            $filename = time() . '-' . $image->getClientFilename();
+                            $image->moveTo(WWW_ROOT . 'img/uploads/' . $filename);
+
+                            $postImage = $this->Posts->PostImages->newEmptyEntity();
+                            $postImage->post_id = $post->id;
+                            $postImage->filename = $filename;
+                            $postImage->is_featured = $isFirst; // Define como destaque a primeira imagem
+
+                            $this->Posts->PostImages->save($postImage);
+                            $isFirst = false; // Depois da primeira, não marca mais
+                        }
+                    }
+                }
+
                 $this->Flash->success(__('Post salvo com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
+
+
             $this->Flash->error(__('Não foi possível salvar o post.'));
         }
 
@@ -144,7 +158,7 @@ class PostsController extends AppController
         $users = $this->Posts->Users->find('list', limit: 200)->all();
         $tags = $this->Posts->Tags->find('list', limit: 200)->all();
 
-        $this->set(compact('post', 'categories', 'users', 'tags','categoryTree'));
+        $this->set(compact('post', 'categories', 'users', 'tags', 'categoryTree'));
     }
 
 
