@@ -7,6 +7,7 @@ namespace App\Controller;
 use Cake\Http\Exception\NotFoundException;
 use Cake\ORM\Locator\LocatorAwareTrait;
 use Cake\ORM\TableRegistry;
+use Cake\Collection\Collection;
 
 /**
  * Posts Controller
@@ -65,7 +66,7 @@ class PostsController extends AppController
             ->limit(3)
             ->all();
 
-        
+
         $this->set(compact('post', 'recentes'));
     }
 
@@ -73,11 +74,37 @@ class PostsController extends AppController
     {
         $this->viewBuilder()->setLayout('site');
 
-        $query = $this->Posts->find()
-            ->contain(['Categories', 'Users'])
-            ->order(['published' => 'DESC']); // ← aqui
+        $categoriesTable = TableRegistry::getTableLocator()->get('Categories');
 
-        $posts = $this->paginate($query);
+        // Encontra a categoria "blog"
+        $blogCategory = $categoriesTable->find()
+            ->where(['slug' => 'blog'])
+            ->first();
+
+        $posts = [];
+
+        if ($blogCategory) {
+            // Busca todas as categorias dentro do intervalo de "blog"
+            $subCategoryIds = (new Collection(
+                $categoriesTable->find()
+                    ->where([
+                        'lft >=' => $blogCategory->lft,
+                        'rght <=' => $blogCategory->rght
+                    ])
+                    ->all()
+            ))->extract('id')->toList();
+
+            // Consulta os posts dessas categorias
+            $query = $this->Posts->find()
+                ->contain(['Categories', 'Users'])
+                ->where([
+                    'status' => 'publicado',
+                    'category_id IN' => $subCategoryIds
+                ])
+                ->order(['published' => 'DESC']);
+
+            $posts = $this->paginate($query);
+        }
 
         $this->set(compact('posts'));
     }
@@ -124,7 +151,7 @@ class PostsController extends AppController
 
 
 
-    
+
 
     /**
      * Add method
