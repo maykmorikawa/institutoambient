@@ -139,11 +139,7 @@ class PostsController extends AppController
             $this->Flash->error(__('Não foi possível salvar o post.'));
         }
 
-        $categoryTree = $this->Posts->Categories->find('treeList', [
-            'keyPath' => 'id',
-            'valuePath' => 'name',
-            'spacer' => '— '
-        ])->toArray();
+        $categoryTree = $this->Posts->Categories->find('treeList', keyPath: 'id', valuePath: 'name', spacer: '— ')->toArray();
         $categories = $this->Posts->Categories->find('list', limit: 200)->all();
         $users = $this->Posts->Users->find('list', limit: 200)->all();
         $tags = $this->Posts->Tags->find('list', limit: 200)->all();
