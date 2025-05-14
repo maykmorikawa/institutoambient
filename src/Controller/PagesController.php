@@ -129,7 +129,7 @@ class PagesController extends AppController
             ->first();
 
         $postsEditais = [];
-        if ($editaisCategory) {
+        if ($editaisCategory && $editaisCategory->lft !== null && $editaisCategory->rght !== null) {
             $editaisSubcategoryIds = collection(
                 $categoriesTable->find()
                     ->where([
@@ -157,7 +157,7 @@ class PagesController extends AppController
             ->first();
 
         $postsNoticias = [];
-        if ($noticiasCategory) {
+        if ($noticiasCategory && $noticiasCategory->lft !== null && $noticiasCategory->rght !== null) {
             $noticiasSubcategoryIds = collection(
                 $categoriesTable->find()
                     ->where([
