@@ -44,8 +44,8 @@
             <div class="row justify-content-center">
                 <div class="col-auto text-center" style="margin-left: 186px;">
                     <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="..."
-                         class="img-fluid"
-                         style="width: 550px; height: auto;">
+                        class="img-fluid"
+                        style="width: 550px; height: auto;">
                     <div class="mt-3">
                         <!-- Conteúdo adicional aqui -->
                     </div>
@@ -263,67 +263,33 @@
             </div>
         </div>
         <div class="row mt-n1-9">
-            <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                <div class="card card-style3 border-0 text-center">
-                    <div class="card-img position-relative">
-                        <img src="<?= WWW; ?>/site/img/team/team-01.jpg" class="card-img-top" alt="...">
-                        <ul class="social-icon list-unstyled">
-                            <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                            <li><a href="#!"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="card-body p-1-9">
-                        <h3 class="h5">Talentos da Cozinha</h3>
-                        <p class="text-primary mb-0">Amazônicas</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="400ms">
-                <div class="card card-style3 border-0 text-center">
-                    <div class="card-img position-relative">
-                        <img src="<?= WWW; ?>/site/img/team/team-02.jpg" class="card-img-top" alt="...">
-                        <ul class="social-icon list-unstyled">
-                            <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                            <li><a href="#!"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="card-body p-1-9">
-                        <h3 class="h5">Coordenador(a)</h3>
-                        <p class="text-primary mb-0">Administrativo</p>
+            <?php foreach ($postsEditais as $i => $post): ?>
+                <?php
+                $delay = ($i + 1) * 200; // Atraso animado crescente: 200ms, 400ms, etc.
+                $imagePath = !empty($post->image)
+                    ? $this->Url->build('/img/' . $post->image)
+                    : $this->Url->build('/site/img/blog/blog-default.jpg');
+                ?>
+                <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="<?= $delay ?>ms">
+                    <div class="card card-style3 border-0 text-center">
+                        <div class="card-img position-relative">
+                            <img src="<?= $imagePath ?>" class="card-img-top" alt="<?= h($post->title) ?>">
+                            <ul class="social-icon list-unstyled">
+                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="card-body p-1-9">
+                            <h3 class="h5"><?= h($post->title) ?></h3>
+                            <p class="text-primary mb-0">
+                                <?= $post->content ?? 'Sem descrição' ?>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="600ms">
-                <div class="card card-style3 border-0 text-center">
-                    <div class="card-img position-relative">
-                        <img src="<?= WWW; ?>/site/img/team/team-03.jpg" class="card-img-top" alt="...">
-                        <ul class="social-icon list-unstyled">
-                            <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                            <li><a href="#!"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="card-body p-1-9">
-                        <h3 class="h5">Projeto Óasis</h3>
-                        <p class="text-primary mb-0">Saúde e concientização em foco!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
-                <div class="card card-style3 border-0 text-center">
-                    <div class="card-img position-relative">
-                        <img src="<?= WWW; ?>/site/img/team/team-04.jpg" class="card-img-top" alt="...">
-                        <ul class="social-icon list-unstyled">
-                            <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                            <li><a href="#!"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="card-body p-1-9">
-                        <h3 class="h5">Curso Profissionalizante</h3>
-                        <p class="text-primary mb-0">Cabelereiro para Iniciantes</p>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
+
     </div>
 </section>
 
@@ -399,7 +365,7 @@
             </div>
         </div>
         <div class="row mt-n1-9 g-xl-5">
-            <?php foreach ($posts as $post): ?>
+            <?php foreach ($postsNoticias as $post): ?>
                 <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
                     <article class="card card-style3 border-0 h-100">
                         <div class="card-img position-relative">

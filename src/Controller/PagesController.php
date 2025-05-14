@@ -25,6 +25,7 @@ use Cake\Http\Response;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\ORM\TableRegistry;
 use App\Controller\AppController;
+use Cake\Collection\Collection;
 
 /**
  * Static content controller
@@ -99,9 +100,9 @@ class PagesController extends AppController
         }
     }
 
-    
-    
-    
+
+
+
     public function manutencao()
     {
         $this->viewBuilder()->setLayout('manutencao');
@@ -113,15 +114,71 @@ class PagesController extends AppController
     public function videos() {}
     public function conselho() {}
 
+
+
     public function home()
     {
+        $categoriesTable = TableRegistry::getTableLocator()->get('Categories');
         $postsTable = TableRegistry::getTableLocator()->get('Posts');
 
-        $posts = $postsTable->find('all', conditions: ['status' => 'publicado'],
-                                        order: ['created' => 'DESC'], // Ou 'published' se esse campo for a data de publicação
-                                        limit: 3)->all();
+        // =============================
+        // Seção 2: Editais + Projetos
+        // =============================
+        $editaisCategory = $categoriesTable->find()
+            ->where(['slug' => 'editais'])
+            ->first();
 
-        $this->set(compact('posts'));
+        $postsEditais = [];
+        if ($editaisCategory) {
+            $editaisSubcategoryIds = collection(
+                $categoriesTable->find()
+                    ->where([
+                        'lft >=' => $editaisCategory->lft,
+                        'rght <=' => $editaisCategory->rght
+                    ])
+                    ->all()
+            )->extract('id')->toList();
+
+            $postsEditais = $postsTable->find()
+                ->where([
+                    'status' => 'publicado',
+                    'category_id IN' => $editaisSubcategoryIds
+                ])
+                ->order(['created' => 'DESC'])
+                ->limit(4)
+                ->all();
+        }
+
+        // =============================
+        // Seção 1: Notícias + Blog
+        // =============================
+        $noticiasCategory = $categoriesTable->find()
+            ->where(['slug' => 'noticias'])
+            ->first();
+
+        $postsNoticias = [];
+        if ($noticiasCategory) {
+            $noticiasSubcategoryIds = collection(
+                $categoriesTable->find()
+                    ->where([
+                        'lft >=' => $noticiasCategory->lft,
+                        'rght <=' => $noticiasCategory->rght
+                    ])
+                    ->all()
+            )->extract('id')->toList();
+
+            $postsNoticias = $postsTable->find()
+                ->where([
+                    'status' => 'publicado',
+                    'category_id IN' => $noticiasSubcategoryIds
+                ])
+                ->order(['created' => 'DESC'])
+                ->limit(3)
+                ->all();
+        }
+
+        // Enviar para a view
+        $this->set(compact('postsNoticias', 'postsEditais'));
         $this->viewBuilder()->setLayout('site');
     }
 }
