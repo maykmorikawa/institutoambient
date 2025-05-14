@@ -381,7 +381,7 @@
                                 <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
                                     alt="<?= h($post->title) ?>">
                             <?php else: ?>
-                                <img src="<?= $this->Url->build('/site/img/blog/blog-default.jpg') ?>" alt="Imagem padrão">
+                                <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>" alt="Imagem padrão">
                             <?php endif; ?>
                         </div>
                         <div class="card-body p-xl-1-9 p-4">
