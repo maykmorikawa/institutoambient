@@ -266,7 +266,7 @@
                 <?php
                 $delay = ($i + 1) * 200; // Atraso animado crescente: 200ms, 400ms, etc.
                 $imagePath = !empty($post->image)
-                    ? $this->Url->build('/img/' . $post->image)
+                    ? $this->Url->build('/img/uploads/' . $post->image)
                     : $this->Url->build('/site/img/blog/blog-default.jpg');
                 ?>
                 <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="<?= $delay ?>ms">
