@@ -108,19 +108,11 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('manutencao');
         $this->render('manutencao'); // Garante que a view correta será carregada
     }
-    public function quemsomos()
-    {
-    }
+    public function quemsomos() {}
 
-    public function transparencia()
-    {
-    }
-    public function videos()
-    {
-    }
-    public function conselho()
-    {
-    }
+    public function transparencia() {}
+    public function videos() {}
+    public function conselho() {}
 
 
 
@@ -152,6 +144,7 @@ class PagesController extends AppController
                     'status' => 'publicado',
                     'category_id IN' => $editaisSubcategoryIds
                 ])
+                ->contain(['PostImages']) // Adiciona as imagens do post
                 ->order(['created' => 'DESC'])
                 ->limit(4)
                 ->all();

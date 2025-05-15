@@ -113,9 +113,8 @@ class PostsController extends AppController
             throw new NotFoundException(__('Post não encontrado.'));
         }
 
-        $post = $this->Posts->get($id, [
-            'contain' => ['Categories', 'Users', 'Tags', 'PostImages']
-        ]);
+        $post = $this->Posts->get($id, contain: ['Categories', 'Users', 'Tags', 'PostImages']);
+
 
         if ($this->request->is(['post', 'put', 'patch'])) {
             $data = $this->request->getData();

@@ -40,35 +40,61 @@ class PostsController extends AppController
     public function view($slug = null)
     {
         $this->viewBuilder()->setLayout('site');
+
         if (!$slug) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
 
         $slug = urldecode($slug);
         $postsTable = $this->fetchTable('Posts');
+        $categoriesTable = $this->fetchTable('Categories');
 
+        // Buscar o post com imagens e tags
         $post = $postsTable->find()
             ->where(['slug' => $slug])
-            ->contain(['Tags', 'PostImages']) // ← isso traz as tags relacionadas
+            ->contain(['Tags', 'PostImages']) // imagens e tags do post atual
             ->first();
 
         if (!$post) {
             throw new NotFoundException(__('Post não encontrado.'));
         }
 
-        // Buscar os 3 posts recentes, exceto o atual
-        $recentes = $postsTable->find()
-            ->where([
-                'status' => 'publicado',
-                'id !=' => $post->id // Evita repetir o post atual
-            ])
-            ->order(['published' => 'DESC'])
-            ->limit(3)
-            ->all();
+        // =============================
+        // Buscar posts recentes de subcategorias de "blog"
+        // =============================
+        $recentes = [];
 
+        $blogCategory = $categoriesTable->find()
+            ->where(['slug' => 'blog'])
+            ->first();
+
+        if ($blogCategory && $blogCategory->lft !== null && $blogCategory->rght !== null) {
+            // Subcategorias de blog
+            $blogSubcategoryIds = $categoriesTable->find()
+                ->where([
+                    'lft >=' => $blogCategory->lft,
+                    'rght <=' => $blogCategory->rght
+                ])
+                ->all()
+                ->extract('id')
+                ->toList();
+
+            // Posts recentes dessas subcategorias
+            $recentes = $postsTable->find()
+                ->contain(['PostImages']) // para mostrar a imagem destaque
+                ->where([
+                    'status' => 'publicado',
+                    'category_id IN' => $blogSubcategoryIds,
+                    'id !=' => $post->id // Evita repetir o post atual
+                ])
+                ->order(['published' => 'DESC'])
+                ->limit(3)
+                ->all();
+        }
 
         $this->set(compact('post', 'recentes'));
     }
+
 
     public function listblog()
     {

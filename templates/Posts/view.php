@@ -111,17 +111,26 @@
                         <h3 class="mb-1-6 h5">Postagens Recentes</h3>
 
                         <?php foreach ($recentes as $r): ?>
-                            <div class="media mb-4">
-                                <img src="<?= $r->imagem ?? $this->Url->image('/img/' . $r->image) ?>"
-                                    class="rounded img-fluid" alt="<?= h($r->title) ?>" width="80" height="80"
-                                    style="object-fit: cover;">
+                            <?php
+                            $featured = null;
+                            foreach ($r->post_images as $img) {
+                                if ($img->is_featured) {
+                                    $featured = $img;
+                                    break;
+                                }
+                            }
 
+                            $imagePath = $featured
+                                ? $this->Url->build('/img/uploads/' . $featured->filename)
+                                : $this->Url->build('/site/img/blog/blog-default.jpg');
+                            ?>
+                            <div class="media mb-4">
+                                <img src="<?= $imagePath ?>" class="rounded img-fluid" alt="<?= h($r->title) ?>" width="80" height="80" style="object-fit: cover;">
                                 <div class="media-body ms-3">
                                     <h4 class="h6">
-                                        <a href="<?= $this->Url->build([h($r->slug)]) ?>">
+                                        <a href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'view', $r->slug]) ?>">
                                             <?= h($r->title) ?>
                                         </a>
-
                                     </h4>
                                     <p class="mb-0 small"><?= $r->published->format('M d, Y') ?></p>
                                 </div>
@@ -129,16 +138,17 @@
                         <?php endforeach; ?>
                     </div>
 
+
                     <?php if (!empty($post->tags)): ?>
                         <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="800ms">
                             <h3 class="mb-1-6 h5">Tags</h3>
                             <div class="tags">
                                 <?php foreach ($post->tags as $tag): ?>
                                     <a href="<?= $this->Url->build([
-                                        'controller' => 'Posts',
-                                        'action' => 'tag',
-                                        $tag->slug
-                                    ]) ?>">
+                                                    'controller' => 'Posts',
+                                                    'action' => 'tag',
+                                                    $tag->slug
+                                                ]) ?>">
                                         <?= h($tag->name) ?>
                                     </a>
                                 <?php endforeach; ?>
