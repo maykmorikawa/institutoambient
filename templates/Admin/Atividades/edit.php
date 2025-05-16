@@ -6,33 +6,47 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $atividade->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $atividade->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Atividades'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="atividades form content">
-            <?= $this->Form->create($atividade) ?>
-            <fieldset>
-                <legend><?= __('Edit Atividade') ?></legend>
-                <?php
-                    echo $this->Form->control('projeto_id', ['options' => $projetos]);
-                    echo $this->Form->control('titulo');
-                    echo $this->Form->control('descricao');
-                    echo $this->Form->control('slug');
-                    echo $this->Form->control('link_inscricao');
-                    echo $this->Form->control('publicado');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Editar Atividade') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($atividade) ?>
+                    <fieldset>
+                        <legend><?= __('Informações da Atividade') ?></legend>
+                        <div class="mb-3">
+                            <?= $this->Form->control('projeto_id', ['options' => $projetos, 'class' => 'form-control', 'label' => 'Projeto']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <?= $this->Form->control('titulo', ['class' => 'form-control', 'label' => 'Título']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <?= $this->Form->control('descricao', ['class' => 'form-control', 'label' => 'Descrição', 'type' => 'textarea']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <?= $this->Form->control('slug', ['class' => 'form-control', 'label' => 'Slug']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <?= $this->Form->control('link_inscricao', ['class' => 'form-control', 'label' => 'Link Inscrição']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <?= $this->Form->checkbox('publicado', [
+                                    'class' => 'form-check-input',
+                                    'id' => 'publicado'
+                                ]) ?>
+                                <label class="form-check-label" for="publicado">
+                                    <?= __('Publicado') ?>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="d-grid">
+                        <?= $this->Form->button(__('Salvar Alterações'), ['class' => 'btn btn-primary']) ?>
+                    </div>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

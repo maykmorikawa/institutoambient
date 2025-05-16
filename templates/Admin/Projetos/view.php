@@ -4,87 +4,84 @@
  * @var \App\Model\Entity\Projeto $projeto
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Projeto'), ['action' => 'edit', $projeto->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Projeto'), ['action' => 'delete', $projeto->id], ['confirm' => __('Are you sure you want to delete # {0}?', $projeto->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Projetos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Projeto'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2><?= h($projeto->titulo) ?></h2>
+        <div>
+            <?= $this->Html->link('<i class="bi bi-pencil-square"></i> Editar', ['action' => 'edit', $projeto->id], ['class' => 'btn btn-outline-secondary me-2', 'escape' => false]) ?>
+            <?= $this->Form->postLink('<i class="bi bi-trash"></i> Excluir', ['action' => 'delete', $projeto->id], [
+                'class' => 'btn btn-outline-danger',
+                'escape' => false,
+                'confirm' => __('Tem certeza que deseja excluir o projeto #{0}?', $projeto->id),
+            ]) ?>
         </div>
-    </aside>
-    <div class="column column-80">
-        <div class="projetos view content">
-            <h3><?= h($projeto->titulo) ?></h3>
-            <table>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header fw-bold"><?= __('Detalhes do Projeto') ?></div>
+        <div class="card-body">
+            <table class="table table-striped">
                 <tr>
-                    <th><?= __('Titulo') ?></th>
+                    <th><?= __('Título') ?></th>
                     <td><?= h($projeto->titulo) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
+                    <th><?= __('ID') ?></th>
                     <td><?= $this->Number->format($projeto->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($projeto->created) ?></td>
+                    <th><?= __('Criado em') ?></th>
+                    <td><?= $projeto->created ? $projeto->created->format('d/m/Y H:i') : '-' ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Modified') ?></th>
-                    <td><?= h($projeto->modified) ?></td>
+                    <th><?= __('Modificado em') ?></th>
+                    <td><?= $projeto->modified ? $projeto->modified->format('d/m/Y H:i') : '-' ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Ublicado') ?></th>
-                    <td><?= $projeto->ublicado ? __('Yes') : __('No'); ?></td>
+                    <th><?= __('Publicado') ?></th>
+                    <td><?= $projeto->ublicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?></td>
                 </tr>
             </table>
-            <div class="related">
-                <h4><?= __('Related Atividades') ?></h4>
-                <?php if (!empty($projeto->atividades)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Projeto Id') ?></th>
-                            <th><?= __('Titulo') ?></th>
-                            <th><?= __('Descricao') ?></th>
-                            <th><?= __('Slug') ?></th>
-                            <th><?= __('Link Inscricao') ?></th>
-                            <th><?= __('Publicado') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($projeto->atividades as $atividade) : ?>
-                        <tr>
-                            <td><?= h($atividade->id) ?></td>
-                            <td><?= h($atividade->projeto_id) ?></td>
-                            <td><?= h($atividade->titulo) ?></td>
-                            <td><?= h($atividade->descricao) ?></td>
-                            <td><?= h($atividade->slug) ?></td>
-                            <td><?= h($atividade->link_inscricao) ?></td>
-                            <td><?= h($atividade->publicado) ?></td>
-                            <td><?= h($atividade->created) ?></td>
-                            <td><?= h($atividade->modified) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Atividades', 'action' => 'view', $atividade->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Atividades', 'action' => 'edit', $atividade->id]) ?>
-                                <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['controller' => 'Atividades', 'action' => 'delete', $atividade->id],
-                                    [
-                                        'method' => 'delete',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $atividade->id),
-                                    ]
-                                ) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
+
+    <?php if (!empty($projeto->atividades)) : ?>
+        <div class="card mb-4">
+            <div class="card-header fw-bold"><?= __('Atividades Relacionadas') ?></div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th><?= __('ID') ?></th>
+                                <th><?= __('Título') ?></th>
+                                <th><?= __('Descrição') ?></th>
+                                <th><?= __('Publicado') ?></th>
+                                <th class="actions"><?= __('Ações') ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($projeto->atividades as $atividade) : ?>
+                            <tr>
+                                <td><?= h($atividade->id) ?></td>
+                                <td><?= h($atividade->titulo) ?></td>
+                                <td><?= $this->Text->truncate(h($atividade->descricao), 100, ['ellipsis' => '...']) ?></td>
+                                <td><?= h($atividade->publicado) ?></td>
+                                <td class="actions">
+                                    <?= $this->Html->link('<i class="bi bi-eye-fill"></i> ' . __('Ver'), ['controller' => 'Atividades', 'action' => 'view', $atividade->id], ['class' => 'btn btn-sm btn-outline-primary', 'escape' => false]) ?>
+                                    <?= $this->Html->link('<i class="bi bi-pencil-square"></i> ' . __('Editar'), ['controller' => 'Atividades', 'action' => 'edit', $atividade->id], ['class' => 'btn btn-sm btn-outline-secondary', 'escape' => false]) ?>
+                                    <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i> ' . __('Excluir'), ['controller' => 'Atividades', 'action' => 'delete', $atividade->id], [
+                                        'class' => 'btn btn-sm btn-outline-danger',
+                                        'escape' => false,
+                                        'confirm' => __('Tem certeza que deseja excluir a atividade #{0}?', $atividade->id),
+                                    ]) ?>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </div>

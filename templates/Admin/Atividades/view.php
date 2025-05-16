@@ -4,26 +4,30 @@
  * @var \App\Model\Entity\Atividade $atividade
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Atividade'), ['action' => 'edit', $atividade->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Atividade'), ['action' => 'delete', $atividade->id], ['confirm' => __('Are you sure you want to delete # {0}?', $atividade->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Atividades'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Atividade'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2><?= h($atividade->titulo) ?></h2>
+        <div>
+            <?= $this->Html->link('<i class="bi bi-pencil-square"></i> Editar', ['action' => 'edit', $atividade->id], ['class' => 'btn btn-outline-secondary me-2', 'escape' => false]) ?>
+            <?= $this->Form->postLink('<i class="bi bi-trash"></i> Excluir', ['action' => 'delete', $atividade->id], [
+                'class' => 'btn btn-outline-danger',
+                'escape' => false,
+                'confirm' => __('Tem certeza que deseja excluir a atividade #{0}?', $atividade->id),
+            ]) ?>
         </div>
-    </aside>
-    <div class="column column-80">
-        <div class="atividades view content">
-            <h3><?= h($atividade->titulo) ?></h3>
-            <table>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header fw-bold"><?= __('Detalhes da Atividade') ?></div>
+        <div class="card-body">
+            <table class="table table-striped">
                 <tr>
                     <th><?= __('Projeto') ?></th>
-                    <td><?= $atividade->hasValue('projeto') ? $this->Html->link($atividade->projeto->titulo, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id]) : '' ?></td>
+                    <td><?= $atividade->hasValue('projeto') ? $this->Html->link($atividade->projeto->titulo, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id]) : '-' ?>
+                    </td>
                 </tr>
                 <tr>
-                    <th><?= __('Titulo') ?></th>
+                    <th><?= __('Título') ?></th>
                     <td><?= h($atividade->titulo) ?></td>
                 </tr>
                 <tr>
@@ -31,124 +35,140 @@
                     <td><?= h($atividade->slug) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Link Inscricao') ?></th>
-                    <td><?= h($atividade->link_inscricao) ?></td>
+                    <th><?= __('Link Inscrição') ?></th>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" id="linkInscricao" class="form-control"
+                                value="<?= $this->Url->build('/inscricao/' . $atividade->link_inscricao, ['fullBase' => true]) ?>"
+                                readonly>
+                            <button class="btn btn-outline-secondary" type="button"
+                                onclick="copiarLink()">Copiar</button>
+                        </div>
+                    </td>
                 </tr>
+
                 <tr>
-                    <th><?= __('Id') ?></th>
+                    <th><?= __('ID') ?></th>
                     <td><?= $this->Number->format($atividade->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($atividade->created) ?></td>
+                    <th><?= __('Criado em') ?></th>
+                    <td><?= $atividade->created ? $atividade->created->format('d/m/Y H:i') : '-' ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Modified') ?></th>
-                    <td><?= h($atividade->modified) ?></td>
+                    <th><?= __('Modificado em') ?></th>
+                    <td><?= $atividade->modified ? $atividade->modified->format('d/m/Y H:i') : '-' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Publicado') ?></th>
-                    <td><?= $atividade->publicado ? __('Yes') : __('No'); ?></td>
+                    <td><?= $atividade->publicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?>
+                    </td>
                 </tr>
             </table>
-            <div class="text">
-                <strong><?= __('Descricao') ?></strong>
-                <blockquote>
-                    <?= $this->Text->autoParagraph(h($atividade->descricao)); ?>
-                </blockquote>
-            </div>
-            <div class="related">
-                <h4><?= __('Related Alunos') ?></h4>
-                <?php if (!empty($atividade->alunos)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Nome') ?></th>
-                            <th><?= __('Email') ?></th>
-                            <th><?= __('Cpf') ?></th>
-                            <th><?= __('Rg') ?></th>
-                            <th><?= __('Nis') ?></th>
-                            <th><?= __('Data Nascimento') ?></th>
-                            <th><?= __('Telefone') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
-                            <th><?= __('Atividade Id') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($atividade->alunos as $aluno) : ?>
-                        <tr>
-                            <td><?= h($aluno->id) ?></td>
-                            <td><?= h($aluno->nome) ?></td>
-                            <td><?= h($aluno->email) ?></td>
-                            <td><?= h($aluno->cpf) ?></td>
-                            <td><?= h($aluno->rg) ?></td>
-                            <td><?= h($aluno->nis) ?></td>
-                            <td><?= h($aluno->data_nascimento) ?></td>
-                            <td><?= h($aluno->telefone) ?></td>
-                            <td><?= h($aluno->created) ?></td>
-                            <td><?= h($aluno->modified) ?></td>
-                            <td><?= h($aluno->atividade_id) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Alunos', 'action' => 'view', $aluno->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Alunos', 'action' => 'edit', $aluno->id]) ?>
-                                <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['controller' => 'Alunos', 'action' => 'delete', $aluno->id],
-                                    [
-                                        'method' => 'delete',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $aluno->id),
-                                    ]
-                                ) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-            <div class="related">
-                <h4><?= __('Related Inscricoes') ?></h4>
-                <?php if (!empty($atividade->inscricoes)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Aluno Id') ?></th>
-                            <th><?= __('Atividade Id') ?></th>
-                            <th><?= __('User Id') ?></th>
-                            <th><?= __('Responsavel Id') ?></th>
-                            <th><?= __('Data Inscricao') ?></th>
-                            <th><?= __('Status') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($atividade->inscricoes as $inscrico) : ?>
-                        <tr>
-                            <td><?= h($inscrico->id) ?></td>
-                            <td><?= h($inscrico->aluno_id) ?></td>
-                            <td><?= h($inscrico->atividade_id) ?></td>
-                            <td><?= h($inscrico->user_id) ?></td>
-                            <td><?= h($inscrico->responsavel_id) ?></td>
-                            <td><?= h($inscrico->data_inscricao) ?></td>
-                            <td><?= h($inscrico->status) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Inscricoes', 'action' => 'view', $inscrico->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Inscricoes', 'action' => 'edit', $inscrico->id]) ?>
-                                <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['controller' => 'Inscricoes', 'action' => 'delete', $inscrico->id],
-                                    [
-                                        'method' => 'delete',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $inscrico->id),
-                                    ]
-                                ) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
+
+    <div class="card mb-4">
+        <div class="card-header fw-bold"><?= __('Descrição') ?></div>
+        <div class="card-body">
+            <blockquote>
+                <?= $this->Text->autoParagraph(h($atividade->descricao)); ?>
+            </blockquote>
+        </div>
+    </div>
+
+    <?php if (!empty($atividade->alunos)): ?>
+        <div class="card mb-4">
+            <div class="card-header fw-bold"><?= __('Alunos Relacionados') ?></div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th><?= __('ID') ?></th>
+                                <th><?= __('Nome') ?></th>
+                                <th><?= __('Email') ?></th>
+                                <th><?= __('CPF') ?></th>
+                                <th class="actions"><?= __('Ações') ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($atividade->alunos as $aluno): ?>
+                                <tr>
+                                    <td><?= h($aluno->id) ?></td>
+                                    <td><?= h($aluno->nome) ?></td>
+                                    <td><?= h($aluno->email) ?></td>
+                                    <td><?= h($aluno->cpf) ?></td>
+                                    <td class="actions">
+                                        <?= $this->Html->link('<i class="bi bi-eye-fill"></i> ' . __('Ver'), ['controller' => 'Alunos', 'action' => 'view', $aluno->id], ['class' => 'btn btn-sm btn-outline-primary', 'escape' => false]) ?>
+                                        <?= $this->Html->link('<i class="bi bi-pencil-square"></i> ' . __('Editar'), ['controller' => 'Alunos', 'action' => 'edit', $aluno->id], ['class' => 'btn btn-sm btn-outline-secondary', 'escape' => false]) ?>
+                                        <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i> ' . __('Excluir'), ['controller' => 'Alunos', 'action' => 'delete', $aluno->id], [
+                                            'class' => 'btn btn-sm btn-outline-danger',
+                                            'escape' => false,
+                                            'confirm' => __('Tem certeza que deseja excluir o aluno #{0}?', $aluno->id),
+                                        ]) ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if (!empty($atividade->inscricoes)): ?>
+        <div class="card mb-4">
+            <div class="card-header fw-bold"><?= __('Inscrições Relacionadas') ?></div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th><?= __('ID') ?></th>
+                                <th><?= __('Aluno') ?></th>
+                                <th><?= __('Data Inscrição') ?></th>
+                                <th><?= __('Status') ?></th>
+                                <th class="actions"><?= __('Ações') ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($atividade->inscricoes as $inscrico): ?>
+                                <tr>
+                                    <td><?= h($inscrico->id) ?></td>
+                                    <td><?= $inscrico->hasValue('aluno') ? $this->Html->link($inscrico->aluno->nome, ['controller' => 'Alunos', 'action' => 'view', $inscrico->aluno->id]) : '-' ?>
+                                    </td>
+                                    <td><?= $inscrico->data_inscricao ? $inscrico->data_inscricao->format('d/m/Y H:i') : '-' ?>
+                                    </td>
+                                    <td><?= h($inscrico->status) ?></td>
+                                    <td class="actions">
+                                        <?= $this->Html->link('<i class="bi bi-eye-fill"></i> ' . __('Ver'), ['controller' => 'Inscricoes', 'action' => 'view', $inscrico->id], ['class' => 'btn btn-sm btn-outline-primary', 'escape' => false]) ?>
+                                        <?= $this->Html->link('<i class="bi bi-pencil-square"></i> ' . __('Editar'), ['controller' => 'Inscricoes', 'action' => 'edit', $inscrico->id], ['class' => 'btn btn-sm btn-outline-secondary', 'escape' => false]) ?>
+                                        <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i> ' . __('Excluir'), ['controller' => 'Inscricoes', 'action' => 'delete', $inscrico->id], [
+                                            'class' => 'btn btn-sm btn-outline-danger',
+                                            'escape' => false,
+                                            'confirm' => __('Tem certeza que deseja excluir a inscrição #{0}?', $inscrico->id),
+                                        ]) ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </div>
+
+
+<?php $this->Html->scriptStart(['block' => true]); ?>
+<script>
+    function copiarLink() {
+        const input = document.getElementById("linkInscricao");
+        input.select();
+        input.setSelectionRange(0, 99999); // Para mobile
+        document.execCommand("copy");
+        alert("Link copiado para a área de transferência!");
+    }
+</script>
+<?php $this->Html->scriptEnd(); ?>

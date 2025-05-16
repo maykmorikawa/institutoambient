@@ -25,7 +25,7 @@
                         <td><?= $this->Number->format($profile->id) ?></td>
                         <td><?= h($profile->name) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $profile->id], ['class' => 'btn btn-sm btn-outline-secondary']) ?>
+                            <?= $this->Html->link(__('Ver'), ['action' => 'view', $profile->id], ['class' => 'btn btn-sm btn-outline-secondary']) ?>
                             <?= $this->Html->link(__('Editar'), ['action' => 'edit', $profile->id], ['class' => 'btn btn-sm btn-outline-primary']) ?>
                             <?= $this->Form->postLink(
                                 __('Apagar'),

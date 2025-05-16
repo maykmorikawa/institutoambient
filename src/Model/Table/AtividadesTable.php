@@ -7,6 +7,10 @@ use Cake\ORM\Query\SelectQuery;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Event\EventInterface;
+use Cake\Datasource\EntityInterface;
+use Cake\Utility\Text;
+use ArrayObject;
 
 /**
  * Atividades Model
@@ -116,5 +120,12 @@ class AtividadesTable extends Table
         $rules->add($rules->existsIn(['projeto_id'], 'Projetos'), ['errorField' => 'projeto_id']);
 
         return $rules;
+    }
+
+    public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options): void
+    {
+        if ($entity->isNew() && empty($entity->get('link_inscricao'))) {
+            $entity->set('link_inscricao', Text::uuid());
+        }
     }
 }
