@@ -25,41 +25,41 @@ class CreateUsers extends AbstractMigration
             ->create();
     }
 }
+
+
 # criação de tabelas no banco
 
-#  CREATE TABLE projetos (
-#      id INT AUTO_INCREMENT PRIMARY KEY,
-#      titulo VARCHAR(255) NOT NULL,
-#    		ublicado BOOLEAN DEFAULT FALSE,
-#      created DATETIME DEFAULT CURRENT_TIMESTAMP,
-#      modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-#  );
-
-#  CREATE TABLE atividades (
-#      id INT AUTO_INCREMENT PRIMARY KEY,
-#      projeto_id INT NOT NULL,
-#      titulo VARCHAR(255) NOT NULL,
-#      descricao TEXT,
-#      slug VARCHAR(255) UNIQUE,
-#      link_inscricao VARCHAR(255) UNIQUE,
-#      publicado BOOLEAN DEFAULT FALSE,
-#      created DATETIME DEFAULT CURRENT_TIMESTAMP,
-#      modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-#      FOREIGN KEY (projeto_id) REFERENCES projetos(id) ON DELETE CASCADE
-#  );
-
-#  CREATE TABLE alunos (
-#      id INT AUTO_INCREMENT PRIMARY KEY,
-#      nome VARCHAR(255) NOT NULL,
-#      email VARCHAR(255) NOT NULL,
-#      cpf VARCHAR(14) NOT NULL UNIQUE,
-#      rg VARCHAR(20),
-#      nis VARCHAR(20),
-#      data_nascimento DATE,
-#      telefone VARCHAR(20),
-#      created DATETIME DEFAULT CURRENT_TIMESTAMP,
-#      modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-#  );
+CREATE TABLE projetos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+  		ublicado BOOLEAN DEFAULT FALSE,
+    created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+CREATE TABLE atividades (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    projeto_id INT NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    slug VARCHAR(255) UNIQUE,
+    link_inscricao VARCHAR(255) UNIQUE,
+    publicado BOOLEAN DEFAULT FALSE,
+    created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (projeto_id) REFERENCES projetos(id) ON DELETE CASCADE
+);
+CREATE TABLE alunos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    rg VARCHAR(20),
+    nis VARCHAR(20),
+    data_nascimento DATE,
+    telefone VARCHAR(20),
+    created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
 CREATE TABLE inscricoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
