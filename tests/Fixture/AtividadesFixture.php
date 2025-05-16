@@ -26,8 +26,8 @@ class AtividadesFixture extends TestFixture
                 'slug' => 'Lorem ipsum dolor sit amet',
                 'link_inscricao' => 'Lorem ipsum dolor sit amet',
                 'publicado' => 1,
-                'created' => '2025-05-16 00:08:53',
-                'modified' => '2025-05-16 00:08:53',
+                'created' => '2025-05-16 02:33:16',
+                'modified' => '2025-05-16 02:33:16',
             ],
         ];
         parent::init();
