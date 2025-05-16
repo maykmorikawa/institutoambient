@@ -95,12 +95,9 @@
                         ?>
                     </div>
                 </div>
-
-
-
-
-                <div class="d-grid">
-                    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
+                <div class="mt-4 d-flex">
+                    <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary','style' => 'margin-right: 10px;']) ?>
+                    <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
                 </div>
 
                 <?= $this->Form->end() ?>

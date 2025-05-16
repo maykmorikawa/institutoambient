@@ -4,71 +4,69 @@
  * @var \App\Model\Entity\Profile $profile
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Profile'), ['action' => 'edit', $profile->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Profile'), ['action' => 'delete', $profile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $profile->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Profiles'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Profile'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2><?= h($profile->name) ?></h2>
+        <div>
+            <?= $this->Html->link('<i class="bi bi-pencil-square"></i> Editar', ['action' => 'edit', $profile->id], ['class' => 'btn btn-outline-secondary me-2', 'escape' => false]) ?>
+            <?= $this->Form->postLink('<i class="bi bi-trash"></i> Excluir', ['action' => 'delete', $profile->id], [
+                'class' => 'btn btn-outline-danger',
+                'escape' => false,
+                'confirm' => __('Tem certeza que deseja excluir o perfil #{0}?', $profile->id),
+            ]) ?>
         </div>
-    </aside>
-    <div class="column column-80">
-        <div class="profiles view content">
-            <h3><?= h($profile->name) ?></h3>
-            <table>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header fw-bold"><?= __('Detalhes do Perfil') ?></div>
+        <div class="card-body">
+            <table class="table table-striped">
                 <tr>
-                    <th><?= __('Name') ?></th>
+                    <th><?= __('Nome') ?></th>
                     <td><?= h($profile->name) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
+                    <th><?= __('ID') ?></th>
                     <td><?= $this->Number->format($profile->id) ?></td>
                 </tr>
             </table>
-            <div class="related">
-                <h4><?= __('Related Users') ?></h4>
-                <?php if (!empty($profile->users)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Profile Id') ?></th>
-                            <th><?= __('Name') ?></th>
-                            <th><?= __('Email') ?></th>
-                            <th><?= __('Password') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($profile->users as $user) : ?>
-                        <tr>
-                            <td><?= h($user->id) ?></td>
-                            <td><?= h($user->profile_id) ?></td>
-                            <td><?= h($user->name) ?></td>
-                            <td><?= h($user->email) ?></td>
-                            <td><?= h($user->password) ?></td>
-                            <td><?= h($user->created) ?></td>
-                            <td><?= h($user->modified) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Users', 'action' => 'view', $user->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Users', 'action' => 'edit', $user->id]) ?>
-                                <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['controller' => 'Users', 'action' => 'delete', $user->id],
-                                    [
-                                        'method' => 'delete',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $user->id),
-                                    ]
-                                ) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
+
+    <?php if (!empty($profile->users)) : ?>
+        <div class="card mb-4">
+            <div class="card-header fw-bold"><?= __('Usuários Relacionados') ?></div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th><?= __('ID') ?></th>
+                                <th><?= __('Nome') ?></th>
+                                <th><?= __('Email') ?></th>
+                                <th class="actions"><?= __('Ações') ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($profile->users as $user) : ?>
+                            <tr>
+                                <td><?= h($user->id) ?></td>
+                                <td><?= h($user->name) ?></td>
+                                <td><?= h($user->email) ?></td>
+                                <td class="actions">
+                                    <?= $this->Html->link(__('Ver'), ['controller' => 'Users', 'action' => 'view', $user->id], ['class' => 'btn btn-sm btn-outline-primary']) ?>
+                                    <?= $this->Html->link(__('Editar'), ['controller' => 'Users', 'action' => 'edit', $user->id], ['class' => 'btn btn-sm btn-outline-secondary']) ?>
+                                    <?= $this->Form->postLink(__('Excluir'), ['controller' => 'Users', 'action' => 'delete', $user->id], [
+                                        'class' => 'btn btn-sm btn-outline-danger',
+                                        'confirm' => __('Tem certeza que deseja excluir o usuário #{0}?', $user->id),
+                                    ]) ?>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </div>

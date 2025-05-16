@@ -67,8 +67,8 @@ class ProjetosTable extends Table
             ->notEmptyString('titulo');
 
         $validator
-            ->boolean('ublicado')
-            ->allowEmptyString('ublicado');
+            ->boolean('publicado')
+            ->allowEmptyString('publicado');
 
         return $validator;
     }

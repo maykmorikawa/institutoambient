@@ -5,28 +5,25 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $profile->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $profile->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Profiles'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="profiles form content">
-            <?= $this->Form->create($profile) ?>
-            <fieldset>
-                <legend><?= __('Edit Profile') ?></legend>
-                <?php
-                    echo $this->Form->control('name');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Editar Perfil') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($profile) ?>
+                <fieldset>
+                    <legend><?= __('Informações do Perfil') ?></legend>
+                    <div class="mb-3">
+                        <?= $this->Form->control('name', ['class' => 'form-control', 'label' => 'Nome']) ?>
+                    </div>
+                </fieldset>
+                <div class="mt-4 d-flex">
+                    <?= $this->Form->button(__('Salvar Alterações'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>
+                    <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
+                </div>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

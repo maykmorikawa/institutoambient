@@ -10,7 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $titulo
- * @property bool|null $ublicado
+ * @property bool|null $publicado
  * @property \Cake\I18n\DateTime|null $created
  * @property \Cake\I18n\DateTime|null $modified
  *
@@ -29,7 +29,7 @@ class Projeto extends Entity
      */
     protected array $_accessible = [
         'titulo' => true,
-        'ublicado' => true,
+        'publicado' => true,
         'created' => true,
         'modified' => true,
         'atividades' => true,

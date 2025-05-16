@@ -104,16 +104,39 @@
                 </div>
 
                 <div class="mb-3">
-                    <?= $this->Form->control('tags._ids', [
-                        'options' => $tags,
-                        'class' => 'form-control',
-                        'multiple' => true,
-                        'label' => __('Tags Relacionadas')
-                    ]) ?>
+                    <label class="form-label d-block"><?= __('Tags Relacionadas') ?></label>
+                    <div class="row">
+                        <?php
+                        $count = 0;
+                        foreach ($tags as $id => $name):
+                            if ($count % 3 === 0 && $count > 0) {
+                                echo '</div><div class="row">';
+                            }
+                            ?>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <?= $this->Form->checkbox("tags._ids.$id", [
+                                        'value' => $id,
+                                        'checked' => in_array($id, collection($post->tags)->extract('id')->toList()),
+                                        'class' => 'form-check-input',
+                                        'id' => 'tag-' . $id
+                                    ]) ?>
+
+                                    <label class="form-check-label" for="tag-<?= $id ?>">
+                                        <?= h($name) ?>
+                                    </label>
+                                </div>
+                            </div>
+                            <?php
+                            $count++;
+                        endforeach;
+                        ?>
+                    </div>
                 </div>
 
-                <div class="d-grid">
-                    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
+                <div class="mt-4 d-flex">
+                    <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary','style' => 'margin-right: 10px;']) ?>
+                    <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
                 </div>
 
                 <?= $this->Form->end() ?>

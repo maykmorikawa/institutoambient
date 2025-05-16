@@ -5,24 +5,27 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Projetos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="projetos form content">
-            <?= $this->Form->create($projeto) ?>
-            <fieldset>
-                <legend><?= __('Add Projeto') ?></legend>
-                <?php
-                    echo $this->Form->control('titulo');
-                    echo $this->Form->control('ublicado');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Adicionar Projeto') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($projeto) ?>
+                    <fieldset>
+                        <legend><?= __('Informações do Projeto') ?></legend>
+                        <div class="mb-3">
+                            <?= $this->Form->control('titulo', ['class' => 'form-control', 'label' => 'Título']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <?= $this->Form->control('publicado', ['class' => 'form-control', 'label' => 'Publicado']) ?>
+                        </div>
+                    </fieldset>
+                    <div class="d-grid">
+                        <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary']) ?>
+                    </div>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>
