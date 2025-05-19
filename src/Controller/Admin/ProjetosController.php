@@ -19,7 +19,8 @@ class ProjetosController extends AppController
      */
     public function index()
     {
-        $query = $this->Projetos->find();
+        $query = $this->Projetos->find()
+            ->contain(['Users']);
         $projetos = $this->paginate($query);
 
         $this->set(compact('projetos'));
@@ -34,7 +35,7 @@ class ProjetosController extends AppController
      */
     public function view($id = null)
     {
-        $projeto = $this->Projetos->get($id, contain: ['Atividades']);
+        $projeto = $this->Projetos->get($id, contain: ['Users', 'Atividades']);
         $this->set(compact('projeto'));
     }
 
@@ -55,7 +56,8 @@ class ProjetosController extends AppController
             }
             $this->Flash->error(__('The projeto could not be saved. Please, try again.'));
         }
-        $this->set(compact('projeto'));
+        $users = $this->Projetos->Users->find('list', limit: 200)->all();
+        $this->set(compact('projeto', 'users'));
     }
 
     /**
@@ -77,7 +79,8 @@ class ProjetosController extends AppController
             }
             $this->Flash->error(__('The projeto could not be saved. Please, try again.'));
         }
-        $this->set(compact('projeto'));
+        $users = $this->Projetos->Users->find('list', limit: 200)->all();
+        $this->set(compact('projeto', 'users'));
     }
 
     /**

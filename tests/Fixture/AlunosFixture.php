@@ -20,16 +20,16 @@ class AlunosFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'nome' => 'Lorem ipsum dolor sit amet',
+                'user_id' => 1,
+                'nome_completo' => 'Lorem ipsum dolor sit amet',
                 'email' => 'Lorem ipsum dolor sit amet',
                 'cpf' => 'Lorem ipsum ',
                 'rg' => 'Lorem ipsum dolor ',
                 'nis' => 'Lorem ipsum dolor ',
                 'data_nascimento' => '2025-05-16',
                 'telefone' => 'Lorem ipsum dolor ',
-                'created' => '2025-05-16 01:19:34',
-                'modified' => '2025-05-16 01:19:34',
-                'atividade_id' => 1,
+                'created' => '2025-05-16 23:01:14',
+                'modified' => '2025-05-16 23:01:14',
             ],
         ];
         parent::init();

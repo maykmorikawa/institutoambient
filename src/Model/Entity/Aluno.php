@@ -9,7 +9,8 @@ use Cake\ORM\Entity;
  * Aluno Entity
  *
  * @property int $id
- * @property string $nome
+ * @property int $user_id
+ * @property string $nome_completo
  * @property string $email
  * @property string $cpf
  * @property string|null $rg
@@ -18,12 +19,12 @@ use Cake\ORM\Entity;
  * @property string|null $telefone
  * @property \Cake\I18n\DateTime|null $created
  * @property \Cake\I18n\DateTime|null $modified
- * @property int|null $atividade_id
  *
- * @property \App\Model\Entity\Atividade $atividade
+ * @property \App\Model\Entity\User $user
  * @property \App\Model\Entity\Endereco[] $enderecos
  * @property \App\Model\Entity\Escolaridade[] $escolaridades
  * @property \App\Model\Entity\Inscrico[] $inscricoes
+ * @property \App\Model\Entity\Presenca[] $presencas
  */
 class Aluno extends Entity
 {
@@ -37,7 +38,8 @@ class Aluno extends Entity
      * @var array<string, bool>
      */
     protected array $_accessible = [
-        'nome' => true,
+        'user_id' => true,
+        'nome_completo' => true,
         'email' => true,
         'cpf' => true,
         'rg' => true,
@@ -46,10 +48,10 @@ class Aluno extends Entity
         'telefone' => true,
         'created' => true,
         'modified' => true,
-        'atividade_id' => true,
-        'atividade' => true,
+        'user' => true,
         'enderecos' => true,
         'escolaridades' => true,
         'inscricoes' => true,
+        'presencas' => true,
     ];
 }

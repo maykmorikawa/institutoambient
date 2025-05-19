@@ -95,12 +95,20 @@ $cakeDescription = 'Sistema Instituto Ambiente';
 
     <!-- Page level plugins -->
     <script src="<?= WWW; ?>/dash/vendor/chart.js/Chart.min.js"></script>
+    
 
     <!-- Page level custom scripts -->
     <script src="<?= WWW; ?>/dash/js/demo/chart-area-demo.js"></script>
     <script src="<?= WWW; ?>/dash/js/demo/chart-pie-demo.js"></script>
     <script src="<?= WWW; ?>/dash/js/demo/datatables-demo.js"></script>
     
+
+    <!-- BLOCO DE SCRIPTS DE VIEWS -->
+    <?= $this->fetch('script') ?>
+    <?= $this->Html->script([
+    'https://code.jquery.com/jquery-3.6.0.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js'
+]) ?>
 </body>
 
 </html>

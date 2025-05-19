@@ -93,7 +93,7 @@ class InscricoesTable extends Table
 
         $validator
             ->scalar('status')
-            ->allowEmptyString('status');
+            ->notEmptyString('status');
 
         return $validator;
     }

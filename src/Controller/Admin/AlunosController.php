@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
@@ -20,7 +21,7 @@ class AlunosController extends AppController
     public function index()
     {
         $query = $this->Alunos->find()
-            ->contain(['Atividades']);
+            ->contain(['Users']);
         $alunos = $this->paginate($query);
 
         $this->set(compact('alunos'));
@@ -35,7 +36,7 @@ class AlunosController extends AppController
      */
     public function view($id = null)
     {
-        $aluno = $this->Alunos->get($id, contain: ['Atividades', 'Enderecos', 'Escolaridades', 'Inscricoes']);
+        $aluno = $this->Alunos->get($id, contain: ['Users', 'Enderecos', 'Escolaridades', 'Inscricoes', 'Presencas']);
         $this->set(compact('aluno'));
     }
 
@@ -46,18 +47,26 @@ class AlunosController extends AppController
      */
     public function add()
     {
-        $aluno = $this->Alunos->newEmptyEntity();
+        $aluno = $this->Alunos->newEmptyEntity([
+            'associated' => ['Enderecos', 'Escolaridades']
+        ]);
+
         if ($this->request->is('post')) {
-            $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData());
+            $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData(), [
+                'associated' => ['Enderecos', 'Escolaridades']
+            ]);
+
             if ($this->Alunos->save($aluno)) {
-                $this->Flash->success(__('The aluno has been saved.'));
+                $this->Flash->success(__('O aluno foi salvo com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The aluno could not be saved. Please, try again.'));
+
+            $this->Flash->error(__('Não foi possível salvar o aluno. Tente novamente.'));
         }
-        $atividades = $this->Alunos->Atividades->find('list', limit: 200)->all();
-        $this->set(compact('aluno', 'atividades'));
+
+        $users = $this->Alunos->Users->find('list', ['limit' => 200])->all();
+        $this->set(compact('aluno', 'users'));
     }
 
     /**
@@ -69,18 +78,30 @@ class AlunosController extends AppController
      */
     public function edit($id = null)
     {
-        $aluno = $this->Alunos->get($id, contain: []);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData());
-            if ($this->Alunos->save($aluno)) {
-                $this->Flash->success(__('The aluno has been saved.'));
+        $aluno = $this->Alunos->get($id, [
+            'contain' => ['Enderecos', 'Escolaridades'],
+        ]);
 
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            // Debug: veja os dados recebidos
+            // debug($this->request->getData()); exit;
+
+            $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData(), [
+                'associated' => ['Enderecos', 'Escolaridades']
+            ]);
+
+            // Debug: veja a entidade após o patch
+            // debug($aluno); exit;
+
+            if ($this->Alunos->save($aluno, ['associated' => ['Enderecos', 'Escolaridades']])) {
+                $this->Flash->success(__('O aluno foi salvo com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The aluno could not be saved. Please, try again.'));
+            $this->Flash->error(__('Não foi possível salvar o aluno. Tente novamente.'));
         }
-        $atividades = $this->Alunos->Atividades->find('list', limit: 200)->all();
-        $this->set(compact('aluno', 'atividades'));
+
+        $users = $this->Alunos->Users->find('list', ['limit' => 200]);
+        $this->set(compact('aluno', 'users'));
     }
 
     /**

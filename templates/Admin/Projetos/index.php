@@ -3,8 +3,15 @@
  * @var \App\View\AppView $this
  * @var iterable<\App\Model\Entity\Projeto> $projetos
  */
+
+$statusCores = [
+    'planejamento' => 'info',    // Azul claro
+    'andamento'   => 'warning', // Amarelo
+    'concluido'   => 'success', // Verde
+    'cancelado'   => 'danger',  // Vermelho
+];
 ?>
-<div class="container mt-4">
+<div class="container-fluid mt-4">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h3 class="mb-0"><?= __('Projetos') ?></h3>
@@ -16,8 +23,12 @@
                     <thead>
                         <tr>
                             <th><?= $this->Paginator->sort('id', '#') ?></th>
-                            <th><?= $this->Paginator->sort('titulo', 'Título') ?></th>
-                            <th><?= $this->Paginator->sort('publicado', 'Publicado') ?></th>
+                            <th><?= $this->Paginator->sort('name', 'Nome') ?></th>
+                            <th><?= $this->Paginator->sort('data_inicio', 'Início') ?></th>
+                            <th><?= $this->Paginator->sort('data_fim', 'Fim') ?></th>
+                            <th><?= $this->Paginator->sort('status', 'Status') ?></th>
+                            <th><?= $this->Paginator->sort('user_id', 'Usuário') ?></th>
+                            <th><?= $this->Paginator->sort('ublicado', 'Publicado') ?></th>
                             <th><?= $this->Paginator->sort('created', 'Criado em') ?></th>
                             <th><?= $this->Paginator->sort('modified', 'Modificado em') ?></th>
                             <th class="actions"><?= __('Ações') ?></th>
@@ -27,8 +38,18 @@
                         <?php foreach ($projetos as $projeto): ?>
                         <tr>
                             <td><?= $this->Number->format($projeto->id) ?></td>
-                            <td><?= h($projeto->titulo) ?></td>
-                            <td><?= $projeto->publicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?></td>
+                            <td><?= h($projeto->name) ?></td>
+                            <td><?= $projeto->data_inicio ? $projeto->data_inicio->format('d/m/Y') : '-' ?></td>
+                            <td><?= $projeto->data_fim ? $projeto->data_fim->format('d/m/Y') : '-' ?></td>
+                            <td>
+                                <?php if (isset($statusCores[$projeto->status])) : ?>
+                                    <span class="badge bg-<?= $statusCores[$projeto->status] ?> text-white"><?= h($projeto->status) ?></span>
+                                <?php else : ?>
+                                    <?= h($projeto->status) ?>
+                                <?php endif; ?>
+                            </td>
+                            <td><?= $projeto->hasValue('user') ? $this->Html->link($projeto->user->name, ['controller' => 'Users', 'action' => 'view', $projeto->user->id]) : '' ?></td>
+                            <td><?= $projeto->ublicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?></td>
                             <td><?= $projeto->created ? $projeto->created->format('d/m/Y H:i') : '-' ?></td>
                             <td><?= $projeto->modified ? $projeto->modified->format('d/m/Y H:i') : '-' ?></td>
                             <td class="actions">

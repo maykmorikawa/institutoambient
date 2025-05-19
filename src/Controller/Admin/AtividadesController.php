@@ -20,7 +20,7 @@ class AtividadesController extends AppController
     public function index()
     {
         $query = $this->Atividades->find()
-            ->contain(['Projetos']);
+            ->contain(['Projetos', 'Users']);
         $atividades = $this->paginate($query);
 
         $this->set(compact('atividades'));
@@ -35,7 +35,7 @@ class AtividadesController extends AppController
      */
     public function view($id = null)
     {
-        $atividade = $this->Atividades->get($id, contain: ['Projetos', 'Alunos', 'Inscricoes']);
+        $atividade = $this->Atividades->get($id, contain: ['Projetos', 'Users', 'Aulas', 'Inscricoes']);
         $this->set(compact('atividade'));
     }
 
@@ -56,8 +56,9 @@ class AtividadesController extends AppController
             }
             $this->Flash->error(__('The atividade could not be saved. Please, try again.'));
         }
-        $projetos = $this->Atividades->Projetos->find('list', limit: 200)->all();
-        $this->set(compact('atividade', 'projetos'));
+        $projetos = $this->Atividades->Projetos->find('list', ['keyField' => 'id', 'valueField' => 'name'])->toArray();
+        $users = $this->Atividades->Users->find('list', limit: 200)->all();
+        $this->set(compact('atividade', 'projetos', 'users'));
     }
 
     /**
@@ -79,8 +80,9 @@ class AtividadesController extends AppController
             }
             $this->Flash->error(__('The atividade could not be saved. Please, try again.'));
         }
-        $projetos = $this->Atividades->Projetos->find('list', limit: 200)->all();
-        $this->set(compact('atividade', 'projetos'));
+        $projetos = $this->Atividades->Projetos->find('list', ['keyField' => 'id', 'valueField' => 'name'])->toArray();
+        $users = $this->Atividades->Users->find('list', limit: 200)->all();
+        $this->set(compact('atividade', 'projetos', 'users'));
     }
 
     /**

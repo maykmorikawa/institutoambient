@@ -9,9 +9,14 @@ use Cake\ORM\Entity;
  * Atividade Entity
  *
  * @property int $id
- * @property int $projeto_id
- * @property string $titulo
+ * @property int|null $projeto_id
+ * @property string $name
  * @property string|null $descricao
+ * @property int $vagas
+ * @property string|null $local
+ * @property \Cake\I18n\Time|null $horario
+ * @property string|null $dias_semana
+ * @property int $user_id
  * @property string|null $slug
  * @property string|null $link_inscricao
  * @property bool|null $publicado
@@ -19,7 +24,8 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\DateTime|null $modified
  *
  * @property \App\Model\Entity\Projeto $projeto
- * @property \App\Model\Entity\Aluno[] $alunos
+ * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Aula[] $aulas
  * @property \App\Model\Entity\Inscrico[] $inscricoes
  */
 class Atividade extends Entity
@@ -35,15 +41,21 @@ class Atividade extends Entity
      */
     protected array $_accessible = [
         'projeto_id' => true,
-        'titulo' => true,
+        'name' => true,
         'descricao' => true,
+        'vagas' => true,
+        'local' => true,
+        'horario' => true,
+        'dias_semana' => true,
+        'user_id' => true,
         'slug' => true,
         'link_inscricao' => true,
         'publicado' => true,
         'created' => true,
         'modified' => true,
         'projeto' => true,
-        'alunos' => true,
+        'user' => true,
+        'aulas' => true,
         'inscricoes' => true,
     ];
 }

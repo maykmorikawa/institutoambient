@@ -12,16 +12,19 @@
             </div>
             <div class="card-body">
                 <?= $this->Form->create($profile) ?>
-                <fieldset>
-                    <legend><?= __('Informações do Perfil') ?></legend>
-                    <div class="mb-3">
-                        <?= $this->Form->control('name', ['class' => 'form-control', 'label' => 'Nome']) ?>
+                    <fieldset>
+                        <legend><?= __('Informações do Perfil') ?></legend>
+                        <div class="mb-3">
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'label' => 'Nome']) ?>
+                        </div>
+                        <div class="mb-3">
+                            <?= $this->Form->control('description', ['class' => 'form-control', 'label' => 'Descrição', 'type' => 'textarea']) ?>
+                        </div>
+                    </fieldset>
+                    <div class="mt-4 d-flex">
+                        <?= $this->Form->button(__('Salvar Alterações'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>
+                        <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
                     </div>
-                </fieldset>
-                <div class="mt-4 d-flex">
-                    <?= $this->Form->button(__('Salvar Alterações'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>
-                    <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
-                </div>
                 <?= $this->Form->end() ?>
             </div>
         </div>

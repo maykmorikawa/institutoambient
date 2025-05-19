@@ -21,13 +21,18 @@ class AtividadesFixture extends TestFixture
             [
                 'id' => 1,
                 'projeto_id' => 1,
-                'titulo' => 'Lorem ipsum dolor sit amet',
+                'name' => 'Lorem ipsum dolor sit amet',
                 'descricao' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+                'vagas' => 1,
+                'local' => 'Lorem ipsum dolor sit amet',
+                'horario' => '16:27:36',
+                'dias_semana' => 'Lorem ipsum dolor sit amet',
+                'user_id' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
                 'link_inscricao' => 'Lorem ipsum dolor sit amet',
                 'publicado' => 1,
-                'created' => '2025-05-16 02:33:16',
-                'modified' => '2025-05-16 02:33:16',
+                'created' => '2025-05-17 16:27:36',
+                'modified' => '2025-05-17 16:27:36',
             ],
         ];
         parent::init();

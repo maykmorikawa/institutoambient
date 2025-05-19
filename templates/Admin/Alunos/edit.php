@@ -1,40 +1,127 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Aluno $aluno
- * @var string[]|\Cake\Collection\CollectionInterface $atividades
+ * @var \Cake\Collection\CollectionInterface|string[] $users
  */
 ?>
+
+<?= $this->Html->script('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', ['block' => true]) ?>
+<?= $this->Html->css('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', ['block' => true]) ?>
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $aluno->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $aluno->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Alunos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-12">
+        <?= $this->Form->create($aluno) ?>
+
+        <ul class="nav nav-tabs" id="alunoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="dados-tab" data-bs-toggle="tab" data-bs-target="#dados" type="button" role="tab">Dados Pessoais</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="endereco-tab" data-bs-toggle="tab" data-bs-target="#endereco" type="button" role="tab">Endereço</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="escolaridade-tab" data-bs-toggle="tab" data-bs-target="#escolaridade" type="button" role="tab">Escolaridade</button>
+            </li>
+        </ul>
+
+        <div class="tab-content p-3 border border-top-0">
+            <!-- Tab Dados Pessoais -->
+            <div class="tab-pane fade show active" id="dados" role="tabpanel">
+                <div class="mb-3">
+                    <?= $this->Form->control('user_id', ['options' => $users, 'class' => 'form-control', 'label' => 'Usuário']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('nome_completo', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('email', ['type' => 'email', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('cpf', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('rg', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('nis', ['class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('data_nascimento', ['type' => 'date', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('telefone', ['class' => 'form-control']) ?>
+                </div>
+            </div>
+
+            <!-- Tab Endereço -->
+            <div class="tab-pane fade" id="endereco" role="tabpanel">
+                <?php if (!empty($aluno->enderecos)): ?>
+                    <?= $this->Form->hidden('enderecos.0.id') ?>
+                <?php endif; ?>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.cep', ['label' => 'CEP', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.logradouro', ['label' => 'Logradouro', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.numero', ['label' => 'Número', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.complemento', ['label' => 'Complemento', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.bairro', ['label' => 'Bairro', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.cidade', ['label' => 'Cidade', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('enderecos.0.estado', ['label' => 'Estado', 'class' => 'form-control']) ?>
+                </div>
+            </div>
+
+            <!-- Tab Escolaridade -->
+            <div class="tab-pane fade" id="escolaridade" role="tabpanel">
+                <?php if (!empty($aluno->escolaridades)): ?>
+                    <?= $this->Form->hidden('escolaridades.0.id') ?>
+                <?php endif; ?>
+                <div class="mb-3">
+                    <?= $this->Form->control('escolaridades.0.nivel', ['label' => 'Nível', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('escolaridades.0.serie', ['label' => 'Série', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('escolaridades.0.situacao', [
+                        'class' => 'form-control',
+                        'label' => 'Situação',
+                        'options' => [
+                            'Cursando' => __('Cursando'),
+                            'Interrompido' => __('Interrompido'),
+                            'Concluido' => __('Concluído'),
+                        ],
+                    ]) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('escolaridades.0.curso', ['label' => 'Curso', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('escolaridades.0.instituicao', ['label' => 'Instituição', 'class' => 'form-control']) ?>
+                </div>
+                <div class="mb-3">
+                    <?= $this->Form->control('escolaridades.0.ano_conclusao', ['label' => 'Ano de Conclusão', 'class' => 'form-control']) ?>
+                </div>
+            </div>
         </div>
-    </aside>
-    <div class="column column-80">
-        <div class="alunos form content">
-            <?= $this->Form->create($aluno) ?>
-            <fieldset>
-                <legend><?= __('Edit Aluno') ?></legend>
-                <?php
-                    echo $this->Form->control('nome');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('cpf');
-                    echo $this->Form->control('rg');
-                    echo $this->Form->control('nis');
-                    echo $this->Form->control('data_nascimento', ['empty' => true]);
-                    echo $this->Form->control('telefone');
-                    echo $this->Form->control('atividade_id', ['options' => $atividades, 'empty' => true]);
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+
+        <div class="mt-4">
+            <?= $this->Form->button(__('Salvar Alterações'), ['class' => 'btn btn-primary']) ?>
+            <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
         </div>
+
+        <?= $this->Form->end() ?>
     </div>
 </div>

@@ -25,6 +25,7 @@ class ProjetosTableTest extends TestCase
      */
     protected array $fixtures = [
         'app.Projetos',
+        'app.Users',
         'app.Atividades',
     ];
 
@@ -59,6 +60,17 @@ class ProjetosTableTest extends TestCase
      * @uses \App\Model\Table\ProjetosTable::validationDefault()
      */
     public function testValidationDefault(): void
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     * @uses \App\Model\Table\ProjetosTable::buildRules()
+     */
+    public function testBuildRules(): void
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

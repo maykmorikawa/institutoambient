@@ -18,25 +18,10 @@ class AtividadesController extends AppController
     public function index()
     {
         $query = $this->Atividades->find()
-            ->contain(['Projetos']);
+            ->contain(['Projetos', 'Users']);
         $atividades = $this->paginate($query);
 
         $this->set(compact('atividades'));
-    }
-
-    public function inscrever(string $link): void
-    {
-        $atividade = $this->Atividades->find()
-            ->where(['link_inscricao' => $link])
-            ->contain(['Projetos']) // ou outras associações necessárias
-            ->first();
-
-        if (!$atividade) {
-            throw new \Cake\Http\Exception\NotFoundException(__('Atividade não encontrada'));
-        }
-
-        $this->set(compact('atividade'));
-        $this->viewBuilder()->setLayout('default'); // ou o layout personalizado
     }
 
     /**
@@ -48,7 +33,7 @@ class AtividadesController extends AppController
      */
     public function view($id = null)
     {
-        $atividade = $this->Atividades->get($id, contain: ['Projetos', 'Alunos', 'Inscricoes']);
+        $atividade = $this->Atividades->get($id, contain: ['Projetos', 'Users', 'Aulas', 'Inscricoes']);
         $this->set(compact('atividade'));
     }
 
@@ -70,7 +55,8 @@ class AtividadesController extends AppController
             $this->Flash->error(__('The atividade could not be saved. Please, try again.'));
         }
         $projetos = $this->Atividades->Projetos->find('list', limit: 200)->all();
-        $this->set(compact('atividade', 'projetos'));
+        $users = $this->Atividades->Users->find('list', limit: 200)->all();
+        $this->set(compact('atividade', 'projetos', 'users'));
     }
 
     /**
@@ -93,7 +79,8 @@ class AtividadesController extends AppController
             $this->Flash->error(__('The atividade could not be saved. Please, try again.'));
         }
         $projetos = $this->Atividades->Projetos->find('list', limit: 200)->all();
-        $this->set(compact('atividade', 'projetos'));
+        $users = $this->Atividades->Users->find('list', limit: 200)->all();
+        $this->set(compact('atividade', 'projetos', 'users'));
     }
 
     /**

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -7,16 +8,13 @@ use Cake\ORM\Query\SelectQuery;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
-use Cake\Event\EventInterface;
-use Cake\Datasource\EntityInterface;
-use Cake\Utility\Text;
-use ArrayObject;
 
 /**
  * Atividades Model
  *
  * @property \App\Model\Table\ProjetosTable&\Cake\ORM\Association\BelongsTo $Projetos
- * @property \App\Model\Table\AlunosTable&\Cake\ORM\Association\HasMany $Alunos
+ * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
+ * @property \App\Model\Table\AulasTable&\Cake\ORM\Association\HasMany $Aulas
  * @property \App\Model\Table\InscricoesTable&\Cake\ORM\Association\HasMany $Inscricoes
  *
  * @method \App\Model\Entity\Atividade newEmptyEntity()
@@ -55,9 +53,13 @@ class AtividadesTable extends Table
 
         $this->belongsTo('Projetos', [
             'foreignKey' => 'projeto_id',
+            'joinType' => 'INNER', // ou LEFT
+        ]);
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
             'joinType' => 'INNER',
         ]);
-        $this->hasMany('Alunos', [
+        $this->hasMany('Aulas', [
             'foreignKey' => 'atividade_id',
         ]);
         $this->hasMany('Inscricoes', [
@@ -75,17 +77,38 @@ class AtividadesTable extends Table
     {
         $validator
             ->integer('projeto_id')
-            ->notEmptyString('projeto_id');
+            ->allowEmptyString('projeto_id');
 
         $validator
-            ->scalar('titulo')
-            ->maxLength('titulo', 255)
-            ->requirePresence('titulo', 'create')
-            ->notEmptyString('titulo');
+            ->scalar('name')
+            ->maxLength('name', 100)
+            ->notEmptyString('name');
 
         $validator
             ->scalar('descricao')
             ->allowEmptyString('descricao');
+
+        $validator
+            ->integer('vagas')
+            ->notEmptyString('vagas');
+
+        $validator
+            ->scalar('local')
+            ->maxLength('local', 100)
+            ->allowEmptyString('local');
+
+        $validator
+            ->time('horario')
+            ->allowEmptyTime('horario');
+
+        $validator
+            ->scalar('dias_semana')
+            ->maxLength('dias_semana', 50)
+            ->allowEmptyString('dias_semana');
+
+        $validator
+            ->integer('user_id')
+            ->notEmptyString('user_id');
 
         $validator
             ->scalar('slug')
@@ -95,7 +118,7 @@ class AtividadesTable extends Table
 
         $validator
             ->scalar('link_inscricao')
-            ->maxLength('link_inscricao', 255)
+            ->maxLength('link_inscricao', 64)
             ->allowEmptyString('link_inscricao')
             ->add('link_inscricao', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
@@ -118,14 +141,8 @@ class AtividadesTable extends Table
         $rules->add($rules->isUnique(['slug'], ['allowMultipleNulls' => true]), ['errorField' => 'slug']);
         $rules->add($rules->isUnique(['link_inscricao'], ['allowMultipleNulls' => true]), ['errorField' => 'link_inscricao']);
         $rules->add($rules->existsIn(['projeto_id'], 'Projetos'), ['errorField' => 'projeto_id']);
+        $rules->add($rules->existsIn(['user_id'], 'Users'), ['errorField' => 'user_id']);
 
         return $rules;
-    }
-
-    public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options): void
-    {
-        if ($entity->isNew() && empty($entity->get('link_inscricao'))) {
-            $entity->set('link_inscricao', Text::uuid());
-        }
     }
 }

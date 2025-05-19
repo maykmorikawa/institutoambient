@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Atividade $atividade
  * @var string[]|\Cake\Collection\CollectionInterface $projetos
+ * @var string[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
 <div class="row">
@@ -24,8 +25,13 @@
                 <legend><?= __('Edit Atividade') ?></legend>
                 <?php
                     echo $this->Form->control('projeto_id', ['options' => $projetos]);
-                    echo $this->Form->control('titulo');
+                    echo $this->Form->control('nome');
                     echo $this->Form->control('descricao');
+                    echo $this->Form->control('vagas');
+                    echo $this->Form->control('local');
+                    echo $this->Form->control('horario', ['empty' => true]);
+                    echo $this->Form->control('dias_semana');
+                    echo $this->Form->control('user_id', ['options' => $users]);
                     echo $this->Form->control('slug');
                     echo $this->Form->control('link_inscricao');
                     echo $this->Form->control('publicado');

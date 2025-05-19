@@ -23,6 +23,7 @@ class ProjetosControllerTest extends TestCase
      */
     protected array $fixtures = [
         'app.Projetos',
+        'app.Users',
         'app.Atividades',
     ];
 

@@ -4,7 +4,7 @@
  * @var iterable<\App\Model\Entity\Atividade> $atividades
  */
 ?>
-<div class="container mt-4">
+<div class="container-fluid mt-4">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h3 class="mb-0"><?= __('Atividades') ?></h3>
@@ -17,7 +17,12 @@
                         <tr>
                             <th><?= $this->Paginator->sort('id', '#') ?></th>
                             <th><?= $this->Paginator->sort('projeto_id', 'Projeto') ?></th>
-                            <th><?= $this->Paginator->sort('titulo', 'Título') ?></th>
+                            <th><?= $this->Paginator->sort('name', 'Nome') ?></th>
+                            <th><?= $this->Paginator->sort('vagas', 'Vagas') ?></th>
+                            <th><?= $this->Paginator->sort('local', 'Local') ?></th>
+                            <th><?= $this->Paginator->sort('horario', 'Horário') ?></th>
+                            <th><?= $this->Paginator->sort('dias_semana', 'Dias da Semana') ?></th>
+                            <th><?= $this->Paginator->sort('user_id', 'Usuário') ?></th>
                             <th><?= $this->Paginator->sort('slug', 'Slug') ?></th>
                             <th><?= $this->Paginator->sort('link_inscricao', 'Link Inscrição') ?></th>
                             <th><?= $this->Paginator->sort('publicado', 'Publicado') ?></th>
@@ -30,8 +35,13 @@
                         <?php foreach ($atividades as $atividade): ?>
                         <tr>
                             <td><?= $this->Number->format($atividade->id) ?></td>
-                            <td><?= $atividade->hasValue('projeto') ? $this->Html->link($atividade->projeto->titulo, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id]) : '' ?></td>
-                            <td><?= h($atividade->titulo) ?></td>
+                            <td><?= $atividade->hasValue('projeto') ? '<span class="badge bg-info text-white">' . $this->Html->link($atividade->projeto->name, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Projeto') . '</span>' ?></td>
+                            <td><?= h($atividade->name) ?></td>
+                            <td><?= $this->Number->format($atividade->vagas) ?></td>
+                            <td><?= h($atividade->local) ?></td>
+                            <td><?= h($atividade->horario) ?></td>
+                            <td><?= h($atividade->dias_semana) ?></td>
+                            <td><?= $atividade->hasValue('user') ? '<span class="badge bg-primary text-white">' . $this->Html->link($atividade->user->name, ['controller' => 'Users', 'action' => 'view', $atividade->user->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Usuário') . '</span>' ?></td>
                             <td><?= h($atividade->slug) ?></td>
                             <td><?= h($atividade->link_inscricao) ?></td>
                             <td><?= $atividade->publicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?></td>

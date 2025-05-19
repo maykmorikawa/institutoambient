@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Inscrico $inscrico
@@ -9,28 +10,49 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Inscricoes'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="inscricoes form content">
-            <?= $this->Form->create($inscrico) ?>
-            <fieldset>
-                <legend><?= __('Add Inscrico') ?></legend>
-                <?php
-                    echo $this->Form->control('aluno_id', ['options' => $alunos]);
-                    echo $this->Form->control('atividade_id', ['options' => $atividades]);
-                    echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
-                    echo $this->Form->control('responsavel_id', ['options' => $responsavels, 'empty' => true]);
-                    echo $this->Form->control('data_inscricao', ['empty' => true]);
-                    echo $this->Form->control('status');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><?= __('Adicionar Inscrição') ?></h4>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($inscrico) ?>
+                <fieldset>
+                    <legend><?= __('Informações da Inscrição') ?></legend>
+                    <div class="mb-3">
+                        <?= $this->Form->control('aluno_id', ['options' => $alunos, 'class' => 'form-control', 'label' => 'Aluno']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('atividade_id', ['options' => $atividades, 'class' => 'form-control', 'label' => 'Atividade']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('user_id', ['options' => $users, 'empty' => true, 'class' => 'form-control', 'label' => 'Usuário']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('responsavel_id', ['options' => $responsavels, 'empty' => true, 'class' => 'form-control', 'label' => 'Responsável']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('data_inscricao', ['class' => 'form-control', 'label' => 'Data Inscrição', 'type' => 'date']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('status', [
+                            'class' => 'form-control',
+                            'label' => 'Status',
+                            'options' => [
+                                'planejamento' => __('Planejamento'),
+                                'andamento' => __('Andamento'),
+                                'concluido' => __('Concluído'),
+                                'cancelado' => __('Cancelado'),
+                            ],
+                        ]) ?>
+                    </div>
+                </fieldset>
+                <div class="mt-4 d-flex">
+                    <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>
+                    <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
+                </div>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

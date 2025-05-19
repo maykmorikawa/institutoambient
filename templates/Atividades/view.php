@@ -23,8 +23,20 @@
                     <td><?= $atividade->hasValue('projeto') ? $this->Html->link($atividade->projeto->titulo, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id]) : '' ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Titulo') ?></th>
-                    <td><?= h($atividade->titulo) ?></td>
+                    <th><?= __('Nome') ?></th>
+                    <td><?= h($atividade->nome) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Local') ?></th>
+                    <td><?= h($atividade->local) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Dias Semana') ?></th>
+                    <td><?= h($atividade->dias_semana) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('User') ?></th>
+                    <td><?= $atividade->hasValue('user') ? $this->Html->link($atividade->user->name, ['controller' => 'Users', 'action' => 'view', $atividade->user->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Slug') ?></th>
@@ -37,6 +49,14 @@
                 <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($atividade->id) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Vagas') ?></th>
+                    <td><?= $this->Number->format($atividade->vagas) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Horario') ?></th>
+                    <td><?= h($atividade->horario) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Created') ?></th>
@@ -58,46 +78,38 @@
                 </blockquote>
             </div>
             <div class="related">
-                <h4><?= __('Related Alunos') ?></h4>
-                <?php if (!empty($atividade->alunos)) : ?>
+                <h4><?= __('Related Aulas') ?></h4>
+                <?php if (!empty($atividade->aulas)) : ?>
                 <div class="table-responsive">
                     <table>
                         <tr>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Atividade Id') ?></th>
-                            <th><?= __('Nome') ?></th>
-                            <th><?= __('Email') ?></th>
-                            <th><?= __('Cpf') ?></th>
-                            <th><?= __('Rg') ?></th>
-                            <th><?= __('Nis') ?></th>
-                            <th><?= __('Data Nascimento') ?></th>
-                            <th><?= __('Telefone') ?></th>
+                            <th><?= __('Data') ?></th>
+                            <th><?= __('Conteudo') ?></th>
+                            <th><?= __('Observacoes') ?></th>
                             <th><?= __('Created') ?></th>
                             <th><?= __('Modified') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
-                        <?php foreach ($atividade->alunos as $aluno) : ?>
+                        <?php foreach ($atividade->aulas as $aula) : ?>
                         <tr>
-                            <td><?= h($aluno->id) ?></td>
-                            <td><?= h($aluno->atividade_id) ?></td>
-                            <td><?= h($aluno->nome) ?></td>
-                            <td><?= h($aluno->email) ?></td>
-                            <td><?= h($aluno->cpf) ?></td>
-                            <td><?= h($aluno->rg) ?></td>
-                            <td><?= h($aluno->nis) ?></td>
-                            <td><?= h($aluno->data_nascimento) ?></td>
-                            <td><?= h($aluno->telefone) ?></td>
-                            <td><?= h($aluno->created) ?></td>
-                            <td><?= h($aluno->modified) ?></td>
+                            <td><?= h($aula->id) ?></td>
+                            <td><?= h($aula->atividade_id) ?></td>
+                            <td><?= h($aula->data) ?></td>
+                            <td><?= h($aula->conteudo) ?></td>
+                            <td><?= h($aula->observacoes) ?></td>
+                            <td><?= h($aula->created) ?></td>
+                            <td><?= h($aula->modified) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Alunos', 'action' => 'view', $aluno->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Alunos', 'action' => 'edit', $aluno->id]) ?>
+                                <?= $this->Html->link(__('View'), ['controller' => 'Aulas', 'action' => 'view', $aula->id]) ?>
+                                <?= $this->Html->link(__('Edit'), ['controller' => 'Aulas', 'action' => 'edit', $aula->id]) ?>
                                 <?= $this->Form->postLink(
                                     __('Delete'),
-                                    ['controller' => 'Alunos', 'action' => 'delete', $aluno->id],
+                                    ['controller' => 'Aulas', 'action' => 'delete', $aula->id],
                                     [
                                         'method' => 'delete',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $aluno->id),
+                                        'confirm' => __('Are you sure you want to delete # {0}?', $aula->id),
                                     ]
                                 ) ?>
                             </td>

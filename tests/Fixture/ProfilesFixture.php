@@ -21,6 +21,9 @@ class ProfilesFixture extends TestFixture
             [
                 'id' => 1,
                 'name' => 'Lorem ipsum dolor sit amet',
+                'created' => '2025-05-16 23:02:20',
+                'modified' => '2025-05-16 23:02:20',
+                'description' => 'Lorem ipsum dolor sit amet',
             ],
         ];
         parent::init();

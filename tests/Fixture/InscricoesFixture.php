@@ -24,7 +24,7 @@ class InscricoesFixture extends TestFixture
                 'atividade_id' => 1,
                 'user_id' => 1,
                 'responsavel_id' => 1,
-                'data_inscricao' => '2025-05-16 02:33:44',
+                'data_inscricao' => '2025-05-16 23:00:33',
                 'status' => 'Lorem ipsum dolor sit amet',
             ],
         ];

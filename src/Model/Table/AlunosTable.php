@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -11,10 +12,11 @@ use Cake\Validation\Validator;
 /**
  * Alunos Model
  *
- * @property \App\Model\Table\AtividadesTable&\Cake\ORM\Association\BelongsTo $Atividades
+ * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
  * @property \App\Model\Table\EnderecosTable&\Cake\ORM\Association\HasMany $Enderecos
  * @property \App\Model\Table\EscolaridadesTable&\Cake\ORM\Association\HasMany $Escolaridades
  * @property \App\Model\Table\InscricoesTable&\Cake\ORM\Association\HasMany $Inscricoes
+ * @property \App\Model\Table\PresencasTable&\Cake\ORM\Association\HasMany $Presencas
  *
  * @method \App\Model\Entity\Aluno newEmptyEntity()
  * @method \App\Model\Entity\Aluno newEntity(array $data, array $options = [])
@@ -50,17 +52,28 @@ class AlunosTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Atividades', [
-            'foreignKey' => 'atividade_id',
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER',
         ]);
-        $this->hasMany('Enderecos', [
-            'foreignKey' => 'aluno_id',
-        ]);
-        $this->hasMany('Escolaridades', [
-            'foreignKey' => 'aluno_id',
-        ]);
+
         $this->hasMany('Inscricoes', [
             'foreignKey' => 'aluno_id',
+        ]);
+        $this->hasMany('Presencas', [
+            'foreignKey' => 'aluno_id',
+        ]);
+
+        $this->hasMany('Enderecos', [
+            'foreignKey' => 'aluno_id',
+            'dependent' => true,
+            'cascadeCallbacks' => true,
+        ]);
+
+        $this->hasMany('Escolaridades', [
+            'foreignKey' => 'aluno_id',
+            'dependent' => true,
+            'cascadeCallbacks' => true,
         ]);
     }
 
@@ -73,22 +86,34 @@ class AlunosTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
-            ->scalar('nome')
-            ->maxLength('nome', 255)
-            ->requirePresence('nome', 'create')
-            ->notEmptyString('nome');
+            ->integer('user_id')
+            ->notEmptyString('user_id');
+
+        $validator
+            ->scalar('nome_completo')
+            ->maxLength('nome_completo', 100)
+            ->requirePresence('nome_completo', 'create')
+            ->notEmptyString('nome_completo');
 
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmptyString('email');
+            ->notEmptyString('email')
+            ->add('email', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->scalar('cpf')
-            ->maxLength('cpf', 14)
-            ->requirePresence('cpf', 'create')
-            ->notEmptyString('cpf')
-            ->add('cpf', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            // Validação CPF
+            ->add('cpf', 'length', [
+                'rule' => ['lengthBetween', 11, 14],
+                'message' => 'CPF deve conter 11 dígitos'
+            ])
+            ->add('cpf', 'custom', [
+                'rule' => function ($value) {
+                    $cleaned = preg_replace('/[^0-9]/', '', $value);
+                    return strlen($cleaned) === 11;
+                },
+                'message' => 'CPF inválido'
+            ]);
 
         $validator
             ->scalar('rg')
@@ -105,13 +130,14 @@ class AlunosTable extends Table
             ->allowEmptyDate('data_nascimento');
 
         $validator
-            ->scalar('telefone')
-            ->maxLength('telefone', 20)
-            ->allowEmptyString('telefone');
-
-        $validator
-            ->integer('atividade_id')
-            ->allowEmptyString('atividade_id');
+            // Validação Telefone
+            ->add('telefone', 'custom', [
+                'rule' => function ($value) {
+                    $cleaned = preg_replace('/[^0-9]/', '', $value);
+                    return strlen($cleaned) >= 10 && strlen($cleaned) <= 11;
+                },
+                'message' => 'Telefone deve ter 10 ou 11 dígitos'
+            ]);
 
         return $validator;
     }
@@ -126,7 +152,8 @@ class AlunosTable extends Table
     public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->isUnique(['cpf']), ['errorField' => 'cpf']);
-        $rules->add($rules->existsIn(['atividade_id'], 'Atividades'), ['errorField' => 'atividade_id']);
+        $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
+        $rules->add($rules->existsIn(['user_id'], 'Users'), ['errorField' => 'user_id']);
 
         return $rules;
     }

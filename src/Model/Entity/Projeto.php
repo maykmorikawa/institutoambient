@@ -9,11 +9,17 @@ use Cake\ORM\Entity;
  * Projeto Entity
  *
  * @property int $id
- * @property string $titulo
+ * @property string $name
+ * @property string|null $descricao
+ * @property \Cake\I18n\Date $data_inicio
+ * @property \Cake\I18n\Date $data_fim
+ * @property string $status
+ * @property int $user_id
  * @property bool|null $publicado
  * @property \Cake\I18n\DateTime|null $created
  * @property \Cake\I18n\DateTime|null $modified
  *
+ * @property \App\Model\Entity\User $user
  * @property \App\Model\Entity\Atividade[] $atividades
  */
 class Projeto extends Entity
@@ -28,10 +34,16 @@ class Projeto extends Entity
      * @var array<string, bool>
      */
     protected array $_accessible = [
-        'titulo' => true,
+        'name' => true,
+        'descricao' => true,
+        'data_inicio' => true,
+        'data_fim' => true,
+        'status' => true,
+        'user_id' => true,
         'publicado' => true,
         'created' => true,
         'modified' => true,
+        'user' => true,
         'atividades' => true,
     ];
 }

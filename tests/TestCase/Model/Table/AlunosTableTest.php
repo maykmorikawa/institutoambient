@@ -25,10 +25,11 @@ class AlunosTableTest extends TestCase
      */
     protected array $fixtures = [
         'app.Alunos',
-        'app.Atividades',
+        'app.Users',
         'app.Enderecos',
         'app.Escolaridades',
         'app.Inscricoes',
+        'app.Presencas',
     ];
 
     /**

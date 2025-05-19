@@ -14,7 +14,7 @@ use Cake\ORM\Entity;
  * @property int|null $user_id
  * @property int|null $responsavel_id
  * @property \Cake\I18n\DateTime|null $data_inscricao
- * @property string|null $status
+ * @property string $status
  *
  * @property \App\Model\Entity\Aluno $aluno
  * @property \App\Model\Entity\Atividade $atividade

@@ -10,6 +10,9 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
+ * @property \Cake\I18n\DateTime|null $created
+ * @property \Cake\I18n\DateTime|null $modified
+ * @property string|null $description
  *
  * @property \App\Model\Entity\User[] $users
  */
@@ -26,6 +29,9 @@ class Profile extends Entity
      */
     protected array $_accessible = [
         'name' => true,
+        'created' => true,
+        'modified' => true,
+        'description' => true,
         'users' => true,
     ];
 }
