@@ -44,7 +44,7 @@ class AtividadesController extends AppController
      */
     public function add()
     {
-        
+
         $atividade = $this->Atividades->newEmptyEntity();
         if ($this->request->is('post')) {
             $atividade = $this->Atividades->patchEntity($atividade, $this->request->getData());
@@ -55,8 +55,9 @@ class AtividadesController extends AppController
             }
             $this->Flash->error(__('The atividade could not be saved. Please, try again.'));
         }
-        $projetos = $this->Atividades->Projetos->find('list', limit: 200)->all();
-        $users = $this->Atividades->Users->find('list', limit: 200)->all();
+        
+        $users = $this->Atividades->Users->find('list', keyField: 'id', valueField: 'nome', limit: 200);
+        $projetos = $this->Atividades->Projetos->find('list', keyField: 'id', valueField: 'nome', limit: 200);
         $this->set(compact('atividade', 'projetos', 'users'));
     }
 
