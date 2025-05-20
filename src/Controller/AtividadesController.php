@@ -44,6 +44,7 @@ class AtividadesController extends AppController
      */
     public function add()
     {
+        
         $atividade = $this->Atividades->newEmptyEntity();
         if ($this->request->is('post')) {
             $atividade = $this->Atividades->patchEntity($atividade, $this->request->getData());
