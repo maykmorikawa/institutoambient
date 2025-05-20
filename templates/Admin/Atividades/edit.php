@@ -25,7 +25,7 @@
                             <?= $this->Form->control('projeto_id', ['options' => $projetos, 'empty' => true, 'class' => 'form-control', 'label' => 'Projeto']) ?>
                         </div>
                         <div class="mb-3">
-                            <?= $this->Form->control('name', ['class' => 'form-control', 'label' => 'Nome']) ?>
+                            <?= $this->Form->control('nome', ['class' => 'form-control', 'label' => 'Nome']) ?>
                         </div>
                         <div class="mb-3">
                             <?= $this->Form->control('descricao', ['class' => 'form-control', 'label' => 'Descrição', 'type' => 'textarea']) ?>

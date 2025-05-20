@@ -8,7 +8,7 @@
     <div class="col-md-10 offset-md-1">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h3 class="mb-0"><?= h($atividade->name) ?></h3>
+                <h3 class="mb-0"><?= h($atividade->nome) ?></h3>
                 <div>
                     <?= $this->Html->link('<i class="bi bi-pencil-square"></i> ' . __('Editar'), ['action' => 'edit', $atividade->id], ['class' => 'btn btn-sm btn-outline-secondary', 'escape' => false, 'style' => 'margin-right: 10px;']) ?>
                     <?= $this->Form->postLink(
@@ -26,7 +26,7 @@
                     </tr>
                     <tr>
                         <th><?= __('Nome') ?></th>
-                        <td><?= h($atividade->name) ?></td>
+                        <td><?= h($atividade->nome) ?></td>
                     </tr>
                     <tr>
                         <th><?= __('Local') ?></th>

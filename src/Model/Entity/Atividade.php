@@ -41,7 +41,7 @@ class Atividade extends Entity
      */
     protected array $_accessible = [
         'projeto_id' => true,
-        'name' => true,
+        'nome' => true,
         'descricao' => true,
         'vagas' => true,
         'local' => true,

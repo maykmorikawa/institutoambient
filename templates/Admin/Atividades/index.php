@@ -17,7 +17,7 @@
                         <tr>
                             <th><?= $this->Paginator->sort('id', '#') ?></th>
                             <th><?= $this->Paginator->sort('projeto_id', 'Projeto') ?></th>
-                            <th><?= $this->Paginator->sort('name', 'Nome') ?></th>
+                            <th><?= $this->Paginator->sort('nome', 'Nome') ?></th>
                             <th><?= $this->Paginator->sort('vagas', 'Vagas') ?></th>
                             <th><?= $this->Paginator->sort('local', 'Local') ?></th>
                             <th><?= $this->Paginator->sort('horario', 'Horário') ?></th>
@@ -36,7 +36,7 @@
                         <tr>
                             <td><?= $this->Number->format($atividade->id) ?></td>
                             <td><?= $atividade->hasValue('projeto') ? '<span class="badge bg-info text-white">' . $this->Html->link($atividade->projeto->name, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Projeto') . '</span>' ?></td>
-                            <td><?= h($atividade->name) ?></td>
+                            <td><?= h($atividade->nome) ?></td>
                             <td><?= $this->Number->format($atividade->vagas) ?></td>
                             <td><?= h($atividade->local) ?></td>
                             <td><?= h($atividade->horario) ?></td>
