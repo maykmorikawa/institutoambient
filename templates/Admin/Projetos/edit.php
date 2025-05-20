@@ -15,7 +15,7 @@
                     <fieldset>
                         <legend><?= __('Informações do Projeto') ?></legend>
                         <div class="mb-3">
-                            <?= $this->Form->control('nome', ['class' => 'form-control', 'label' => 'Nome']) ?>
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'label' => 'Nome']) ?>
                         </div>
                         <div class="mb-3">
                             <?= $this->Form->control('descricao', ['class' => 'form-control', 'label' => 'Descrição', 'type' => 'textarea']) ?>
@@ -43,11 +43,11 @@
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
-                                <?= $this->Form->checkbox('ublicado', [
+                                <?= $this->Form->checkbox('publicado', [
                                     'class' => 'form-check-input',
-                                    'id' => 'ublicado'
+                                    'id' => 'publicado'
                                 ]) ?>
-                                <label class="form-check-label" for="ublicado">
+                                <label class="form-check-label" for="publicado">
                                     <?= __('Publicado') ?>
                                 </label>
                             </div>
