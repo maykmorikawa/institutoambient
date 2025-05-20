@@ -65,7 +65,7 @@ class AlunosController extends AppController
             $this->Flash->error(__('Não foi possível salvar o aluno. Tente novamente.'));
         }
 
-        $users = $this->Alunos->Users->find('list', ['limit' => 200])->all();
+        $users = $this->Alunos->Users->find('list')->limit(200)->all();
         $this->set(compact('aluno', 'users'));
     }
 
