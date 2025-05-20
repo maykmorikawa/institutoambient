@@ -47,21 +47,35 @@ class InscricoesController extends AppController
     public function add()
     {
         $inscrico = $this->Inscricoes->newEmptyEntity();
+
         if ($this->request->is('post')) {
-            $inscrico = $this->Inscricoes->patchEntity($inscrico, $this->request->getData());
+            // Pega os dados do formulário
+            $data = $this->request->getData();
+
+            // Seta a data atual do servidor no campo `data_inscricao`
+            $data['data_inscricao'] = date('Y-m-d H:i:s');
+
+            // Aplica os dados à entidade
+            $inscrico = $this->Inscricoes->patchEntity($inscrico, $data);
+
             if ($this->Inscricoes->save($inscrico)) {
-                $this->Flash->success(__('The inscrico has been saved.'));
+                $this->Flash->success(__('A inscrição foi salva com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The inscrico could not be saved. Please, try again.'));
+
+            $this->Flash->error(__('Não foi possível salvar a inscrição. Por favor, tente novamente.'));
         }
+
+        // Busca os dados para os selects
         $alunos = $this->Inscricoes->Alunos->find('list', keyField: 'id', valueField: 'nome_completo')->toArray();
         $atividades = $this->Inscricoes->Atividades->find('list', keyField: 'id', valueField: 'nome')->toArray();
         $users = $this->Inscricoes->Users->find('list', keyField: 'id', valueField: 'name')->toArray();
         $responsavels = $this->Inscricoes->Responsavels->find('list', keyField: 'id', valueField: 'name')->toArray();
+
         $this->set(compact('inscrico', 'alunos', 'atividades', 'users', 'responsavels'));
     }
+
 
     /**
      * Edit method
