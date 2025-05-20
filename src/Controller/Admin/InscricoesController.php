@@ -82,7 +82,7 @@ class InscricoesController extends AppController
             }
             $this->Flash->error(__('The inscrico could not be saved. Please, try again.'));
         }
-        $alunos = $this->Inscricoes->Alunos->find('list', keyField: 'id', valueField: 'name')->toArray();
+        $alunos = $this->Inscricoes->Alunos->find('list', keyField: 'id', valueField: 'nome_completo')->toArray();
         $atividades = $this->Inscricoes->Atividades->find('list', keyField: 'id', valueField: 'nome')->toArray();
         $users = $this->Inscricoes->Users->find('list', keyField: 'id', valueField: 'name')->toArray();
         $responsavels = $this->Inscricoes->Responsavels->find('list', keyField: 'id', valueField: 'name')->toArray();
