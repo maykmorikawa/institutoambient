@@ -36,7 +36,7 @@
                         <?= $this->Form->control('responsavel_id', ['options' => $responsavels, 'empty' => true, 'class' => 'form-control', 'label' => 'Responsável']) ?>
                     </div>
                     <div class="mb-3">
-                        <?= $this->Form->control('data_inscricao', ['empty' => true, 'class' => 'form-control', 'label' => 'Data Inscrição', 'type' => 'date']) ?>
+                        <?= $this->Form->control('data_inscricao', ['class' => 'form-control', 'label' => 'Data Inscrição']) ?>
                     </div>
                     <div class="mb-3">
                         <?= $this->Form->control('status', [
