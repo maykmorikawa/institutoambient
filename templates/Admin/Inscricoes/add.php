@@ -35,11 +35,10 @@
                         <?= $this->Form->control('status', [
                             'class' => 'form-control',
                             'label' => 'Status',
-                            'options' => [
-                                'planejamento' => __('Planejamento'),
-                                'andamento' => __('Andamento'),
-                                'concluido' => __('Concluído'),
-                                'cancelado' => __('Cancelado'),
+                            'options' => [                                
+                                'pendente' => __('Pendente'),
+                                'confirmada' => __('Confirmada'),
+                                'cancelada' => __('Cancelado'),
                             ],
                         ]) ?>
                     </div>

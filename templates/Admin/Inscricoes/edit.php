@@ -21,31 +21,39 @@
             </div>
             <div class="card-body">
                 <?= $this->Form->create($inscrico) ?>
-                    <fieldset>
-                        <legend><?= __('Informações da Inscrição') ?></legend>
-                        <div class="mb-3">
-                            <?= $this->Form->control('aluno_id', ['options' => $alunos, 'class' => 'form-control', 'label' => 'Aluno']) ?>
-                        </div>
-                        <div class="mb-3">
-                            <?= $this->Form->control('atividade_id', ['options' => $atividades, 'class' => 'form-control', 'label' => 'Atividade']) ?>
-                        </div>
-                        <div class="mb-3">
-                            <?= $this->Form->control('user_id', ['options' => $users, 'empty' => true, 'class' => 'form-control', 'label' => 'Usuário']) ?>
-                        </div>
-                        <div class="mb-3">
-                            <?= $this->Form->control('responsavel_id', ['options' => $responsavels, 'empty' => true, 'class' => 'form-control', 'label' => 'Responsável']) ?>
-                        </div>
-                        <div class="mb-3">
-                            <?= $this->Form->control('data_inscricao', ['empty' => true, 'class' => 'form-control', 'label' => 'Data Inscrição', 'type' => 'date']) ?>
-                        </div>
-                        <div class="mb-3">
-                            <?= $this->Form->control('status', ['class' => 'form-control', 'label' => 'Status']) ?>
-                        </div>
-                    </fieldset>
-                    <div class="mt-4 d-flex">
-                        <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>
-                        <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
+                <fieldset>
+                    <legend><?= __('Informações da Inscrição') ?></legend>
+                    <div class="mb-3">
+                        <?= $this->Form->control('aluno_id', ['options' => $alunos, 'class' => 'form-control', 'label' => 'Aluno']) ?>
                     </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('atividade_id', ['options' => $atividades, 'class' => 'form-control', 'label' => 'Atividade']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('user_id', ['options' => $users, 'empty' => true, 'class' => 'form-control', 'label' => 'Usuário']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('responsavel_id', ['options' => $responsavels, 'empty' => true, 'class' => 'form-control', 'label' => 'Responsável']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('data_inscricao', ['empty' => true, 'class' => 'form-control', 'label' => 'Data Inscrição', 'type' => 'date']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('status', [
+                            'class' => 'form-control',
+                            'label' => 'Status',
+                            'options' => [
+                                'pendente' => __('Pendente'),
+                                'confirmada' => __('Confirmada'),
+                                'cancelada' => __('Cancelado'),
+                            ],
+                        ]) ?>
+                    </div>
+                </fieldset>
+                <div class="mt-4 d-flex">
+                    <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>
+                    <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-secondary']) ?>
+                </div>
                 <?= $this->Form->end() ?>
             </div>
         </div>
