@@ -28,12 +28,9 @@
                     <div class="mb-3">
                         <?= $this->Form->control('user_id', ['options' => $users, 'empty' => true, 'class' => 'form-control', 'label' => 'Usuário']) ?>
                     </div>
-                    <?= $this->Form->control('data_inscricao', [
-                        'class' => 'form-control',
-                        'label' => 'Data Inscrição',
-                        'type' => 'datetime-local',
-                        'value' => date('Y-m-d\TH:i') // Formato compatível com datetime-local
-                    ]) ?>                    
+                    <div class="mb-3">
+                        <?= $this->Form->control('data_inscricao', ['class' => 'form-control', 'label' => 'Data Inscrição']) ?>
+                    </div>
                     <div class="mb-3">
                         <?= $this->Form->control('status', [
                             'class' => 'form-control',
