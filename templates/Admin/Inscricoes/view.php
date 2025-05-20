@@ -22,11 +22,11 @@
                 <table class="table table-bordered">
                     <tr>
                         <th><?= __('Aluno') ?></th>
-                        <td><?= $inscrico->hasValue('aluno') ? $this->Html->link($inscrico->aluno->nome, ['controller' => 'Alunos', 'action' => 'view', $inscrico->aluno->id]) : '<span class="badge bg-secondary text-white">' . __('Sem Aluno') . '</span>' ?></td>
+                        <td><?= $inscrico->hasValue('aluno') ? $this->Html->link($inscrico->aluno->nome_completo, ['controller' => 'Alunos', 'action' => 'view', $inscrico->aluno->id]) : '<span class="badge bg-secondary text-white">' . __('Sem Aluno') . '</span>' ?></td>
                     </tr>
                     <tr>
                         <th><?= __('Atividade') ?></th>
-                        <td><?= $inscrico->hasValue('atividade') ? $this->Html->link($inscrico->atividade->titulo, ['controller' => 'Atividades', 'action' => 'view', $inscrico->atividade->id]) : '<span class="badge bg-secondary text-white">' . __('Sem Atividade') . '</span>' ?></td>
+                        <td><?= $inscrico->hasValue('atividade') ? $this->Html->link($inscrico->atividade->nome, ['controller' => 'Atividades', 'action' => 'view', $inscrico->atividade->id]) : '<span class="badge bg-secondary text-white">' . __('Sem Atividade') . '</span>' ?></td>
                     </tr>
                     <tr>
                         <th><?= __('Usuário') ?></th>
