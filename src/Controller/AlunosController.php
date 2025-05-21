@@ -45,27 +45,34 @@ class AlunosController extends AppController
     public function add()
     {
         $aluno = $this->Alunos->newEmptyEntity();
+
+        // Recupera atividade_id da URL ou sessão
+        $atividade_id = $this->request->getQuery('atividade_id')
+            ?? $this->request->getSession()->read('Inscricao.atividade_id');
+
         if ($this->request->is('post')) {
-            $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData());
+            $data = $this->request->getData();
+            $data['atividade_id'] = $atividade_id; // Garante o vínculo
+
+            $aluno = $this->Alunos->patchEntity($aluno, $data);
+
             if ($this->Alunos->save($aluno)) {
+                // Redireciona com ambos IDs
                 return $this->redirect([
                     'controller' => 'Inscricoes',
                     'action' => 'processarInscricao',
                     '?' => [
-                        'atividade_id' => $this->request->getData('atividade_id'),
+                        'atividade_id' => $atividade_id,
                         'aluno_id' => $aluno->id
                     ]
                 ]);
             }
-            $this->Flash->error(__('The aluno could not be saved. Please, try again.'));
+            $this->Flash->error(__('Erro no cadastro.'));
         }
+
+        // Passa atividade_id para o template
         $users = $this->Alunos->Users->find('list', limit: 200)->all();
-        $atividades = $this->Alunos->Atividades->find('list', [
-            'keyField' => 'id',
-            'valueField' => 'nome', // ajuste conforme o nome do campo
-            'limit' => 200
-        ])->toArray();
-        $this->set(compact('aluno', 'atividades', 'users'));
+        $this->set(compact('aluno', 'users', 'atividade_id'));
     }
 
     /**
