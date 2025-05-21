@@ -78,29 +78,22 @@ class AlunosController extends AppController
      */
     public function edit($id = null)
     {
-        $aluno = $this->Alunos->get($id, [
-            'contain' => ['Enderecos', 'Escolaridades'],
-        ]);
+        $aluno = $this->Alunos->get($id, contain: ['Enderecos', 'Escolaridades']);
 
         if ($this->request->is(['patch', 'post', 'put'])) {
-            // Debug: veja os dados recebidos
-            // debug($this->request->getData()); exit;
-
             $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData(), [
                 'associated' => ['Enderecos', 'Escolaridades']
             ]);
-
-            // Debug: veja a entidade após o patch
-            // debug($aluno); exit;
 
             if ($this->Alunos->save($aluno, ['associated' => ['Enderecos', 'Escolaridades']])) {
                 $this->Flash->success(__('O aluno foi salvo com sucesso.'));
                 return $this->redirect(['action' => 'index']);
             }
+
             $this->Flash->error(__('Não foi possível salvar o aluno. Tente novamente.'));
         }
 
-        $users = $this->Alunos->Users->find('list', ['limit' => 200]);
+        $users = $this->Alunos->Users->find('list', limit: 200);
         $this->set(compact('aluno', 'users'));
     }
 
