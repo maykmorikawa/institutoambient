@@ -57,20 +57,16 @@ class AlunosController extends AppController
             $aluno = $this->Alunos->patchEntity($aluno, $data);
 
             if ($this->Alunos->save($aluno)) {
-                debug([
-                    'expected_redirect' => [
-                        'controller' => 'Inscricoes',
-                        'action' => 'processarInscricao',
-                        '?' => [
-                            'atividade_id' => $atividade_id,
-                            'aluno_id' => $aluno->id
-                        ]
-                    ],
-                    'actual_data' => $aluno->toArray()
+                // Força o redirecionamento ignorando qualquer hook
+                $response = $this->redirect([
+                    'controller' => 'Inscricoes',
+                    'action' => 'processarInscricao',
+                    '?' => [
+                        'atividade_id' => $atividade_id,
+                        'aluno_id' => $aluno->id
+                    ]
                 ]);
-                exit;
-
-                // return $this->redirect(...); // Comente temporariamente
+                return $response->withDisabledCache(); // Opcional
             }
         }
 
