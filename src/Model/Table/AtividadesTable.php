@@ -121,11 +121,7 @@ class AtividadesTable extends Table
             ->scalar('slug')
             ->maxLength('slug', 255)
             ->allowEmptyString('slug')
-            ->add('slug', 'unique', [
-                'rule' => 'validateUnique',
-                'provider' => 'table',
-                'message' => 'Já existe uma atividade com este nome. Por favor, escolha outro nome.'
-            ]);
+            ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->scalar('link_inscricao')
