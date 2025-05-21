@@ -155,18 +155,21 @@ class AtividadesTable extends Table
 
     public function beforeSave(EventInterface $event, $entity, $options)
     {
+        // Gera o slug se estiver vazio
         if (empty($entity->slug)) {
             $entity->slug = Text::slug(strtolower($entity->nome));
         }
 
-        // Gera link sem o prefixo /admin
-        $entity->link_inscricao = Router::url([
-            'prefix' => false, // <- isso é crucial
-            'controller' => 'Inscricoes',
-            'action' => 'verificar',
-            $entity->slug,
-            '_full' => true // inclui o domínio
-        ]);
+        // ⚠️ Garante que o slug foi gerado antes de montar o link
+        if (!empty($entity->slug)) {
+            $entity->link_inscricao = Router::url([
+                'prefix' => false,
+                'controller' => 'Inscricoes',
+                'action' => 'verificar',
+                $entity->slug,
+                '_full' => true
+            ]);
+        }
 
         return true;
     }
