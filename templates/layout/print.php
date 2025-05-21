@@ -38,11 +38,35 @@
     <!-- home css -->
     <link href="<?= WWW; ?>/site/css/home.css" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; font-size: 14px; margin: 20px; }
         @media print {
-            .no-print { display: none !important; }
+            @page {
+                size: auto;
+                margin: 0;
+            }
+
+            body {
+                margin: 0;
+                padding: 20px;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .container,
+            .card,
+            .card-body {
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow: visible !important;
+            }
+
+            .card {
+                page-break-inside: avoid;
+            }
         }
     </style>
+
 
 </head>
 
@@ -53,9 +77,9 @@
     <div id="preloader"></div>
 
     <div class="main-wrapper">
-       
+
         <?= $this->fetch('content') ?>
-        
+
     </div>
     <!-- MAIN WRAPPER
     ================================================== -->
