@@ -152,33 +152,20 @@ class AtividadesTable extends Table
 
         return $rules;
     }
-
     public function beforeSave(EventInterface $event, $entity, $options)
     {
         if (empty($entity->slug)) {
             $entity->slug = Text::slug(strtolower($entity->nome));
         }
 
-        // NÃO gere o link aqui!
-    }
+        // Gera link PÚBLICO (sem /admin)
+        $entity->link_inscricao = Router::url([
+            'controller' => 'Inscricoes',
+            'action' => 'verificar',
+            $entity->slug,
+            '_full' => true  // Inclui o domínio completo
+        ], false); // 👈 'false' remove prefixos (como /admin)
 
-    public function afterSave(EventInterface $event, $entity, $options)
-    {
-        // Só atualiza se o link ainda não estiver salvo
-        if (empty($entity->link_inscricao)) {
-            $link = Router::url([
-                'prefix' => false, // garante que não tenha "/admin"
-                'controller' => 'Inscricoes',
-                'action' => 'verificar',
-                $entity->slug,
-                '_full' => true
-            ], false);
-
-            // Atualiza a entidade com o link correto
-            $entity->link_inscricao = $link;
-
-            // Salva novamente sem chamar os eventos para evitar loop
-            $this->save($entity, ['checkRules' => false, 'atomic' => false, 'callbacks' => false]);
-        }
+        return true;
     }
 }
