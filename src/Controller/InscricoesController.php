@@ -74,6 +74,7 @@ class InscricoesController extends AppController
      */
     public function processarInscricao()
     {
+        $this->viewBuilder()->setLayout('site');
         $atividadeId = $this->request->getQuery('atividade_id');
         $alunoId = $this->request->getQuery('aluno_id');
 
@@ -111,6 +112,7 @@ class InscricoesController extends AppController
             $this->Flash->error(__('Erro ao processar inscrição.'));
             return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
+        
     }
 
 
@@ -160,6 +162,7 @@ class InscricoesController extends AppController
         }
 
         $this->set(compact('atividade', 'aluno', 'inscricao'));
+        $this->viewBuilder()->setLayout('site');
     }
 
     /**
