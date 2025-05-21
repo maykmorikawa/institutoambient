@@ -15,7 +15,6 @@
             top: 0;
             left: 0;
             width: 100%;
-            height:100%;
             margin: 0;
             box-shadow: none !important;
         }
@@ -74,6 +73,12 @@
                                 </div>
                                 <div class="col-md-6 no-print">
                                     <div class="d-grid gap-2">
+                                        <?= $this->Html->link(
+                                            'Imprimir Comprovante',
+                                            ['action' => 'comprovante', $inscricao->id, '?' => ['print' => '1']],
+                                            ['class' => 'btn btn-outline-info butn-style3 mb-2', 'target' => '_blank']
+                                        ) ?>
+
                                         <?= $this->Html->link(
                                             'Voltar à Home',
                                             ['controller' => 'Pages', 'action' => 'home'],
