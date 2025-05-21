@@ -5,55 +5,20 @@
  * @var \Cake\Collection\CollectionInterface|string[] $users
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Alunos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column column-80">
-        <div class="alunos form content">
-            <?= $this->Form->create($aluno) ?>
-            <fieldset>
-                <legend><?= __('Add Aluno') ?></legend>
-                <?php
-                echo $this->Form->control('user_id', ['options' => $users]);
-
-                echo $this->Form->control('nome_completo');
-                echo $this->Form->control('email');
-                echo $this->Form->control('cpf');
-                echo $this->Form->control('rg');
-                echo $this->Form->control('nis');
-                echo $this->Form->control('data_nascimento', ['empty' => true]);
-                echo $this->Form->control('telefone');
-                ?>
-                <?php
-                // Pega o atividade_id da URL
-                $atividadeId = $this->request->getQuery('atividade_id');
-                ?>
-
-                <!-- Campo hidden para enviar o ID da atividade no form -->
-                <?= $this->Form->control('atividade_id', [
-                    'type' => 'hidden',
-                    'value' => $atividadeId
-                ]) ?>
-
-                <!-- Exibe o nome da atividade em texto -->
-                <p>
-                    <strong>Atividade:</strong>
-                    <?= h($atividades[$atividadeId] ?? 'Desconhecida') ?>
-                </p>
-            </fieldset><section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="img/banner/page-title.jpg">
+</fieldset>
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
+    data-background="img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Adicionar Novo Aluno</h1> </div>
+                    <h1>Adicionar Novo Aluno</h1>
+                </div>
                 <div class="col-md-12">
                     <ul class="ps-0">
                         <li><a href="/">Home</a></li>
-                        <li><a href="#!">Adicionar Aluno</a></li> </ul>
+                        <li><a href="#!">Adicionar Aluno</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -73,7 +38,8 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="h5">Dicas para Cadastro</h4>
-                                    <span>Preencha todos os campos com atenção para garantir a inscrição correta do aluno.</span>
+                                    <span>Preencha todos os campos com atenção para garantir a inscrição correta do
+                                        aluno.</span>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
             <div class="col-lg-7 col-xl-8">
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
@@ -129,13 +95,13 @@
                         <?= $this->Form->button(__('Cadastrar Aluno'), ['class' => 'butn-style3 mt-4']) ?>
                         <?= $this->Form->end() ?>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
-    </div>
+<?= $this->Form->button(__('Submit')) ?>
+<?= $this->Form->end() ?>
+</div>
+</div>
 </div>
