@@ -33,30 +33,37 @@
                     </thead>
                     <tbody>
                         <?php foreach ($atividades as $atividade): ?>
-                        <tr>
-                            <td><?= $this->Number->format($atividade->id) ?></td>
-                            <td><?= $atividade->hasValue('projeto') ? '<span class="badge bg-info text-white">' . $this->Html->link($atividade->projeto->name, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Projeto') . '</span>' ?></td>
-                            <td><?= h($atividade->nome) ?></td>
-                            <td><?= $this->Number->format($atividade->vagas) ?></td>
-                            <td><?= h($atividade->local) ?></td>
-                            <td><?= h($atividade->horario) ?></td>
-                            <td><?= h($atividade->dias_semana) ?></td>
-                            <td><?= $atividade->hasValue('user') ? '<span class="badge bg-primary text-white">' . $this->Html->link($atividade->user->name, ['controller' => 'Users', 'action' => 'view', $atividade->user->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Usuário') . '</span>' ?></td>
-                            <td><?= h($atividade->slug) ?></td>
-                            <td><?= h($atividade->link_inscricao) ?></td>
-                            <td><?= $atividade->publicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?></td>
-                            <td><?= $atividade->created ? $atividade->created->format('d/m/Y H:i') : '-' ?></td>
-                            <td><?= $atividade->modified ? $atividade->modified->format('d/m/Y H:i') : '-' ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link('<i class="bi bi-eye-fill"></i> ' . __('Ver'), ['action' => 'view', $atividade->id], ['class' => 'btn btn-sm btn-outline-primary', 'escape' => false]) ?>
-                                <?= $this->Html->link('<i class="bi bi-pencil-square"></i> ' . __('Editar'), ['action' => 'edit', $atividade->id], ['class' => 'btn btn-sm btn-outline-secondary', 'escape' => false]) ?>
-                                <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i> ' . __('Excluir'), ['action' => 'delete', $atividade->id], [
-                                    'class' => 'btn btn-sm btn-outline-danger',
-                                    'escape' => false,
-                                    'confirm' => __('Tem certeza que deseja excluir a atividade #{0}?', $atividade->id),
-                                ]) ?>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?= $this->Number->format($atividade->id) ?></td>
+                                <td><?= $atividade->hasValue('projeto') ? '<span class="badge bg-info text-white">' . $this->Html->link($atividade->projeto->name, ['controller' => 'Projetos', 'action' => 'view', $atividade->projeto->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Projeto') . '</span>' ?>
+                                </td>
+                                <td><?= h($atividade->nome) ?></td>
+                                <td><?= $this->Number->format($atividade->vagas) ?></td>
+                                <td><?= h($atividade->local) ?></td>
+                                <td><?= h($atividade->horario) ?></td>
+                                <td><?= h($atividade->dias_semana) ?></td>
+                                <td><?= $atividade->hasValue('user') ? '<span class="badge bg-primary text-white">' . $this->Html->link($atividade->user->name, ['controller' => 'Users', 'action' => 'view', $atividade->user->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Usuário') . '</span>' ?>
+                                </td>
+                                <td><?= h($atividade->slug) ?></td>
+                                <td><?= h($atividade->link_inscricao) ?>
+                                    <span id="link-inscricao"><?= h($atividade->link_inscricao) ?></span>
+                                    <button class="btn btn-sm btn-outline-secondary ms-2"
+                                        onclick="copiarLink()">Copiar</button>
+                                </td>
+                                <td><?= $atividade->publicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?>
+                                </td>
+                                <td><?= $atividade->created ? $atividade->created->format('d/m/Y H:i') : '-' ?></td>
+                                <td><?= $atividade->modified ? $atividade->modified->format('d/m/Y H:i') : '-' ?></td>
+                                <td class="actions">
+                                    <?= $this->Html->link('<i class="bi bi-eye-fill"></i> ' . __('Ver'), ['action' => 'view', $atividade->id], ['class' => 'btn btn-sm btn-outline-primary', 'escape' => false]) ?>
+                                    <?= $this->Html->link('<i class="bi bi-pencil-square"></i> ' . __('Editar'), ['action' => 'edit', $atividade->id], ['class' => 'btn btn-sm btn-outline-secondary', 'escape' => false]) ?>
+                                    <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i> ' . __('Excluir'), ['action' => 'delete', $atividade->id], [
+                                        'class' => 'btn btn-sm btn-outline-danger',
+                                        'escape' => false,
+                                        'confirm' => __('Tem certeza que deseja excluir a atividade #{0}?', $atividade->id),
+                                    ]) ?>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
@@ -69,8 +76,26 @@
                     <?= $this->Paginator->next(__('próxima') . ' <i class="bi bi-chevron-right"></i>', ['escape' => false]) ?>
                     <?= $this->Paginator->last(__('última') . ' <i class="bi bi-chevron-double-right"></i>', ['escape' => false]) ?>
                 </ul>
-                <p class="mt-2"><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} no total')) ?></p>
+                <p class="mt-2">
+                    <?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} no total')) ?>
+                </p>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Script para copiar -->
+<script>
+    function copiarLink() {
+        let texto = document.getElementById('link-inscricao').textContent;
+
+        // Remove "/admin" se estiver no link
+        texto = texto.replace('/admin/', '/');
+
+        navigator.clipboard.writeText(texto).then(function () {
+            alert("Link copiado com sucesso!");
+        }, function (err) {
+            alert("Erro ao copiar link: " + err);
+        });
+    }
+</script>
