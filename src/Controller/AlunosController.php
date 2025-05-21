@@ -57,17 +57,18 @@ class AlunosController extends AppController
             $aluno = $this->Alunos->patchEntity($aluno, $data);
 
             if ($this->Alunos->save($aluno)) {
-                // Redireciona com ambos IDs
-                return $this->redirect([
-                    'controller' => 'Inscricoes',
-                    'action' => 'processarInscricao',
-                    '?' => [
-                        'atividade_id' => $atividade_id,
-                        'aluno_id' => $aluno->id
-                    ]
-                ]);
-            }
-            $this->Flash->error(__('Erro no cadastro.'));
+        debug([
+            'expected_redirect' => [
+                'controller' => 'Inscricoes',
+                'action' => 'processarInscricao',
+                '?' => [
+                    'atividade_id' => $atividade_id,
+                    'aluno_id' => $aluno->id
+                ]
+            ],
+            'actual_data' => $aluno->toArray()
+        ]);
+        exit;
         }
 
         // Passa atividade_id para o template
