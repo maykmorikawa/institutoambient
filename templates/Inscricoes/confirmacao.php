@@ -12,10 +12,10 @@
                     <div class="col-md-6">
                         <h5>Detalhes:</h5>
                         <ul class="list-unstyled">
-                            <li><strong>Código:</strong> <?= h($atividade->codigo ?? 'N/A') ?></li>
+                            <li><strong>Código:</strong> <?= h($inscricao->id ?? 'N/A') ?></li>
                             <li><strong>Local:</strong> <?= h($atividade->local ?? 'A definir') ?></li>
                             <li><strong>Data:</strong> 
-                                <?= $atividade->data ? $atividade->created->format('d/m/Y') : 'A definir' ?>
+                                <?= $inscricao->data ? $inscricao->data_inscricao->format('d/m/Y') : 'A definir' ?>
                             </li>
                             <li><strong>Data da Inscrição:</strong> 
                                 <?= $inscricao->data_inscricao->format('d/m/Y H:i') ?>
