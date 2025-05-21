@@ -161,10 +161,10 @@ class AtividadesTable extends Table
 
         // Gera link PÚBLICO (sem /admin)
         $entity->link_inscricao = Router::url([
-            'prefix' => false, 
+            $entity->slug,
             'controller' => 'Inscricoes',
             'action' => 'verificar',
-            $entity->slug,
+            'prefix' => false, 
             '_full' => true  // Inclui o domínio completo
         ], false); // 👈 'false' remove prefixos (como /admin)
 
