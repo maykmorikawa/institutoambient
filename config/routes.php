@@ -85,12 +85,7 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
 
-      $builder->connect('/inscricao/:link', [
-         'controller' => 'Atividades',
-         'action' => 'inscrever',
-      ], [
-         'pass' => ['link']
-      ]);
+      
 
 
 
