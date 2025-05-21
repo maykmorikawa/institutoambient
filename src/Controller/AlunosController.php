@@ -60,8 +60,12 @@ class AlunosController extends AppController
             $this->Flash->error(__('The aluno could not be saved. Please, try again.'));
         }
         $users = $this->Alunos->Users->find('list', limit: 200)->all();
-        $atividades = $this->Alunos->Atividades->find('list', limit: 200)->all();
-        $this->set(compact('aluno','atividades', 'users'));
+        $atividades = $this->Alunos->Atividades->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'nome', // ajuste conforme o nome do campo
+            'limit' => 200
+        ])->toArray();
+        $this->set(compact('aluno', 'atividades', 'users'));
     }
 
     /**
