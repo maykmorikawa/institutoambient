@@ -121,7 +121,11 @@ class AtividadesTable extends Table
             ->scalar('slug')
             ->maxLength('slug', 255)
             ->allowEmptyString('slug')
-            ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->add('slug', 'unique', [
+                'rule' => 'validateUnique',
+                'provider' => 'table',
+                'message' => 'Já existe uma atividade com este nome. Por favor, escolha outro nome.'
+            ]);
 
         $validator
             ->scalar('link_inscricao')
@@ -152,6 +156,7 @@ class AtividadesTable extends Table
 
         return $rules;
     }
+
     public function beforeSave(EventInterface $event, $entity, $options)
     {
         if (empty($entity->slug)) {
