@@ -1,9 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Event\EventInterface;  // 👈 Adicione esta linha
+
 
 /**
  * Atividades Controller
@@ -49,16 +52,25 @@ class AtividadesController extends AppController
         $atividade = $this->Atividades->newEmptyEntity();
         if ($this->request->is('post')) {
             $atividade = $this->Atividades->patchEntity($atividade, $this->request->getData());
+
+            // 👇 Esta linha já vai acionar o beforeSave automaticamente
             if ($this->Atividades->save($atividade)) {
-                $this->Flash->success(__('The atividade has been saved.'));
+                $this->Flash->success(__('Atividade salva com sucesso!'));
+
+                // Mostra o link gerado (opcional)
+                $this->Flash->success(
+                    'Link de inscrição: ' . $atividade->link_inscricao,
+                    ['escape' => false]
+                );
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The atividade could not be saved. Please, try again.'));
+            $this->Flash->error(__('Erro ao salvar a atividade.'));
         }
+
+        // Restante do método permanece igual...
         $projetos = $this->Atividades->Projetos->find('list', keyField: 'id', valueField: 'name')->toArray();
         $users = $this->Atividades->Users->find('list', keyField: 'id', valueField: 'name')->toArray();
-
         $this->set(compact('atividade', 'projetos', 'users'));
     }
 

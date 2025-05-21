@@ -54,9 +54,21 @@ return function (RouteBuilder $routes): void {
     */
    $routes->setRouteClass(Route::class);
 
-
+   
+   
    $routes->scope('/', function (RouteBuilder $builder): void {
       $builder->setRouteClass(DashedRoute::class);
+
+      // Rota de Inscrição Pública (única definição)
+        $builder->get('/inscricao/:slug', [
+            'controller' => 'Inscricoes',
+            'action' => 'verificar'
+        ])->setPass(['slug']);
+
+        $builder->post('/inscricao/processar', [
+            'controller' => 'Inscricoes',
+            'action' => 'processarInscricao'
+        ]);
 
       // ROTAS ESPECÍFICAS PRIMEIRO
       $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
@@ -81,6 +93,7 @@ return function (RouteBuilder $routes): void {
       ]);
 
 
+
       // ✅ CHAME O Fallbacks **DENTRO** do escopo
       $builder->fallbacks(DashedRoute::class);
 
@@ -101,6 +114,11 @@ return function (RouteBuilder $routes): void {
 
    // Prefixo Admin
    $routes->prefix('Admin', ['path' => '/admin'], function (RouteBuilder $builder): void {
+
+      $builder->connect('/inscricoes/verificar/:slug', [
+            'controller' => 'Inscricoes',
+            'action' => 'verificarAdmin' // Ação diferente para admin
+        ])->setPass(['slug']);
       $builder->setRouteClass(DashedRoute::class);
       $builder->connect('/', ['controller' => 'Users', 'action' => 'admin']); // opcional
 
@@ -127,5 +145,4 @@ return function (RouteBuilder $routes): void {
     * });
     * ```
     */
-
 };

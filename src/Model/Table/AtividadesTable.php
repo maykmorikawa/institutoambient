@@ -8,6 +8,10 @@ use Cake\ORM\Query\SelectQuery;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Event\EventInterface;
+use Cake\Utility\Text;
+use Cake\Routing\Router;
+
 
 /**
  * Atividades Model
@@ -144,5 +148,22 @@ class AtividadesTable extends Table
         $rules->add($rules->existsIn(['user_id'], 'Users'), ['errorField' => 'user_id']);
 
         return $rules;
+    }
+
+    public function beforeSave(EventInterface $event, $entity, $options)
+    {
+        if (empty($entity->slug)) {
+            $entity->slug = Text::slug(strtolower($entity->nome));
+        }
+
+        // Gera link PÚBLICO (sem /admin)
+        $entity->link_inscricao = Router::url([
+            'controller' => 'Inscricoes',
+            'action' => 'verificar',
+            $entity->slug,
+            '_full' => true  // Inclui o domínio completo
+        ], false); // 👈 'false' remove prefixos (como /admin)
+
+        return true;
     }
 }
