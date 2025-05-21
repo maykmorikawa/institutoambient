@@ -122,26 +122,31 @@ class InscricoesController extends AppController
 
     public function confirmacao()
     {
-        $session = $this->request->getSession();
-        $atividadeId = $session->read('Inscricao.success.atividade_id');
-        $alunoId = $session->read('Inscricao.success.aluno_id');
+        $dados = $this->request->getSession()->consume('Inscricao.success');
 
-        if (!$atividadeId || !$alunoId) {
-            $this->Flash->error(__('Sessão de inscrição inválida.'));
+        if (empty($dados)) {
+            $this->Flash->error('Dados de confirmação não encontrados.');
             return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
 
-        // Carrega dados completos
-        $atividade = $this->fetchTable('Atividades')->get($atividadeId);
-        $aluno = $this->fetchTable('Alunos')->get($alunoId);
+        // Carrega os dados completos com verificação
+        $atividade = $this->fetchTable('Atividades')->get($dados['atividade_id'], [
+            'contain' => []
+        ]);
+
+        $aluno = $this->fetchTable('Alunos')->get($dados['aluno_id']);
+
         $inscricao = $this->fetchTable('Inscricoes')->find()
             ->where([
-                'atividade_id' => $atividadeId,
-                'aluno_id' => $alunoId
+                'atividade_id' => $dados['atividade_id'],
+                'aluno_id' => $dados['aluno_id']
             ])
             ->first();
 
-        $session->delete('Inscricao.success');
+        if (!$atividade || !$aluno || !$inscricao) {
+            $this->Flash->error('Inscrição não encontrada.');
+            return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
+        }
 
         $this->set(compact('atividade', 'aluno', 'inscricao'));
     }
