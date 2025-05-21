@@ -111,6 +111,17 @@ class InscricoesController extends AppController
             $atividadeId
         ]);
     }
+
+    public function confirmacao()
+    {
+        $dados = $this->request->getSession()->consume('Inscricao.success');
+
+        if (empty($dados)) {
+            return $this->redirect('/');
+        }
+
+        $this->set(compact('dados'));
+    }
     /**
      * Index method
      *

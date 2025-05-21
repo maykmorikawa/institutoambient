@@ -39,6 +39,7 @@ class Aluno extends Entity
      */
     protected array $_accessible = [
         'user_id' => true,
+        'atividade_id' => true,
         'nome_completo' => true,
         'email' => true,
         'cpf' => true,

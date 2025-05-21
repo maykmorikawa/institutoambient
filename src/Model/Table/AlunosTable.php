@@ -56,6 +56,10 @@ class AlunosTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER',
         ]);
+        $this->belongsTo('Atividades', [
+            'foreignKey' => 'atividade_id',
+            'joinType' => 'INNER',
+        ]);
 
         $this->hasMany('Inscricoes', [
             'foreignKey' => 'aluno_id',
@@ -88,6 +92,10 @@ class AlunosTable extends Table
         $validator
             ->integer('user_id')
             ->notEmptyString('user_id');
+
+        $validator
+            ->integer('atividade_id')
+            ->notEmptyString('atividade_id');
 
         $validator
             ->scalar('nome_completo')
@@ -154,6 +162,7 @@ class AlunosTable extends Table
         $rules->add($rules->isUnique(['cpf']), ['errorField' => 'cpf']);
         $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
         $rules->add($rules->existsIn(['user_id'], 'Users'), ['errorField' => 'user_id']);
+        $rules->add($rules->existsIn(['atividade_id'], 'Atividades'), ['errorField' => 'atividade_id']);
 
         return $rules;
     }
