@@ -148,10 +148,10 @@ class InscricoesController extends AppController
 
         $inscricao = $this->fetchTable('Inscricoes')->find()
             ->where([
-                'atividade_id' => $dados['atividade_id'],
-                'aluno_id' => $dados['aluno_id']
+                'Inscricoes.atividade_id' => $dados['atividade_id'],
+                'Inscricoes.aluno_id' => $dados['aluno_id']
             ])
-            ->contain(['Alunos']) // <- carrega a relação
+            ->contain(['Alunos', 'Atividades'])
             ->first();
 
         if (!$atividade || !$aluno || !$inscricao) {
