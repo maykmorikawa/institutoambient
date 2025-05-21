@@ -69,6 +69,9 @@ class AtividadesTable extends Table
         $this->hasMany('Inscricoes', [
             'foreignKey' => 'atividade_id',
         ]);
+        $this->hasMany('Alunos', [
+            'foreignKey' => 'atividade_id',
+        ]);
     }
 
     /**

@@ -19,6 +19,7 @@
                 <legend><?= __('Add Aluno') ?></legend>
                 <?php
                     echo $this->Form->control('user_id', ['options' => $users]);
+                    echo $this->Form->control('atividade_id', ['options' => $atividades]);
                     echo $this->Form->control('nome_completo');
                     echo $this->Form->control('email');
                     echo $this->Form->control('cpf');
