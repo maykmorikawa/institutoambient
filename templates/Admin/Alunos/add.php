@@ -91,7 +91,19 @@
             <!-- Tab Escolaridade -->
             <div class="tab-pane fade" id="escolaridade" role="tabpanel">
                 <div class="mb-3">
-                    <?= $this->Form->control('escolaridades.0.nivel', ['label' => 'Nível', 'class' => 'form-control']) ?>
+                    <?= $this->Form->control('escolaridades.0.nivel', [
+                        'class' => 'form-control',
+                        'label' => 'Nível',
+                        'options' => [
+                            'Fundamental' => __('Fundamental'),
+                            'Medio' => __('Médio'),
+                            'Tecnico' => __('Técnico'),                            
+                            'Superior' => __('Superior'),                            
+                            'Pos-graduacao' => __('Pós-graduação'),                            
+                            'Mestrado' => __('Mestrado'),                            
+                            'Doutorado' => __('Doutorado'),                            
+                        ],
+                    ]) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('escolaridades.0.serie', ['label' => 'Série', 'class' => 'form-control']) ?>
