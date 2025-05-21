@@ -1,29 +1,33 @@
 <style>
-    /* Só mostra a área da impressão ao imprimir */
     @media print {
-        body * {
-            visibility: hidden !important;
-        }
-
-        .card.shadow,
-        .card.shadow * {
-            visibility: visible !important;
-        }
-
-        .card.shadow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+        @page {
+            size: auto;
             margin: 0;
-            box-shadow: none !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
         }
 
         .no-print {
             display: none !important;
         }
+
+        .container,
+        .card,
+        .card-body {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow: visible !important;
+        }
+
+        .card {
+            page-break-inside: avoid;
+        }
     }
 </style>
+
 
 <section class="page-title-section bg-img cover-background left-overlay-dark no-print" data-overlay-dark="6"
     data-background="img/banner/page-title.jpg">

@@ -37,36 +37,6 @@
 
     <!-- home css -->
     <link href="<?= WWW; ?>/site/css/home.css" rel="stylesheet">
-    <style>
-        @media print {
-            @page {
-                size: auto;
-                margin: 0;
-            }
-
-            body {
-                margin: 0;
-                padding: 20px;
-            }
-
-            .no-print {
-                display: none !important;
-            }
-
-            .container,
-            .card,
-            .card-body {
-                width: 100% !important;
-                max-width: 100% !important;
-                overflow: visible !important;
-            }
-
-            .card {
-                page-break-inside: avoid;
-            }
-        }
-    </style>
-
 
 </head>
 
