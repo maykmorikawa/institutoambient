@@ -129,10 +129,11 @@ class InscricoesController extends AppController
             return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
 
-        // Carrega os dados completos com verificação
-        $atividade = $this->fetchTable('Atividades')->get($dados['atividade_id'], [
-            'contain' => []
-        ]);
+        // ✅ Corrigido: named argument
+        $atividade = $this->fetchTable('Atividades')->get(
+            $dados['atividade_id'],
+            contain: []
+        );
 
         $aluno = $this->fetchTable('Alunos')->get($dados['aluno_id']);
 
@@ -150,6 +151,7 @@ class InscricoesController extends AppController
 
         $this->set(compact('atividade', 'aluno', 'inscricao'));
     }
+
     /**
      * Index method
      *
