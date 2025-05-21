@@ -50,8 +50,10 @@ class InscricoesController extends AppController
             if ($aluno) {
                 return $this->redirect([
                     'action' => 'processarInscricao',
-                    'atividade_id' => $atividade->id,
-                    'aluno_id' => $aluno->id
+                    '?' => [
+                        'atividade_id' => $atividade->id,
+                        'aluno_id' => $aluno->id
+                    ]
                 ]);
             } else {
                 $this->Flash->error('Cadastro não encontrado. Por favor, cadastre-se.');
@@ -74,6 +76,12 @@ class InscricoesController extends AppController
     {
         $atividadeId = $this->request->getQuery('atividade_id');
         $alunoId = $this->request->getQuery('aluno_id');
+
+        // ✅ Validação logo no começo
+        if (empty($atividadeId) || empty($alunoId)) {
+            $this->Flash->error('Parâmetros inválidos para inscrição.');
+            return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
+        }
 
         // Verifica se já está inscrito
         $inscricaoExistente = $this->fetchTable('Inscricoes')
@@ -104,6 +112,7 @@ class InscricoesController extends AppController
             return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
     }
+
 
     // Novo método privado para centralizar o redirecionamento
     private function redirectToInscricaoSuccess($atividadeId, $alunoId)
