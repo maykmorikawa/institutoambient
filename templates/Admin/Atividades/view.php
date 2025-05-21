@@ -179,10 +179,14 @@
 <!-- Script para copiar -->
 <script>
     function copiarLink() {
-        const texto = document.getElementById('link-inscricao').textContent;
-        navigator.clipboard.writeText(texto).then(function() {
+        let texto = document.getElementById('link-inscricao').textContent;
+
+        // Remove "/admin" se estiver no link
+        texto = texto.replace('/admin/', '/');
+
+        navigator.clipboard.writeText(texto).then(function () {
             alert("Link copiado com sucesso!");
-        }, function(err) {
+        }, function (err) {
             alert("Erro ao copiar link: " + err);
         });
     }
