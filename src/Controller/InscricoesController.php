@@ -112,7 +112,7 @@ class InscricoesController extends AppController
             $this->Flash->error(__('Erro ao processar inscrição.'));
             return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
-        
+
     }
 
 
@@ -165,6 +165,37 @@ class InscricoesController extends AppController
         $this->viewBuilder()->setLayout('site');
     }
 
+    public function comprovante($id = null)
+    {
+        if (!$id) {
+            $this->Flash->error('ID de inscrição inválido.');
+            return $this->redirect(['action' => 'index']);
+        }
+
+        $inscricao = $this->Inscricoes->find()
+            ->where(['Inscricoes.id' => $id])
+            ->contain(['Alunos', 'Atividades'])
+            ->first();
+
+        if (!$inscricao) {
+            $this->Flash->error('Inscrição não encontrada.');
+            return $this->redirect(['action' => 'index']);
+        }
+
+        $aluno = $inscricao->aluno;
+        $atividade = $inscricao->atividade;
+
+        $this->set(compact('inscricao', 'aluno', 'atividade'));
+
+        // Caso queira layout especial para impressão:
+        if ($this->request->getQuery('print') === '1') {
+            $this->viewBuilder()->setLayout('print'); // Crie esse layout se quiser um visual próprio
+        } else {
+            $this->viewBuilder()->setLayout('site');
+        }
+
+        $this->render('comprovante'); // Renderiza templates/Inscricoes/comprovante.php
+    }
     /**
      * Index method
      *
