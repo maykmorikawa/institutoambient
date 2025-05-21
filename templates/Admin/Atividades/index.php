@@ -45,8 +45,7 @@
                                 <td><?= $atividade->hasValue('user') ? '<span class="badge bg-primary text-white">' . $this->Html->link($atividade->user->name, ['controller' => 'Users', 'action' => 'view', $atividade->user->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Usuário') . '</span>' ?>
                                 </td>
                                 <td><?= h($atividade->slug) ?></td>
-                                <td><?= h($atividade->link_inscricao) ?>
-                                    <span id="link-inscricao"><?= h($atividade->link_inscricao) ?></span>
+                                <td><span id="link-inscricao"><?= h($atividade->link_inscricao) ?></span>
                                     <button class="btn btn-sm btn-outline-secondary ms-2"
                                         onclick="copiarLink()">Copiar</button>
                                 </td>
