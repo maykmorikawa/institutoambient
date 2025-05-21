@@ -37,6 +37,14 @@
 
     <!-- home css -->
     <link href="<?= WWW; ?>/site/css/home.css" rel="stylesheet">
+    <style>
+        .page-title-section {
+            padding: 260px 0 49px 0;
+            text-align: center;
+            position: relative;
+            margin-top: -96px;
+        }
+    </style>
 
 </head>
 
