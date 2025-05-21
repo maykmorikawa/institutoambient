@@ -54,24 +54,32 @@ return function (RouteBuilder $routes): void {
     */
    $routes->setRouteClass(Route::class);
 
-   
-   
+
+
    $routes->scope('/', function (RouteBuilder $builder): void {
       $builder->setRouteClass(DashedRoute::class);
 
-      // Rota de Inscrição Pública (única definição)
-        $builder->get('/inscricao/:slug', [
-            'controller' => 'Inscricoes',
-            'action' => 'verificar'
-        ])->setPass(['slug']);
+      // 1. Primeiro coloque TODAS suas rotas personalizadas
+      $builder->get('/inscricao/:slug', [
+         'controller' => 'Inscricoes',
+         'action' => 'verificar'
+      ])->setPass(['slug']);
 
-        $builder->post('/inscricao/processar', [
-            'controller' => 'Inscricoes',
-            'action' => 'processarInscricao'
-        ]);
+      $builder->post('/inscricao/processar', [
+         'controller' => 'Inscricoes',
+         'action' => 'processarInscricao'
+      ]);
+
 
       // ROTAS ESPECÍFICAS PRIMEIRO
       $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
+
+      // 2. Especifique explicitamente a rota para atividades/view
+      $builder->connect('/atividades/view/:id', [
+         'controller' => 'Atividades',
+         'action' => 'view'
+      ])->setPass(['id']);
+
       $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
       $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
       $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
@@ -85,7 +93,7 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
 
-      
+
 
 
 
@@ -111,9 +119,9 @@ return function (RouteBuilder $routes): void {
    $routes->prefix('Admin', ['path' => '/admin'], function (RouteBuilder $builder): void {
 
       $builder->connect('/inscricoes/verificar/:slug', [
-            'controller' => 'Inscricoes',
-            'action' => 'verificarAdmin' // Ação diferente para admin
-        ])->setPass(['slug']);
+         'controller' => 'Inscricoes',
+         'action' => 'verificarAdmin' // Ação diferente para admin
+      ])->setPass(['slug']);
       $builder->setRouteClass(DashedRoute::class);
       $builder->connect('/', ['controller' => 'Users', 'action' => 'admin']); // opcional
 
