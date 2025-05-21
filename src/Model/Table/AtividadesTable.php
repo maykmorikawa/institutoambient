@@ -153,15 +153,9 @@ class AtividadesTable extends Table
         return $rules;
     }
 
-    public function beforeSave(EventInterface $event, $entity, $options)
+    public function afterSave(EventInterface $event, $entity, $options)
     {
-        // Gera o slug se estiver vazio
-        if (empty($entity->slug)) {
-            $entity->slug = Text::slug(strtolower($entity->nome));
-        }
-
-        // ⚠️ Garante que o slug foi gerado antes de montar o link
-        if (!empty($entity->slug)) {
+        if (!empty($entity->slug) && empty($entity->link_inscricao)) {
             $entity->link_inscricao = Router::url([
                 'prefix' => false,
                 'controller' => 'Inscricoes',
@@ -169,8 +163,9 @@ class AtividadesTable extends Table
                 $entity->slug,
                 '_full' => true
             ]);
-        }
 
-        return true;
+            // Salva novamente só o campo link_inscricao
+            $this->save($entity, ['checkRules' => false, 'checkExisting' => false]);
+        }
     }
 }
