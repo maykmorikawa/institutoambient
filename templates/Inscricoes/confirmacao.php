@@ -22,10 +22,9 @@
                         <h5>Detalhes:</h5>
                         <ul class="list-unstyled">
                             <li><strong>Código:</strong> <?= h($inscricao->id ?? 'N/A') ?></li>
-                            <li><strong>Local:</strong> <?= h($atividade->local ?? 'A definir') ?></li>
-                            <li><strong>Data:</strong>
-                                <?= $inscricao->data ? $inscricao->data_inscricao->format('d/m/Y') : 'A definir' ?>
-                            </li>
+                            <li><strong>Local:</strong> <?= h($atividade->local ?? 'A definir') ?></li> 
+                            <li><strong>Aluno:</strong> <?= h($inscricao->aluno->nome_completo ?? 'Sem nome') ?></li>
+
                             <li><strong>Data da Inscrição:</strong>
                                 <?= $inscricao->data_inscricao->format('d/m/Y H:i') ?>
                             </li>
