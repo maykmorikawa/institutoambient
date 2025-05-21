@@ -159,13 +159,14 @@ class AtividadesTable extends Table
             $entity->slug = Text::slug(strtolower($entity->nome));
         }
 
-        // Gera link PÚBLICO (sem /admin)
+        // Gera link sem o prefixo /admin
         $entity->link_inscricao = Router::url([
+            'prefix' => false, // <- isso é crucial
             'controller' => 'Inscricoes',
             'action' => 'verificar',
             $entity->slug,
-            '_full' => true  // Inclui o domínio completo
-        ], false); // 👈 'false' remove prefixos (como /admin)
+            '_full' => true // inclui o domínio
+        ]);
 
         return true;
     }
