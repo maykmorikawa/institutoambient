@@ -282,8 +282,8 @@
                         <div class="card-img position-relative">
                             <img src="<?= $imagePath ?>" class="card-img-top" alt="<?= h($post->title) ?>">
                             <ul class="social-icon list-unstyled">
-                                <li><a href="<?= $this->Url->build('' . h($post->excerpt)) ?>"><i class="fa-solid fa-pen-to-square"></i></a></li>
-                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                                <li><a href="<?= $this->Url->build('' . h($post->excerpt)) ?>"><i class="ti-facebook"></i></a></li>
+                                
                             </ul>
                         </div>
                         <div class="card-body p-1-9">
