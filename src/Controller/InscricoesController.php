@@ -151,6 +151,7 @@ class InscricoesController extends AppController
                 'atividade_id' => $dados['atividade_id'],
                 'aluno_id' => $dados['aluno_id']
             ])
+            ->contain(['Alunos']) // <- carrega a relação
             ->first();
 
         if (!$atividade || !$aluno || !$inscricao) {
