@@ -75,6 +75,7 @@ class InscricoesController extends AppController
         $atividadeId = $this->request->getQuery('atividade_id');
         $alunoId = $this->request->getQuery('aluno_id');
 
+        // Verifica se já está inscrito
         $inscricaoExistente = $this->fetchTable('Inscricoes')
             ->find()
             ->where([
@@ -84,43 +85,65 @@ class InscricoesController extends AppController
             ->first();
 
         if ($inscricaoExistente) {
-            $this->Flash->warning('Você já está inscrito nesta atividade.');
-            return $this->redirect([
-                'controller' => 'Atividades',
-                'action' => 'view',
-                $atividadeId
-            ]);
+            $this->Flash->warning(__('Você já está inscrito nesta atividade.'));
+            return $this->redirectToInscricaoSuccess($atividadeId, $alunoId);
         }
 
-        $inscricao = $this->fetchTable('Inscricoes')->newEntity([
+        // Cria nova inscrição
+        $inscricao = $this->Inscricoes->newEntity([
             'aluno_id' => $alunoId,
             'atividade_id' => $atividadeId,
             'data_inscricao' => new \DateTime(),
             'user_id' => $this->request->getAttribute('identity')->id ?? null
         ]);
 
-        if ($this->fetchTable('Inscricoes')->save($inscricao)) {
-            $this->Flash->success('Inscrição realizada com sucesso!');
+        if ($this->Inscricoes->save($inscricao)) {
+            return $this->redirectToInscricaoSuccess($atividadeId, $alunoId);
         } else {
-            $this->Flash->error('Não foi possível completar a inscrição.');
+            $this->Flash->error(__('Erro ao processar inscrição.'));
+            return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
+    }
 
+    // Novo método privado para centralizar o redirecionamento
+    private function redirectToInscricaoSuccess($atividadeId, $alunoId)
+    {
+        // Armazena dados na sessão
+        $this->request->getSession()->write('Inscricao.success', [
+            'atividade_id' => $atividadeId,
+            'aluno_id' => $alunoId
+        ]);
+
+        // Redireciona para página de confirmação
         return $this->redirect([
-            'controller' => 'Atividades',
-            'action' => 'view',
-            $atividadeId
+            'action' => 'confirmacao'
         ]);
     }
 
     public function confirmacao()
     {
-        $dados = $this->request->getSession()->consume('Inscricao.success');
+        $session = $this->request->getSession();
+        $atividadeId = $session->read('Inscricao.success.atividade_id');
+        $alunoId = $session->read('Inscricao.success.aluno_id');
 
-        if (empty($dados)) {
-            return $this->redirect('/');
+        if (!$atividadeId || !$alunoId) {
+            $this->Flash->error(__('Sessão de inscrição inválida.'));
+            return $this->redirect(['controller' => 'Atividades', 'action' => 'index']);
         }
 
-        $this->set(compact('dados'));
+        // Carrega dados completos
+        $atividade = $this->fetchTable('Atividades')->get($atividadeId);
+        $aluno = $this->fetchTable('Alunos')->get($alunoId);
+        $inscricao = $this->fetchTable('Inscricoes')->find()
+            ->where([
+                'atividade_id' => $atividadeId,
+                'aluno_id' => $alunoId
+            ])
+            ->first();
+
+        $session->delete('Inscricao.success');
+
+        $this->set(compact('atividade', 'aluno', 'inscricao'));
     }
     /**
      * Index method
