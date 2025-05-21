@@ -23,8 +23,8 @@
                         <h1>Inscrição em: <?= h($atividade->nome) ?></h1>
 
                         <?= $this->Form->create() ?>
-                            <?= $this->Form->control('cpf', ['label' => 'Seu CPF', 'class' => 'form-control']) ?>
-                            <?= $this->Form->control('data_nascimento', ['type' => 'date', 'label' => 'Data de Nascimento', 'class' => 'form-control']) ?>
+                            <?= $this->Form->control('cpf', ['label' => 'Seu CPF', 'required' => true , 'class' => 'form-control']) ?>
+                            <?= $this->Form->control('data_nascimento', ['type' => 'date', 'label' => 'Data de Nascimento','required' => true ,'class' => 'form-control']) ?>
                             <?= $this->Form->button('Verificar Cadastro', ['class' => 'butn-style3 mt-3']) ?>
                         <?= $this->Form->end() ?>
                     </div>
