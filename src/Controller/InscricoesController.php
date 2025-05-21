@@ -74,7 +74,7 @@ class InscricoesController extends AppController
      */
     public function processarInscricao()
     {
-        $this->viewBuilder()->setLayout('site');
+        $this->viewBuilder()->setLayout('print');
         $atividadeId = $this->request->getQuery('atividade_id');
         $alunoId = $this->request->getQuery('aluno_id');
 
@@ -162,7 +162,7 @@ class InscricoesController extends AppController
         }
 
         $this->set(compact('atividade', 'aluno', 'inscricao'));
-        $this->viewBuilder()->setLayout('site');
+        $this->viewBuilder()->setLayout('print');
     }
 
     public function comprovante($id = null)
