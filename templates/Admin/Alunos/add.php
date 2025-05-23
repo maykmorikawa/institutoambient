@@ -7,6 +7,15 @@
  */
 ?>
 
+<?php
+// ...
+$loggedInUserId = null;
+if ($this->request->getAttribute('identity')) {
+    $loggedInUserId = $this->request->getAttribute('identity')->getIdentifier();
+}
+// ...
+?>
+
 <?= $this->Html->script('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', ['block' => true]) ?>
 <?= $this->Html->css('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', ['block' => true]) ?>
 
@@ -30,7 +39,7 @@
             <!-- Tab Dados Pessoais -->
             <div class="tab-pane fade show active" id="dados" role="tabpanel">
                 <div class="mb-3">
-                    <?= $this->Form->control('user_id', ['options' => $users, 'class' => 'form-control', 'label' => 'Usuário']) ?>
+                    <?= $this->Form->control('user_id', ['type' => 'hidden', 'value' => $loggedInUserId]) ?>
                 </div>
                 <div class="mb-3">
                     <?= $this->Form->control('nome_completo', ['class' => 'form-control']) ?>

@@ -74,7 +74,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <?= $this->Form->control('user_id', ['options' => $users, 'class' => 'form-control', 'label' => 'Usuário Responsável']) ?>
+                                    <?= $this->Form->control('user_id', ['type' => 'hidden', 'value' => 1]) ?>
                                 </div>
                                 <div class="mb-3">
                                     <?= $this->Form->control('nome_completo', ['class' => 'form-control', 'label' => 'Nome Completo']) ?>
