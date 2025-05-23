@@ -1,7 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
+
+use Cake\Event\EventInterface;
 
 /**
  * Alunos Controller
@@ -10,6 +13,12 @@ namespace App\Controller;
  */
 class AlunosController extends AppController
 {
+
+    public function beforeFilter(EventInterface $event): void
+    {
+        parent::beforeFilter($event);
+        $this->Authentication->addUnauthenticatedActions(['add']);
+    }
 
     /**
      * Add method
@@ -49,6 +58,4 @@ class AlunosController extends AppController
         $this->set(compact('aluno', 'users', 'atividade_id'));
         $this->viewBuilder()->setLayout('site');
     }
-
-
 }

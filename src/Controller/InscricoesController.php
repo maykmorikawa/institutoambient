@@ -22,7 +22,7 @@ class InscricoesController extends AppController
     public function beforeFilter(EventInterface $event): void
     {
         parent::beforeFilter($event);
-        $this->Authentication->addUnauthenticatedActions(['verificar', 'processarInscricao']);
+        $this->Authentication->addUnauthenticatedActions(['verificar', 'processarInscricao','confirmacao','comprovante']);
     }
 
     /**
