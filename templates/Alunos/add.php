@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Aluno $aluno
@@ -66,138 +67,97 @@
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Adicionar Novo Aluno</h2>
                     <div class="alunos form content">
+                        <?= $this->Flash->render() ?>
                         <?= $this->Form->create($aluno) ?>
+                        <?php if ($aluno->getErrors()): ?>
+                            <div class="alert alert-danger">
+                                <h5>Erros de validação:</h5>
+                                <ul>
+                                    <?php foreach ($aluno->getErrors() as $field => $errors): ?>
+                                        <?php foreach ($errors as $error): ?>
+                                            <li><?= h($field) ?>: <?= h($error) ?></li>
+                                        <?php endforeach; ?>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
 
+                        <!-- Dados Pessoais (sempre exibe na 1ª etapa) -->
                         <div class="card mb-4">
-                            <div class="card-header bg-primary">
+                            <div class="card-header bg-primary text-white">
                                 <h5 class="mb-0 text-white">Dados Pessoais</h5>
                             </div>
                             <div class="card-body">
-                                <div class="mb-3">
-                                    <?= $this->Form->control('user_id', ['type' => 'hidden', 'value' => 1]) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('nome_completo', ['class' => 'form-control', 'label' => 'Nome Completo']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('email', ['type' => 'email', 'class' => 'form-control', 'label' => 'E-mail']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('cpf', ['class' => 'form-control', 'label' => 'CPF']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('rg', ['class' => 'form-control', 'label' => 'RG']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('nis', ['class' => 'form-control', 'label' => 'NIS']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('data_nascimento', ['type' => 'date', 'class' => 'form-control', 'label' => 'Data de Nascimento']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('telefone', ['class' => 'form-control', 'label' => 'Telefone']) ?>
-                                </div>
+                                <?= $this->Form->control('user_id', ['type' => 'hidden', 'value' => '11']) ?>
+                                <?= $this->Form->control('nome_completo', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('email', ['type' => 'email', 'class' => 'form-control']) ?>
+                                <?= $this->Form->control('cpf', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('rg', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('nis', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('data_nascimento', ['type' => 'date', 'class' => 'form-control']) ?>
+                                <?= $this->Form->control('telefone', ['class' => 'form-control']) ?>
                             </div>
                         </div>
 
-                        <div class="card mb-4">
-                            <div class="card-header bg-primary text-white">
-                                <h5 class="mb-0 text-white">Endereço</h5>
-                            </div>
-                            <div class="card-body">
-                                <?php if (!empty($aluno->enderecos)): ?>
+                        <?php if ($aluno_id): ?>
+                            <!-- Endereço -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0 text-white">Endereço</h5>
+                                </div>
+                                <div class="card-body">
                                     <?= $this->Form->hidden('enderecos.0.id') ?>
-                                <?php endif; ?>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.cep', ['label' => 'CEP', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.logradouro', ['label' => 'Logradouro', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.numero', ['label' => 'Número', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.complemento', ['label' => 'Complemento', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.bairro', ['label' => 'Bairro', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.cidade', ['label' => 'Cidade', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('enderecos.0.estado', ['label' => 'Estado', 'class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.cep', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.logradouro', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.numero', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.complemento', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.bairro', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.cidade', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('enderecos.0.estado', ['class' => 'form-control']) ?>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
 
-                        <div class="card mb-4">
-                            <div class="card-header bg-primary">
-                                <h5 class="mb-0 text-white">Escolaridade</h5>
-                            </div>
-                            <div class="card-body">
-                                <?php if (!empty($aluno->escolaridades)): ?>
+                        <?php if ($aluno_id && !empty($aluno->enderecos)): ?>
+                            <!-- Escolaridade -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0 text-white">Escolaridade</h5>
+                                </div>
+                                <div class="card-body">
                                     <?= $this->Form->hidden('escolaridades.0.id') ?>
-                                <?php endif; ?>
-                                <div class="mb-3">
                                     <?= $this->Form->control('escolaridades.0.nivel', [
                                         'class' => 'form-control',
-                                        'label' => 'Nível',
                                         'options' => [
-                                            'Fundamental' => __('Fundamental'),
-                                            'Medio' => __('Médio'),
-                                            'Tecnico' => __('Técnico'),
-                                            'Superior' => __('Superior'),
-                                            'Pos-graduacao' => __('Pós-graduação'),
-                                            'Mestrado' => __('Mestrado'),
-                                            'Doutorado' => __('Doutorado'),
-                                        ],
+                                            'Fundamental' => 'Fundamental',
+                                            'Medio' => 'Médio',
+                                            'Tecnico' => 'Técnico',
+                                            'Superior' => 'Superior',
+                                            'Pos-graduacao' => 'Pós-graduação',
+                                            'Mestrado' => 'Mestrado',
+                                            'Doutorado' => 'Doutorado',
+                                        ]
                                     ]) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('escolaridades.0.serie', ['label' => 'Série', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
+                                    <?= $this->Form->control('escolaridades.0.serie', ['class' => 'form-control']) ?>
                                     <?= $this->Form->control('escolaridades.0.situacao', [
                                         'class' => 'form-control',
-                                        'label' => 'Situação',
                                         'options' => [
-                                            'Cursando' => __('Cursando'),
-                                            'Interrompido' => __('Interrompido'),
-                                            'Concluido' => __('Concluído'),
-                                        ],
+                                            'Cursando' => 'Cursando',
+                                            'Interrompido' => 'Interrompido',
+                                            'Concluido' => 'Concluído',
+                                        ]
                                     ]) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('escolaridades.0.curso', ['label' => 'Curso', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('escolaridades.0.instituicao', ['label' => 'Instituição', 'class' => 'form-control']) ?>
-                                </div>
-                                <div class="mb-3">
-                                    <?= $this->Form->control('escolaridades.0.ano_conclusao', ['label' => 'Ano de Conclusão', 'class' => 'form-control']) ?>
+                                    <?= $this->Form->control('escolaridades.0.curso', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('escolaridades.0.instituicao', ['class' => 'form-control']) ?>
+                                    <?= $this->Form->control('escolaridades.0.ano_conclusao', ['class' => 'form-control']) ?>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
 
-                        <?php
-                            // Pega o atividade_id da URL
-                            $atividadeId = $this->request->getQuery('atividade_id');
-                        ?>
+                        <?= $this->Form->control('atividade_id', ['type' => 'hidden', 'value' => $atividade_id]) ?>
 
-                        <?= $this->Form->control('atividade_id', [
-                            'type' => 'hidden',
-                            'value' => $atividadeId
-                        ]) ?>
-
-                        <p class="mt-4">
-                            <strong>Atividade:</strong>
-                            <?= h($atividades[$atividadeId] ?? 'Desconhecida') ?>
-                        </p>
-
-                        <?= $this->Form->button(__('Salvar Aluno'), ['class' => 'butn-style3 mt-4']) ?>
-                        <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'butn-style3 mt-4 btn-secondary']) ?>
+                        <?= $this->Form->button(__('Salvar Aluno'), ['class' => 'btn btn-primary']) ?>
+                        <?= $this->Form->end() ?>
 
                         <?= $this->Form->end() ?>
                     </div>

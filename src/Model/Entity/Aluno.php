@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Entity;
@@ -38,6 +39,8 @@ class Aluno extends Entity
      * @var array<string, bool>
      */
     protected array $_accessible = [
+        '*' => true,
+        'id' => false,
         'user_id' => true,
         'atividade_id' => true,
         'nome_completo' => true,
