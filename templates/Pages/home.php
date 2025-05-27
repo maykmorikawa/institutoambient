@@ -279,13 +279,12 @@
                 ?>
                 <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="<?= $delay ?>ms">
                     <div class="card card-style3 border-0 text-center">
-                        <div class="card-img position-relative">
-                            <img src="<?= $imagePath ?>" class="card-img-top" alt="<?= h($post->title) ?>">
-                            <ul class="social-icon list-unstyled">
-                                <li><a href="<?= $this->Url->build('' . h($post->excerpt)) ?>"><i class="ti-facebook"></i></a></li>
+                        <a href="<?= $this->Url->build(h($post->excerpt)) ?>" class="text-decoration-none text-dark">
+                            <div class="card-img position-relative">
+                                <img src="<?= $imagePath ?>" class="card-img-top" alt="<?= h($post->title) ?>">
                                 
-                            </ul>
-                        </div>
+                            </div>
+                        </a>
                         <div class="card-body p-1-9">
                             <h3 class="h5"><?= h($post->title) ?></h3>
                             <p class="text-primary mb-0">
