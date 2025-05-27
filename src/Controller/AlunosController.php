@@ -28,14 +28,10 @@ class AlunosController extends AppController
     public function add()
     {
         $atividade_id = $this->request->getQuery('atividade_id');
-        $aluno_id = $this->request->getQuery('aluno_id');
 
-        if ($aluno_id) {
-            // Carrega aluno existente com relações
-            $aluno = $this->Alunos->get($aluno_id, ['contain' => ['Enderecos', 'Escolaridades']]);
-        } else {
-            $aluno = $this->Alunos->newEmptyEntity();
-        }
+        $aluno = $this->Alunos->newEmptyEntity([
+            'associated' => ['Enderecos', 'Escolaridades']
+        ]);
 
         if ($this->request->is('post')) {
             $data = $this->request->getData();
@@ -46,24 +42,7 @@ class AlunosController extends AppController
             ]);
 
             if ($this->Alunos->save($aluno)) {
-                // 1ª Etapa: salvar aluno e ir para endereço
-                if (!$aluno_id) {
-                    return $this->redirect([
-                        'action' => 'add',
-                        '?' => [
-                            'atividade_id' => $atividade_id,
-                            'aluno_id' => $aluno->id
-                        ]
-                    ]);
-                }
-
-                // 2ª Etapa: salvar endereço, ir para escolaridade
-                if (!isset($data['escolaridades'])) {
-                    $this->Flash->success('Endereço salvo. Agora preencha a escolaridade.');
-                    return $this->redirect($this->request->getRequestTarget());
-                }
-
-                // 3ª Etapa: tudo salvo, vai para próxima etapa (ex: inscrição)
+                $this->Flash->success('Aluno cadastrado com sucesso.');
                 return $this->redirect([
                     'controller' => 'Inscricoes',
                     'action' => 'processarInscricao',
@@ -78,8 +57,8 @@ class AlunosController extends AppController
         }
 
         $users = $this->Alunos->Users->find('list')->all();
-        $atividades = []; // Carregue as atividades aqui se necessário
-        $this->set(compact('aluno', 'users', 'atividade_id', 'aluno_id', 'atividades'));
+        $atividades = []; // Carregue as atividades se necessário
+        $this->set(compact('aluno', 'users', 'atividade_id', 'atividades'));
         $this->viewBuilder()->setLayout('site');
     }
 }

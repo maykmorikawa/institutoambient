@@ -99,7 +99,7 @@
                             </div>
                         </div>
 
-                        <?php if ($aluno_id): ?>
+                       
                             <!-- Endereço -->
                             <div class="card mb-4">
                                 <div class="card-header bg-primary text-white">
@@ -116,9 +116,7 @@
                                     <?= $this->Form->control('enderecos.0.estado', ['class' => 'form-control']) ?>
                                 </div>
                             </div>
-                        <?php endif; ?>
-
-                        <?php if ($aluno_id && !empty($aluno->enderecos)): ?>
+                        
                             <!-- Escolaridade -->
                             <div class="card mb-4">
                                 <div class="card-header bg-primary text-white">
@@ -152,13 +150,10 @@
                                     <?= $this->Form->control('escolaridades.0.ano_conclusao', ['class' => 'form-control']) ?>
                                 </div>
                             </div>
-                        <?php endif; ?>
 
                         <?= $this->Form->control('atividade_id', ['type' => 'hidden', 'value' => $atividade_id]) ?>
 
                         <?= $this->Form->button(__('Salvar Aluno'), ['class' => 'btn btn-primary']) ?>
-                        <?= $this->Form->end() ?>
-
                         <?= $this->Form->end() ?>
                     </div>
                 </div>
