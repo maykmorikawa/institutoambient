@@ -125,7 +125,7 @@ class AtividadesTable extends Table
 
         $validator
             ->scalar('link_inscricao')
-            ->maxLength('link_inscricao', 64)
+            ->maxLength('link_inscricao', max: 100)
             ->allowEmptyString('link_inscricao')
             ->add('link_inscricao', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
