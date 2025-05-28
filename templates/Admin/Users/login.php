@@ -38,14 +38,12 @@
                                 <?= $this->Flash->render() ?>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox small">
-                                        <?= $this->Form->control('remember_me', [
-                                            'type' => 'checkbox',
-                                            'label' => 'Lembrar-me',
+                                        <?= $this->Form->checkbox('remember_me', [
                                             'class' => 'custom-control-input',
                                             'id' => 'customCheck',
-                                            'labelOptions' => ['class' => 'custom-control-label'],
-                                            'hiddenField' => false // impede envio automático de "0"
+                                            'hiddenField' => false // não envia "0" oculto
                                         ]) ?>
+                                        <label class="custom-control-label" for="customCheck">Lembrar-me</label>
                                     </div>
                                 </div>
                                 <?= $this->Form->button(__('Entrar'), ['class' => 'btn btn-primary btn-user btn-block']) ?>
