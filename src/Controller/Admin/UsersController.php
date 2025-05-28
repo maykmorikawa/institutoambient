@@ -18,7 +18,39 @@ class UsersController extends AppController
      *
      * @return void
      */
-        public function index()
+    public function initialize(): void
+    {
+        parent::initialize();
+
+        $this->Authentication->allowUnauthenticated(['login']);
+    }
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        $this->viewBuilder()->setLayout('admin');
+
+        $this->Authentication->addUnauthenticatedActions(['login', 'logout', 'add']);
+
+        $user = $this->request->getAttribute('identity');
+
+        if (!$user || $user->profile_id !== 1) {
+            $this->Flash->error('Acesso não autorizado.');
+            return $this->redirect('/');
+        }
+    }
+
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
+    public function admin()
+    {
+    }
+
+    
+    public function index()
     {
 
         $query = $this->Users->find()
