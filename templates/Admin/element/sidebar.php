@@ -88,22 +88,22 @@
                 <a class="collapse-item" href="/admin/tags">Tags</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Outros</h6>
-                <a class="#" href="/">Manutenção</a>
-
+                <a class="collapse-item" href="/">Manutenção</a>
+                
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
     </li>
