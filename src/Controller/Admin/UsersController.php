@@ -28,16 +28,9 @@ class UsersController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
-        $this->viewBuilder()->setLayout('admin');
 
+        // Permitir acesso a login, logout e add sem autenticação
         $this->Authentication->addUnauthenticatedActions(['login', 'logout', 'add']);
-
-        $user = $this->request->getAttribute('identity');
-
-        if (!$user || $user->profile_id !== 1) {
-            $this->Flash->error('Acesso não autorizado.');
-            return $this->redirect('/');
-        }
     }
 
     /**
@@ -45,11 +38,7 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function admin()
-    {
-    }
-
-    
+    public function admin() {}
     public function index()
     {
 
