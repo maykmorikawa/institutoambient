@@ -38,9 +38,7 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function admin()
-    {
-    }
+    public function admin() {}
     public function index()
     {
 
@@ -155,32 +153,23 @@ class UsersController extends AppController
     public function login()
     {
         $this->viewBuilder()->setLayout('login');
-
+        // Se o usuário já estiver logado, redireciona para a página inicial
         $result = $this->Authentication->getResult();
         if ($result && $result->isValid() && $this->request->is('get')) {
-            return $this->redirect(['controller' => 'Users', 'action' => 'admin']);
+            return $this->redirect([
+                'controller' => 'Users',
+                'action' => 'admin',
+            ]);
         }
 
         $this->request->allowMethod(['get', 'post']);
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {
-            $rememberMe = $this->request->getData('remember_me');
-
-            if ($rememberMe) {
-                // Define cookie de sessão com validade de 30 dias
-                $this->getRequest()->getSession()->write('Config.timeout', 60 * 24 * 30); // minutos
-                ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 30); // 30 dias
-                session_set_cookie_params([
-                    'lifetime' => 60 * 60 * 24 * 30,
-                    'path' => '/',
-                    'secure' => true,
-                    'httponly' => true,
-                    'samesite' => 'Lax'
-                ]);
-            }
-
-            $redirect = $this->request->getQuery('redirect', ['controller' => 'Users', 'action' => 'admin']);
+            $redirect = $this->request->getQuery('redirect', [
+                'controller' => 'Users',
+                'action' => 'admin',
+            ]);
             return $this->redirect($redirect);
         }
 
@@ -188,7 +177,6 @@ class UsersController extends AppController
             $this->Flash->error('Email ou senha inválidos.');
         }
     }
-
 
     public function logout()
     {
