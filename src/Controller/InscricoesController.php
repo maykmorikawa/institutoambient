@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Event\EventInterface;
+use Cake\I18n\FrozenDate;
 
 /**
  * Inscricoes Controller
@@ -22,7 +23,7 @@ class InscricoesController extends AppController
     public function beforeFilter(EventInterface $event): void
     {
         parent::beforeFilter($event);
-        $this->Authentication->addUnauthenticatedActions(['verificar', 'processarInscricao','confirmacao','comprovante']);
+        $this->Authentication->addUnauthenticatedActions(['verificar', 'processarInscricao', 'confirmacao', 'comprovante']);
     }
 
     /**
@@ -30,15 +31,28 @@ class InscricoesController extends AppController
      */
     public function verificar($slug = null)
     {
-        // Usando fetchTable() em vez de loadModel()
         $atividade = $this->fetchTable('Atividades')
             ->findBySlug($slug)
             ->firstOrFail();
 
         if ($this->request->is('post')) {
             $cpf = preg_replace('/[^0-9]/', '', $this->request->getData('cpf'));
-            $dataNascimento = $this->request->getData('data_nascimento');
+            $dataNascimento = new FrozenDate($this->request->getData('data_nascimento'));
 
+            // Cálculo da idade
+            $hoje = FrozenDate::today();
+            $idade = $hoje->diff($dataNascimento)->y;
+
+            // Verifica faixa etária da atividade
+            if (
+                (!is_null($atividade->idade_minima) && $idade < $atividade->idade_minima) ||
+                (!is_null($atividade->idade_maxima) && $idade > $atividade->idade_maxima)
+            ) {
+                $this->Flash->error("Esta atividade é permitida apenas para pessoas entre {$atividade->idade_minima} e {$atividade->idade_maxima} anos.");
+                return $this->redirect($this->referer());
+            }
+
+            // Busca aluno
             $aluno = $this->fetchTable('Alunos')
                 ->find()
                 ->where([
