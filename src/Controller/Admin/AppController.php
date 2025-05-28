@@ -33,11 +33,10 @@ class AppController extends BaseController
         if (in_array($currentController, $controllersComRestricao)) {
             if (!$user || $user->profile_id !== 1) {
                 $this->Flash->error('Acesso não autorizado.');
-                return $this->redirect('/');
+                $this->redirect('/');
             }
         }
     }
-
 
     public function admin()
     {
