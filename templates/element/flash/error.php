@@ -4,8 +4,11 @@
  * @var array $params
  * @var string $message
  */
-if (!isset($params['escape']) || $params['escape'] !== false) {
-    $message = h($message);
-}
+
 ?>
-<div class="message error" onclick="this.classList.add('hidden');"><?= $message ?></div>
+<?php foreach ((array)$message as $msg): ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Erro:</strong> <?= h($msg) ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+    </div>
+<?php endforeach; ?>

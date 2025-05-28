@@ -1,35 +1,3 @@
-<style>
-    /* Flash messages */
-.message {
-    padding: .5rem 1rem;
-    background: var(--color-message-info-bg);
-    color: var(--color-message-info-text);
-    border-color: var(--color-message-info-border);
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    cursor: pointer;
-}
-.message.hidden {
-    display: none;
-}
-.message.success {
-    background: var(--color-message-success-bg);
-    color: var(--color-message-success-text);
-    border-color: var(--color-message-success-border);
-}
-.message.warning {
-    background: var(--color-message-warning-bg);
-    color: var(--color-message-warning-text);
-    border-color: var(--color-message-warning-border);
-}
-.message.error {
-    background: var(--color-message-error-bg);
-    color: var(--color-message-error-text);
-    border-color: var(--color-message-error-border);
-}
-</style>
 <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
