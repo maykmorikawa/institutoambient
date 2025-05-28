@@ -18,28 +18,7 @@ class UsersController extends AppController
      *
      * @return void
      */
-    public function initialize(): void
-    {
-        parent::initialize();
-
-        $this->Authentication->allowUnauthenticated(['login']);
-    }
-
-    public function beforeFilter(\Cake\Event\EventInterface $event)
-    {
-        parent::beforeFilter($event);
-
-        // Permitir acesso a login, logout e add sem autenticação
-        $this->Authentication->addUnauthenticatedActions(['login', 'logout', 'add']);
-    }
-
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null|void Renders view
-     */
-    public function admin() {}
-    public function index()
+        public function index()
     {
 
         $query = $this->Users->find()
