@@ -70,6 +70,12 @@
                             </label>
                         </div>
                     </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('idade_minima', ['class' => 'form-control', 'label' => 'Idade Minima']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('idade_maxima', ['class' => 'form-control', 'label' => 'Idade Maxima']) ?>
+                    </div>
                 </fieldset>
                 <div class="mt-4 d-flex">
                     <?= $this->Form->button(__('Salvar'), ['class' => 'btn btn-primary', 'style' => 'margin-right: 10px;']) ?>

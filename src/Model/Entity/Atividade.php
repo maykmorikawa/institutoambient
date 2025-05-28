@@ -57,5 +57,7 @@ class Atividade extends Entity
         'user' => true,
         'aulas' => true,
         'inscricoes' => true,
+        'idade_minima' => true,
+        'idade_maxima' => true,
     ];
 }

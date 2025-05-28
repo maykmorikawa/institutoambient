@@ -78,6 +78,14 @@
                         <td><?= $atividade->publicado ? '<span class="badge bg-success text-white">Sim</span>' : '<span class="badge bg-danger text-white">Não</span>' ?>
                         </td>
                     </tr>
+                    <tr>
+                        <th><?= __('Idade Minima') ?></th>
+                        <td><?= $this->Number->format($atividade->idade_minima) ?></td>
+                    </tr>
+                    <tr>
+                        <th><?= __('Idade Maxima') ?></th>
+                        <td><?= $this->Number->format($atividade->idade_maxima) ?></td>
+                    </tr>
                 </table>
                 <div class="text mt-3">
                     <strong><?= __('Descrição') ?></strong>

@@ -133,6 +133,14 @@ class AtividadesTable extends Table
             ->boolean('publicado')
             ->allowEmptyString('publicado');
 
+        $validator
+            ->integer('idade_minima')
+            ->allowEmptyString('idade_minima');
+
+        $validator
+            ->integer('idade_maxima')
+            ->allowEmptyString('idade_maxima');
+
         return $validator;
     }
 
