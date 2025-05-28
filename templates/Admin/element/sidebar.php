@@ -29,37 +29,38 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Engrebagem</span>
+            <span>Sistema</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Sistema</h6>
+                <h6 class="collapse-header">Engrebagem</h6>
                 <a class="collapse-item" href="/admin/users">Usuários</a>
                 <a class="collapse-item" href="/admin/profiles">Perfis</a>
+                <h6 class="collapse-header">Cadastros</h6>                
                 <a class="collapse-item" href="/admin/projetos">Projetos</a>
                 <a class="collapse-item" href="/admin/atividades">Atividades</a>
                 <a class="collapse-item" href="/admin/inscricoes">Inscrições</a>
-                <h6 class="collapse-header">Cadastros</h6>
-                <a class="collapse-item" href="/admin/alunos">Alunos</a>
-                <a class="collapse-item" href="/admin/escolaridades">Escolaridades</a>
-                <a class="collapse-item" href="/admin/enderecos">Endereços</a>
-                
+
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+            aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilidades</span>
+            <span>Cadastros</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="#">Colors</a>
+                <h6 class="collapse-header">Cadastros de Alunos</h6>
+                <a class="collapse-item" href="/admin/alunos">Alunos</a>
+                <a class="collapse-item" href="/admin/escolaridades">Escolaridades</a>
+                <a class="collapse-item" href="/admin/enderecos">Endereços</a>
             </div>
         </div>
     </li>
@@ -69,25 +70,26 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        No ar
+        Site
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+            aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
             <span>Ações</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Site</h6>                
+                <h6 class="collapse-header">Site</h6>
                 <a class="collapse-item" href="/admin/categories">Categorias</a>
                 <a class="collapse-item" href="/admin/posts">Posts</a>
                 <a class="collapse-item" href="/admin/tags">Tags</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Outros</h6>
                 <a class="#" href="/">Manutenção</a>
-                
+
             </div>
         </div>
     </li>
