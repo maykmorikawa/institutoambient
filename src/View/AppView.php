@@ -37,5 +37,8 @@ class AppView extends View
      */
     public function initialize(): void
     {
+
+         // Este é o que falta para funcionar o $this->Identity na sidebar
+        $this->loadHelper('Authentication.Identity');
     }
 }
