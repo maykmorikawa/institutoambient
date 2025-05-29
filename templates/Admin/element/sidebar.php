@@ -1,4 +1,6 @@
 <!-- Sidebar -->
+<!-- ... código anterior do sidebar ... -->
+<?php $user = $this->Identity->get(); ?>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -26,45 +28,46 @@
     <div class="sidebar-heading">
         Plataforma
     </div>
+    <!-- Apenas Admin vê o menu Sistema -->
+    <?php if ($user && $user->profile_id == 1): ?>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Sistema</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Engrebagem</h6>
+                    <a class="collapse-item" href="/admin/users">Usuários</a>
+                    <a class="collapse-item" href="/admin/profiles">Perfis</a>
+                    <h6 class="collapse-header">Cadastros</h6>
+                    <a class="collapse-item" href="/admin/projetos">Projetos</a>
+                    <a class="collapse-item" href="/admin/atividades">Atividades</a>
+                    <a class="collapse-item" href="/admin/inscricoes">Inscrições</a>
 
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Sistema</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Engrebagem</h6>
-                <a class="collapse-item" href="/admin/users">Usuários</a>
-                <a class="collapse-item" href="/admin/profiles">Perfis</a>
-                <h6 class="collapse-header">Cadastros</h6>                
-                <a class="collapse-item" href="/admin/projetos">Projetos</a>
-                <a class="collapse-item" href="/admin/atividades">Atividades</a>
-                <a class="collapse-item" href="/admin/inscricoes">Inscrições</a>
-
+                </div>
             </div>
-        </div>
-    </li>
+        </li>
 
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Cadastros</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Cadastros de Alunos</h6>
-                <a class="collapse-item" href="/admin/alunos">Alunos</a>
-                <a class="collapse-item" href="/admin/escolaridades">Escolaridades</a>
-                <a class="collapse-item" href="/admin/enderecos">Endereços</a>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Cadastros</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Cadastros de Alunos</h6>
+                    <a class="collapse-item" href="/admin/alunos">Alunos</a>
+                    <a class="collapse-item" href="/admin/escolaridades">Escolaridades</a>
+                    <a class="collapse-item" href="/admin/enderecos">Endereços</a>
+                </div>
             </div>
-        </div>
-    </li>
-
+        </li>
+    <?php endif; ?>
     <!-- Divider -->
     <hr class="sidebar-divider">
 
@@ -89,25 +92,25 @@
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Outros</h6>
                 <a class="collapse-item" href="/">Manutenção</a>
-                
+
             </div>
         </div>
     </li>
+    <?php if ($user && $user->profile_id == 1): ?>
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Charts</span></a>
+        </li>
 
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
-    </li>
-
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tables</span></a>
+        </li>
+    <?php endif; ?>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
