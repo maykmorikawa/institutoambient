@@ -9,6 +9,7 @@
         <h6 class="m-0 font-weight-bold text-primary"><?= __('Users') ?></h6>
         <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
     </div>
+    <?= $this->Flash->render() ?>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

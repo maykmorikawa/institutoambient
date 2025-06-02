@@ -67,7 +67,7 @@
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Adicionar Novo Aluno</h2>
                     <div class="alunos form content">
-                        <?= $this->Flash->render() ?>
+                        
                         <?= $this->Form->create($aluno) ?>
                         <?php if ($aluno->getErrors()): ?>
                             <div class="alert alert-danger">
