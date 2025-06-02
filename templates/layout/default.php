@@ -15,7 +15,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'Sistema Instituto Ambiente';
+$cakeDescription = 'IA System';
 ?>
 <!DOCTYPE html>
 <html>

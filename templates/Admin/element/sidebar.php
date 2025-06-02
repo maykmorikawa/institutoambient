@@ -71,6 +71,7 @@
 
     <hr class="sidebar-divider">
     <!-- Heading -->
+     <?php if ($user && in_array($user->profile_id, [1, 2, 3])): ?>
     <div class="sidebar-heading">
         Site
     </div>
@@ -94,6 +95,7 @@
             </div>
         </div>
     </li>
+    <?php endif; ?>
     <hr class="sidebar-divider">
     <?php if ($user && $user->profile_id == 1): ?>
         <div class="sidebar-heading">
