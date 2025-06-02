@@ -67,20 +67,8 @@
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Adicionar Novo Aluno</h2>
                     <div class="alunos form content">
+                        <?= $this->Flash->render() ?>
                         
-                        <?= $this->Form->create($aluno) ?>
-                        <?php if ($aluno->getErrors()): ?>
-                            <div class="alert alert-danger">
-                                <h5>Erros de validação:</h5>
-                                <ul>
-                                    <?php foreach ($aluno->getErrors() as $field => $errors): ?>
-                                        <?php foreach ($errors as $error): ?>
-                                            <li><?= h($field) ?>: <?= h($error) ?></li>
-                                        <?php endforeach; ?>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                        <?php endif; ?>
 
                         <!-- Dados Pessoais (sempre exibe na 1ª etapa) -->
                         <div class="card mb-4">
