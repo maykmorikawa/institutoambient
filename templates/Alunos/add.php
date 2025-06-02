@@ -68,8 +68,6 @@
                     <h2 class="h3 mb-4">Adicionar Novo Aluno</h2>
                     <div class="alunos form content">
                         <?= $this->Flash->render() ?>
-                        
-
                         <!-- Dados Pessoais (sempre exibe na 1ª etapa) -->
                         <div class="card mb-4">
                             <div class="card-header bg-primary text-white">
