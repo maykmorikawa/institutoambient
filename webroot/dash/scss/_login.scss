@@ -2,9 +2,10 @@
 // Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
 
 .bg-login-image {
-  background: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');
+  background: url("https://institutoambient.org.br/site/img/logos/apple-touch-icon-114x114.png");
   background-position: center;
-  background-size: cover;
+  background-size: 150px; /* A imagem terá 150 pixels de largura e altura proporcional */
+  background-repeat: no-repeat; /* Essencial para evitar repetição */
 }
 
 .bg-register-image {

@@ -68,11 +68,11 @@
                                 alt="">
                             <div class="box-circle primary"></div>
                         </div>
-                        <h3 class="h5 mb-3"><a href="service-details.html">Instituto</a></h3>
+                        <h3 class="h5 mb-3"><a href="#!">Instituto</a></h3>
                         <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
                             transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
                             de serviços de qualidade, impulsionando mudanças sociais.</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
                                 class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
@@ -85,11 +85,11 @@
                                 alt="">
                             <div class="box-circle primary"></div>
                         </div>
-                        <h3 class="h5 mb-3"><a href="service-details.html">Saúde</a></h3>
+                        <h3 class="h5 mb-3"><a href="#!">Saúde</a></h3>
                         <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas
                             de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo
                             da gestão com profissionais especializados</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais
                             <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
@@ -102,11 +102,11 @@
                                 alt="">
                             <div class="box-circle primary"></div>
                         </div>
-                        <h3 class="h5 mb-3"><a href="service-details.html">Educação</a></h3>
+                        <h3 class="h5 mb-3"><a href="#!">Educação</a></h3>
                         <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e
                             capacitação em diversas modalidades educacionais, abrangendo da infância à educação
                             superior, profissional, digital e socioambiental.</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais
                             <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
@@ -119,11 +119,11 @@
                                 alt="">
                             <div class="box-circle primary"></div>
                         </div>
-                        <h3 class="h5 mb-3"><a href="service-details.html">Sustentabilidade</a></h3>
+                        <h3 class="h5 mb-3"><a href="#!">Sustentabilidade</a></h3>
                         <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
                             econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
                             projetos de gestão ambiental e sustentabilidade.</p>
-                        <a href="service-details.html" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
                                 class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
