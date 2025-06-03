@@ -23,11 +23,9 @@
 
                     <li class="d-inline-block me-2"><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
 
-                    <li class="d-inline-block me-2"><a href="#!"><i class="fab fa-twitter"></i></a></li>
-
                     <li class="d-inline-block me-2"><a href="#!"><i class="fab fa-youtube"></i></a></li>
 
-                    <li class="d-inline-block"><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="d-inline-block"><a href="https://www.instagram.com/institutoambient/"><i class="fab fa-instagram"></i><i class="fa-brands fa-instagram"></i></a></li>
 
                 </ul>
 
