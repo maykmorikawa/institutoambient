@@ -497,6 +497,22 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-1.png" class="mb-3" alt="COMDAC">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
+                <div class="card card-features d-table border-0 text-center">
+                    <div class="card-body d-table-cell py-2-2 align-middle">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-3.png" class="mb-3" alt="PERNOH">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
