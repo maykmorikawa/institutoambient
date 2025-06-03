@@ -16,7 +16,7 @@
                                 
                                 
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Bem-vindo de volta!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Bem-vindo ao AI System!</h1>
                                 </div>
 
                                 <?= $this->Form->create() ?>
