@@ -44,7 +44,7 @@
             <div class="row justify-content-center">
                 <div class="col-auto text-center" style="margin-left: 186px;">
                     <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="..." class="img-fluid"
-                        style="width: 550px; height: auto;">
+                        style="width: 450px; height: auto;">
                     <div class="mt-3">
                         <!-- Conteúdo adicional aqui -->
                     </div>
@@ -424,7 +424,7 @@
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-1.png" class="mb-3" alt="COMAC">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-10.png" class="mb-3" alt="GRUPO EQUATORIAL">
 
                     </div>
                 </div>
@@ -432,8 +432,8 @@
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-2.png" class="mb-3"
-                            alt="UNIVERSIDADE DO ESTADO DO PARÁ">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-11.png" class="mb-3"
+                            alt="SUZUNO">
 
                     </div>
                 </div>
@@ -441,7 +441,7 @@
             <div class="col-sm-4 col-lg-3 col-xxl-2 mt-2-9">
                 <div class="card card-features d-table border-0 text-center">
                     <div class="card-body d-table-cell py-2-2 align-middle">
-                        <img src="<?= WWW; ?>/site/img/icons/icon-3.png" class="mb-3" alt="PERNOH">
+                        <img src="<?= WWW; ?>/site/img/icons/icon-12.png" class="mb-3" alt="ELO">
 
                     </div>
                 </div>
