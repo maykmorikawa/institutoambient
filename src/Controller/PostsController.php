@@ -95,7 +95,6 @@ class PostsController extends AppController
         $this->set(compact('post', 'recentes'));
     }
 
-
     public function listblog()
     {
         $this->viewBuilder()->setLayout('site');
@@ -110,7 +109,7 @@ class PostsController extends AppController
         $posts = [];
 
         if ($blogCategory) {
-            // Busca todas as categorias dentro do intervalo de "blog"
+            // Busca todas as subcategorias de "blog"
             $subCategoryIds = (new Collection(
                 $categoriesTable->find()
                     ->where([
@@ -120,20 +119,24 @@ class PostsController extends AppController
                     ->all()
             ))->extract('id')->toList();
 
-            // Consulta os posts dessas categorias
+            // Consulta os posts com imagem destaque
             $query = $this->Posts->find()
-                ->contain(['Categories', 'Users'])
+                ->leftJoinWith('PostImages', function ($q) {
+                    return $q->where(['PostImages.is_featured' => true]);
+                })
+                ->contain(['Categories', 'Users', 'PostImages']) // carrega imagens e usuários
                 ->where([
-                    'status' => 'publicado',
-                    'category_id IN' => $subCategoryIds
+                    'Posts.status' => 'publicado',
+                    'Posts.category_id IN' => $subCategoryIds
                 ])
-                ->order(['published' => 'DESC']);
+                ->order(['Posts.published' => 'DESC']);
 
             $posts = $this->paginate($query);
         }
 
         $this->set(compact('posts'));
     }
+
 
 
     public function tag($slug = null)

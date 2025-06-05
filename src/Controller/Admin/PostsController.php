@@ -7,6 +7,8 @@ use App\Controller\AppController;
 use Cake\Utility\Text; // Esta linha é crucial
 use Cake\Http\Exception\NotFoundException;
 
+
+
 /**
  * Posts Controller
  *
@@ -22,7 +24,9 @@ class PostsController extends AppController
     public function index()
     {
         $query = $this->Posts->find()
-            ->contain(['Categories', 'Users']);
+            ->contain(['Categories', 'Users'])
+            ->orderBy(['Posts.created' => 'DESC']); // ou 'Posts.published' => 'DESC'
+
         $posts = $this->paginate($query);
 
         $this->set(compact('posts'));
@@ -36,7 +40,7 @@ class PostsController extends AppController
      */
     public function view($id = null)
     {
-       
+
         $post = $this->Posts->get($id, contain: ['Categories', 'Users', 'Tags', 'Comments', 'PostImages']);
 
         $this->set(compact('post'));
@@ -135,7 +139,7 @@ class PostsController extends AppController
                 }
 
 
-                
+
 
                 // 🔥 EXCLUIR imagens marcadas
                 $toDelete = $this->request->getData('delete_images');
