@@ -30,7 +30,7 @@
                     <div class="col-md-6 col-lg-4 mt-1-9">
                         <article class="card card-style3 border-0 h-100">
                             <div class="card-img position-relative">
-                                <img src="<?= $this->Url->build('/img/' . $post->image) ?>" alt="<?= h($post->title) ?>">
+                                <img src="<?= $this->Url->build('/img/uploads/' . $post->image) ?>" alt="<?= h($post->title) ?>">
                             </div>
                             <div class="card-body p-xl-1-9 p-4">
                                 <h3 class="h5 mb-3">
