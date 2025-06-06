@@ -91,9 +91,6 @@
                                 <?= $this->Form->control('nome_completo', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('data_nascimento', ['type' => 'date', 'class' => 'form-control']) ?>
                                 <?= $this->Form->control('email', ['type' => 'email', 'class' => 'form-control']) ?>
-                                <?= $this->Form->control('cpf', ['class' => 'form-control']) ?>
-                                <?= $this->Form->control('rg', ['class' => 'form-control']) ?>
-                                <?= $this->Form->control('nis', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('telefone', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('genero', [
                                     'class' => 'form-control',
@@ -173,10 +170,81 @@
                                         'Parda' => 'Parda',
                                     ]
                                 ]) ?>
+
+                                <?= $this->Form->control('programas_sociais', [
+                                    'type' => 'select',
+                                    'label' => 'Programas Sociais em que é incluído:',
+                                    'options' => [
+                                        'boisa_familia' => 'Programa Bolsa Família',
+                                        'bpc' => 'Benefício de Prestação Continuada- BPC',
+                                        'cartao_alimentação' => 'Cartão alimentação',
+                                        'nenhum' => 'Nenhum',
+                                        'Outro' => 'Outro',
+                                    ],
+                                    'class' => 'form-control select-com-outro',
+                                    'data-target' => '#campo-outra-programas-sociais'
+                                ]) ?>
+                                <div id="campo-outra-programas-sociais" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('outra_programas-sociais', [
+                                        'label' => 'Informe outro Programa Social',
+                                        'class' => 'form-control',
+                                    ]) ?>
+                                </div>
+
+                                <?= $this->Form->control('deficiencia', [
+                                    'type' => 'select',
+                                    'label' => 'Pessoa com Deficiência?',
+                                    'options' => [
+                                        'nao' => 'Não',
+                                        'Outro' => 'Sim',
+                                    ],
+                                    'class' => 'form-control select-com-outro',
+                                    'data-target' => '#campo-outra-deficiencia'
+                                ]) ?>
+                                <div id="campo-outra-deficiencia" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('outra_deficiencia', [
+                                        'label' => 'Qual a sua Deficiência?',
+                                        'class' => 'form-control',
+                                    ]) ?>
+                                </div>
+
+                                <?= $this->Form->control('encaminhado_instituicao', [
+                                    'type' => 'select',
+                                    'label' => 'Você foi encaminhado(a) de alguma dessas Instituições',
+                                    'options' => [
+                                        'caps' => 'CAPS',
+                                        'cras_creas' => 'CRAS/CREAS',
+                                        'deam' => 'DELEGACIA DA MULHER (DEAM)',
+                                        'escola_puplica' => 'ESCOLA PÚBLICA',
+                                        'unidade_de_saudeE' => 'UNIDADE DE SAÚDE',
+                                        'poser_judiciario' => 'PODER JUDICIÁRIO',
+                                        'Outro' => 'Outra',
+                                    ],
+                                    'class' => 'form-control select-com-outro',
+                                    'data-target' => '#campo-outra-encaminhado_instituicao'
+                                ]) ?>
+                                <div id="campo-outra-encaminhado-instituicao" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('outra_encaminhado_instituicao', [
+                                        'label' => 'Qual a Instituição?',
+                                        'class' => 'form-control',
+                                    ]) ?>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Documentos Pessoais (sempre exibe na 2ª etapa) -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0 text-white">Documetos Pessoais</h5>
+                            </div>
+                            <div class="card-body">
+                                <?= $this->Form->control('cpf', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('rg', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('nis', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('documentos_civis', [
                                     'class' => 'form-control',
                                     'label' => 'selecione quais dos documentos civis abaixo você possui',
-                                    'multiple' => true,
                                     'options' => [
                                         'c_nascimento' => 'Certidão de nascimento',
                                         'c_casamento' => 'Certidão de casamento',
@@ -184,6 +252,9 @@
                                         'c_trabalho' => 'Carteira de trabalho',
                                     ]
                                 ]) ?>
+
+                                <?= $this->Form->control('valor_cadunico', ['class' => 'form-control', 'label' => 'Sua família está cadastrada no CadÚnico? ( se sim, digita o número do código familiar)']) ?>
+
                             </div>
                         </div>
 
