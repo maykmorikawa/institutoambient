@@ -131,12 +131,13 @@
                                     ]
                                 ]) ?>
                                 <?= $this->Form->control('naturalidade', [
-                                    'class' => 'form-control select-com-outro',
+                                    'type' => 'select',
                                     'label' => 'Naturalidade',
                                     'options' => [
                                         'Para' => 'PARÁ',
-                                        'Outra' => 'Outra',
+                                        'Outro' => 'Outro',
                                     ],
+                                    'class' => 'form-control select-com-outro',
                                     'data-target' => '#campo-outra-naturalidade'
                                 ]) ?>
 
