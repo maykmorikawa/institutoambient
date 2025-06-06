@@ -221,10 +221,10 @@
                                         'Outro' => 'Outra',
                                     ],
                                     'class' => 'form-control select-com-outro',
-                                    'data-target' => '#campo-outra-encaminhado_instituicao'
+                                    'data-target' => '#campo-outra-instituicao-encaminhado'
                                 ]) ?>
-                                <div id="campo-outra-encaminhado-instituicao" class="campo-outro" style="display:none;">
-                                    <?= $this->Form->control('outra_encaminhado_instituicao', [
+                                <div id="campo-outra-instituicao-encaminhado" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('outra_instituicao_encaminhado', [
                                         'label' => 'Qual a Instituição?',
                                         'class' => 'form-control',
                                     ]) ?>
@@ -257,7 +257,6 @@
 
                             </div>
                         </div>
-
 
                         <!-- Endereço -->
                         <div class="card mb-4">
