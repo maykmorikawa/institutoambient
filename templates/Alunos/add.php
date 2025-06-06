@@ -329,11 +329,13 @@
                             </div>
                             <div class="card-body">
                                 <?= $this->Form->control('autorizo_imagem', [
+                                    'class' => 'form-control',
                                     'type' => 'checkbox',
                                     'label' => 'AUTORIZO: o uso de minha imagem em todo e qualquer material entre fotos, documentos, meios de comunicação, mídias sociais (Facebook, Instagran, WhatsApp, etc) para ser utilizada em campanhas promocionais e institucional do INSTITUTO AMBIENT – IA, desde que não haja desvirtuamento da sua finalidade. A presente autorização é concedida a título gratuito, abrangendo o uso da imagem acima mencionada em todo território nacional e no exterior, em todas as suas modalidades e, em destaque, das seguintes formas: (I) out-door; (II) busdoor; folhetos em geral (encartes, mala direta, catálogo, etc.); (III) folder de apresentação; (IV) anúncios em revistas e jornais em geral; (V) home page; (VI) cartazes; (VII) back-light; (VIII) mídia eletrônica (painéis, vídeo-tapes, televisão, cinema, programa para rádio, entre outros).'
                                 ]) ?>
 
                                 <?= $this->Form->control('compromisso_participacao', [
+                                    'class' => 'form-control',
                                     'type' => 'checkbox',
                                     'label' => 'COMPROMETO-ME a participar das ações e eventos socias organizados gratuitamente pelo Instituto Ambient, como uma estratégia roativa de contribuição à sociedade.'
                                 ]) ?>
