@@ -39,28 +39,24 @@
                                         break;
                                     }
                                 }
-                                $postUrl = $this->Url->build(['controller' => 'Posts', 'action' => 'view', $post->slug]);
                                 ?>
-
-                                <a href="<?= $postUrl ?>">
-                                    <?php if ($featuredImage): ?>
-                                        <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
-                                            alt="<?= h($post->title) ?>">
-                                    <?php else: ?>
-                                        <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>" alt="Imagem padrão">
-                                    <?php endif; ?>
-                                </a>
+                                <?php if ($featuredImage): ?>
+                                    <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
+                                        alt="<?= h($post->title) ?>">
+                                <?php else: ?>
+                                    <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>" alt="Imagem padrão">
+                                <?php endif; ?>
                             </div>
-
                             <div class="card-body p-xl-1-9 p-4">
                                 <h3 class="h5 mb-3">
-                                    <a href="<?= $postUrl ?>">
+                                    <a
+                                        href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'view', $post->slug]) ?>">
                                         <?= h($post->title) ?>
                                     </a>
                                 </h3>
-                                <a href="<?= $postUrl ?>" class="fw-bold text-primary text-secondary-hover">Leia mais</a>
+                                <a href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'view', $post->slug]) ?>"
+                                    class="fw-bold text-primary text-secondary-hover">Leia mais</a>
                             </div>
-
                             <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                                 <div class="d-flex justify-content-between">
                                     <span class="display-30">
