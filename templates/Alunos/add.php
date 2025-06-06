@@ -89,66 +89,151 @@
                             <div class="card-body">
                                 <?= $this->Form->control('user_id', ['type' => 'hidden', 'value' => '11']) ?>
                                 <?= $this->Form->control('nome_completo', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('data_nascimento', ['type' => 'date', 'class' => 'form-control']) ?>
                                 <?= $this->Form->control('email', ['type' => 'email', 'class' => 'form-control']) ?>
                                 <?= $this->Form->control('cpf', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('rg', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('nis', ['class' => 'form-control']) ?>
-                                <?= $this->Form->control('data_nascimento', ['type' => 'date', 'class' => 'form-control']) ?>
                                 <?= $this->Form->control('telefone', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('genero', [
+                                    'class' => 'form-control',
+                                    'label' => 'Gênero',
+                                    'options' => [
+                                        'masculino' => 'Masculino',
+                                        'Feminino' => 'Feminino',
+                                        'Nao_informado' => 'Não informado',
+                                        'Nao_Binario' => 'Não Binário',
+                                    ]
+                                ]) ?>
+                                <?= $this->Form->control('civil', [
+                                    'class' => 'form-control',
+                                    'label' => 'Estado Civil',
+                                    'options' => [
+                                        'Casado' => 'Casado(a)',
+                                        'Divorciado' => 'Divorciado(a)',
+                                        'Solteiro' => 'Solteiro(a)',
+                                        'Uniao_estavel' => 'União Estável',
+                                        'Viuvo' => 'Viúvo(a)',
+                                    ]
+                                ]) ?>
+                                <?= $this->Form->control('religiao', [
+                                    'class' => 'form-control',
+                                    'label' => 'Qual a sua religião?',
+                                    'options' => [
+                                        'Adventista' => 'Adventista',
+                                        'Budista' => 'Budista',
+                                        'Candomble' => 'Candomblé',
+                                        'Catolica' => 'Católica',
+                                        'Evangelica' => 'Evangélica',
+                                        'Islamica' => 'Islâmica',
+                                        'Mormon' => 'Mórmon',
+                                        'Nao_possui' => 'Não possui',
+                                    ]
+                                ]) ?>
+                                <?= $this->Form->control('naturalidade', [
+                                    'class' => 'form-control select-com-outro',
+                                    'label' => 'Naturalidade',
+                                    'options' => [
+                                        'Para' => 'PARÁ',
+                                        'Outra' => 'Outra',
+                                    ],
+                                    'data-target' => '#campo-outra-naturalidade'
+                                ]) ?>
+
+                                <div id="campo-outra-naturalidade" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('outra_naturalidade', [
+                                        'label' => 'Informe sua naturalidade',
+                                        'class' => 'form-control',
+                                    ]) ?>
+                                </div>
+                                <?= $this->Form->control('nacionalidade', [
+                                    'type' => 'select',
+                                    'label' => 'Nacionalidade',
+                                    'options' => [
+                                        'Brasileira' => 'Brasileira',
+                                        'Outro' => 'Outro',
+                                    ],
+                                    'class' => 'form-control select-com-outro',
+                                    'data-target' => '#campo-outra-nacionalidade'
+                                ]) ?>
+                                <div id="campo-outra-nacionalidade" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('outra_nacionalidade', [
+                                        'label' => 'Informe sua nacionalidade',
+                                        'class' => 'form-control',
+                                    ]) ?>
+                                </div>
+
+                                <?= $this->Form->control('Etnia', [
+                                    'class' => 'form-control',
+                                    'label' => 'Cor/Etnia',
+                                    'options' => [
+                                        'Preta' => 'Preta',
+                                        'Indigena' => 'Indígena',
+                                        'Parda' => 'Parda',
+                                    ]
+                                ]) ?>
+                                <?= $this->Form->control('documentos_civis', [
+                                    'class' => 'form-control',
+                                    'label' => 'selecione quais dos documentos civis abaixo você possui',
+                                    'multiple' => true,
+                                    'options' => [
+                                        'c_nascimento' => 'Certidão de nascimento',
+                                        'c_casamento' => 'Certidão de casamento',
+                                        'c_reservista' => 'Certificado de reservista',
+                                        'c_trabalho' => 'Carteira de trabalho',
+                                    ]
+                                ]) ?>
                             </div>
                         </div>
 
-                       
-                            <!-- Endereço -->
-                            <div class="card mb-4">
-                                <div class="card-header bg-primary text-white">
-                                    <h5 class="mb-0 text-white">Endereço</h5>
-                                </div>
-                                <div class="card-body">
-                                    <?= $this->Form->hidden('enderecos.0.id') ?>
-                                    <?= $this->Form->control('enderecos.0.cep', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('enderecos.0.logradouro', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('enderecos.0.numero', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('enderecos.0.complemento', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('enderecos.0.bairro', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('enderecos.0.cidade', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('enderecos.0.estado', ['class' => 'form-control']) ?>
-                                </div>
+
+                        <!-- Endereço -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0 text-white">Endereço</h5>
                             </div>
-                        
-                            <!-- Escolaridade -->
-                            <div class="card mb-4">
-                                <div class="card-header bg-primary text-white">
-                                    <h5 class="mb-0 text-white">Escolaridade</h5>
-                                </div>
-                                <div class="card-body">
-                                    <?= $this->Form->hidden('escolaridades.0.id') ?>
-                                    <?= $this->Form->control('escolaridades.0.nivel', [
-                                        'class' => 'form-control',
-                                        'options' => [
-                                            'Fundamental' => 'Fundamental',
-                                            'Medio' => 'Médio',
-                                            'Tecnico' => 'Técnico',
-                                            'Superior' => 'Superior',
-                                            'Pos-graduacao' => 'Pós-graduação',
-                                            'Mestrado' => 'Mestrado',
-                                            'Doutorado' => 'Doutorado',
-                                        ]
-                                    ]) ?>
-                                    <?= $this->Form->control('escolaridades.0.serie', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('escolaridades.0.situacao', [
-                                        'class' => 'form-control',
-                                        'options' => [
-                                            'Cursando' => 'Cursando',
-                                            'Interrompido' => 'Interrompido',
-                                            'Concluido' => 'Concluído',
-                                        ]
-                                    ]) ?>
-                                    <?= $this->Form->control('escolaridades.0.curso', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('escolaridades.0.instituicao', ['class' => 'form-control']) ?>
-                                    <?= $this->Form->control('escolaridades.0.ano_conclusao', ['class' => 'form-control']) ?>
-                                </div>
+                            <div class="card-body">
+                                <?= $this->Form->hidden('enderecos.0.id') ?>
+                                <?= $this->Form->control('enderecos.0.cep', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('enderecos.0.logradouro', ['class' => 'form-control', 'label' => 'Informe o seu endereço']) ?>
+                                <?= $this->Form->control('enderecos.0.numero', ['class' => 'form-control', 'label' => 'Numero']) ?>
+                                <?= $this->Form->control('enderecos.0.complemento', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('enderecos.0.bairro', ['class' => 'form-control']) ?>
+                                <?= $this->Form->control('enderecos.0.cidade', ['class' => 'form-control']) ?>
                             </div>
+                        </div>
+
+                        <!-- Escolaridade -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0 text-white">Escolaridade</h5>
+                            </div>
+                            <div class="card-body">
+                                <?= $this->Form->hidden('escolaridades.0.id') ?>
+                                <?= $this->Form->control('escolaridades.0.nivel', [
+                                    'class' => 'form-control',
+                                    'options' => [
+                                        'Fundamental' => 'Fundamental',
+                                        'Medio' => 'Médio',
+                                        'Tecnico' => 'Técnico',
+                                        'Superior' => 'Superior',
+                                        'Pos-graduacao' => 'Pós-graduação',
+                                        'Mestrado' => 'Mestrado',
+                                        'Doutorado' => 'Doutorado',
+                                    ]
+                                ]) ?>
+                                <?= $this->Form->control('escolaridades.0.situacao', [
+                                    'class' => 'form-control',
+                                    'options' => [
+                                        'Cursando' => 'Cursando',
+                                        'Interrompido' => 'Interrompido',
+                                        'Concluido' => 'Concluído',
+                                    ]
+                                ]) ?>
+                                <?= $this->Form->control('escolaridades.0.instituicao', ['class' => 'form-control', 'label' => 'Informe o nome da instiuição que você estuda ou estudou']) ?>
+
+                            </div>
+                        </div>
 
                         <?= $this->Form->control('atividade_id', ['type' => 'hidden', 'value' => $atividade_id]) ?>
 
@@ -160,3 +245,28 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const selects = document.querySelectorAll('.select-com-outro');
+
+        selects.forEach(function (select) {
+            const targetId = select.getAttribute('data-target');
+            const target = document.querySelector(targetId);
+
+            const toggleCampoOutro = function () {
+                if (select.value === 'Outro') {
+                    target.style.display = 'block';
+                } else {
+                    target.style.display = 'none';
+                }
+            };
+
+            // Executa ao carregar
+            toggleCampoOutro();
+
+            // Executa ao mudar
+            select.addEventListener('change', toggleCampoOutro);
+        });
+    });
+</script>
