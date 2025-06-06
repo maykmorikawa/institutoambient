@@ -165,9 +165,9 @@
                                     'class' => 'form-control',
                                     'label' => 'Cor/Etnia',
                                     'options' => [
+                                        'Parda' => 'Parda',
                                         'Preta' => 'Preta',
                                         'Indigena' => 'Indígena',
-                                        'Parda' => 'Parda',
                                     ]
                                 ]) ?>
 
@@ -190,6 +190,8 @@
                                         'class' => 'form-control',
                                     ]) ?>
                                 </div>
+
+                                <?= $this->Form->control('valor_do_beneficio', ['class' => 'form-control', 'label' => 'Qual o valor do benefício?']) ?>
 
                                 <?= $this->Form->control('deficiencia', [
                                     'type' => 'select',
@@ -244,7 +246,7 @@
                                 <?= $this->Form->control('nis', ['class' => 'form-control']) ?>
                                 <?= $this->Form->control('documentos_civis', [
                                     'class' => 'form-control',
-                                    'label' => 'selecione quais dos documentos civis abaixo você possui',
+                                    'label' => 'Selecione quais dos documentos civis abaixo você possui',
                                     'options' => [
                                         'c_nascimento' => 'Certidão de nascimento',
                                         'c_casamento' => 'Certidão de casamento',
@@ -253,8 +255,24 @@
                                     ]
                                 ]) ?>
 
-                                <?= $this->Form->control('valor_cadunico', ['class' => 'form-control', 'label' => 'Sua família está cadastrada no CadÚnico? ( se sim, digita o número do código familiar)']) ?>
+                                <?= $this->Form->control('cadunico', ['class' => 'form-control', 'label' => 'Sua família está cadastrada no CadÚnico? ( se sim, digita o número do código familiar)']) ?>
 
+                                <?= $this->Form->control('cadunico', [
+                                    'type' => 'select',
+                                    'label' => 'Sua família está cadastrada no CadÚnico?',
+                                    'options' => [
+                                        'nao' => 'Não',
+                                        'Outro' => 'Sim',
+                                    ],
+                                    'class' => 'form-control select-com-outro',
+                                    'data-target' => '#campo-outra-valor-cadunico'
+                                ]) ?>
+                                <div id="campo-outra-valor-cadunico" class="campo-outro" style="display:none;">
+                                    <?= $this->Form->control('valor_cadunico', [
+                                        'label' => 'Digita o número do código familiar?',
+                                        'class' => 'form-control',
+                                    ]) ?>
+                                </div>s
                             </div>
                         </div>
 
