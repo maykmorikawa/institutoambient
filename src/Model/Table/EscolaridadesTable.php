@@ -71,20 +71,10 @@ class EscolaridadesTable extends Table
             ->notEmptyString('nivel');
 
         $validator
-            ->scalar('serie')
-            ->maxLength('serie', 100)
-            ->requirePresence('serie', 'create')
-            ->notEmptyString('serie');
-
-        $validator
             ->scalar('situacao')
             ->requirePresence('situacao', 'create')
             ->notEmptyString('situacao');
 
-        $validator
-            ->scalar('curso')
-            ->maxLength('curso', 255)
-            ->allowEmptyString('curso');
 
         $validator
             ->scalar('instituicao')
@@ -92,9 +82,7 @@ class EscolaridadesTable extends Table
             ->requirePresence('instituicao', 'create')
             ->notEmptyString('instituicao');
 
-        $validator
-            ->scalar('ano_conclusao')
-            ->allowEmptyString('ano_conclusao');
+        
 
         return $validator;
     }
