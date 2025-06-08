@@ -372,27 +372,53 @@
     </div>
 </section>
 
+<!-- Adiciona jQuery e Inputmask para máscara de CEP -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const selects = document.querySelectorAll('.select-com-outro');
+    document.addEventListener("DOMContentLoaded", function() {
+        // Aplica máscara no campo de CEP
+        $('#cep').inputmask('99999-999');
 
-        selects.forEach(function (select) {
-            const targetId = select.getAttribute('data-target');
-            const target = document.querySelector(targetId);
+        // Ao sair do campo de CEP
+        $('#cep').on('blur', function() {
+            let cep = $(this).val().replace(/\D/g, '');
 
-            const toggleCampoOutro = function () {
-                if (select.value === 'Outro') {
-                    target.style.display = 'block';
-                } else {
-                    target.style.display = 'none';
-                }
-            };
+            if (!cep || cep.length !== 8) {
+                alert('Por favor, informe um CEP válido com 8 dígitos.');
+                return;
+            }
 
-            // Executa ao carregar
-            toggleCampoOutro();
+            // Limpa campos antes da busca
+            limparCamposEndereco();
 
-            // Executa ao mudar
-            select.addEventListener('change', toggleCampoOutro);
+            // Consulta a API ViaCEP
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        alert('CEP não encontrado.');
+                        return;
+                    }
+
+                    // Preenche os campos do formulário
+                    $('#logradouro').val(data.logradouro || '');
+                    $('#bairro').val(data.bairro || '');
+                    $('#cidade').val(data.localidade || '');
+                    $('#uf').val(data.uf || '');
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar o CEP:', error);
+                    alert('Erro ao buscar o CEP. Tente novamente.');
+                });
         });
+
+        function limparCamposEndereco() {
+            $('#logradouro').val('');
+            $('#bairro').val('');
+            $('#cidade').val('');
+            $('#uf').val('');
+        }
     });
 </script>
