@@ -222,11 +222,6 @@ class UsersController extends AppController
         // Salva no arquivo de logs do CakePHP (logs/audit.log)
         Log::write('info', $logMessage, ['scope' => ['audit']]);
     }
-    /**
-     * Login method
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
+    
 
 }
