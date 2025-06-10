@@ -373,59 +373,52 @@
 </section>
 
 <!-- Adiciona jQuery e Inputmask para máscara de CEP -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Aplica máscara no campo de CEP
-        $('#enderecos.0.cep').inputmask('99999-999');
+        // 1. Seleciona o campo CEP
+        const cepField = document.getElementById("enderecos-0-cep");
 
-        // Função para preencher endereço
-        function preencherEndereco(cep) {
-            cep = cep.replace(/\D/g, '');
+        // 2. Função para buscar CEP e preencher endereço
+        function buscarEnderecoPorCEP() {
+            const cep = cepField.value.replace(/\D/g, ''); // Remove não-dígitos
 
-            if (!cep || cep.length !== 8) {
-                alert('Por favor, informe um CEP válido com 8 dígitos.');
+            // Validação básica do CEP (8 dígitos)
+            if (cep.length !== 8) {
+                alert("CEP deve conter 8 dígitos.");
                 return;
             }
 
-            // Limpa campos antes da busca
-            $('#enderecos.0.logradouro').val('');
-            $('#enderecos.0.bairro').val('');
-            $('#enderecos.0.cidade').val('');
-
-            // Consulta a API ViaCEP
+            // Busca na API ViaCEP
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.erro) {
-                        alert('CEP não encontrado.');
+                        alert("CEP não encontrado.");
                         return;
                     }
 
-                    // Preenche os campos do formulário
-                    $('#enderecos.0.logradouro').val(data.logradouro || '');
-                    $('#enderecos.0.bairro').val(data.bairro || '');
-                    $('#enderecos.0.cidade').val(data.localidade || '');
-                    $('#enderecos.0.complemento').focus(); // Move o foco para o campo complemento
+                    // Preenche os campos (IDs do CakePHP)
+                    document.getElementById("enderecos-0-logradouro").value = data.logradouro || "";
+                    document.getElementById("enderecos-0-bairro").value = data.bairro || "";
+                    document.getElementById("enderecos-0-cidade").value = data.localidade || "";
+                    
+                    // Foco automático no próximo campo (opcional)
+                    document.getElementById("enderecos-0-numero")?.focus();
                 })
                 .catch(error => {
-                    console.error('Erro ao buscar o CEP:', error);
-                    alert('Erro ao buscar o CEP. Tente novamente.');
+                    console.error("Erro ao buscar CEP:", error);
+                    alert("Erro na consulta. Tente novamente.");
                 });
         }
 
-        // Ao sair do campo de CEP (blur)
-        $('#enderecos.0.cep').on('blur', function() {
-            preencherEndereco($(this).val());
+        // 3. Dispara a busca quando:
+        //    - Usuário pressiona ENTER no campo CEP
+        //    - Ou clica fora do campo (evento blur)
+        cepField.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") buscarEnderecoPorCEP();
         });
 
-        // Ao pressionar Tab no campo CEP
-        $('#enderecos.0.cep').on('keydown', function(e) {
-            if (e.key === 'Tab') {
-                preencherEndereco($(this).val());
-            }
-        });
+        cepField.addEventListener("blur", buscarEnderecoPorCEP);
     });
 </script>
