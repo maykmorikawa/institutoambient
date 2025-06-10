@@ -405,10 +405,10 @@
                     }
 
                     // Preenche os campos do formulário
-                    $('#enderecos-0-logradouro').val(data.logradouro || '');
-                    $('#enderecos-0-bairro').val(data.bairro || '');
-                    $('#enderecos-0-cidade').val(data.localidade || '');
-                    $('#enderecos-0-complemento').focus(); // Move o foco para o campo complemento
+                    $('#enderecos.0.logradouro').val(data.logradouro || '');
+                    $('#enderecos.0.bairro').val(data.bairro || '');
+                    $('#enderecos.0.cidade').val(data.localidade || '');
+                    $('#enderecos.0.complemento').focus(); // Move o foco para o campo complemento
                 })
                 .catch(error => {
                     console.error('Erro ao buscar o CEP:', error);
