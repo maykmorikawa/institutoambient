@@ -379,11 +379,11 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Aplica máscara no campo de CEP
-        $('#cep').inputmask('99999-999');
+        $('#enderecos-0-cep').inputmask('99999-999');
 
-        // Ao sair do campo de CEP
-        $('#cep').on('blur', function() {
-            let cep = $(this).val().replace(/\D/g, '');
+        // Função para preencher endereço
+        function preencherEndereco(cep) {
+            cep = cep.replace(/\D/g, '');
 
             if (!cep || cep.length !== 8) {
                 alert('Por favor, informe um CEP válido com 8 dígitos.');
@@ -391,7 +391,9 @@
             }
 
             // Limpa campos antes da busca
-            limparCamposEndereco();
+            $('#enderecos-0-logradouro').val('');
+            $('#enderecos-0-bairro').val('');
+            $('#enderecos-0-cidade').val('');
 
             // Consulta a API ViaCEP
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -403,22 +405,27 @@
                     }
 
                     // Preenche os campos do formulário
-                    $('#logradouro').val(data.logradouro || '');
-                    $('#bairro').val(data.bairro || '');
-                    $('#cidade').val(data.localidade || '');
-                    $('#uf').val(data.uf || '');
+                    $('#enderecos-0-logradouro').val(data.logradouro || '');
+                    $('#enderecos-0-bairro').val(data.bairro || '');
+                    $('#enderecos-0-cidade').val(data.localidade || '');
+                    $('#enderecos-0-complemento').focus(); // Move o foco para o campo complemento
                 })
                 .catch(error => {
                     console.error('Erro ao buscar o CEP:', error);
                     alert('Erro ao buscar o CEP. Tente novamente.');
                 });
+        }
+
+        // Ao sair do campo de CEP (blur)
+        $('#enderecos-0-cep').on('blur', function() {
+            preencherEndereco($(this).val());
         });
 
-        function limparCamposEndereco() {
-            $('#logradouro').val('');
-            $('#bairro').val('');
-            $('#cidade').val('');
-            $('#uf').val('');
-        }
+        // Ao pressionar Tab no campo CEP
+        $('#enderecos-0-cep').on('keydown', function(e) {
+            if (e.key === 'Tab') {
+                preencherEndereco($(this).val());
+            }
+        });
     });
 </script>
