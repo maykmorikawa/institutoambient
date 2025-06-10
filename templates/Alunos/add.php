@@ -379,7 +379,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Aplica máscara no campo de CEP
-        $('#enderecos-0-cep').inputmask('99999-999');
+        $('#enderecos.0.cep').inputmask('99999-999');
 
         // Função para preencher endereço
         function preencherEndereco(cep) {
@@ -391,9 +391,9 @@
             }
 
             // Limpa campos antes da busca
-            $('#enderecos-0-logradouro').val('');
-            $('#enderecos-0-bairro').val('');
-            $('#enderecos-0-cidade').val('');
+            $('#enderecos.0.logradouro').val('');
+            $('#enderecos.0.bairro').val('');
+            $('#enderecos.0.cidade').val('');
 
             // Consulta a API ViaCEP
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -417,12 +417,12 @@
         }
 
         // Ao sair do campo de CEP (blur)
-        $('#enderecos-0-cep').on('blur', function() {
+        $('#enderecos.0.cep').on('blur', function() {
             preencherEndereco($(this).val());
         });
 
         // Ao pressionar Tab no campo CEP
-        $('#enderecos-0-cep').on('keydown', function(e) {
+        $('#enderecos.0.cep').on('keydown', function(e) {
             if (e.key === 'Tab') {
                 preencherEndereco($(this).val());
             }
