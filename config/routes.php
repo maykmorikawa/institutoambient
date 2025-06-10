@@ -72,7 +72,7 @@ return function (RouteBuilder $routes): void {
 
 
       // ROTAS ESPECÍFICAS PRIMEIRO
-      $builder->connect('/', ['controller' => 'Pages', 'action' => 'home']);
+      $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
 
       // 2. Especifique explicitamente a rota para atividades/view
       $builder->connect('/atividades/view/:id', [
@@ -86,6 +86,7 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
       $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
       $builder->connect('/listar_blogs', ['controller' => 'Posts', 'action' => 'listblog']);
+      $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
 
       // 🔥 SUA ROTA PERSONALIZADA AQUI
       $builder->connect('/noticia/:slug', ['controller' => 'Posts', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]);
