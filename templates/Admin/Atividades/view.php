@@ -145,6 +145,7 @@
                             <tr>
                                 <th><?= __('ID') ?></th>
                                 <th><?= __('Aluno ID') ?></th>
+                                <th><?= __('Nome do Aluno') ?></th>
                                 <th><?= __('Atividade ID') ?></th>
                                 <th><?= __('Usuário ID') ?></th>
                                 <th><?= __('Responsável ID') ?></th>
@@ -158,6 +159,7 @@
                                 <tr>
                                     <td><?= h($inscrico->id) ?></td>
                                     <td><?= h($inscrico->aluno_id) ?></td>
+                                    <td><?= h($inscrico->aluno->nome_completo ?? 'Não informado') ?></td>
                                     <td><?= h($inscrico->atividade_id) ?></td>
                                     <td><?= h($inscrico->user_id) ?></td>
                                     <td><?= h($inscrico->responsavel_id) ?></td>
