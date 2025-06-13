@@ -58,7 +58,6 @@ class AlunosTable extends Table
         ]);
         $this->belongsTo('Atividades', [
             'foreignKey' => 'atividade_id',
-            'joinType' => 'INNER',
         ]);
 
         $this->hasMany('Inscricoes', [

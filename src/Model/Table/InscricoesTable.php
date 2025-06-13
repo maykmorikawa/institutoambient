@@ -48,7 +48,6 @@ class InscricoesTable extends Table
 
         $this->belongsTo('Alunos', [
             'foreignKey' => 'aluno_id',
-            'joinType' => 'INNER',
         ]);
         $this->belongsTo('Atividades', [
             'foreignKey' => 'atividade_id',
