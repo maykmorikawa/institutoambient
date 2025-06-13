@@ -90,7 +90,7 @@
                 <a class="collapse-item" href="/admin/tags">Tags</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Outros</h6>
-                <a class="collapse-item" href="/">Manutenção</a>
+                <a class="collapse-item" href="/manutencao">Manutenção</a>
 
             </div>
         </div>

@@ -72,7 +72,7 @@ return function (RouteBuilder $routes): void {
 
 
       // ROTAS ESPECÍFICAS PRIMEIRO
-      $builder->connect('/', ['controller' => 'Pages', 'action' => 'manutencao']);
+      $builder->connect('/', ['controller' => 'Pages', 'action' => 'home']);
 
       // 2. Especifique explicitamente a rota para atividades/view
       $builder->connect('/atividades/view/:id', [
