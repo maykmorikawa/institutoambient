@@ -178,7 +178,7 @@ class PagesController extends AppController
                     'Posts.status' => 'publicado',
                     'Posts.category_id IN' => $noticiasSubcategoryIds
                 ])
-                ->order(['Posts.created' => 'DESC']) // <– atenção no prefixo
+                ->order(['Posts.published' => 'DESC']) // <– atenção no prefixo
                 ->limit(3)
                 ->all();
         }
