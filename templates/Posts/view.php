@@ -173,13 +173,10 @@
                     <?php endif; ?>
 
                     <div class="widget p-4 wow fadeIn" data-wow-delay="1000ms">
-                        <h3 class="mb-1-6 h5">Follow Us</h3>
+                        <h3 class="mb-1-6 h5">Siga-nos</h3>
                         <div>
-                            <a href="#!" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#!" class="me-2"><i class="fab fa-twitter"></i></a>
-                            <a href="#!" class="me-2"><i class="fab fa-instagram"></i></a>
-                            <a href="#!" class="me-2"><i class="fab fa-youtube"></i></a>
-                            <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/institutoambient?locale=pt_BR" target="_blank" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/institutoambient/" target="_blank" class="me-2"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
