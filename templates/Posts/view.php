@@ -68,14 +68,30 @@
                                     <?php endif; ?>
                                 </div>
 
+                                <?php
+                                $postUrl = $this->Url->build([
+                                    'controller' => 'Posts',
+                                    'action' => 'view',
+                                    $post->slug
+                                ], ['fullBase' => true]);
+                                ?>
+
                                 <div class="pt-4">
                                     <h4 class="h6 d-inline-block me-2">Compartilhar:</h4>
-                                    <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($postUrl) ?>" target="_blank" class="me-2">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?url=<?= urlencode($postUrl) ?>&text=<?= urlencode($post->title) ?>" target="_blank" class="me-2">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send?text=<?= urlencode($post->title . ' ' . $postUrl) ?>" target="_blank" class="me-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/shareArticle?url=<?= urlencode($postUrl) ?>&title=<?= urlencode($post->title) ?>" target="_blank" class="me-2">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
