@@ -87,9 +87,6 @@
                                     <a href="https://api.whatsapp.com/send?text=<?= urlencode($post->title . ' ' . $postUrl) ?>" target="_blank" class="me-2">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/shareArticle?url=<?= urlencode($postUrl) ?>&title=<?= urlencode($post->title) ?>" target="_blank" class="me-2">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
                                 </div>
 
                             </div>
