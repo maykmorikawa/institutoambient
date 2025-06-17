@@ -282,7 +282,7 @@
                         <a href="<?= $this->Url->build(h($post->excerpt)) ?>" class="text-decoration-none text-dark">
                             <div class="card-img position-relative">
                                 <img src="<?= $imagePath ?>" class="card-img-top" alt="<?= h($post->title) ?>">
-                                
+
                             </div>
                         </a>
                         <div class="card-body p-1-9">
@@ -401,8 +401,10 @@
                         </div>
                         <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
                             <div class="d-flex justify-content-between">
-                                <span class="display-30"><i class="ti-calendar me-1 text-primary"></i>
-                                    <?= $post->published ? $post->published->format('F j, Y') : '' ?></span>
+                                <span class="display-30">
+                                    <i class="ti-calendar me-1 text-primary"></i>
+                                    <?= $post->published ? $post->published->i18nFormat('d \'de\' MMMM \'de\' yyyy', null, 'pt_BR') : '' ?>
+                                </span>
                             </div>
                         </div>
                     </article>
