@@ -63,53 +63,14 @@
 
                         <h2 class="mb-3"> O INSTITUTO AMBIENT - IA</h2>
 
-                        <p>Constituído em 17 de julho de 2012, CNPJ 16.791.646/0001-74, é um instituto
-                            técnico-científico, qualificado como Organização Social - OS,
-                            por meio do Decreto Nº 1.360 de 31/08/2015, com finalidade social, sem fins econômicos ou
-                            lucrativos, apartidário, de Utilidade Pública pelo Estado do Pará pela Lei Nº 8.364 de
-                            11/05/2016,
-                            de Utilidade Pública pelo Município de Belém, por meio da Lei Nº 9.082, de 24/03/2015,
-                            inscrito no Conselho da Criança e do Adolescente com o Nº 164/2018, de acordo com a
-                            Resolução Nº 028/2018 - COMDAC,
-                            publicado no Diário Oficial Nº 13.546 - Página 07, do município de Belém em 28/06/2018,
-                            inscrito no Conselho Municipal de Assistência Social de Ananindeua - CMAS,
-                            nos termos da Lei Nº 1.262 de 15 de julho de 1997 e Decreto Nº 1.902/00 de 28 de março de
-                            2000, registro em Andamento no Conselho Municipal de Assistência Social de Belém - CMAS,
-                            regido pela legislação vigente, com duração por tempo indeterminado, tendo sua sede e foro
-                            na cidade de Belém, Capital do Estado do Pará, na Av. Dr. Freitas, nº 55, CEP 66.123-050,
-                            Bairro Sacramenta.
-                        </p>
-                        <p>Homepage: www.institutoambient.org.br e atuação no território nacional e internacional.
+                        <p>O Instituto Ambient é uma organização da sociedade civil engajada na perspectiva da proteção e defesa dos direitos fundamentais, prioritariamente de pessoas em situação de vulnerabilidade social, projetando uma sociedade de pessoas mobilizadas em todas as suas capacidades, dentro de um contexto de justiça ambiental, em que todas as pessoas  independentemente da sua raça, classe social ou etnia, tenham o mesmo acesso a um meio ambiente saudável e seguro.</p>
+                        <p>Diante disso, o IA tem como público prioritário de suas iniciativas  crianças, adolescentes, jovens, mulheres, mulheres negras, idosas, oportunizando  processos inclusivos e equitativos, por meio da educação, educação profissional, arte, tecnologias inovadoras, entre outras em vivências intergeracionais.</p>
+                        <p>Os/as colaboradores/as do IA trabalham na expectativa de proporcionar direitos humanos e proteção social, ou seja, com a articulação e ativação de um conjunto de políticas, programas, projetos, serviços e ações que visam garantir um mínimo de bem-estar e segurança para os cidadãos, especialmente aqueles em situação de vulnerabilidade social.</p>
+                        <p>Para tanto, o IA desenvolve seus processos  por meio de projetos sociais e socioambientais, como:  Oásis, objetivando o cuidado ao envelhecimento com a  inclusão de mulheres com 50+; Flores do Oásis, proporcionando artesanato sustentável e geração de renda; Mariá, com capacitação em gestão de empreendimentos para mulheres negras; Lado a Lado: oportunizando a formação e incubação de negócios sociais na periferia amazônica; Projeto “Modelagem de Negócios para a COP 30”; Projeto Aurora, que efetiva apoio a Mulheres Grávidas Vulneráveis nos Municípios de Belém e Jacundá;  Grávidas Vulneráveis nos Municípios de Belém e Jacundá (Parceria: Ministério das Mulheres), entre outros.</p>
+                        <p>Outro trajeto efetivado pelo o IA para concretização daquilo que o motiva tem sido ativar redes de colaboradores e parceiros que tem contribuído em nossos sonhos, como: PERNOH, a fundação Acolher, Mistério Público do Pará,  Fundação Papa João XXIII (FUNPAPA), responsável pela execução da Política de Assistência Social, em Belém; Conselho Municipal de Assistência Social (CMAS); Conselho Municipal dos Direitos da Criança e do Adolescente (COMDAC); Mistério Público,  Empresa Suzano, Equatorial Energia,entre outras parcerias.</p>
 
-                        </p>
-
-                        <p>Vale ressaltar que o IA é uma entidade que oferece serviços gratuitos e permanentes
-                            para pessoas de baixa renda ou beneficiárias de programas governamentais e não faz
-                            distinçã de nacionalidade, sexo, cor, crença política e religião. A título de informação,
-                            estamos inscritos em várias organizações e, inclusive, na Fundação ABRINQ, na ABONG, no
-                            IPEA e no profile da NGO BRANCH Department of Economic and Social Affairs (ONU)
-                        </p>
-
-                        <p>Somos uma Organização Social que tem, por força de Lei, vários objetos dentre os quais
-                            os principais estão relacionados às áreas da Saúde, Educação, Assistência Social e Meio
-                            Ambiente. Todavia, estamos preparados para desenvolver qualquer projeto nos mais
-                            diversos segmentos.
-
-                        </p>
-
-                        <p>O IA busca proporcionar qualidade de vida às pessoas, a partir de práticas sociais
-                            corporativas, públicas e privadas, definidas por projetos que agreguem sustentabilidade à
-                            responsabilidade social e formem frentes de trabalho, que deem alento às comunidades
-                            mais vulneráveis
-                        </p>
-
-                        <p>Além disso, o IA está comprometido com princípios da sustentabilidade. Por isso,
-                            cumpre rigorosamente as normas jurídicas que regulam as ações no meio ambiente, nos
-                            diversos treinamentos, em comunidades, dando ênfase à participação do adolescente
-                        </p>
-                        <p>Nossa maior patente é a dignidade da pessoa humana, prevista no Art. I, da
-                            Constituição de 1988.
-                        </p>
+                        <p>Homepage: www.institutoambient.org.br e atuação no território nacional e internacional.</p>
+                        
                     </div>
 
                     <div class="col-lg-12 mb-2-9">
