@@ -316,7 +316,7 @@
                         <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Valores</a></h3>
                         <p class="mb-0 position-relative">Os valores de governança institucional demarcam os elementos
                             ético-políticos que balizam a atuação da entidade em todas as suas dimensões de prática
-                            social. A seguir apresentamos brevemente:</p>
+                            social.</p>
                     </div>
                 </div>
             </div>
@@ -328,8 +328,8 @@
 <section>
     <div class="container">
         <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms"> <span
-                class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossos Serviços</span>
-            <h2 class="mb-0 h1">Nossos Princípios e Serviços</h2>
+                class="text-secondary mb-2 d-block fw-bold text-uppercase">Prática Social</span>
+            <h2 class="mb-0 h1">A seguir apresentamos brevemente:</h2>
         </div>
         <div class="row mt-n1-9">
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms"> <a
