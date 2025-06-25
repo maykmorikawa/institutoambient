@@ -325,3 +325,83 @@
     <div class="circle-md right-10 top-15 border-dark-color d-none d-md-block"></div>
     <div class="bg-img bg-stripes ani-left-right d-none d-md-block" data-background="img/content/bg-stripes.png"></div>
 </section>
+<section>
+    <div class="container">
+        <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms"> <span
+                class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossos Serviços</span>
+            <h2 class="mb-0 h1">Nossos Princípios e Serviços</h2>
+        </div>
+        <div class="row mt-n1-9">
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-hand-open display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Equidade</h3>
+                        <p class="mb-0">Em todos os níveis e serviços, proporcionando o cuidado com a diferença.</p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="300ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-check-box display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Ética</h3>
+                        <p class="mb-0">Gestão comprometida com conduta reta e integridade, valorizando colaboradores e
+                            respeitando a diversidade.</p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="400ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-heart display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Humanização</h3>
+                        <p class="mb-0">Respeito à vida humana, abrangendo circunstâncias sociais, éticas, educacionais
+                            e psíquicas.</p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="500ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-star display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Qualidade dos Serviços</h3>
+                        <p class="mb-0">Dever inerente aos servidores públicos, construída por esforços de todos os
+                            níveis da organização.</p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-world display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Responsabilidade Social</h3>
+                        <p class="mb-0">Atuando em consonância com os paradigmas da sustentabilidade e suas influências.
+                        </p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="700ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-light-bulb display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Valorização do Conhecimento</h3>
+                        <p class="mb-0">Investimento na capacitação contínua de pessoas, incentivando e valorizando
+                            competências.</p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-briefcase display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Valorização Profissional</h3>
+                        <p class="mb-0">Ações que proporcionam bem-estar, qualidade de vida e desenvolvimento
+                            profissional.</p>
+                    </div>
+                </a> </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="900ms"> <a
+                    href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
+                            class="ti-leaf display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Desenvolvimento Sustentável</h3>
+                        <p class="mb-0">Mudança de atitude e conduta na utilização de recursos naturais e na vida.</p>
+                    </div>
+                </a> </div>
+        </div>
+    </div>
+</section>
