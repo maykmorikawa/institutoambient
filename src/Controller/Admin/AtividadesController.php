@@ -38,7 +38,7 @@ class AtividadesController extends AppController
      */
     public function view($id = null)
     {
-        $atividade = $this->Atividades->get($id, contain: ['Projetos', 'Users', 'Aulas', 'Inscricoes']);
+        $atividade = $this->Atividades->get($id, contain: ['Projetos', 'Users', 'Aulas', 'Inscricoes','Alunos']);
         $this->set(compact('atividade'));
     }
 
