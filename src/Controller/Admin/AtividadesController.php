@@ -42,7 +42,7 @@ class AtividadesController extends AppController
             'Projetos',
             'Users',
             'Aulas',
-            'Inscricoes' => ['Alunos', 'Users', 'Responsavels'] // <- aqui está o segredo
+            'Inscricoes' => ['Alunos', 'Users', 'Responsavels', 'Atividades'] // <- aqui está o segredo
         ]);
         $this->set(compact('atividade'));
     }
