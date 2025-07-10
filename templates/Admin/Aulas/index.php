@@ -27,7 +27,7 @@
                         <?php foreach ($aulas as $aula): ?>
                         <tr>
                             <td><?= $this->Number->format($aula->id) ?></td>
-                            <td><?= $aula->hasValue('atividade') ? '<span class="badge bg-primary text-white">' . $this->Html->link($aula->atividade->titulo, ['controller' => 'Atividades', 'action' => 'view', $aula->atividade->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Atividade') . '</span>' ?></td>
+                            <td><?= $aula->hasValue('atividade') ? '<span class="badge bg-primary text-white">' . $this->Html->link($aula->atividade->nome, ['controller' => 'Atividades', 'action' => 'view', $aula->atividade->id], ['class' => 'text-white', 'style' => 'text-decoration: none;']) . '</span>' : '<span class="badge bg-secondary text-white">' . __('Sem Atividade') . '</span>' ?></td>
                             <td><?= $aula->data ? $aula->data->format('d/m/Y') : '-' ?></td>
                             <td><?= $aula->created ? $aula->created->format('d/m/Y H:i') : '-' ?></td>
                             <td><?= $aula->modified ? $aula->modified->format('d/m/Y H:i') : '-' ?></td>

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -69,8 +70,9 @@ class AulasTable extends Table
             ->integer('atividade_id')
             ->notEmptyString('atividade_id');
 
+        
         $validator
-            ->date('data')
+            ->date('data') // Valida como data
             ->requirePresence('data', 'create')
             ->notEmptyDate('data');
 
