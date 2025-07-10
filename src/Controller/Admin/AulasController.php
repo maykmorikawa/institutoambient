@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
@@ -47,15 +48,28 @@ class AulasController extends AppController
     public function add()
     {
         $aula = $this->Aulas->newEmptyEntity();
+
         if ($this->request->is('post')) {
-            $aula = $this->Aulas->patchEntity($aula, $this->request->getData());
+            $data = $this->request->getData();
+
+            if (!empty($data['data'])) {
+                // Converte para YYYY-MM-DD
+                $date = \DateTime::createFromFormat('d/m/Y', $data['data']);
+                if ($date) {
+                    $data['data'] = $date->format('Y-m-d');
+                }
+            }
+
+            $aula = $this->Aulas->patchEntity($aula, $data);
+
             if ($this->Aulas->save($aula)) {
                 $this->Flash->success(__('The aula has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
+
             $this->Flash->error(__('The aula could not be saved. Please, try again.'));
         }
+
         $atividades = $this->Aulas->Atividades->find('list', limit: 200)->all();
         $this->set(compact('aula', 'atividades'));
     }
