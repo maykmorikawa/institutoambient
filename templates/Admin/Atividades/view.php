@@ -143,12 +143,10 @@
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th><?= __('ID') ?></th>
-                                <th><?= __('Aluno ID') ?></th>
+                               
+                                <th><?= __('Matricula') ?></th>
                                 <th><?= __('Nome do Aluno') ?></th>
-                                <th><?= __('Atividade ID') ?></th>
-                                <th><?= __('Usuário ID') ?></th>
-                                <th><?= __('Responsável ID') ?></th>
+                                <th><?= __('Atividade') ?></th>
                                 <th><?= __('Data Inscrição') ?></th>
                                 <th><?= __('Status') ?></th>
                                 <th class="actions"><?= __('Ações') ?></th>
@@ -157,12 +155,10 @@
                         <tbody>
                             <?php foreach ($atividade->inscricoes as $inscrico): ?>
                                 <tr>
-                                    <td><?= h($inscrico->id) ?></td>
+                                    
                                     <td><?= h($inscrico->aluno_id) ?></td>
                                     <td><?= h($inscrico->aluno->nome_completo ?? 'Não informado') ?></td>
-                                    <td><?= h($inscrico->atividade_id) ?></td>
-                                    <td><?= h($inscrico->user_id) ?></td>
-                                    <td><?= h($inscrico->responsavel_id) ?></td>
+                                    <td><?= h($inscrico->atividade->nome ?? 'Não informado') ?></td>
                                     <td><?= $inscrico->data_inscricao ? $inscrico->data_inscricao->format('d/m/Y') : '-' ?></td>
                                     <td><?= h($inscrico->status) ?></td>
                                     <td class="actions">
