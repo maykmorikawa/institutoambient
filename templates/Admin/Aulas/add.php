@@ -18,7 +18,7 @@
                     <legend class="h5 mb-4"><?= __('Dados da Aula') ?></legend>
                     <?php
                         echo $this->Form->control('atividade_id', ['options' => $atividades, 'class' => 'form-control mb-3', 'label' => 'Atividade']);
-                        echo $this->Form->control('data', ['class' => 'form-control mb-3', 'type' => 'date', 'label' => 'Data']);
+                        echo $this->Form->control('data', [ 'type' => 'date', 'label' => 'Data da Aula','class' => 'form-control mb-3']);
                         echo $this->Form->control('conteudo', ['class' => 'form-control mb-3', 'label' => 'Conteúdo', 'rows' => 5]);
                         echo $this->Form->control('observacoes', ['class' => 'form-control mb-3', 'label' => 'Observações', 'rows' => 3]);
                     ?>
