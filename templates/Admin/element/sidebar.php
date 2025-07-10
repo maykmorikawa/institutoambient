@@ -66,35 +66,50 @@
                 </div>
             </div>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAulas"
+                aria-expanded="true" aria-controls="collapseAulas">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Aulas</span>
+            </a>
+            <div id="collapseAulas" class="collapse" aria-labelledby="headingAulas" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Área do Alunos</h6>
+                    <a class="collapse-item" href="/admin/alunas">Aulas</a>
+                    <a class="collapse-item" href="/admin/presencas">Presenças</a>
+                </div>
+            </div>
+        </li>
     <?php endif; ?>
     <!-- Divider -->
 
     <hr class="sidebar-divider">
     <!-- Heading -->
-     <?php if ($user && in_array($user->profile_id, [1, 2, 3])): ?>
-    <div class="sidebar-heading">
-        Site
-    </div>
-    <!-- Apenas Admin e coordenador vê o menu Sistema -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-            aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Ações</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Site</h6>
-                <a class="collapse-item" href="/admin/categories">Categorias</a>
-                <a class="collapse-item" href="/admin/posts">Posts</a>
-                <a class="collapse-item" href="/admin/tags">Tags</a>
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Outros</h6>
-                <a class="collapse-item" href="/manutencao">Manutenção</a>
-
-            </div>
+    <?php if ($user && in_array($user->profile_id, [1, 2, 3])): ?>
+        <div class="sidebar-heading">
+            Site
         </div>
-    </li>
+        <!-- Apenas Admin e coordenador vê o menu Sistema -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+                aria-controls="collapsePages">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Ações</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Site</h6>
+                    <a class="collapse-item" href="/admin/categories">Categorias</a>
+                    <a class="collapse-item" href="/admin/posts">Posts</a>
+                    <a class="collapse-item" href="/admin/tags">Tags</a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Outros</h6>
+                    <a class="collapse-item" href="/manutencao">Manutenção</a>
+
+                </div>
+            </div>
+        </li>
     <?php endif; ?>
     <hr class="sidebar-divider">
     <?php if ($user && $user->profile_id == 1): ?>
