@@ -70,9 +70,9 @@ class AulasTable extends Table
             ->notEmptyString('atividade_id');
 
         $validator
-            ->dateTime('data')
+            ->date('data')
             ->requirePresence('data', 'create')
-            ->notEmptyDateTime('data');
+            ->notEmptyDate('data');
 
         $validator
             ->scalar('conteudo')
