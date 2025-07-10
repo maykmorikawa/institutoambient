@@ -252,7 +252,7 @@
         <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <div class="col-lg-5 mb-3 mb-lg-0">
                 <span class="d-block mb-2 text-secondary text-uppercase fw-bold">Editais</span>
-                <h2 class="mb-0">Confira alguns de nossos projetos:</h2>
+                <h2 class="mb-0">Confira nossos cursos disponíveis</h2>
             </div>
             <div class="col-lg-7">
                 <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">O Instituto
