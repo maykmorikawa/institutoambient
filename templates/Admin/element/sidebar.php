@@ -76,7 +76,7 @@
             <div id="collapseAulas" class="collapse" aria-labelledby="headingAulas" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Área do Alunos</h6>
-                    <a class="collapse-item" href="/admin/alunas">Aulas</a>
+                    <a class="collapse-item" href="/admin/aulas">Aulas</a>
                     <a class="collapse-item" href="/admin/presencas">Presenças</a>
                 </div>
             </div>
