@@ -20,7 +20,7 @@
             <table>
                 <tr>
                     <th><?= __('Atividade') ?></th>
-                    <td><?= $aula->hasValue('atividade') ? $this->Html->link($aula->atividade->titulo, ['controller' => 'Atividades', 'action' => 'view', $aula->atividade->id]) : '' ?></td>
+                    <td><?= $aula->hasValue('atividade') ? $this->Html->link($aula->atividade->nome, ['controller' => 'Atividades', 'action' => 'view', $aula->atividade->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
