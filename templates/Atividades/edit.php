@@ -31,6 +31,8 @@
                     echo $this->Form->control('local');
                     echo $this->Form->control('horario', ['empty' => true]);
                     echo $this->Form->control('dias_semana');
+                    echo $this->Form->control('data_inicio');
+                    echo $this->Form->control('data_fim');
                     echo $this->Form->control('user_id', ['options' => $users]);
                     echo $this->Form->control('slug');
                     echo $this->Form->control('link_inscricao');
