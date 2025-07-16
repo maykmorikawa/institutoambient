@@ -93,7 +93,7 @@ class AulasController extends AppController
             }
             $this->Flash->error(__('The aula could not be saved. Please, try again.'));
         }
-        $atividades = $this->Aulas->Atividades->find('list', keyField: 'id', valueField: 'name')->toArray();
+        $atividades = $this->Aulas->Atividades->find('list', keyField: 'id', valueField: 'nome')->toArray();
         $this->set(compact('aula', 'atividades'));
     }
 
