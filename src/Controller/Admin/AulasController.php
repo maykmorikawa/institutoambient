@@ -72,7 +72,7 @@ class AulasController extends AppController
 
         $atividades = $this->Aulas->Atividades->find('list', keyField: 'id', valueField: 'nome')->toArray();
         $this->set(compact('aula', 'atividades'));
-        $this->set(compact('aula', 'atividades'));
+        
     }
 
     /**
