@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var iterable<\App\Model\Entity\Presenca> $presencas
@@ -22,26 +23,31 @@
             </thead>
             <tbody>
                 <?php foreach ($presencas as $presenca): ?>
-                <tr>
-                    <td><?= $this->Number->format($presenca->id) ?></td>
-                    <td><?= $presenca->hasValue('aula') ? $this->Html->link($presenca->aula->id, ['controller' => 'Aulas', 'action' => 'view', $presenca->aula->id]) : '' ?></td>
-                    <td><?= $presenca->hasValue('aluno') ? $this->Html->link($presenca->aluno->nome, ['controller' => 'Alunos', 'action' => 'view', $presenca->aluno->id]) : '' ?></td>
-                    <td><?= h($presenca->presente) ?></td>
-                    <td><?= h($presenca->created) ?></td>
-                    <td><?= h($presenca->modified) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $presenca->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $presenca->id]) ?>
-                        <?= $this->Form->postLink(
-                            __('Delete'),
-                            ['action' => 'delete', $presenca->id],
-                            [
-                                'method' => 'delete',
-                                'confirm' => __('Are you sure you want to delete # {0}?', $presenca->id),
-                            ]
-                        ) ?>
-                    </td>
-                </tr>
+                    <tr>
+                        <td><?= $this->Number->format($presenca->id) ?></td>
+                        <td><?= $presenca->hasValue('aula') ? $this->Html->link($presenca->aula->id, ['controller' => 'Aulas', 'action' => 'view', $presenca->aula->id]) : '' ?></td>
+                        <?php
+                        echo $this->Html->link(
+                            $presenca->aluno->nome_completo ?? 'Nome Desconhecido', // Se nome_completo for null, usa 'Nome Desconhecido'
+                            ['controller' => 'Alunos', 'action' => 'view', $presenca->aluno->id]
+                        );
+                        ?>
+                        <td><?= h($presenca->presente) ?></td>
+                        <td><?= h($presenca->created) ?></td>
+                        <td><?= h($presenca->modified) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $presenca->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $presenca->id]) ?>
+                            <?= $this->Form->postLink(
+                                __('Delete'),
+                                ['action' => 'delete', $presenca->id],
+                                [
+                                    'method' => 'delete',
+                                    'confirm' => __('Are you sure you want to delete # {0}?', $presenca->id),
+                                ]
+                            ) ?>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
