@@ -59,5 +59,7 @@ class Atividade extends Entity
         'inscricoes' => true,
         'idade_minima' => true,
         'idade_maxima' => true,
+        'data_inicio' => true,
+        'data_fim' => true,
     ];
 }
