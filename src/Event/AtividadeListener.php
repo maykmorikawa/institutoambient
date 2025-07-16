@@ -1,12 +1,14 @@
 <?php
 // src/Event/AtividadeListener.php
+declare(strict_types=1); // Boa prática para type hints mais rigorosos
+
 namespace App\Event;
 
 use Cake\Event\EventListenerInterface;
 use Cake\I18n\Date;
 use Cake\ORM\Locator\LocatorAwareTrait;
 use Cake\Datasource\ConnectionManager;
-use Cake\ORM\Query; // Importar para o finder
+use Cake\ORM\Query; // Importar se você usar finders customizados ou Query
 
 class AtividadeListener implements EventListenerInterface
 {
@@ -15,30 +17,44 @@ class AtividadeListener implements EventListenerInterface
     public function implementedEvents(): array
     {
         return [
+            // Garanta que o nome do evento e o método sejam consistentes
             'Model.afterSave' => 'gerarAulasEMatricularAlunos',
         ];
     }
 
+    /**
+     * Gera aulas e matricula alunos após a atividade ser salva.
+     *
+     * @param \Cake\Event\EventInterface $event O objeto evento.
+     * @param \App\Model\Entity\Atividade $entity A entidade Atividade que foi salva.
+     * @param \ArrayObject $options As opções passadas para o save.
+     * @return void
+     */
     public function gerarAulasEMatricularAlunos($event, $entity, $options)
     {
-        // Verifica se é uma entidade de Atividade e se as datas foram alteradas ou é nova
+        // Verifica se a entidade é uma Atividade e se as datas de início/fim foram alteradas ou é uma nova atividade.
+        // O `getSource()` retorna o nome da Table class (ex: 'Atividades').
         if ($entity->getSource() === 'Atividades' && ($entity->isNew() || $entity->isDirty('data_inicio') || $entity->isDirty('data_fim'))) {
             $idAtividade = $entity->id;
+            // Certifique-se que esses campos existem na sua entidade Atividade e são objetos Date
             $dataInicio = $entity->data_inicio;
             $dataFim = $entity->data_fim;
 
+            // Instancia as tabelas necessárias via LocatorAwareTrait
             $atividadesTable = $this->fetchTable('Atividades');
             $aulasTable = $this->fetchTable('Aulas');
-            $inscricoesTable = $this->fetchTable('Inscricoes'); // Novo: Tabela de inscrições
-            $presencasTable = $this->fetchTable('Presencas'); // Sua tabela de presenças
+            $inscricoesTable = $this->fetchTable('Inscricoes');
+            $presencasTable = $this->fetchTable('Presencas');
 
             $connection = ConnectionManager::get('default');
 
-            // Inicia uma transação
-            $connection->begin();
-            try {
+            // O método transactional() já encapsula a lógica de try/catch e rollback/commit.
+            // Se uma exceção for lançada dentro do callback, ele fará o rollback.
+            // Não é necessário um try/catch externo aqui para o rollback.
+            $connection->transactional(function () use ($idAtividade, $dataInicio, $dataFim, $atividadesTable, $aulasTable, $inscricoesTable, $presencasTable, $entity) {
 
-                // 1. Remover aulas e associações de alunos existentes se as datas mudaram
+                // 1. Remover aulas e associações de alunos existentes se as datas mudaram (ou se não for nova atividade)
+                // Usamos !isNew() para garantir que só tentamos remover aulas se a atividade já existia.
                 if (!$entity->isNew()) {
                     // Pega os IDs das aulas antigas desta atividade
                     $aulasAntigasIds = $aulasTable->find()
@@ -49,64 +65,68 @@ class AtividadeListener implements EventListenerInterface
 
                     if (!empty($aulasAntigasIds)) {
                         // Primeiro, remove as presenças (associações de alunos) das aulas antigas
+                        // Isso é importante para evitar erros de chave estrangeira ao deletar as aulas
                         $presencasTable->deleteAll(['aula_id IN' => $aulasAntigasIds]);
                         // Depois, remove as aulas em si
-                        $aulasTable->deleteAll(['id' => $aulasAntigasIds]);
+                        $aulasTable->deleteAll(['id IN' => $aulasAntigasIds]); // Use IN para deletar múltiplos
                     }
                 }
 
                 $aulasParaSalvar = [];
-                $dataAtual = new Date($dataInicio);
-                $dataFinal = new Date($dataFim);
+                // Garante que $dataInicio e $dataFim são objetos Cake\I18n\Date
+                $currentDate = new Date($dataInicio);
+                $endDate = new Date($dataFim);
 
                 // 2. Gerar as novas aulas
-                while ($dataAtual->lte($dataFinal)) {
-                    if ($dataAtual->isWeekday()) { // Exemplo: apenas dias úteis
+                while ($currentDate->lte($endDate)) {
+                    // Exemplo: apenas dias úteis (segunda a sexta)
+                    // Adapte isso se você tiver um campo 'dias_semana' na sua atividade e precisar de lógica mais complexa.
+                    if ($currentDate->isWeekday()) {
                         $aula = $aulasTable->newEmptyEntity();
-                        $aula->atividade_id = $idAtividade; // Use o nome do campo real
-                        $aula->data = $dataAtual->format('Y-m-d'); // Use o nome do campo real
+                        $aula->atividade_id = $idAtividade;
+                        $aula->data = $currentDate->format('Y-m-d'); // Use o nome real da coluna 'data'
                         $aulasParaSalvar[] = $aula;
                     }
-                    $dataAtual = $dataAtual->addDays(1);
+                    $currentDate = $currentDate->addDays(1);
                 }
 
                 if (!empty($aulasParaSalvar)) {
-                    // Salvar as aulas. O saveMany retornará as entidades com IDs.
+                    // Salvar as aulas. O saveMany retornará as entidades salvas com seus IDs (se AUTO_INCREMENT).
                     $savedAulas = $aulasTable->saveMany($aulasParaSalvar);
 
-                    // 3. Obter os alunos ATIVAMENTE inscritos nesta atividade através da tabela `inscricoes`
-                    $alunosInscritos = $inscricoesTable->find()
-                        ->select(['Alunos.id']) // Seleciona apenas o ID do aluno
-                        ->contain(['Alunos']) // Carrega a associação com Alunos
+                    // 3. Obter os IDs dos alunos ATIVAMENTE inscritos nesta atividade através da tabela `inscricoes`
+                    // Optamos por buscar apenas os IDs para otimização.
+                    $alunosInscritosIds = $inscricoesTable->find()
+                        ->select(['Inscricoes.aluno_id']) // Seleciona apenas o ID do aluno da tabela de junção 'inscricoes'
                         ->where([
                             'Inscricoes.atividade_id' => $idAtividade,
-                            'Inscricoes.status' => 'confirmada' // Filtra por status 'confirmada'
+                            'Inscricoes.status' => 'confirmada' // Filtra apenas inscrições com status 'confirmada'
                         ])
-                        ->all()
-                        ->collection()
-                        ->extract('Alunos.id') // Extrai apenas os IDs dos alunos
-                        ->toList();
+                        ->extract('aluno_id') // Extrai os valores do campo 'aluno_id' para um array simples
+                        ->toArray();
 
-                    if (!empty($alunosInscritos) && !empty($savedAulas)) {
+                    if (!empty($alunosInscritosIds) && !empty($savedAulas)) {
                         $presencasParaSalvar = [];
                         foreach ($savedAulas as $aula) {
-                            foreach ($alunosInscritos as $alunoId) {
-                                // Cria uma nova entidade de presença (associação aula-aluno)
+                            foreach ($alunosInscritosIds as $alunoId) {
+                                // Cria uma nova entidade de presença (que associa aula e aluno)
                                 $presenca = $presencasTable->newEmptyEntity();
                                 $presenca->aula_id = $aula->id;
                                 $presenca->aluno_id = $alunoId;
-                                $presenca->presente = 0; // Define como não presente por padrão
-                                // Outros campos como observacoes podem ser nulos ou preenchidos
+                                $presenca->presente = 0; // Define o padrão como não presente
+                                // Adicione outros campos padrão se houver (ex: observacoes = null)
                                 $presencasParaSalvar[] = $presenca;
                             }
                         }
-                        $presencasTable->saveMany($presencasParaSalvar);
+                        // Salva todas as novas entradas de presença em massa
+                        // saveMany é mais eficiente para múltiplos registros.
+                        if (!$presencasTable->saveMany($presencasParaSalvar)) {
+                            // Se o saveMany falhar (ex: validação), lança uma exceção para acionar o rollback
+                            throw new \Exception(__('Falha ao matricular alunos nas aulas.'));
+                        }
                     }
                 }
-            $connection->commit();
-        } catch (\Exception $e) {
-            $connection->rollback();
-            throw $e;
+            });
         }
     }
 }
