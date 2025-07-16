@@ -39,6 +39,12 @@
                         <?= $this->Form->control('dias_semana', ['class' => 'form-control', 'label' => 'Dias da Semana']) ?>
                     </div>
                     <div class="mb-3">
+                        <?= $this->Form->control('data_inicio', ['type' => 'date','class' => 'form-control', 'label' => 'Inicio']) ?>
+                    </div>
+                    <div class="mb-3">
+                        <?= $this->Form->control('data_fim', ['type' => 'date','class' => 'form-control', 'label' => 'Fim']) ?>
+                    </div>
+                    <div class="mb-3">
                         <?= $this->Form->control('user_id', ['options' => $users, 'class' => 'form-control', 'label' => 'Usuário']) ?>
                     </div>
                     <!-- Substitua estes campos: -->
