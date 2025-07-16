@@ -90,33 +90,38 @@ class PresencasController extends AppController
 
     public function registrar($aulaId = null)
     {
-        $this->loadModel('Aulas');
-        $this->loadModel('Alunos');
-        $this->loadModel('Atividades'); // Carregado para obter o nome da atividade da aula
+        // **CakePHP 5.1: Carregando modelos com fetchTable()**
+        $aulasTable = $this->fetchTable('Aulas');
+        $alunosTable = $this->fetchTable('Alunos');
+        // A tabela 'Atividades' é carregada via 'contain' na aula, não é necessário carregá-la separadamente aqui.
+        // $atividadesTable = $this->fetchTable('Atividades');
 
         // Validação básica do ID da aula
         if (empty($aulaId) || !is_numeric($aulaId)) {
-            $this->Flash->error(__('ID da aula inválido.'));
+            $this->Flash->error(__('ID da aula inválido. Por favor, forneça um ID de aula válido.'));
             return $this->redirect(['controller' => 'Aulas', 'action' => 'index']);
         }
 
         try {
-            $aula = $this->Aulas->get($aulaId, ['contain' => ['Atividades']]); // Carregar Atividade
-        } catch (NotFoundException $e) { // Capturar a exceção de registro não encontrado
-            $this->Flash->error(__('Aula não encontrada.'));
+            // Carrega a aula e sua atividade associada
+            $aula = $aulasTable->get($aulaId, ['contain' => ['Atividades']]);
+        } catch (RecordNotFoundException $e) { // **Use RecordNotFoundException no CakePHP 5.1**
+            $this->Flash->error(__('Aula não encontrada. O ID fornecido não corresponde a nenhuma aula existente.'));
             return $this->redirect(['controller' => 'Aulas', 'action' => 'index']);
         }
 
         // Recupera todos os alunos associados a esta Atividade
         // Cenário 1 (assumindo Aluno tem atividade_id):
-        $alunosDaAtividade = $this->Alunos->find('all')
+        // Esta é a abordagem mais simples se a relação é direta (Aluno possui um atividade_id)
+        $alunosDaAtividade = $alunosTable->find('all')
             ->where(['Alunos.atividade_id' => $aula->atividade->id])
             ->order(['Alunos.nome_completo' => 'ASC']) // Opcional: ordenar alunos
             ->toArray();
 
         // Cenário 2 (se Aluno tem belongsToMany Atividades):
+        // Se a relação entre Alunos e Atividades for Many-to-Many (tabela pivot), use o 'matching'
         /*
-        $alunosDaAtividade = $this->Alunos->find('all')
+        $alunosDaAtividade = $alunosTable->find('all')
             ->matching('Atividades', function ($q) use ($aula) {
                 return $q->where(['Atividades.id' => $aula->atividade->id]);
             })
@@ -125,10 +130,9 @@ class PresencasController extends AppController
         */
 
         // Carrega presenças já registradas para esta aula para preencher o formulário
-        // Usar um array de entidades para facilitar a renderização no formulário
         $presencasRegistradas = $this->Presencas->find('all')
             ->where(['aula_id' => $aulaId])
-            ->indexBy('aluno_id') // Indexa por aluno_id para fácil acesso
+            ->indexBy('aluno_id') // Indexa por aluno_id para fácil acesso na view
             ->toArray();
 
         $this->set(compact('aula', 'alunosDaAtividade', 'presencasRegistradas'));
@@ -137,16 +141,25 @@ class PresencasController extends AppController
 
     /**
      * Ação AJAX para atualizar a presença de um único aluno.
+     * Retorna JSON.
+     *
+     * @return \Cake\Http\Response|null
      */
     public function updatePresenceAjax()
     {
-        $this->request->allowMethod(['post']); // Apenas permite requisições POST
+        // Certifica-se de que a requisição é POST
+        $this->request->allowMethod(['post']);
 
+        // Recupera os dados enviados via AJAX
         $alunoId = $this->request->getData('aluno_id');
         $aulaId = $this->request->getData('aula_id');
-        $presente = (bool)$this->request->getData('presente'); // Converte para booleano
+        // Converte para booleano: '1' ou 'true' vira true, '0' ou 'false' vira false
+        $presente = (bool)$this->request->getData('presente');
 
-        $this->loadModel('Presencas');
+        // O modelo Presencas já deve estar disponível via $this->Presencas
+        // Se não estiver (ex: se PresencasController não for o Controller principal para Presencas),
+        // use $this->fetchTable('Presencas');
+        // $presencasTable = $this->fetchTable('Presencas'); // Exemplo, se necessário
 
         // Tenta encontrar uma presença existente para o aluno e aula
         $presenca = $this->Presencas->find()
@@ -156,32 +169,38 @@ class PresencasController extends AppController
             ])
             ->first();
 
+        // Se não encontrar, cria uma nova entidade de presença
         if (!$presenca) {
-            $presenca = $this->Presencas->newEntity([
-                'aluno_id' => $alunoId,
-                'aula_id' => $aulaId,
-            ]);
+            $presenca = $this->Presencas->newEmptyEntity(); // **Use newEmptyEntity() no CakePHP 5.1**
+            $presenca->aluno_id = $alunoId;
+            $presenca->aula_id = $aulaId;
         }
 
+        // Atualiza o status de presença
         $presenca->presente = $presente;
 
+        // Tenta salvar a presença
         if ($this->Presencas->save($presenca)) {
-            $this->set([
+            $response = [
                 'status' => 'success',
                 'message' => __('Presença atualizada com sucesso.'),
-                '_serialize' => ['status', 'message'] // Retorna JSON
-            ]);
+                'presencaId' => $presenca->id // Útil para o front-end
+            ];
+            $this->response = $this->response->withStatus(200); // OK
         } else {
-            $this->set([
+            // Em caso de erro, retorna status de erro e detalhes
+            $response = [
                 'status' => 'error',
-                'message' => __('Erro ao atualizar a presença.'),
-                'errors' => $presenca->getErrors(), // Retorna erros de validação, se houver
-                '_serialize' => ['status', 'message', 'errors'] // Retorna JSON
-            ]);
+                'message' => __('Erro ao atualizar a presença. Verifique os dados e tente novamente.'),
+                'errors' => $presenca->getErrors(), // Retorna erros de validação
+            ];
             $this->response = $this->response->withStatus(400); // Bad Request
         }
 
-        $this->viewBuilder()->setOption('serialize', true); // Configura para serializar a view
+        // Configura a resposta para JSON
+        $this->setResponse($this->response->withType('application/json'));
+        $this->set(compact('response'));
+        $this->viewBuilder()->setOption('serialize', 'response'); // Serializa a variável 'response'
     }
 
 
