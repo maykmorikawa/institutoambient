@@ -59,21 +59,31 @@ class AlunosTable extends Table
         $this->belongsTo('Atividades', [
             'foreignKey' => 'atividade_id',
             'joinType' => 'INNER',
+            'targetForeignKey' => 'atividade_id',
+            'joinTable' => 'inscricoes',
+            'className' => 'Atividades',
+        ]);
+
+        $this->belongsToMany('Aulas', [
+            'foreignKey' => 'aluno_id',
+            'targetForeignKey' => 'aula_id',
+            'joinTable' => 'presencas', // Sua tabela de presenças
+            'className' => 'Aulas',
         ]);
 
         $this->hasMany('Inscricoes', [
             'foreignKey' => 'aluno_id',
+            'className' => 'Inscricoes',
         ]);
         $this->hasMany('Presencas', [
             'foreignKey' => 'aluno_id',
+            'className' => 'Presencas',
         ]);
-
         $this->hasMany('Enderecos', [
             'foreignKey' => 'aluno_id',
             'dependent' => true,
             'cascadeCallbacks' => true,
-        ]);
-
+        ]);         
         $this->hasMany('Escolaridades', [
             'foreignKey' => 'aluno_id',
             'dependent' => true,

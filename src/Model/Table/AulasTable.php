@@ -52,9 +52,18 @@ class AulasTable extends Table
         $this->belongsTo('Atividades', [
             'foreignKey' => 'atividade_id',
             'joinType' => 'INNER',
+            'className' => 'Atividades',
+        ]);
+        // Associação com Alunos via Presencas
+        $this->belongsToMany('Alunos', [
+            'foreignKey' => 'aula_id',
+            'targetForeignKey' => 'aluno_id',
+            'joinTable' => 'presencas', // Sua tabela de presenças
+            'className' => 'Alunos',
         ]);
         $this->hasMany('Presencas', [
             'foreignKey' => 'aula_id',
+            'className' => 'Presencas',
         ]);
     }
 
@@ -70,7 +79,7 @@ class AulasTable extends Table
             ->integer('atividade_id')
             ->notEmptyString('atividade_id');
 
-        
+
         $validator
             ->date('data') // Valida como data
             ->requirePresence('data', 'create')

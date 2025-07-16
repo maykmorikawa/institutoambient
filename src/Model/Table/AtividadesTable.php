@@ -65,12 +65,19 @@ class AtividadesTable extends Table
         ]);
         $this->hasMany('Aulas', [
             'foreignKey' => 'atividade_id',
+            'className' => 'Aulas',
         ]);
         $this->hasMany('Inscricoes', [
             'foreignKey' => 'atividade_id',
+            'className' => 'Inscricoes',
         ]);
         $this->hasMany('Alunos', [
             'foreignKey' => 'atividade_id',
+            'targetForeignKey' => 'aluno_id',
+            'joinTable' => 'inscricoes', // Use sua tabela de inscrições como a tabela de junção
+            'className' => 'Alunos',
+            // Você pode adicionar um finder para filtrar por status aqui, ou no listener
+            'finder' => 'activeEnrollments', 
         ]);
     }
 

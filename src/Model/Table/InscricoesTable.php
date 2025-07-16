@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -53,9 +54,11 @@ class InscricoesTable extends Table
         $this->belongsTo('Atividades', [
             'foreignKey' => 'atividade_id',
             'joinType' => 'INNER',
+            'className' => 'Atividades',
         ]);
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
+            'className' => 'Users',
         ]);
         $this->belongsTo('Responsavels', [
             'foreignKey' => 'responsavel_id',
@@ -73,10 +76,12 @@ class InscricoesTable extends Table
     {
         $validator
             ->integer('aluno_id')
+            ->requirePresence('aluno_id', 'create')
             ->notEmptyString('aluno_id');
 
         $validator
             ->integer('atividade_id')
+            ->requirePresence('atividade_id', 'create')
             ->notEmptyString('atividade_id');
 
         $validator
@@ -93,7 +98,24 @@ class InscricoesTable extends Table
 
         $validator
             ->scalar('status')
-            ->notEmptyString('status');
+            ->notEmptyString('status')
+            ->inList('status', ['pendente', 'confirmada', 'cancelada']);
+
+            // Adicionar regra para garantir que um aluno só se inscreva uma vez em uma atividade
+        $validator->add('aluno_id', 'uniqueActivityEnrollment', [
+            'rule' => function ($value, $context) {
+                $inscricaoExistente = $this->find()
+                    ->where([
+                        'aluno_id' => $value,
+                        'atividade_id' => $context['data']['atividade_id'],
+                        'status IN' => ['pendente', 'confirmada'] // Considerar apenas inscrições ativas
+                    ])
+                    ->count();
+                return $inscricaoExistente === 0;
+            },
+            'message' => 'Este aluno já está inscrito nesta atividade.',
+            'on' => 'create' // Aplica a regra apenas na criação
+        ]);
 
         return $validator;
     }
