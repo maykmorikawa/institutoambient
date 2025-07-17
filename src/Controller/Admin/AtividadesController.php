@@ -106,22 +106,18 @@ class AtividadesController extends AppController
             try {
                 $connection->transactional(function () use ($atividade, &$success) {
                     if ($this->Atividades->save($atividade)) {
-                        // Chamar a função de geração de aulas e matrícula
-                        $this->gerarAulasEMatricularAlunos(
-                            $atividade->id,
-                            $atividade->data_inicio,
-                            $atividade->data_fim,
-                            true // Indica que é uma nova atividade
-                        );
+                        // A lógica de gerarAulasEMatricularAlunos não é chamada aqui no ADD,
+                        // pois os alunos só se inscreverão depois.
+                        // Essa lógica será chamada no EDIT (se as datas mudarem) ou em um método manual.
                         $success = true;
                     } else {
-                        // Se o save da atividade falhar, uma exceção não é lançada por padrão,
-                        // então precisamos forçar um erro para a transação reverter.
-                        // Usar validationErrors para uma mensagem mais específica.
                         $errors = $atividade->getErrors();
                         $errorMessage = __('Erro ao salvar a atividade: ');
                         foreach ($errors as $field => $messages) {
-                            $errorMessage .= implode(', ', $messages) . ' ';
+                            $errorMessage .= $field . ': ' . implode(', ', $messages) . ' ';
+                        }
+                        if (empty($errors)) {
+                            $errorMessage = __('Erro desconhecido ao salvar a atividade principal. Verifique os logs.');
                         }
                         throw new \Exception($errorMessage);
                     }
@@ -133,26 +129,26 @@ class AtividadesController extends AppController
 
             if ($success) {
                 $this->Flash->success(__('Atividade salva com sucesso!'));
-                $this->Flash->success(
-                    'Link de inscrição: ' . $atividade->link_inscricao,
-                    ['escape' => false]
-                );
+                if (!empty($atividade->link_inscricao)) {
+                    $this->Flash->success(
+                        'Link de inscrição: ' . $atividade->link_inscricao,
+                        ['escape' => false]
+                    );
+                }
                 return $this->redirect(['action' => 'index']);
             }
         }
 
-        // Carrega dados para os selects do formulário
-        // Usar $this->fetchTable() para acessar outras tabelas.
         $projetos = $this->fetchTable('Projetos')->find('list', keyField: 'id', valueField: 'name')->toArray();
         $users = $this->fetchTable('Users')->find('list', keyField: 'id', valueField: 'name')->toArray();
         $this->set(compact('atividade', 'projetos', 'users'));
     }
 
     /**
-     * Método Edit
-     * Edita uma atividade existente e regera suas aulas se as datas mudarem.
+     * Método Editar
+     * Edita uma atividade existente.
      *
-     * @param string|null $id Atividade id.
+     * @param string|null $id ID da Atividade.
      * @return \Cake\Http\Response|null|void Redireciona em caso de sucesso, renderiza a view caso contrário.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException Quando o registro não for encontrado.
      */
@@ -179,12 +175,13 @@ class AtividadesController extends AppController
             try {
                 $connection->transactional(function () use ($atividade, $originalStartDate, $originalEndDate, &$success) {
                     if ($this->Atividades->save($atividade)) {
+                        // Verifica se as datas foram alteradas para regenerar aulas e matrículas
                         if ($atividade->data_inicio != $originalStartDate || $atividade->data_fim != $originalEndDate) {
                             $this->gerarAulasEMatricularAlunos(
                                 $atividade->id,
                                 $atividade->data_inicio,
                                 $atividade->data_fim,
-                                false
+                                false // Indica que NÃO é uma nova atividade (para limpar aulas antigas)
                             );
                         }
                         $success = true;
@@ -192,7 +189,7 @@ class AtividadesController extends AppController
                         $errors = $atividade->getErrors();
                         $errorMessage = __('Erro ao atualizar a atividade: ');
                         foreach ($errors as $field => $messages) {
-                            $errorMessage .= implode(', ', $messages) . ' ';
+                            $errorMessage .= $field . ': ' . implode(', ', $messages) . ' ';
                         }
                         throw new \Exception($errorMessage);
                     }
@@ -215,22 +212,22 @@ class AtividadesController extends AppController
 
     /**
      * Método auxiliar para gerar aulas e matricular alunos.
-     * Este método pode ser protected, pois é chamado internamente pelo controller.
+     * Este método é chamado internamente pelos métodos add() e edit().
      *
      * @param int $idAtividade ID da atividade.
-     * @param \Cake\I18n\Date $dataInicio Data de início da atividade.
-     * @param \Cake\I18n\Date $dataFim Data de fim da atividade.
+     * @param \Cake\I18n\Date $dataInicio Objeto Date com a data de início da atividade.
+     * @param \Cake\I18n\Date $dataFim Objeto Date com a data de fim da atividade.
      * @param bool $isNewActivity Indica se a atividade é nova (true) ou está sendo editada (false).
      * @return void
      */
-    protected function gerarAulasEMatricularAlunos($idAtividade, $dataInicio, $dataFim, $isNewActivity)
+    protected function gerarAulasEMatricularAlunos(int $idAtividade, Date $dataInicio, Date $dataFim, bool $isNewActivity): void
     {
-        // Use $this->fetchTable() para obter instâncias das tabelas dentro do método
         $aulasTable = $this->fetchTable('Aulas');
         $inscricoesTable = $this->fetchTable('Inscricoes');
         $presencasTable = $this->fetchTable('Presencas');
-        $alunosTable = $this->fetchTable('Alunos');
+        // $alunosTable = $this->fetchTable('Alunos'); // Não diretamente usado aqui, mas pode ser útil em outras lógicas.
 
+        // 1. Remover aulas e associações de alunos existentes, SE NÃO for uma nova atividade.
         if (!$isNewActivity) {
             $aulasAntigasIds = $aulasTable->find()
                 ->select(['id'])
@@ -245,28 +242,33 @@ class AtividadesController extends AppController
         }
 
         $aulasParaSalvar = [];
-        $dataAtual = new Date($dataInicio);
-        $dataFinal = new Date($dataFim);
+        $currentDate = new Date($dataInicio);
+        $endDate = new Date($dataFim);
 
-        while ($dataAtual->lte($dataFinal)) {
-            if ($dataAtual->isWeekday()) {
+        // 2. Gerar as novas aulas para cada dia válido no período
+        // CORREÇÃO APLICADA: Usando o operador de comparação '<=' para objetos Date.
+        while ($currentDate <= $endDate) {
+            if ($currentDate->isWeekday()) {
                 $aula = $aulasTable->newEmptyEntity();
                 $aula->atividade_id = $idAtividade;
-                $aula->data = $dataAtual->format('Y-m-d');
+                $aula->data = $currentDate->format('Y-m-d');
                 $aulasParaSalvar[] = $aula;
             }
-            $dataAtual = $dataAtual->addDays(1);
+            $currentDate = $currentDate->addDays(1);
         }
 
         if (!empty($aulasParaSalvar)) {
             $savedAulas = $aulasTable->saveMany($aulasParaSalvar);
 
+            // 3. Obter os IDs dos alunos ATIVAMENTE inscritos (confirmados) nesta atividade
+            // CORREÇÃO APLICADA: Adicionado ->all() antes de ->extract() para executar a query.
             $alunosInscritosIds = $inscricoesTable->find()
                 ->select(['Inscricoes.aluno_id'])
                 ->where([
                     'Inscricoes.atividade_id' => $idAtividade,
                     'Inscricoes.status' => 'confirmada'
                 ])
+                ->all() // <-- ESTA LINHA FOI ADICIONADA/RESTAURADA
                 ->extract('aluno_id')
                 ->toArray();
 
