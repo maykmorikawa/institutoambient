@@ -98,65 +98,51 @@ class AtividadesController extends AppController
     {
         $atividade = $this->Atividades->newEmptyEntity();
         if ($this->request->is('post')) {
-            debug('Requisição POST recebida.'); // Debug para rastrear
-            debug($this->request->getData()); // Mostra todos os dados enviados pelo formulário
-
             $atividade = $this->Atividades->patchEntity($atividade, $this->request->getData());
-
-            debug('Entidade após patchEntity:'); // Novo debug
-            debug($atividade); // Mostra o estado da entidade com os dados do formulário
-
-            debug('Erros de validação da entidade (esperado vazio se tudo ok):'); // Novo debug
-            debug($atividade->getErrors()); // <<< OLHE AQUI PRIMEIRO!
 
             $connection = ConnectionManager::get('default');
             $success = false;
 
             try {
                 $connection->transactional(function () use ($atividade, &$success) {
-                    // AQUI é onde $saveResult é definido!
-                    $saveResult = $this->Atividades->save($atividade);
-
-                    // E AQUI é onde devemos debugar $saveResult
-                    debug('Resultado de $this->Atividades->save($atividade) no ADD:');
-                    debug($saveResult); // <<< ESTA É A LINHA QUE PRECISAMOS VER!
-
-                    if ($saveResult) {
-                        // Removido: A chamada a gerarAulasEMatricularAlunos não está mais aqui no ADD
+                    if ($this->Atividades->save($atividade)) {
+                        // Chamar a função de geração de aulas e matrícula
+                        $this->gerarAulasEMatricularAlunos(
+                            $atividade->id,
+                            $atividade->data_inicio,
+                            $atividade->data_fim,
+                            true // Indica que é uma nova atividade
+                        );
                         $success = true;
                     } else {
                         // Se o save da atividade falhar, uma exceção não é lançada por padrão,
                         // então precisamos forçar um erro para a transação reverter.
+                        // Usar validationErrors para uma mensagem mais específica.
                         $errors = $atividade->getErrors();
                         $errorMessage = __('Erro ao salvar a atividade: ');
                         foreach ($errors as $field => $messages) {
-                            $errorMessage .= $field . ': ' . implode(', ', $messages) . ' ';
-                        }
-                        if (empty($errors)) { // Se não há erros de validação, mas o save falhou (ex: erro de DB)
-                            $errorMessage = __('Erro desconhecido ao salvar a atividade principal. Verifique os logs.');
+                            $errorMessage .= implode(', ', $messages) . ' ';
                         }
                         throw new \Exception($errorMessage);
                     }
                 });
             } catch (\Exception $e) {
-                debug('Exceção capturada no ADD: ' . $e->getMessage()); // Debug para exceções
                 $this->Flash->error(__('Não foi possível salvar a atividade: ' . $e->getMessage()));
                 $success = false;
             }
 
             if ($success) {
-                $this->Flash->success(__('Atividade salva com sucesso! Você pode agora processar as aulas e matrículas.'));
-                if (!empty($atividade->link_inscricao)) {
-                    $this->Flash->success(
-                        'Link de inscrição: ' . $atividade->link_inscricao,
-                        ['escape' => false]
-                    );
-                }
+                $this->Flash->success(__('Atividade salva com sucesso!'));
+                $this->Flash->success(
+                    'Link de inscrição: ' . $atividade->link_inscricao,
+                    ['escape' => false]
+                );
                 return $this->redirect(['action' => 'index']);
             }
         }
 
         // Carrega dados para os selects do formulário
+        // Usar $this->fetchTable() para acessar outras tabelas.
         $projetos = $this->fetchTable('Projetos')->find('list', keyField: 'id', valueField: 'name')->toArray();
         $users = $this->fetchTable('Users')->find('list', keyField: 'id', valueField: 'name')->toArray();
         $this->set(compact('atividade', 'projetos', 'users'));
