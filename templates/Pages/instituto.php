@@ -13,7 +13,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Quem Somos</h1>
+                    <h1>Sobre o Instituto Ambiente</h1>
 
                 </div>
 
