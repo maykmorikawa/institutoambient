@@ -76,16 +76,13 @@ class AtividadesController extends AppController
     public function view($id = null)
     {
         try {
-            $atividade = $this->Atividades->get($id, [
-                'contain' => [
-                    'Projetos', // Se quiser exibir informações do projeto
-                    'Users',    // Se quiser exibir informações do usuário
-                    'Inscricoes.Alunos', // Carrega inscrições e, para cada inscrição, o aluno associado
-                    // Adicionado: Carrega as aulas e, para cada aula, as presenças e os alunos relacionados
-                    'Aulas' => [
-                        'sort' => ['Aulas.data' => 'ASC'], // Ordena as aulas por data
-                        'Presencas.Alunos' // Carrega as presenças e, para cada presença, o aluno
-                    ],
+            $atividade = $this->Atividades->get($id, contain: [ // << AQUI ESTÁ A MUDANÇA: use 'contain:'
+                'Projetos',
+                'Users',
+                'Inscricoes.Alunos',
+                'Aulas' => [
+                    'sort' => ['Aulas.data' => 'ASC'],
+                    'Presencas.Alunos'
                 ],
             ]);
         } catch (RecordNotFoundException $e) {
