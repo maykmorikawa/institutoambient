@@ -98,6 +98,8 @@ class AtividadesController extends AppController
     {
         $atividade = $this->Atividades->newEmptyEntity();
         if ($this->request->is('post')) {
+            debug('Requisição POST recebida.');
+            debug($this->request->getData()); // Mostra todos os dados enviados pelo formulário
             $atividade = $this->Atividades->patchEntity($atividade, $this->request->getData());
 
             $connection = ConnectionManager::get('default');
