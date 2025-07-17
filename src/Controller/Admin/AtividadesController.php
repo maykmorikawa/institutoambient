@@ -62,7 +62,7 @@ class AtividadesController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view1($id = null)
     {
         $atividade = $this->Atividades->get($id, contain: [
             'Projetos',
@@ -70,6 +70,29 @@ class AtividadesController extends AppController
             'Aulas',
             'Inscricoes' => ['Alunos', 'Users', 'Responsavels', 'Atividades'] // <- aqui está o segredo
         ]);
+        $this->set(compact('atividade'));
+    }
+
+    public function view($id = null)
+    {
+        try {
+            $atividade = $this->Atividades->get($id, [
+                'contain' => [
+                    'Projetos', // Se quiser exibir informações do projeto
+                    'Users',    // Se quiser exibir informações do usuário
+                    'Inscricoes.Alunos', // Carrega inscrições e, para cada inscrição, o aluno associado
+                    // Adicionado: Carrega as aulas e, para cada aula, as presenças e os alunos relacionados
+                    'Aulas' => [
+                        'sort' => ['Aulas.data' => 'ASC'], // Ordena as aulas por data
+                        'Presencas.Alunos' // Carrega as presenças e, para cada presença, o aluno
+                    ],
+                ],
+            ]);
+        } catch (RecordNotFoundException $e) {
+            $this->Flash->error(__('Atividade não encontrada.'));
+            return $this->redirect(['action' => 'index']);
+        }
+
         $this->set(compact('atividade'));
     }
 

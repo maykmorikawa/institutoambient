@@ -133,45 +133,8 @@
                         </tbody>
                     </table>
                 </div>
-            <?php else: ?>
-                <p class="text-muted"><?= __('Nenhuma aula relacionada encontrada para esta atividade.') ?></p>
             <?php endif; ?>
         </div>
-
-        <div class="related mt-4">
-            <h4><?= __('Gerenciamento de Frequência') ?></h4>
-            <?php if (!empty($atividade->aulas)): ?>
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th><?= __('Data da Aula') ?></th>
-                                <th><?= __('Conteúdo da Aula') ?></th>
-                                <th class="actions"><?= __('Ações') ?></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($atividade->aulas as $aula): ?>
-                                <tr>
-                                    <td><?= $aula->data ? $aula->data->format('d/m/Y') : '-' ?></td>
-                                    <td><?= h($aula->conteudo) ?: __('Não informado') ?></td>
-                                    <td class="actions">
-                                        <?= $this->Html->link(
-                                            '<i class="bi bi-check-circle-fill"></i> ' . __('Marcar Frequência'),
-                                            ['controller' => 'Presencas', 'action' => 'marcar', $aula->id], // Novo link para a action 'marcar' no PresencasController
-                                            ['class' => 'btn btn-sm btn-success', 'escape' => false]
-                                        ) ?>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-            <?php else: ?>
-                <p class="text-muted"><?= __('Não há aulas para gerenciar a frequência.') ?></p>
-            <?php endif; ?>
-        </div>
-
 
         <div class="related mt-4">
             <h4><?= __('Inscrições Relacionadas') ?></h4>
@@ -180,7 +143,7 @@
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
-
+                               
                                 <th><?= __('Matricula') ?></th>
                                 <th><?= __('Nome do Aluno') ?></th>
                                 <th><?= __('Atividade') ?></th>
@@ -192,7 +155,7 @@
                         <tbody>
                             <?php foreach ($atividade->inscricoes as $inscrico): ?>
                                 <tr>
-
+                                    
                                     <td><?= h($inscrico->aluno_id) ?></td>
                                     <td><?= h($inscrico->aluno->nome_completo ?? 'Não informado') ?></td>
                                     <td><?= h($inscrico->atividade->nome ?? 'Não informado') ?></td>
@@ -208,8 +171,6 @@
                         </tbody>
                     </table>
                 </div>
-            <?php else: ?>
-                <p class="text-muted"><?= __('Nenhuma inscrição relacionada encontrada para esta atividade.') ?></p>
             <?php endif; ?>
         </div>
 
@@ -221,6 +182,7 @@
 </div>
 
 
+<!-- Script para copiar -->
 <script>
     function copiarLink() {
         let texto = document.getElementById('link-inscricao').textContent;
