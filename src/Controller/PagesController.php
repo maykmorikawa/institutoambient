@@ -108,8 +108,8 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('manutencao');
         $this->render('manutencao'); // Garante que a view correta será carregada
     }
+    public function instituto() {}
     public function quemsomos() {}
-
     public function transparencia() {}
     public function videos() {}
     public function conselho() {}

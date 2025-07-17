@@ -81,6 +81,7 @@ return function (RouteBuilder $routes): void {
       ])->setPass(['id']);
 
       $builder->connect('/home', ['controller' => 'Pages', 'action' => 'home']);
+      $builder->connect('/o_instituto_ambient', ['controller' => 'Pages', 'action' => 'display', 'instituto']);
       $builder->connect('/quem_somos', ['controller' => 'Pages', 'action' => 'display', 'quemsomos']);
       $builder->connect('/conselho', ['controller' => 'Pages', 'action' => 'display', 'conselho']);
       $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
