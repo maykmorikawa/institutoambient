@@ -56,89 +56,100 @@ class PresencasController extends AppController
 
     public function marcar($aulaId = null)
     {
-        // Obtém a instância da tabela Aulas usando fetchTable()
+        // Obtém instâncias das tabelas necessárias usando fetchTable().
         $aulasTable = $this->fetchTable('Aulas');
         $inscricoesTable = $this->fetchTable('Inscricoes');
-        $presencasTable = $this->fetchTable('Presencas'); // A tabela principal deste controller já é carregada automaticamente ($this->Presencas)
+        $presencasTable = $this->fetchTable('Presencas'); // A tabela principal do controller ($this->Presencas) já é carregada automaticamente.
 
         try {
-            // CORREÇÃO APLICADA: Usando $aulasTable->get() e argumentos nomeados para 'contain'
+            // Carrega a entidade da Aula pelo ID, incluindo suas Atividades relacionadas
+            // e as Presenças existentes com os Alunos associados.
+            // Uso de argumentos nomeados 'contain:' conforme recomendação do CakePHP 5.x.
             $aula = $aulasTable->get($aulaId, contain: [
-                'Atividades', // Para mostrar o nome da atividade
-                'Presencas.Alunos', // Carrega presenças existentes e os alunos associados
+                'Atividades', // Para acessar o nome da atividade e seu ID.
+                'Presencas.Alunos', // Carrega os registros de presença existentes para esta aula, e os dados dos alunos associados a essas presenças.
             ]);
         } catch (RecordNotFoundException $e) {
+            // Se a aula não for encontrada, exibe uma mensagem de erro e redireciona.
             $this->Flash->error(__('Aula não encontrada.'));
-            // Redireciona para a página anterior, ou para a lista de atividades se não houver referer
+            // Tenta redirecionar para a página anterior, ou para a lista de atividades como fallback.
             return $this->redirect($this->referer() ?: ['controller' => 'Atividades', 'action' => 'index']);
         }
-        debug('Dados da Aula carregada:');
-        debug($aula);
-        debug('ID da Atividade associada à aula: ' . $aula->atividade->id);
-        // Obtém todos os alunos com status 'confirmada' para a atividade desta aula
-        $alunosInscritosConfirmados = $inscricoesTable->find()
-            ->contain(['Alunos']) // Carrega a entidade Aluno para cada Inscrição
-            ->where([
-                'Inscricoes.atividade_id' => $aula->atividade->id,
-                'Inscricoes.status' => 'confirmada'
-            ])
-            ->order(['Alunos.nome_completo' => 'ASC']) // Opcional: ordenar por nome do aluno
-            ->toArray(); // Converte para array de entidades
 
-        // Mapeia as presenças existentes para fácil acesso (aluno_id => entidade Presenca)
+        // Obtém todos os alunos que estão inscritos e com status 'confirmada' na atividade
+        // à qual esta aula pertence. Estes são os alunos que deveriam estar na aula.
+        $alunosInscritosConfirmados = $inscricoesTable->find()
+            ->contain(['Alunos']) // Carrega a entidade 'Aluno' para cada 'Inscrição'.
+            ->where([
+                'Inscricoes.atividade_id' => $aula->atividade->id, // Filtra pela atividade da aula atual.
+                'Inscricoes.status' => 'confirmada' // Considera apenas inscrições com status 'confirmada'.
+            ])
+            ->order(['Alunos.nome_completo' => 'ASC']) // Opcional: ordena os alunos por nome completo para melhor visualização.
+            ->toArray(); // Executa a consulta e converte o resultado em um array de entidades.
+
+        // Mapeia as presenças existentes para fácil acesso.
+        // Isso cria um array onde a chave é o ID do aluno e o valor é a entidade 'Presenca' correspondente.
+        // Facilita a verificação se um aluno já tem um registro de presença para esta aula.
         $presencasExistentes = [];
         foreach ($aula->presencas as $presenca) {
             $presencasExistentes[$presenca->aluno_id] = $presenca;
         }
 
-        // Lida com o envio do formulário (POST)
+        // Processa o envio do formulário de frequência (requisições POST ou PUT).
         if ($this->request->is(['post', 'put'])) {
-            $data = $this->request->getData();
-            $presencasParaSalvar = [];
+            $data = $this->request->getData(); // Obtém todos os dados enviados pelo formulário.
+            $presencasParaSalvar = []; // Array para armazenar as entidades de Presença a serem salvas/atualizadas.
 
+            // Itera sobre cada aluno que deveria estar na aula (alunos inscritos confirmados).
             foreach ($alunosInscritosConfirmados as $inscricao) {
                 $alunoId = $inscricao->aluno->id;
-                // Verifica se o checkbox foi marcado (o valor '1' indica presente)
+                // Verifica se o checkbox de presença para este aluno foi marcado no formulário.
+                // O valor '1' é o que esperamos de um checkbox marcado no CakePHP FormHelper.
                 $isPresent = isset($data['presenca'][$alunoId]) && $data['presenca'][$alunoId] === '1';
 
-                // Verifica se já existe uma presença para este aluno e aula
+                // Verifica se já existe um registro de presença para este aluno e esta aula.
                 if (isset($presencasExistentes[$alunoId])) {
                     $presenca = $presencasExistentes[$alunoId];
-                    // Se o status mudou (ou se o valor atual é diferente do que veio do formulário), atualiza
+                    // Se o status de presença mudou (do banco para o formulário), atualiza a entidade.
                     if ($presenca->presente != (int) $isPresent) {
                         $presenca->presente = (int) $isPresent;
-                        $presencasParaSalvar[] = $presenca;
+                        $presencasParaSalvar[] = $presenca; // Adiciona à lista para salvamento.
                     }
                 } else {
-                    // Se não existe, cria uma nova entidade Presenca.
-                    // Criamos um registro mesmo se o aluno estiver ausente (presente = 0)
-                    // para ter um histórico completo de quem deveria estar na aula.
+                    // Se não existe um registro de presença, cria uma nova entidade.
+                    // Um registro é criado mesmo se o aluno estiver ausente (presente = 0)
+                    // para manter um histórico completo de quem deveria estar na aula.
                     $presenca = $presencasTable->newEmptyEntity();
                     $presenca->aula_id = $aulaId;
                     $presenca->aluno_id = $alunoId;
-                    $presenca->presente = (int) $isPresent; // 0 para ausente, 1 para presente
-                    $presencasParaSalvar[] = $presenca;
+                    $presenca->presente = (int) $isPresent; // Define 0 para ausente, 1 para presente.
+                    $presencasParaSalvar[] = $presenca; // Adiciona à lista para salvamento.
                 }
             }
 
-            $connection = ConnectionManager::get('default');
+            $connection = ConnectionManager::get('default'); // Obtém a conexão do banco de dados.
             try {
+                // Inicia uma transação para salvar/atualizar todas as presenças.
                 $connection->transactional(function () use ($presencasParaSalvar, $presencasTable) {
-                    // Salva ou atualiza todas as entidades de presença em massa.
+                    // Tenta salvar todas as entidades de presença em massa.
+                    // saveMany é mais eficiente para múltiplos registros.
                     if (!$presencasTable->saveMany($presencasParaSalvar)) {
-                        // Se saveMany falhar, lança uma exceção para acionar o rollback da transação.
+                        // Se o saveMany falhar (ex: erro de validação, erro no banco),
+                        // lança uma exceção para acionar o rollback da transação.
                         throw new \Exception(__('Erro ao salvar algumas presenças.'));
                     }
                 });
+                // Se a transação for bem-sucedida, exibe mensagem de sucesso.
                 $this->Flash->success(__('Frequência marcada com sucesso.'));
-                // Redireciona de volta para a view da atividade após o sucesso
+                // Redireciona de volta para a view da atividade à qual a aula pertence.
                 return $this->redirect(['controller' => 'Atividades', 'action' => 'view', $aula->atividade->id]);
             } catch (\Exception $e) {
+                // Se uma exceção for capturada (transação falhou), exibe mensagem de erro.
                 $this->Flash->error(__('Não foi possível marcar a frequência: ' . $e->getMessage()));
             }
         }
 
-        // Passa os dados para a view
+        // Passa os dados necessários para a view (templates/Admin/Presencas/marcar.php).
         $this->set(compact('aula', 'alunosInscritosConfirmados', 'presencasExistentes'));
     }
 
