@@ -72,7 +72,9 @@ class PresencasController extends AppController
             // Redireciona para a página anterior, ou para a lista de atividades se não houver referer
             return $this->redirect($this->referer() ?: ['controller' => 'Atividades', 'action' => 'index']);
         }
-
+        debug('Dados da Aula carregada:');
+        debug($aula);
+        debug('ID da Atividade associada à aula: ' . $aula->atividade->id);
         // Obtém todos os alunos com status 'confirmada' para a atividade desta aula
         $alunosInscritosConfirmados = $inscricoesTable->find()
             ->contain(['Alunos']) // Carrega a entidade Aluno para cada Inscrição
