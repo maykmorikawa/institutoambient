@@ -92,6 +92,7 @@ return function (RouteBuilder $routes): void {
       // 🔥 SUA ROTA PERSONALIZADA AQUI
       $builder->connect('/noticia/:slug', ['controller' => 'Posts', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]);
 
+      $builder->connect('/certificados/verificar/:codigo_autenticacao',['controller' => 'Certificados', 'action' => 'verificar']);
       $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
 
@@ -126,6 +127,7 @@ return function (RouteBuilder $routes): void {
       ])->setPass(['slug']);
       $builder->setRouteClass(DashedRoute::class);
       $builder->connect('/', ['controller' => 'Users', 'action' => 'admin']); // opcional
+      
 
       $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
       $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);

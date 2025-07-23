@@ -6,6 +6,7 @@ namespace App\Model\Table;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Utility\Text; // Para gerar UUIDs
+use Cake\Event\EventInterface; 
 
 class CertificadosTable extends Table
 {
@@ -71,7 +72,7 @@ class CertificadosTable extends Table
      * @param \ArrayObject $options The options for the save operation.
      * @return bool
      */
-    public function beforeSave(EventInterface $event, $entity, \ArrayObject $options)
+    public function beforeSave(EventInterface $event, $entity, \ArrayObject $options) // CORREÇÃO: Type hint 'EventInterface' agora está correto
     {
         if ($entity->isNew() && empty($entity->codigo_autenticacao)) {
             $entity->codigo_autenticacao = Text::uuid(); // Gera um UUID único

@@ -1,4 +1,5 @@
 <?php
+// src/Controller/Admin/CertificadosController.php
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
@@ -13,7 +14,7 @@ use chillerlan\QRCode\{QRCode, QROptions}; // Para gerar QR Code
 use Cake\View\View; // Importa a classe View para renderizar templates
 
 /**
- * Controller dos Certificados
+ * Certificados Controller
  *
  * Este controller é responsável por gerenciar a geração e verificação de certificados.
  *
@@ -22,6 +23,7 @@ use Cake\View\View; // Importa a classe View para renderizar templates
  * @property \App\Model\Table\AtividadesTable $Atividades
  * @property \App\Model\Table\AulasTable $Aulas
  * @property \App\Model\Table\PresencasTable $Presencas
+ * @property \App\Model\Table\SettingsTable $Settings // Adicionado para acesso à tabela de configurações
  * @property \App\Controller\Component\FlashComponent $Flash
  *
  * @method \App\Model\Entity\Certificado[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
@@ -35,14 +37,7 @@ class CertificadosController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        // REMOVIDO: loadModel() não é mais usado aqui no CakePHP 5.x.
-        // As tabelas serão acessadas via $this->fetchTable() diretamente nas actions onde são necessárias.
-
-        // Se você tiver um componente de autenticação e quiser permitir acesso público
-        // à action 'verificar', você faria isso aqui. No entanto, se este controller
-        // está sob o prefixo 'Admin', a rota 'verificar' também precisaria ser definida
-        // fora do prefixo 'Admin' em config/routes.php para ser verdadeiramente pública.
-        // Exemplo: $this->Authentication->allowUnauthenticated(['verificar']);
+        
     }
 
     /**
@@ -64,8 +59,7 @@ class CertificadosController extends AppController
         $atividadesTable = $this->fetchTable('Atividades');
         $aulasTable = $this->fetchTable('Aulas');
         $presencasTable = $this->fetchTable('Presencas');
-        // A tabela principal do controller ($this->Certificados) já é carregada automaticamente.
-        $certificadosTable = $this->Certificados;
+        $certificadosTable = $this->Certificados; // A tabela principal do controller ($this->Certificados) já é carregada automaticamente.
 
         // Verifica se os IDs do aluno e da atividade foram fornecidos.
         if (!$alunoId || !$atividadeId) {
@@ -87,28 +81,64 @@ class CertificadosController extends AppController
         $connection = ConnectionManager::get('default'); // Obtém a conexão padrão do banco de dados.
         $certificado = null; // Variável para armazenar a entidade do certificado.
 
+        // 1. Carregar as configurações de imagem do banco de dados
+        // Busca todas as configurações de imagem e carga horária padrão da tabela 'settings'.
+        $settingsData = $this->Settings->find()
+            ->select(['key_name', 'value'])
+            ->whereIn('key_name', [
+                'certificate_bg_page1',
+                'certificate_bg_page2',
+                'logo_instituto_ambient_ia',
+                'logo_equatorial_energia',
+                'logo_comdac',
+                'logo_instituto_ambient_texto',
+                'logo_trabalho_lado_lado',
+                'carga_horaria_padrao_aula', // Se você usar essa configuração
+            ])
+            ->toArray();
+
+        // Mapeia as configurações para um array associativo para fácil acesso.
+        $appSettings = [];
+        foreach ($settingsData as $setting) {
+            $appSettings[$setting->key_name] = $setting->value;
+        }
+
+        // Definir o caminho base para as imagens carregadas via upload (relativo a webroot/).
+        $imageUploadPath = 'img/';
+
+        // Definir as URLs completas das logos e imagens de fundo dinamicamente.
+        // Usa um placeholder se a configuração não estiver definida no banco de dados.
+        $bgCertificadoPage1 = $this->Url->image($imageUploadPath . 'backgrounds/' . ($appSettings['certificate_bg_page1'] ?? 'placeholder_bg1.png'), ['fullBase' => true]);
+        $bgCertificadoPage2 = $this->Url->image($imageUploadPath . 'backgrounds/' . ($appSettings['certificate_bg_page2'] ?? 'placeholder_bg2.png'), ['fullBase' => true]);
+        $logoInstitutoAmbientIA = $this->Url->image($imageUploadPath . 'logos/' . ($appSettings['logo_instituto_ambient_ia'] ?? 'placeholder_ia.png'), ['fullBase' => true]);
+        $logoEquatorial = $this->Url->image($imageUploadPath . 'logos/' . ($appSettings['logo_equatorial_energia'] ?? 'placeholder_equatorial.png'), ['fullBase' => true]);
+        $logoComdac = $this->Url->image($imageUploadPath . 'logos/' . ($appSettings['logo_comdac'] ?? 'placeholder_comdac.png'), ['fullBase' => true]);
+        $logoInstitutoAmbientTexto = $this->Url->image($imageUploadPath . 'logos/' . ($appSettings['logo_instituto_ambient_texto'] ?? 'placeholder_instituto.png'), ['fullBase' => true]);
+        $logoTrabalhoLadoLado = $this->Url->image($imageUploadPath . 'logos/' . ($appSettings['logo_trabalho_lado_lado'] ?? 'placeholder_trabalho.png'), ['fullBase' => true]);
+
+
         try {
             // Inicia uma transação no banco de dados para garantir a atomicidade das operações.
-            $connection->transactional(function () use ($aluno, $atividade, $aulasTable, $presencasTable, $certificadosTable, &$certificado) {
-                // 1. Calcular Carga Horária
+            $connection->transactional(function () use ($aluno, $atividade, $aulasTable, $presencasTable, $certificadosTable, $appSettings, &$certificado) {
+                // 2. Calcular Carga Horária
                 // Conta o número de aulas para esta atividade onde o aluno esteve presente.
                 $aulasPresentesCount = $presencasTable->find()
                     ->where([
                         'Presencas.aluno_id' => $aluno->id,
                         'Presencas.presente' => true, // Apenas aulas onde o aluno foi marcado como presente.
                         // Garante que as presenças são apenas para as aulas pertencentes a esta atividade.
-                        'Presencas.aula_id IN' => $aulasTable->find()->select(['id'])->where(['atividade_id' => $atividade->id])->toArray()
+                        'Presencas.aula_id IN' => $aulasTable->find()->select(['id'])->where(['atividade_id' => $atividade->id])->all()->extract('id')->toArray()
                     ])
                     ->count();
 
                 // Define a carga horária total.
                 // Opção 1: Se a atividade tiver um campo 'carga_horaria' (preferencial se for um valor fixo da atividade).
-                // Opção 2: Calcula com base no número de aulas presentes (ex: 1 hora por aula presente).
-                $cargaHorariaTotal = $atividade->carga_horaria ?? ($aulasPresentesCount * 1); // Exemplo: 1 hora por aula presente.
-                // Se sua carga horária for armazenada em minutos e você quer em horas no certificado, divida por 60.
-                // Ex: $cargaHorariaTotal = floor($cargaHorariaTotal / 60);
+                // Opção 2: Calcula com base no número de aulas presentes (ex: 1 hora por aula presente),
+                //         usando a configuração 'carga_horaria_padrao_aula' se definida.
+                $cargaHorariaPorAulaConfig = (float)($appSettings['carga_horaria_padrao_aula'] ?? 1); // Padrão 1 hora
+                $cargaHorariaTotal = $atividade->carga_horaria ?? ($aulasPresentesCount * $cargaHorariaPorAulaConfig);
 
-                // 2. Verificar se um certificado já existe para este aluno e atividade.
+                // 3. Verificar se um certificado já existe para este aluno e atividade.
                 $certificado = $certificadosTable->find()
                     ->where(['aluno_id' => $aluno->id, 'atividade_id' => $atividade->id])
                     ->first();
@@ -139,7 +169,7 @@ class CertificadosController extends AppController
                 }
             });
 
-            // 3. Gerar o PDF do Certificado após o sucesso da transação.
+            // 4. Gerar o PDF do Certificado após o sucesso da transação.
             $options = new Options();
             $options->set('defaultFont', 'sans-serif'); // Define a fonte padrão.
             $options->set('isHtml5ParserEnabled', true); // Habilita o parser HTML5.
@@ -158,6 +188,8 @@ class CertificadosController extends AppController
 
             // Gerar QR Code usando a biblioteca chillerlan/php-qrcode.
             $qrCodeDataUri = '';
+            // A biblioteca chillerlan/php-qrcode precisa ser instalada via composer
+            // composer require chillerlan/php-qrcode
             if (class_exists(QRCode::class)) {
                 $qrOptions = new QROptions([
                     'outputType' => QRCode::OUTPUT_IMAGE_PNG,
@@ -175,14 +207,18 @@ class CertificadosController extends AppController
             // Renderiza a view do certificado (templates/Admin/Certificados/pdf/certificado.php) como HTML.
             // 'ajax' é usado para não incluir o layout padrão do CakePHP na renderização do PDF.
             $view = new View($this->getRequest());
-            $view->set(compact('aluno', 'atividade', 'certificado', 'verificationUrl', 'qrCodeDataUri'));
-            $html = $view->render('Certificados/pdf/certificado', 'ajax');
+            // Passa todas as variáveis necessárias para a view do PDF, incluindo as URLs das imagens.
+            $view->set(compact('aluno', 'atividade', 'certificado', 'verificationUrl', 'qrCodeDataUri',
+                               'bgCertificadoPage1', 'bgCertificadoPage2',
+                               'logoInstitutoAmbientIA', 'logoEquatorial', 'logoComdac',
+                               'logoInstitutoAmbientTexto', 'logoTrabalhoLadoLado'));
+            $html = $view->render('Admin/Certificados/pdf/certificado', 'ajax');
 
             $dompdf->loadHtml($html);
             $dompdf->setPaper('A4', 'landscape'); // Define o tamanho do papel e a orientação (paisagem).
             $dompdf->render(); // Gera o PDF.
 
-            // 4. Enviar o PDF para o navegador.
+            // 5. Enviar o PDF para o navegador.
             $fileName = 'certificado_' . $aluno->id . '_' . $atividade->id . '.pdf';
             // 'Attachment' => false faz com que o PDF seja aberto no navegador em vez de forçar o download.
             $dompdf->stream($fileName, ["Attachment" => false]);
