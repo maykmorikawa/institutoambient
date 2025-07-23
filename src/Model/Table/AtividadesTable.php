@@ -77,7 +77,12 @@ class AtividadesTable extends Table
             'joinTable' => 'inscricoes', // Use sua tabela de inscrições como a tabela de junção
             'className' => 'Alunos',
             // Você pode adicionar um finder para filtrar por status aqui, ou no listener
-            'finder' => 'activeEnrollments', 
+            'finder' => 'activeEnrollments',
+        ]);
+
+        $this->hasMany('Certificados', [ // Adicione esta linha
+            'foreignKey' => 'atividade_id',
+            'className' => 'Certificados',
         ]);
     }
 
@@ -128,7 +133,7 @@ class AtividadesTable extends Table
             ->scalar('slug')
             ->maxLength('slug', 255)
             ->allowEmptyString('slug')
-           ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'Este slug já está em uso.']);
+            ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'Este slug já está em uso.']);
 
         $validator
             ->scalar('link_inscricao')

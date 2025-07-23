@@ -83,11 +83,16 @@ class AlunosTable extends Table
             'foreignKey' => 'aluno_id',
             'dependent' => true,
             'cascadeCallbacks' => true,
-        ]);         
+        ]);
         $this->hasMany('Escolaridades', [
             'foreignKey' => 'aluno_id',
             'dependent' => true,
             'cascadeCallbacks' => true,
+        ]);
+
+        $this->hasMany('Certificados', [ // Adicione esta linha
+            'foreignKey' => 'aluno_id',
+            'className' => 'Certificados',
         ]);
     }
 
