@@ -39,7 +39,8 @@ $this->assign('title', __('Lista de Configurações'));
                             <img src="<?= $this->Url->image($imagePath . $setting->value, ['fullBase' => true]) ?>" alt="<?= h($setting->description) ?>" style="max-width: 100px; height: auto;">
                             <br><small><?= h($setting->value) ?></small>
                         <?php else: ?>
-                            <?= $this->Text->truncate(h($setting->value), 50, ['exact' => false]) ?>
+                            <!-- CORREÇÃO APLICADA AQUI: Usando ?? '' para garantir que $setting->value seja uma string -->
+                            <?= $this->Text->truncate(h($setting->value ?? ''), 50, ['exact' => false]) ?>
                         <?php endif; ?>
                     </td>
                     <td><?= h($setting->type) ?></td>
