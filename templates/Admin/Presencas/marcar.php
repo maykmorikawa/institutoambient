@@ -34,7 +34,8 @@ $this->assign('title', __('Marcar Frequência da Aula: {0} ({1})', $aula->data->
                             <?php if (empty($alunosInscritosConfirmados)): ?>
                                 <tr>
                                     <td colspan="4" class="text-center text-muted">
-                                        <?= __('Nenhum aluno inscrito e confirmado para esta atividade.') ?></td>
+                                        <?= __('Nenhum aluno inscrito e confirmado para esta atividade.') ?>
+                                    </td>
                                 </tr>
                             <?php else: ?>
                                 <?php foreach ($alunosInscritosConfirmados as $inscricao): ?>
@@ -58,10 +59,23 @@ $this->assign('title', __('Marcar Frequência da Aula: {0} ({1})', $aula->data->
                                         </td>
                                         <td class="actions text-center">
                                             <?= $this->Html->link(
-                                                '<i class="bi bi-file-earmark-pdf-fill"></i> ' . __('Gerar'),
-                                                ['controller' => 'Certificados', 'action' => 'gerar', $aluno->id, $aula->atividade->id],
-                                                // A OPÇÃO 'target' => '_blank' FOI REMOVIDA DA LINHA ABAIXO
-                                                ['class' => 'btn btn-sm btn-primary', 'escape' => false]
+                                                // O texto e o ícone do botão
+                                                '<i class="bi bi-file-earmark-pdf-fill"></i> ' . __('Gerar Certificado'),
+
+                                                // O link de destino
+                                                [
+                                                    'controller' => 'Certificados',
+                                                    'action' => 'previsualizar', // <-- AQUI ESTÁ A MUDANÇA
+                                                    $aluno->id,
+                                                    $aula->atividade->id // Certifique-se que esta variável está correta no seu contexto
+                                                ],
+
+                                                // As opções de estilo e comportamento
+                                                [
+                                                    'class' => 'btn btn-sm btn-primary',
+                                                    'escape' => false,
+                                                    'target' => '_blank' // Abrir a pré-visualização em uma nova aba
+                                                ]
                                             ) ?>
                                         </td>
                                     </tr>

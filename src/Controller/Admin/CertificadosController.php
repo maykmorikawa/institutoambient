@@ -9,7 +9,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Http\Response;
 use Cake\I18n\Date;
-use Cake\I18n\I18n; // ✅ CORREÇÃO: Esta linha é essencial para a formatação de datas.
+use Cake\I18n\I18n;
 use Cake\Routing\Router;
 use Cake\View\View;
 use chillerlan\QRCode\QRCode;
@@ -51,16 +51,15 @@ class CertificadosController extends AppController
      * @param string|null $atividadeId ID da Atividade.
      * @return \Cake\Http\Response|null|void
      */
-    public function gerar($alunoId = null,$atividadeId = null): ?Response
+    public function previsualizar(string $alunoId = null, string $atividadeId = null)
     {
-        set_time_limit(300);
-
-        // 1. Busca dos dados principais
+        // A lógica de busca de dados e cálculo é a mesma de antes
         $alunosTable = $this->fetchTable('Alunos');
         $atividadesTable = $this->fetchTable('Atividades');
         $aulasTable = $this->fetchTable('Aulas');
         $presencasTable = $this->fetchTable('Presencas');
         $certificadosTable = $this->fetchTable('Certificados');
+        $settingsTable = $this->fetchTable('Settings');
 
         try {
             $aluno = $alunosTable->get($alunoId);
@@ -70,7 +69,6 @@ class CertificadosController extends AppController
             return $this->redirect($this->referer());
         }
 
-        // 2. Lógica de cálculo da carga horária (2 horas por presença)
         $aulasPresentesCount = $presencasTable->find()
             ->innerJoinWith('Aulas', fn($q) => $q->where(['Aulas.atividade_id' => $atividadeId]))
             ->where(['Presencas.aluno_id' => $aluno->id, 'Presencas.presente' => true])
@@ -78,67 +76,95 @@ class CertificadosController extends AppController
 
         if ($aulasPresentesCount === 0) {
             $this->Flash->error(__('Não foi encontrada nenhuma presença para este aluno na atividade.'));
-
-            $msg = sprintf(
-                'DIAGNÓSTICO: Inconsistência de dados. O aluno "%s" tem %d presença(s)...',
-                // ... (resto da mensagem) ...
-            );
-            $this->Flash->error($msg);
-
-            // ADICIONE ESTA LINHA TEMPORARIAMENTE
-            die($msg);
             return $this->redirect($this->referer());
         }
 
         $horasPorAula = 2.0;
         $cargaHorariaCalculada = $aulasPresentesCount * $horasPorAula;
 
-        try {
-            // 3. Salvar os dados do certificado no banco
-            $connection = ConnectionManager::get('default');
-            $certificado = null;
-            $connection->transactional(function () use ($aluno, $atividade, $certificadosTable, $cargaHorariaCalculada, &$certificado) {
-                $certificado = $certificadosTable->find()->where(['aluno_id' => $aluno->id, 'atividade_id' => $atividade->id])->first();
-                if (!$certificado) $certificado = $certificadosTable->newEmptyEntity();
+        // Salva ou atualiza o certificado para garantir que temos um ID e código de autenticação
+        $connection = ConnectionManager::get('default');
+        $certificado = $connection->transactional(function () use ($aluno, $atividade, $certificadosTable, $cargaHorariaCalculada) {
+            $cert = $certificadosTable->find()->where(['aluno_id' => $aluno->id, 'atividade_id' => $atividade->id])->first();
+            if (!$cert)
+                $cert = $certificadosTable->newEmptyEntity();
 
-                $certificado->aluno_id = $aluno->id;
-                $certificado->atividade_id = $atividade->id;
-                $certificado->carga_horaria_total = $cargaHorariaCalculada;
-                $certificado->data_emissao = new Date();
-                if (!$certificadosTable->save($certificado)) throw new \Exception('Erro ao salvar certificado.');
-            });
+            $cert->aluno_id = $aluno->id;
+            $cert->atividade_id = $atividade->id;
+            $cert->carga_horaria_total = $cargaHorariaCalculada;
+            $cert->data_emissao = new Date();
 
-            // 4. Preparar todas as variáveis para o template
-            I18n::setLocale('pt-BR');
-            $dataEmissaoFormatada = $certificado->data_emissao->i18nFormat("dd 'de' MMMM 'de' yyyy");
-            $dataCompleta = 'Belém (PA), ' . $dataEmissaoFormatada;
+            if (!$certificadosTable->save($cert)) {
+                throw new \Exception('Erro ao salvar registro do certificado.');
+            }
+            return $cert;
+        });
 
-            $verificationUrl = Router::url(['controller' => 'Certificados', 'action' => 'verificar', $certificado->codigo_autenticacao, 'prefix' => false], true);
-            $qrCodeDataUri = (new QRCode(new QROptions(['outputType' => QRCode::OUTPUT_IMAGE_PNG, 'imageBase64' => true, 'scale' => 4])))->render($verificationUrl);
+        // Anexa manualmente os objetos para a view
+        $certificado->aluno = $aluno;
+        $certificado->atividade = $atividade;
 
-            // Usando o caminho absoluto do disco para a imagem de fundo (método mais confiável)
-            $nomeDoArquivoDeFundo = 'fundo_certificado.png';
-            $caminhoAbsoluto = WWW_ROOT . 'img' . DS . 'uploads' . DS . $nomeDoArquivoDeFundo;
-            $bgCertificadoUrl = file_exists($caminhoAbsoluto) ? $caminhoAbsoluto : '';
+        // Prepara as variáveis para a view
+        I18n::setLocale('pt-BR');
+        $dataCompleta = 'Belém (PA), ' . $certificado->data_emissao->i18nFormat("dd 'de' MMMM 'de' yyyy");
+        $qrCodeDataUri = (new QRCode(new QROptions(['outputType' => QRCode::OUTPUT_IMAGE_PNG, 'imageBase64' => true])))->render(Router::url(['action' => 'verificar', $certificado->codigo_autenticacao, 'prefix' => false], true));
 
-            // 5. Renderizar o template HTML para uma variável
-            $view = new View($this->getRequest());
-            $view->set(compact('aluno', 'atividade', 'certificado', 'dataCompleta', 'qrCodeDataUri', 'bgCertificadoUrl'));
-            $html = $view->render('Admin/Certificados/pdf/certificado', 'ajax');
-
-            // 6. Converter o HTML para PDF usando Dompdf
-            $dompdf = new Dompdf(new Options(['defaultFont' => 'sans-serif', 'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]));
-            $dompdf->loadHtml($html);
-            $dompdf->setPaper('A4', 'landscape');
-            $dompdf->render();
-            $dompdf->stream('certificado.pdf', ["Attachment" => false]);
-
-            return $this->response;
-        } catch (\Exception $e) {
-            $this->Flash->error(__('Não foi possível gerar o certificado: ' . $e->getMessage()));
-            $this->log('Erro ao gerar certificado: ' . $e->getMessage(), 'error');
-            return $this->redirect($this->referer());
+        $settingBg = $settingsTable->find()->where(['key_name' => 'certificate_background_default'])->first();
+        $bgCertificadoUrl = '';
+        if ($settingBg && !empty($settingBg->value)) {
+            // ✅ --- AQUI ESTÁ A CORREÇÃO --- ✅
+            // Para a pré-visualização no navegador, usamos Router::url() para gerar uma URL web.
+            $bgCertificadoUrl = Router::url('/img/uploads/' . $settingBg->value, false);
         }
+
+        // Envia todas as variáveis para o template de pré-visualização
+        $this->set(compact('certificado', 'dataCompleta', 'qrCodeDataUri', 'bgCertificadoUrl'));
+    }
+
+    /**
+     * ETAPA 2: Pega um certificado já existente e o converte para PDF.
+     */
+    public function gerarPdf($certificadoId = null)
+    {
+        $this->viewBuilder()->setLayout('ajax'); // Usamos layout AJAX para não ter o HTML do site no PDF
+
+        $certificadosTable = $this->fetchTable('Certificados');
+        $settingsTable = $this->fetchTable('Settings');
+        try {
+            // Buscamos o certificado e seus dados associados
+            $certificado = $certificadosTable->get($certificadoId, ['contain' => ['Alunos', 'Atividades']]);
+        } catch (RecordNotFoundException $e) {
+            $this->Flash->error(__('Certificado não encontrado.'));
+            return $this->redirect(['action' => 'index']); // Redireciona para um lugar seguro
+        }
+
+        // Recria as variáveis necessárias para o template do certificado
+        I18n::setLocale('pt-BR');
+        $dataCompleta = 'Belém (PA), ' . $certificado->data_emissao->i18nFormat("dd 'de' MMMM 'de' yyyy");
+        $qrCodeDataUri = (new QRCode(new QROptions(['outputType' => QRCode::OUTPUT_IMAGE_PNG, 'imageBase64' => true])))->render(Router::url(['action' => 'verificar', $certificado->codigo_autenticacao, 'prefix' => false], true));
+
+        $settingBg = $settingsTable->find()->where(['key_name' => 'certificate_background_default'])->first();
+        $bgCertificadoUrl = '';
+        if ($settingBg && !empty($settingBg->value)) {
+            $bgCertificadoUrl = WWW_ROOT . 'img' . DS . 'uploads' . DS . $settingBg->value;
+        }
+
+        // Passa as variáveis para a view que será renderizada para o PDF
+        $this->set(compact('certificado', 'dataCompleta', 'qrCodeDataUri', 'bgCertificadoUrl'));
+
+        // Renderiza o template para uma variável HTML
+        $view = new View($this->getRequest());
+        $view->set($this->viewBuilder()->getVars());
+        $html = $view->render('Admin/Certificados/pdf_template');
+
+        // Gera o PDF
+        $dompdf = new Dompdf(new Options(['defaultFont' => 'sans-serif', 'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]));
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+        $dompdf->stream('certificado.pdf', ["Attachment" => true]); // true para forçar o download
+
+        return $this->response;
     }
 
 
