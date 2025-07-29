@@ -56,12 +56,14 @@ $this->assign('title', __('Marcar Frequência da Aula: {0} ({1})', $aula->data->
                                             ]);
                                             ?>
                                         </td>
-                                        <?= $this->Html->link(
-                                            '<i class="bi bi-file-earmark-pdf-fill"></i> ' . __('Gerar'),
-                                            ['controller' => 'Certificados', 'action' => 'gerar', $aluno->id, $aula->atividade->id],
-                                            // A OPÇÃO 'target' => '_blank' FOI REMOVIDA DA LINHA ABAIXO
-                                            ['class' => 'btn btn-sm btn-primary', 'escape' => false]
-                                        ) ?>
+                                        <td class="actions text-center">
+                                            <?= $this->Html->link(
+                                                '<i class="bi bi-file-earmark-pdf-fill"></i> ' . __('Gerar'),
+                                                ['controller' => 'Certificados', 'action' => 'gerar', $aluno->id, $aula->atividade->id],
+                                                // A OPÇÃO 'target' => '_blank' FOI REMOVIDA DA LINHA ABAIXO
+                                                ['class' => 'btn btn-sm btn-primary', 'escape' => false]
+                                            ) ?>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php endif; ?>
