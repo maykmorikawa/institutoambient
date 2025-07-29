@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Aula $aula
@@ -13,7 +14,8 @@ $this->assign('title', __('Marcar Frequência da Aula: {0} ({1})', $aula->data->
         <div class="card">
             <div class="card-header">
                 <h3 class="mb-0"><?= __('Marcar Frequência da Aula:') ?>
-                    <small><?= $aula->data->format('d/m/Y') ?></small></h3>
+                    <small><?= $aula->data->format('d/m/Y') ?></small>
+                </h3>
                 <h5 class="mb-0 text-muted"><?= __('Atividade:') ?> <?= h($aula->atividade->nome) ?></h5>
             </div>
             <div class="card-body">
@@ -54,13 +56,12 @@ $this->assign('title', __('Marcar Frequência da Aula: {0} ({1})', $aula->data->
                                             ]);
                                             ?>
                                         </td>
-                                        <td class="actions text-center">
-                                            <?= $this->Html->link(
-                                                '<i class="bi bi-file-earmark-pdf-fill"></i> ' . __('Gerar'),
-                                                ['controller' => 'Certificados', 'action' => 'gerar', $aluno->id, $aula->atividade->id],
-                                                ['class' => 'btn btn-sm btn-primary', 'escape' => false, 'target' => '_blank'] // Abre em nova aba
-                                            ) ?>
-                                        </td>
+                                        <?= $this->Html->link(
+                                            '<i class="bi bi-file-earmark-pdf-fill"></i> ' . __('Gerar'),
+                                            ['controller' => 'Certificados', 'action' => 'gerar', $aluno->id, $aula->atividade->id],
+                                            // A OPÇÃO 'target' => '_blank' FOI REMOVIDA DA LINHA ABAIXO
+                                            ['class' => 'btn btn-sm btn-primary', 'escape' => false]
+                                        ) ?>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php endif; ?>
