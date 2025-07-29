@@ -78,6 +78,15 @@ class CertificadosController extends AppController
 
         if ($aulasPresentesCount === 0) {
             $this->Flash->error(__('Não foi encontrada nenhuma presença para este aluno na atividade.'));
+
+            $msg = sprintf(
+                'DIAGNÓSTICO: Inconsistência de dados. O aluno "%s" tem %d presença(s)...',
+                // ... (resto da mensagem) ...
+            );
+            $this->Flash->error($msg);
+
+            // ADICIONE ESTA LINHA TEMPORARIAMENTE
+            die($msg);
             return $this->redirect($this->referer());
         }
 
