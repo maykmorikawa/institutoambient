@@ -5,7 +5,7 @@
  * @var \App\Model\Entity\Certificado $certificado
  * @var string $dataCompleta
  * @var string $qrCodeDataUri
- * @var string $bgCertificadoUrl // <-- [NOVO] Variável para a imagem de fundo
+ * @var string $bgCertificadoUrl
  */
 ?>
 <!DOCTYPE html>
@@ -18,27 +18,35 @@
             margin: 0;
         }
         body {
+            /* Define a imagem de fundo */
+            background-image: url("<?= $bgCertificadoUrl ?>");
+            background-size: cover; /* Faz a imagem cobrir toda a página */
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* Estilos gerais */
             font-family: sans-serif;
             text-align: center;
-            /* A borda foi removida para dar lugar à imagem de fundo */
             width: 100%;
             height: 100%;
             box-sizing: border-box;
             padding: 50px;
         }
-        /* [NOVO] Estilo para o container do conteúdo, para que fique sobre a imagem */
         .content-wrapper {
+            /* Este container ajuda a posicionar o texto sobre o fundo */
             position: relative;
             z-index: 10;
         }
         h1 {
             font-size: 48px;
             margin-bottom: 40px;
+            color: #333; /* Cor escura para boa legibilidade */
         }
         p {
             font-size: 18px;
             line-height: 1.6;
             margin: 20px 40px;
+            color: #333;
         }
         .nome-aluno {
             font-size: 36px;
@@ -47,6 +55,7 @@
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
             padding: 20px 0;
+            color: #000;
         }
         .footer {
             position: absolute;
@@ -59,38 +68,29 @@
         .texto-verificacao { float: left; margin-left: 20px; text-align: left; font-size: 12px; }
     </style>
 </head>
-<body style="background-image: url('<?= $bgCertificadoUrl ?>'); background-size: cover; background-position: center;">
-
+<body>
     <div class="content-wrapper">
-
         <h1>CERTIFICADO DE CONCLUSÃO</h1>
-
         <p>Certificamos que</p>
-
         <div class="nome-aluno">
-            <?= h($aluno->nome_completo) ?>
+            <?= h($aluno->nome) ?>
         </div>
-
         <p>
             concluiu com sucesso a atividade <strong><?= h($atividade->nome) ?></strong>,
             com carga horária total de <strong><?= h($certificado->carga_horaria_total) ?> horas</strong>.
         </p>
-
         <p><?= h($dataCompleta) ?></p>
-
         <div class="footer">
             <?php if (!empty($qrCodeDataUri)): ?>
                 <div class="qr-code">
-                    <img src="<?= $qrCodeDataUri ?>" alt="QR Code de Verificação" style="width: 120px; height: 120px;">
+                    <img src="<?= $qrCodeDataUri ?>" alt="QR Code" style="width: 120px; height: 120px;">
                 </div>
             <?php endif; ?>
             <div class="texto-verificacao">
-                <p>Para verificar a autenticidade deste certificado, aponte a câmera do seu celular para o QR Code ao lado ou acesse o link de verificação.</p>
+                <p>Para verificar a autenticidade deste certificado, aponte a câmera do seu celular para o QR Code ao lado.</p>
                 <p><strong>Código:</strong> <?= h($certificado->codigo_autenticacao) ?></p>
             </div>
         </div>
-
     </div>
-
 </body>
 </html>
