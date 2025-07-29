@@ -175,9 +175,7 @@ class AtividadesController extends AppController
     public function edit($id = null)
     {
         try {
-            $atividade = $this->Atividades->get($id, [
-                'contain' => [],
-            ]);
+            $atividade = $this->Atividades->get($id, contain: []);
         } catch (RecordNotFoundException $e) {
             $this->Flash->error(__('Atividade não encontrada.'));
             return $this->redirect(['action' => 'index']);

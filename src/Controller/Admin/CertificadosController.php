@@ -51,7 +51,7 @@ class CertificadosController extends AppController
      * @param string|null $atividadeId ID da Atividade.
      * @return \Cake\Http\Response|null|void
      */
-    public function previsualizar(string $alunoId = null, string $atividadeId = null)
+    public function previsualizar($alunoId = null, $atividadeId = null)
     {
         // A lógica de busca de dados e cálculo é a mesma de antes
         $alunosTable = $this->fetchTable('Alunos');
