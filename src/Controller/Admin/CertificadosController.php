@@ -51,7 +51,7 @@ class CertificadosController extends AppController
      * @param string|null $atividadeId ID da Atividade.
      * @return \Cake\Http\Response|null|void
      */
-    public function gerar(string $alunoId = null, string $atividadeId = null): ?Response
+    public function gerar($alunoId = null,$atividadeId = null): ?Response
     {
         set_time_limit(300);
 
