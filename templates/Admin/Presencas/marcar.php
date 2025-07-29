@@ -86,12 +86,11 @@ $this->assign('title', __('Marcar Frequência da Aula: {0} ({1})', $aula->data->
                 </div>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <?= $this->Html->link(
-                        '<i class="bi bi-arrow-left-square-fill"></i> ' . __('Voltar para Atividade'),
+                    <?= $this->Html->link(('Voltar para Atividade'),
                         ['controller' => 'Atividades', 'action' => 'view', $aula->atividade->id],
                         ['class' => 'btn btn-info', 'escape' => false]
                     ) ?>
-                    <?= $this->Form->button('<i class="bi bi-save"></i> ' . __('Salvar Frequência'), ['class' => 'btn btn-success', 'escape' => false]) ?>
+                    <?= $this->Form->button(('Salvar Frequência'), ['class' => 'btn btn-success', 'escape' => false]) ?>
                 </div>
                 <?= $this->Form->end() ?>
             </div>
