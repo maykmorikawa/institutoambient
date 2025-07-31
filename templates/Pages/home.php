@@ -156,7 +156,7 @@
             </div>
             <div class="col-lg-7">
                 <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">O Instituto
-                    Ambiente tem experiência na realização de diagnósticos para atender as necessidades de seus
+                    Ambient tem experiência na realização de diagnósticos para atender as necessidades de seus
                     parceiros. Para estimular a consciência cidadã, a educação e melhorar a qualidade de vida dos
                     brasileiros, realiza ações diversas.</p>
             </div>
@@ -206,7 +206,7 @@
     <div class="container position-relative z-index-9">
         <div class="mb-2-6 mb-lg-6 text-center wow fadeIn" data-wow-delay="100ms">
             <span class="d-block mb-2 text-white text-uppercase fw-bold">Testemunhos</span>
-            <h2 class="text-white mb-0 h1">O que as pessoas estão falando do Instituto Ambiente?</h2>
+            <h2 class="text-white mb-0 h1">O que as pessoas estão falando do Instituto Ambient?</h2>
         </div>
         <div class="bg-primary p-1-9 p-lg-6 testimonial-style1 position-relative rounded wow fadeIn"
             data-wow-delay="200ms">
@@ -216,7 +216,7 @@
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">O Instituto Ambienta foi uma
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">O Instituto Ambient foi uma
                             experiência transformadora para mim! Participei de um curso de educação ambiental e aprendi
                             muito sobre sustentabilidade e conservação da natureza. Os professores são extremamente
                             capacitados e apaixonados pelo que fazem. Sem dúvida, foi um aprendizado que levarei para a
@@ -228,7 +228,7 @@
                 <div class="text-center row justify-content-center">
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
-                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Conheci o Instituto Ambienta
+                        <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Conheci o Instituto Ambient
                             através de um projeto de responsabilidade socioambiental da minha empresa, e fiquei
                             impressionado com o impacto positivo que eles geram. O trabalho deles na conscientização
                             ecológica e preservação do meio ambiente é essencial. Recomendo para qualquer empresa ou
@@ -241,7 +241,7 @@
                     <div class="col-md-10">
                         <img src="site/img/avatar/avatar-01.jpg" alt="Aspas" class="text-white display-3" width="50">
                         <p class="mb-1-6 text-center mt-3 mt-lg-2-3 lead text-white">Ser voluntária no Instituto
-                            Ambienta foi uma das melhores decisões da minha vida. O ambiente é acolhedor, e cada projeto
+                            Ambient foi uma das melhores decisões da minha vida. O ambiente é acolhedor, e cada projeto
                             tem um impacto real na comunidade. Aprendi sobre reciclagem, reflorestamento e educação
                             ambiental, além de conhecer pessoas incríveis que compartilham o mesmo propósito. Sou muito
                             grata por fazer parte dessa missão!</p>
@@ -265,7 +265,7 @@
             </div>
             <div class="col-lg-7">
                 <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">No Instituto
-                    Ambienta, trazemos informações atualizadas sobre projetos ambientais, eventos, pesquisas e
+                    Ambient, trazemos informações atualizadas sobre projetos ambientais, eventos, pesquisas e
                     iniciativas que fazem a diferença. Acompanhe nossas notícias e contribua para um futuro mais
                     sustentável!</p>
             </div>

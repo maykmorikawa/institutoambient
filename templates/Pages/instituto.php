@@ -23,7 +23,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Sobre o Instituto Ambiente</a></li>
+                        <li><a href="#!">Sobre o Instituto Ambient</a></li>
 
                     </ul>
 
