@@ -14,7 +14,7 @@
 
                 <p class="mb-1-6 text-white">
 
-                    O Instituto Ambienta promove a sustentabilidade por meio de educação, conscientização e projetos
+                    O Instituto Ambient promove a sustentabilidade por meio de educação, conscientização e projetos
                     ecológicos. Nosso foco é preservar o meio ambiente e incentivar práticas responsáveis para um futuro
                     melhor.
                 </p>
@@ -67,7 +67,7 @@
 
                     <p class="d-inline-block mb-0 text-white"> <span class="current-year"></span> Todos os direitos
                         resevados
-                        <a href="#!" class="text-primary text-white-hover">Instituto Ambiente</a>
+                        <a href="#!" class="text-primary text-white-hover">Instituto Ambient</a>
                     </p>
 
                 </div>
