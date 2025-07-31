@@ -43,39 +43,45 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
-
+                    <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
                         <div class="inner-title">
                             <h2 class="mb-0">Relatório de Atividades</h2>
                         </div>
-
                         <ul class="list-style4">
                             <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank">
                                 <li>Relatório de Atividades IA - 2023</li>
                             </a>
-
-                            
                         </ul>
+                        
                     </div>
-
-                    <div class="col-md-6 position-relative elements-block mb-6 mb-md-0">
-
+                    <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
                         <div class="inner-title">
                             <h2 class="mb-0">DRE e Balanço</h2>
                         </div>
-
                         <ul class="list-style4">
                             <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
                                 <li>DRE e Balanço IA 2022 - 2023</li>
                             </a>
-
+                        </ul>
+                        <ul class="list-style4">
+                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
+                                <li>DRE e Balanço IA 2023 - 2024</li>
+                            </a>
                         </ul>
                     </div>
-
+                    <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
+                        <div class="inner-title">
+                            <h2 class="mb-0">Demonstrações Contábeis</h2>
+                        </div>
+                        <ul class="list-style4">
+                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
+                                <li>Demonstrações Contábeis - 2024</li>
+                            </a>
+                        </ul>
+                        
+                    </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </section>
