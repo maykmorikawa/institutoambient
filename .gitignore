@@ -5,6 +5,7 @@
 /logs/*
 /tmp/*
 /vendor/*
+/webroot/dash/*
 /webroot/dash/vendor/*
 
 # OS generated files #

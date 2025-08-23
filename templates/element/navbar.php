@@ -69,7 +69,7 @@
                                         <li><a href="#">Acesso à Informação</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#!">Contatos</a>  
+                                <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe Agora</a>  
                             </ul>
                             <!-- end menu area -->
 
