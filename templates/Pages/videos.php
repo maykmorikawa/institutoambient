@@ -43,15 +43,13 @@
         <div class="row justify-content-center">
 
             <div class="col-lg-9">
-                <div class="mb-6 mb-lg-8 position-relative elements-block">
 
+                <!-- Bloco 1 -->
+                <div class="mb-6 mb-lg-8 position-relative elements-block">
                     <div class="inner-title">
                         <h2 class="mb-0">Apresentação</h2>
                     </div>
-
-                    <!-- youtube video section -->
                     <div class="height-300">
-
                         <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/bg/bg-08.jpg">
                             <div class="opacity-extra-medium bg-black"></div>
                             <div class="inner-border"></div>
@@ -63,7 +61,27 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Bloco 2-->
+                <div class="mb-6 mb-lg-8 position-relative elements-block">
+                    <div class="inner-title">
+                        <h2 class="mb-0">Vídeo Institucional</h2>
+                    </div>
+                    <div class="height-300">
+                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/bg/bg-09.jpg">
+                            <div class="opacity-extra-medium bg-black"></div>
+                            <div class="inner-border"></div>
+                            <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
+                                <a class="video video_btn" href="https://www.youtube.com/watch?v=dkqoYzu4TB0">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 </section>

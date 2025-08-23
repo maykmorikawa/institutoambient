@@ -52,6 +52,11 @@
                                 <li>Relatório de Atividades IA - 2023</li>
                             </a>
                         </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                <li>Relatório de Atividades IA - 2024</li>
+                            </a>
+                        </ul>
                         
                     </div>
                     <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
@@ -74,7 +79,7 @@
                             <h2 class="mb-0">Demonstrações</h2>
                         </div>
                         <ul class="list-style4">
-                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_do_Auditor_Independente_Inst_Ambient_2024_assinado.pdf" target="_blank">
                                 <li>Demonstrações Contábeis - 2024</li>
                             </a>
                         </ul>
