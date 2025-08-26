@@ -90,3 +90,24 @@
         </div>
     </div>
 </section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
+                        <div class="inner-title">
+                            <h2 class="mb-0">Relatório</h2>
+                        </div>
+                        <ul class="list-style4">
+                            <a href="<?= WWW; ?>/uploads/pdfs/Ata_IA_Prestatacao_de_Contas_2025.pdf" target="_blank">
+                                <li>Ata - IA - Prestatação de Contas 2025</li>
+                            </a>
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
