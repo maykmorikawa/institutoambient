@@ -117,6 +117,11 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('site');
             
     }
+    public function projetos() 
+    {
+        $this->viewBuilder()->setLayout('site');
+            
+    }
     public function conselho() {}
 
 
