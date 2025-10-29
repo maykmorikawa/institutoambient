@@ -56,6 +56,7 @@
                                         <li><a href="#">Assistência Social</a></li>
                                         <li><a href="#">Educação</a></li>
                                         <li><a href="#">Meio Ambiente</a></li>
+                                        <li><a href="captacao">Projetos/Programas em captação de recursos</a></li>
                                         <li><a href="#">Projetos/Programas em Execução</a></li>
                                     </ul>
                                 </li>

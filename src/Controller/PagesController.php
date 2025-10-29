@@ -112,6 +112,11 @@ class PagesController extends AppController
     public function quemsomos() {}
     public function transparencia() {}
     public function videos() {}
+    public function captacao() 
+    {
+        $this->viewBuilder()->setLayout('site');
+            
+    }
     public function conselho() {}
 
 

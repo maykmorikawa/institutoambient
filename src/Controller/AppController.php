@@ -29,6 +29,7 @@ class AppController extends Controller
             'listblog',
             'tag',
             'view',
+            'captacao',
             'manutencao' // libera /pages/display/*, inclusive /pages/home
         ]);
     }

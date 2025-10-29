@@ -273,7 +273,7 @@
         <div class="row mt-n1-9 g-xl-5">
             <?php foreach ($postsNoticias as $post): ?>
                 <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                    <article class="card card-style3 border-0 h-100">
+                    <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
                         <div class="card-img position-relative">
                             <?php
                             $featuredImage = null;
@@ -286,24 +286,30 @@
                             ?>
                             <?php if ($featuredImage): ?>
                                 <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
-                                    alt="<?= h($post->title) ?>">
+                                     alt="<?= h($post->title) ?>" class="img-fluid rounded-top">
                             <?php else: ?>
-                                <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>" alt="Imagem padrão">
+                                <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>"
+                                     alt="Imagem padrão" class="img-fluid rounded-top">
                             <?php endif; ?>
                         </div>
+        
                         <div class="card-body p-xl-1-9 p-4">
-                            <h3 class="h5 mb-3"><a
-                                    href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>"><?= h($post->title) ?></a>
-                            </h3>
+                            <h3 class="h5 mb-3"><?= h($post->title) ?></h3>
+                            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
+        
+                            <!-- link estendido que cobre todo o card -->
                             <a href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>"
-                                class="fw-bold text-primary text-secondary-hover">Saiba mais</a>
-
+                               class="stretched-link"
+                               aria-label="Abrir postagem: <?= h($post->title) ?>"></a>
                         </div>
-                        <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9">
+        
+                        <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9 border-0">
                             <div class="d-flex justify-content-between">
                                 <span class="display-30">
                                     <i class="ti-calendar me-1 text-primary"></i>
-                                    <?= $post->published ? $post->published->i18nFormat('d \'de\' MMMM \'de\' yyyy', null, 'pt_BR') : '' ?>
+                                    <?= $post->published
+                                        ? $post->published->i18nFormat("d 'de' MMMM 'de' yyyy", null, 'pt_BR')
+                                        : '' ?>
                                 </span>
                             </div>
                         </div>
@@ -311,6 +317,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
+
     </div>
 </section>
 

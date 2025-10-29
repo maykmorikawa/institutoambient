@@ -7,6 +7,7 @@
 /vendor/*
 /webroot/dash/*
 /webroot/dash/vendor/*
+/webroot/img/*
 
 # OS generated files #
 ######################
