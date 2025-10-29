@@ -121,10 +121,10 @@ html, body {
   <div class="full-screen-container">
       
     <div class="slide">
-        <img src="image_888163.png" alt="Nossa Missão: Impacto Social e Sustentável - Instituto Ambient">
+        <img src="site/img/about/crescer_transformar.jpg" alt="Nossa Missão: Impacto Social e Sustentável - Instituto Ambient">
         </div>
     <div class="slide">
-        <img src="image_7ea3ff.jpg" alt="Projeto Trabalho Lado a Lado - Juntos pela transformação social">
+        <img src="site/img/about/trabalho_lado_a_lado.jpg" alt="Projeto Trabalho Lado a Lado - Juntos pela transformação social">
     </div>
     <div class="slide">
         <img src="image_8881c2.jpg" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
