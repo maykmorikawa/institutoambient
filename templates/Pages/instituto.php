@@ -103,38 +103,35 @@
                                 </div>
                                 <ul class="list-style4">
                                     <a href="/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank">
-                                        <li>Relatório de Atividades IA - 2023</li>
+                                        <li>Qualificação de Utilidade Pública Estadual - UPE. N</li>
                                     </a>
                                 </ul>
                                 <ul class="list-style4" style="margin-top: 10px">
                                     <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
-                                        <li>Relatório de Atividades IA - 2024</li>
+                                        <li>Certificado CEBAS - IA</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                        <li>C. I. Amiga da Criança de Belém - IA</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                        <li>Certificado IA - APRENDIZ</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                        <li>Certificado COMDAC - IA</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                        <li>Certificado - COMDICA - Ananindeua - IA</li>
                                     </a>
                                 </ul>
                                 
-                            </div>
-                            <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
-                                
-                                <ul class="list-style4">
-                                    <a href="/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
-                                        <li>DRE e Balanço IA 2022 - 2023</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4"style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
-                                        <li>DRE e Balanço IA 2023 - 2024</li>
-                                    </a>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
-                                
-                                <ul class="list-style4">
-                                    <a href="/uploads/pdfs/Relatorio_do_Auditor_Independente_Inst_Ambient_2024_assinado.pdf" target="_blank">
-                                        <li>Demonstrações Contábeis - 2024</li>
-                                    </a>
-                                </ul>
-                                
-                            </div>
                             </div>
                         </div>
                     </div>-->
