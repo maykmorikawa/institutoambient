@@ -118,17 +118,76 @@ html, body {
 
 <section class="pt-0 my-5">
 
-  <div class="full-screen-container">
-      
-    <div class="slide">
-        <img src="site/img/about/crescer_transformar.jpg" alt="Nossa Missão: Impacto Social e Sustentável - Instituto Ambient">
+  
+    <div class="full-screen-container">
+        
+        <div class="slide">
+            <img src="slides/img/1x/1Prancheta.png" alt="Nossa Missão: Impacto Social e Sustentável - Instituto Ambient">
+            </div>
+
+        <div class="slide">
+            <img src="slides/img/1x/2Prancheta.png" alt="Projeto Trabalho Lado a Lado - Juntos pela transformação social">
         </div>
-    <div class="slide">
-        <img src="site/img/about/trabalho_lado_a_lado.jpg" alt="Projeto Trabalho Lado a Lado - Juntos pela transformação social">
-    </div>
-    <div class="slide">
-        <img src="image_8881c2.jpg" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
-    </div>
-  </div>
+
+        <div class="slide">
+            <img src="slides/img/1x/3Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/4Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/5Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="img/1x/7Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+        </div>
+            <img src="slides/img/1x/8Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/9Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/10Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/11Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/12Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/13Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/14Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/15Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/16Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="img/1x/17Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/18Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/19Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/20Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/21Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+        <div class="slide">
+            <img src="slides/img/1x/22Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
+        </div>
+
+        </div>
 
 </section>
