@@ -95,11 +95,11 @@
 
                     </div>
 
-                    <div class="col-lg-12 mb-2-9">
+                    <!--<div class="col-lg-12 mb-2-9">
                         <div class="row">
                             <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
                                 <div class="inner-title">
-                                    <h2 class="mb-3">Nossos Certificados</h2>
+                                    <h2 class="mb-3">Nossas Certificações</h2>
                                 </div>
                                 <ul class="list-style4">
                                     <a href="/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank">
@@ -137,7 +137,7 @@
                             </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
