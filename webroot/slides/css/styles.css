@@ -1,0 +1,44 @@
+/* Reset básico para remover margens e preenchimentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Garante que o corpo e o html ocupem 100% da altura da viewport (tela) */
+    height: 100%; 
+    overflow: auto; /* Permite a rolagem para ver todos os slides */
+}
+
+/* 1. O Container Principal: Configura o palco */
+.full-screen-container {
+    /* Não é estritamente necessário um tamanho aqui, 
+       pois os slides farão o contêiner crescer, 
+       mas vamos definir 100% para consistência. */
+    width: 100vw;
+    min-height: 100vh; /* Garante que o contêiner tenha pelo menos a altura da tela */
+    display: flex;
+    flex-direction: column; /* Empilha os slides verticalmente */
+}
+
+/* 2. O Slide Individual: Garante que cada um seja tela cheia */
+.slide {
+    width: 100vw; /* 100% da largura da viewport */
+    height: 100vh; /* 100% da altura da viewport */
+    /* Garante que o conteúdo dentro do slide (a imagem) ocupe o espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adicione mais estilos como padding se o conteúdo não for a imagem */
+}
+
+/* 3. A Imagem: Garante que ela preencha o slide sem distorcer (mantendo a proporção) */
+.slide img {
+    width: 100%; /* Ocupa 100% da largura do seu container (.slide) */
+    height: 100%; /* Ocupa 100% da altura do seu container (.slide) */
+    /* ESSENCIAL: Controla como a imagem se encaixa no container */
+    object-fit: contain; /* Ajusta a imagem inteira dentro do contêiner, mostrando barras (preto) se a proporção não for idêntica. */
+    /* Se quiser que a imagem preencha TODO o espaço, cortando o que não cabe, use: */
+    /* object-fit: cover; */
+}
