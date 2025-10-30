@@ -124,11 +124,9 @@ html, body {
         <div class="slide">
             <img src="<?= WWW; ?>/slides/img/1x/1Prancheta.png" alt="Nossa Missão: Impacto Social e Sustentável - Instituto Ambient">
             </div>
-
         <div class="slide">
             <img src="<?= WWW; ?>/slides/img/1x/2Prancheta.png" alt="Projeto Trabalho Lado a Lado - Juntos pela transformação social">
         </div>
-
         <div class="slide">
             <img src="<?= WWW; ?>/slides/img/1x/3Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
         </div>
@@ -186,7 +184,6 @@ html, body {
         <div class="slide">
             <img src="<?= WWW; ?>/slides/img/1x/22Prancheta.png" alt="O Cenário: Desafios e Oportunidades em Belém - Instituto Ambient">
         </div>
-
-        </div>
+    </div>
 
 </section>
