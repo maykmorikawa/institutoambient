@@ -43,16 +43,15 @@
                                     <ul>
                                         <li><a href="/o_instituto_ambient">O Instituto Ambiente</a></li>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
-                                        <li><a href="#">Equipe</a></li>
                                         <li><a href="/conselho">Conselho</a></li>
+                                        <li><a href="#">Equipe</a></li>
                                         <li><a href="/transparencia">Transparência</a></li>
+                                        <li><a href="#">Dedução de Imposto de Renda</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
-                                        <li><a href="#">Dedução de Imposto de Renda</a></li>
                                         <li><a href="#">Áreas de Atuação</a></li>
-                                        <li><a href="#">Saúde</a></li>
                                         <li><a href="#">Assistência Social</a></li>
                                         <li><a href="#">Educação</a></li>
                                         <li><a href="#">Meio Ambiente</a></li>

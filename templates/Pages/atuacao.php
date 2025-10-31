@@ -1,0 +1,169 @@
+<!-- PAGE TITLE
+
+        ================================================== -->
+
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
+    data-background="<?= WWW; ?>/site/img/banner/page-title.webp">
+
+    <div class="container position-unset">
+
+        <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <h1>Como Atuamos</h1>
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <ul class="ps-0">
+
+                        <li><a href="home">Home</a></li>
+
+                        <li><a href="#!">Como Atuamos</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- SERVICE
+================================================== -->
+<section class="service-block pt-0">
+    <div class="container position-relative z-index-1">
+        <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
+            <div class="col-lg-5 mb-3 mb-lg-0">
+                <span class="d-block mb-2 text-secondary text-uppercase fw-bold">Instituto Ambient</span>
+                <h2 class="mb-0">Pressupostos Estratégicos</h2>
+            </div>
+            <div class="col-lg-7">
+                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">Para o direcionamento do presente planejamento estratégico, estamos focados em pressupostos estratégicos que consideramos fundamentais e que deverão fazer a diferença na vida dos participantes, tais como:</p>
+            </div>
+        </div>
+        <div class="row mt-n1-9">
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                <a href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="ti-user display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Life Insurance</h3>
+                        <p class="mb-0">We help you discover any protection inclusions that are ideal for you.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="400ms">
+                <a href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="ti-car display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Car Insurance</h3>
+                        <p class="mb-0">We help you discover any protection inclusions that are ideal for you.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms">
+                <a href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="ti-heart display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Health Insurance</h3>
+                        <p class="mb-0">We help you discover any protection inclusions that are ideal for you.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
+                <a href="service-details.html" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="ti-home display-10 mb-4 d-block"></i>
+                        <h3 class="h5 mb-3">Home Insurance</h3>
+                        <p class="mb-0">We help you discover any protection inclusions that are ideal for you.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <img src="img/content/dots1.png" class="position-absolute bottom-n40 right d-none d-lg-block wow fadeIn ani-left-right" data-wow-delay="200ms" alt="...">
+</section>
+
+ <!-- TEAM
+================================================== -->
+<section data-scroll-index="4">
+    <div class="container">
+        <div class="title-style1 text-center wow fadeIn" data-wow-delay="100ms">
+            <h2>Our Team</h2>
+            <p class="mb-0 w-md-70 w-lg-60 w-xl-50 mx-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+        <div class="row mt-n1-6">
+            <div class="col-sm-6 col-lg-3 mt-1-6 wow fadeIn" data-wow-delay="200ms">
+                <div class="card card-style5">
+                    <div class="card-body p-0">
+                        <img src="img/team/team-11.jpg" class="img-filter" alt="...">
+                        <div class="hover-data">
+                            <h3 class="h6 text-white mb-3">Lisa Weston</h3>
+                            <h6 class="h6 mb-3 text-primary">C.E.O</h6>
+                            <ul class="social-icon list-unstyled mb-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mt-1-6 wow fadeIn" data-wow-delay="400ms">
+                <div class="card card-style5">
+                    <div class="card-body p-0">
+                        <img src="img/team/team-10.jpg" class="img-filter" alt="...">
+                        <div class="hover-data">
+                            <h3 class="h6 text-white mb-3">Philip Tucker</h3>
+                            <h6 class="h6 mb-3 text-primary">Senior Consultant</h6>
+                            <ul class="social-icon list-unstyled mb-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mt-1-6 wow fadeIn" data-wow-delay="600ms">
+                <div class="card card-style5">
+                    <div class="card-body p-0">
+                        <img src="img/team/team-13.jpg" class="img-filter" alt="...">
+                        <div class="hover-data">
+                            <h3 class="h6 text-white mb-3">Regina Jaeger</h3>
+                            <h6 class="h6 mb-3 text-primary">Regional Leader</h6>
+                            <ul class="social-icon list-unstyled mb-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mt-1-6 wow fadeIn" data-wow-delay="800ms">
+                <div class="card card-style5">
+                    <div class="card-body p-0">
+                        <img src="img/team/team-12.jpg" class="img-filter" alt="...">
+                        <div class="hover-data">
+                            <h3 class="h6 text-white mb-3">Jack Galvan</h3>
+                            <h6 class="h6 mb-3 text-primary">Business Advisor</h6>
+                            <ul class="social-icon list-unstyled mb-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
