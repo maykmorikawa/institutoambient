@@ -95,46 +95,76 @@
 
                     </div>
 
-                    <!--<div class="col-lg-12 mb-2-9">
+                    <div class="col-lg-12 mb-2-9">
                         <div class="row">
                             <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
                                 <div class="inner-title">
                                     <h2 class="mb-3">Nossas Certificações</h2>
                                 </div>
                                 <ul class="list-style4">
-                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank">
+                                    <a href="/uploads/pdfs/certificado-04.pdf" target="_blank">
                                         <li>Qualificação de Utilidade Pública Estadual - UPE. N</li>
                                     </a>
                                 </ul>
                                 <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                    <a href="/uploads/pdfs/05_certificado.pdf" target="_blank">
                                         <li>Certificado CEBAS - IA</li>
                                     </a>
                                 </ul>
                                 <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                    <a href="/uploads/pdfs/06_certificado.pdf" target="_blank">
                                         <li>C. I. Amiga da Criança de Belém - IA</li>
                                     </a>
                                 </ul>
                                 <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                    <a href="/uploads/pdfs/07_certificado.pdf" target="_blank">
                                         <li>Certificado IA - APRENDIZ</li>
                                     </a>
                                 </ul>
                                 <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                    <a href="/uploads/pdfs/08_certificado.pdf" target="_blank">
                                         <li>Certificado COMDAC - IA</li>
                                     </a>
                                 </ul>
                                 <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                    <a href="/uploads/pdfs/09_certificado.pdf" target="_blank">
                                         <li>Certificado - COMDICA - Ananindeua - IA</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/10_certificado.pdf" target="_blank">
+                                        <li>Certificação CMAS - BELÉM</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/11_certificado.pdf" target="_blank">
+                                        <li>Mapa das OSC - IPEA - Declaração - INSTITUTO AMBIENT - IA</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/12_certificado.pdf" target="_blank">
+                                        <li>Declaração de Experiência e Capacidade Técnica - MPT</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/13_certificado.pdf" target="_blank">
+                                        <li>Ofício Certificação Funpapa - IA</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/14_certificado.pdf" target="_blank">
+                                        <li>Declaração de Capacidade Técnica - SEMUR - GOVERNO DO ESTADO DO PARÁ</li>
+                                    </a>
+                                </ul>
+                                <ul class="list-style4" style="margin-top: 10px">
+                                    <a href="/uploads/pdfs/15_certificado.pdf" target="_blank">
+                                        <li>Atestado de Capacidade Técnica - SUZANO - IA</li>
                                     </a>
                                 </ul>
                                 
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>
