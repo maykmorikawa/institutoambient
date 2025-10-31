@@ -37,6 +37,49 @@
 
 </section>
 
+<!-- PRESIDENTE
+        ================================================== -->
+<section class="aboutus">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
+                    <img src="<?= WWW; ?>/site/img/about/presidente.webp" alt="Presidente" class="rounded">
+                    <div class="box-left py-4 px-4 px-sm-4 px-md-5">
+                        <h3 class="text-secondary"><span class="countup">11</span></h3>
+                        <p class="lead mb-0 fw-bold text-dark">Anos de Fundação</p>
+                    </div>
+                    <span class="about-img d-none d-lg-inline-block">
+                        <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
+                            class="position-absolute left-n25 bottom-n20 z-index-minus2 ani-left-right">
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                <div class="about-title">
+                    <span class="text-secondary mb-2 d-block fw-bold text-uppercase">sobre nós</span>
+                    <h2 class="mb-1-6">MOBILIZAÇÃO E RESPONSABILIDADE SOCIAL</h2>
+                    <p class="fst-italic font-weight-600">O INSTITUTO AMBIENT trabalha de maneira proativa,
+                        articulando-se de acordo com o contexto social, orientando a parceria entre as organizações
+                        corporativas associadas ao Instituto, com o objetivo de facilitar o desenvolvimento da missão da
+                        entidade e consolidar grandes projetos de cunho social, educacional, assistencial e de saúde.
+                    </p>
+                    <p>Dessa forma, o IA pretende
+                        aperfeiçoar sua política e as práticas de responsabilidade social corporativa, fortalecendo-se
+                        para estar sempre à frente das atribuições inerentes aos projetos sociais administrados.</p>
+                    <ul class="list-style1 mb-4">
+                        <li>DIREITOS HUMANOS</li>
+                        <li>CAPACITAÇÃO PROFISSIONAL</li>
+                        <li>GESTÃO PÚBLICA</li>
+                        <li>PROGRAMA DE COMPLIANCE</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
 <!-- SERVICE DETAILS
@@ -54,8 +97,7 @@
                 <div class="row">
 
                     <div class="col-12 mb-2-9">
-
-                        <img src="<?= WWW; ?>/site/img/service/service-details.jpg" alt="..." class="rounded">
+                        <img src="<?= WWW; ?>/site/img/service/service-details.webp" alt="..." class="rounded">
 
                     </div>
 
