@@ -43,7 +43,7 @@
         <div class="processo">
             <div class="row justify-content-center">
                 <div class="col-auto text-center" style="margin-left: 186px;">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="..." class="img-fluid"
+                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
                         style="width: 450px; height: auto;">
                     <div class="mt-3">
                         <!-- Conteúdo adicional aqui -->

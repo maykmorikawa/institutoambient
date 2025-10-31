@@ -3,7 +3,7 @@
         ================================================== -->
 
 <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
-    data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
+    data-background="<?= WWW; ?>/site/img/banner/page-title.webp">
 
     <div class="container position-unset">
 
