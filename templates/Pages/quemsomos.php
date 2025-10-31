@@ -42,7 +42,7 @@
 <section>
     <div class="container">
         <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
-            <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossas</span>
+            <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossa</span>
             <h2 class="mb-0 h1">Missão, Visão e Valores</h2>
         </div>
         <div class="row mt-n1-3">
