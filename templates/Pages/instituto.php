@@ -1,7 +1,6 @@
 <!-- PAGE TITLE
 
         ================================================== -->
-
 <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
     data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
 
@@ -36,7 +35,6 @@
     </div>
 
 </section>
-
 <!-- PRESIDENTE
         ================================================== -->
 <section class="aboutus">
@@ -79,13 +77,9 @@
         </div>
     </div>
 </section>
-
-
-
 <!-- SERVICE DETAILS
 
         ================================================== -->
-
 <section>
 
     <div class="container">
