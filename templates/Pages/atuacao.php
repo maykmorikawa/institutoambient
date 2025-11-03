@@ -36,6 +36,138 @@
     </div>
 
 </section>
+
+<section class="pt-0">
+    <div class="container">
+        <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
+            <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Instituto Ambient</span>
+            <h2 class="mb-0 h1">Pressupostos Estratégicos</h2>
+        </div>
+        <div class="row wow fadeIn" data-wow-delay="200ms">
+            <div class="horizontaltab tab-style3">
+                
+                <ul class="resp-tabs-list hor_1 text-center">
+                    <li>Visão Geral</li>
+                    <li>Capacidade Protetiva</li>
+                    <li>Pedagogia Crítica</li>
+                    <li>Ações Intersetoriais</li>
+                    <li>Tecnologia e Inovação</li>
+                </ul>
+                
+                <div class="resp-tabs-container hor_1 p-0">
+                    
+                    <div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-lg-1 order-2">
+                                <div class="pe-0 pe-lg-3 pe-xl-4">
+                                    <h4 class="mb-3">Direcionamento do Planejamento 2025-2028</h4>
+                                    [cite_start]<p>Para o direcionamento do presente planejamento estratégico, o Instituto Ambient foca em premissas que são consideradas fundamentais e que deverão fazer a diferença na vida dos participantes[cite: 429].</p>
+                                    <ul class="list-style1 mb-4">
+                                        [cite_start]<li>Foco na vital habilidade protetiva das famílias[cite: 430].</li>
+                                        [cite_start]<li>Abordagens em conformidade com uma pedagogia sociocultural crítica[cite: 432].</li>
+                                        [cite_start]<li>Implementação de processos intersetoriais eficazes[cite: 434].</li>
+                                        [cite_start]<li>Utilização de processos e procedimentos tecnológicos inovadores[cite: 435].</li>
+                                    </ul>
+                                    <a href="#!" class="butn-style3 medium">Saiba Mais sobre a Missão</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                                <div class="box-shadow-large">
+                                    <img src="img/about/history1.jpg" alt="Imagem ilustrativa do planejamento estratégico.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <div class="box-shadow-large">
+                                    <img src="img/about/history2.jpg" alt="Imagem ilustrativa de uma família protegida e unida.">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ps-0 ps-lg-3 ps-xl-4">
+                                    <h4 class="mb-3">1. Capacidade Protetiva das Famílias</h4>
+                                    [cite_start]<p>As famílias são capazes de proteger [cite: 430][cite_start], pois intrinsecamente desenvolvem uma vital habilidade protetiva, na qual agregam processos dinâmicos de vínculos sociais e territoriais, qualificando suas relações familiares[cite: 430].</p>
+                                    <ul class="list-style1 mb-4">
+                                        [cite_start]<li>Foco no protagonismo familiar[cite: 431].</li>
+                                        [cite_start]<li>Promoção de ambientes seguros e protetivos[cite: 431].</li>
+                                    </ul>
+                                    <a href="#!" class="butn-style3 medium">Ver Eixo de Famílias</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-lg-1 order-2">
+                                <div class="pe-0 pe-lg-3 pe-xl-4">
+                                    <h4 class="mb-3">2. Pedagogia Sociocultural Crítica</h4>
+                                    [cite_start]<p>Abordagens em conformidade com uma pedagogia sociocultural crítica que perceba o outro como **sujeito**, jamais como objeto[cite: 432]. [cite_start]O foco é reconhecer o sujeito como constituinte de faculdade produtiva[cite: 433].</p>
+                                    <ul class="list-style1 mb-4">
+                                        [cite_start]<li>Potencial de engajamento nos processos[cite: 433].</li>
+                                        [cite_start]<li>Capacidade de questionar, investigar, planejar e sistematizar a vida[cite: 433].</li>
+                                        [cite_start]<li>Dinâmica criativa baseada no contexto social[cite: 433].</li>
+                                    </ul>
+                                    <a href="#!" class="butn-style3 medium">Nossos Valores</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                                <div class="box-shadow-large">
+                                    <img src="img/about/history3.jpg" alt="Imagem ilustrativa de aprendizado e desenvolvimento crítico.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <div class="box-shadow-large">
+                                    <img src="img/about/history4.jpg" alt="Imagem ilustrativa de diferentes setores trabalhando em conjunto.">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ps-0 ps-lg-3 ps-xl-4">
+                                    <h4 class="mb-3">3. Processos Intersetoriais</h4>
+                                    [cite_start]<p>Uma premissa fundamental é o desenvolvimento de processos intersetoriais, que correspondem à necessidade intrínseca de colaboração e comunicação eficaz entre diferentes setores[cite: 434].</p>
+                                    <ul class="list-style1 mb-4">
+                                        [cite_start]<li>Alcançar objetivos complexos[cite: 434].</li>
+                                        [cite_start]<li>Promover resultados mais abrangentes e sustentáveis[cite: 434].</li>
+                                    </ul>
+                                    <a href="#!" class="butn-style3 medium">Nossos Parceiros</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-lg-1 order-2">
+                                <div class="pe-0 pe-lg-3 pe-xl-4">
+                                    <h4 class="mb-3">4. Tecnologia e Inovação</h4>
+                                    [cite_start]<p>Implementar processos e procedimentos tecnológicos que garantirão ferramentas que potencializarão a transformação de ideias inovadoras em realidades [cite: 435][cite_start], por meio de linguagens artísticas e meios de comunicação[cite: 435].</p>
+                                    <ul class="list-style1 mb-4">
+                                        [cite_start]<li>Criação de produtos e serviços inovadores[cite: 436].</li>
+                                        [cite_start]<li>Desenvolvimento de metodologias e experiências[cite: 437].</li>
+                                    </ul>
+                                    <a href="#!" class="butn-style3 medium">Projetos de Inovação</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                                <div class="box-shadow-large">
+                                    <img src="img/about/history5.jpg" alt="Imagem ilustrativa de tecnologia e inovação.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- SERVICE
 ================================================== -->
 <section class="service-block pt-0">
