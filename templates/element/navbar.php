@@ -51,7 +51,7 @@
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
-                                        <li><a href="#">Áreas de Atuação</a></li>
+                                        <li><a href="/atuacao">Áreas de Atuação</a></li>
                                         <li><a href="#">Assistência Social</a></li>
                                         <li><a href="#">Educação</a></li>
                                         <li><a href="#">Meio Ambiente</a></li>
