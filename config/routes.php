@@ -92,21 +92,19 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
 
 
-      $builder->connect(
-        '/pages/projeto/{template_tipo}', // Rota que captura o tipo de template
-        ['controller' => 'Pages', 'action' => 'projeto'],
-        [
-            'template_tipo' => '[a-z0-9\_]+', // Regex: Garante que só aceite letras, números e underscore
-            'pass' => ['template_tipo']       // Diz ao CakePHP para passar este parâmetro para o método do Controller
-        ]
-      )->setExtensions(['template_tipo']); // Esta linha é Opcional, mas ajuda a esclarecer o elemento.
-      
-      // DICA: Você também pode usar uma rota mais simples para cobrir o caso sem o parâmetro:
-      // $routes->connect('/pages/projetos', ['controller' => 'Pages', 'action' => 'projetos']);
-      
-      // ...
+      // Arquivo: config/routes.php (Dentro do $routes->scope('/', function (RouteBuilder $builder) { ... });)
 
-      // 🔥 SUA ROTA PERSONALIZADA AQUI
+      $builder->connect(
+         '/pages/projetos[/{template_tipo}]', // 1. Corrigido para 'projetos' (PLURAL) e adicionado '[]' para opcional
+         ['controller' => 'Pages', 'action' => 'projetos'], // 2. Corrigido para a ação 'projetos' (PLURAL)
+         [
+            'template_tipo' => '[a-z0-9\_]+',
+            'pass' => ['template_tipo']      
+         ]
+      );
+
+      // Certifique-se de que esta rota venha ANTES da rota genérica do PagesController:
+      $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
       $builder->connect('/noticia/:slug', ['controller' => 'Posts', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]);
 
       $builder->connect('/certificados/verificar/:codigo_autenticacao',['controller' => 'Certificados', 'action' => 'verificar']);
