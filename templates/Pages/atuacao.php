@@ -159,7 +159,9 @@
                         </div>
                         
                         <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                           <a href="/pages/eixos1" class="butn-style3 medium">
+                                Saiba Mais
+                            </a>
                         </div>
                     </div>
                 </a>
