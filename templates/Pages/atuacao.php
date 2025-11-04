@@ -151,15 +151,15 @@
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
                 <a href="#!" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
+                        
                         <div>
                              <i class="ti-heart display-10 mb-4 d-block"></i> 
                              <h3 class="h5 mb-3">EIXO 01: Potencialização da capacidade protetiva das famílias em situação de vulnerabilidade social</h3>
-                             <p class="mb-4">**Objetivo:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo.</p>
+                             <p class="mb-3">**Objetivo:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo.</p>
                         </div>
                         
-                        <div class="d-flex justify-content-center mt-3">
-                             <span class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
-                                 class="ti-arrow-right ms-2 align-middle display-30"></i></span>
+                        <div class="mt-4">
+                            <span class="butn-style3 medium">Saiba Mais</span>
                         </div>
                     </div>
                 </a>
@@ -171,12 +171,11 @@
                         <div>
                             <i class="ti-money display-10 mb-4 d-block"></i> 
                             <h3 class="h5 mb-3">EIXO 02: Proporcionando Geração de emprego e renda</h3>
-                            <p class="mb-4">**Objetivo:** Promover ações de qualificação e inserção no mundo do trabalho, com fomento a ações e serviços com uso de tecnologias inovadoras e negócios sociais.</p>
+                            <p class="mb-3">**Objetivo:** Promover ações de qualificação e inserção no mundo do trabalho, com fomento a ações e serviços com uso de tecnologias inovadoras e negócios sociais.</p>
                         </div>
                         
-                        <div class="d-flex justify-content-center mt-3">
-                             <span class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
-                                 class="ti-arrow-right ms-2 align-middle display-30"></i></span>
+                        <div class="mt-4">
+                            <span class="butn-style3 medium">Saiba Mais</span>
                         </div>
                     </div>
                 </a>
@@ -188,12 +187,11 @@
                         <div>
                             <i class="ti-sharethis display-10 mb-4 d-block"></i> 
                             <h3 class="h5 mb-3">EIXO 03: Redes e assessoramento institucional</h3>
-                            <p class="mb-4">**Objetivo:** Prestar serviços de assessoramento voltados ao fortalecimento das organizações da sociedade civil, movimentos sociais e lideranças comunitárias.</p>
+                            <p class="mb-3">**Objetivo:** Prestar serviços de assessoramento voltados ao fortalecimento das organizações da sociedade civil, movimentos sociais e lideranças comunitárias.</p>
                         </div>
                         
-                        <div class="d-flex justify-content-center mt-3">
-                             <span class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
-                                 class="ti-arrow-right ms-2 align-middle display-30"></i></span>
+                        <div class="mt-4">
+                            <span class="butn-style3 medium">Saiba Mais</span>
                         </div>
                     </div>
                 </a>
@@ -205,12 +203,11 @@
                         <div>
                              <i class="ti-plus display-10 mb-4 d-block"></i> 
                              <h3 class="h5 mb-3">EIXO 04: Saúde e bem estar</h3>
-                             <p class="mb-4">**Objetivo:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida.</p>
+                             <p class="mb-3">**Objetivo:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida.</p>
                         </div>
                         
-                        <div class="d-flex justify-content-center mt-3">
-                             <span class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
-                                 class="ti-arrow-right ms-2 align-middle display-30"></i></span>
+                        <div class="mt-4">
+                            <span class="butn-style3 medium">Saiba Mais</span>
                         </div>
                     </div>
                 </a>
