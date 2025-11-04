@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/familia-protetiva.jpg" alt="Imagem ilustrativa de uma família unida e protegida." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/familia-protetiva.png" alt="Imagem ilustrativa de uma família unida e protegida." class="img-fluid">
                     </div>
                 </div>
             </div>
