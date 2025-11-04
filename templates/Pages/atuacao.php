@@ -156,7 +156,8 @@
                         <p class="mb-4">**Objetivo:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo.</p>
                         
                         <div class="d-flex justify-content-center">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                             <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                         </div>
                     </div>
                 </a>
@@ -170,7 +171,8 @@
                         <p class="mb-4">**Objetivo:** Promover ações de qualificação e inserção no mundo do trabalho, com fomento a ações e serviços com uso de tecnologias inovadoras e negócios sociais.</p>
                         
                         <div class="d-flex justify-content-center">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                         </div>
                     </div>
                 </a>
@@ -184,7 +186,8 @@
                         <p class="mb-4">**Objetivo:** Prestar serviços de assessoramento voltados ao fortalecimento das organizações da sociedade civil, movimentos sociais e lideranças comunitárias.</p>
                         
                         <div class="d-flex justify-content-center">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                             <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                         </div>
                     </div>
                 </a>
@@ -198,7 +201,8 @@
                         <p class="mb-4">**Objetivo:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida.</p>
                         
                         <div class="d-flex justify-content-center">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                         </div>
                     </div>
                 </a>
