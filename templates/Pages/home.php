@@ -3,7 +3,7 @@
 <section class="p-0 top-position1">
     <div class="slider-fade owl-carousel owl-theme w-100">
         <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg left-overlay-dark"
-            data-overlay-dark="85" data-background="<?= WWW; ?>/site/img/banner/slide-03.webp">
+            data-overlay-dark="1" data-background="<?= WWW; ?>/site/img/banner/slide-03.webp">
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
