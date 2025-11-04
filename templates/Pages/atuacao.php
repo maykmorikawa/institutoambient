@@ -58,7 +58,7 @@
                             <li>Foco no protagonismo e autonomia familiar.</li>
                             <li>Promoção de ambientes seguros e protetivos.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Saiba Mais</a>
+                        <!--<a href="#!" class="butn-style3 medium">Saiba Mais</a>-->
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
@@ -83,7 +83,7 @@
                             <li>O foco é o sujeito com faculdade produtiva.</li>
                             <li>Estímulo à dinâmica criativa e ao questionamento.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Nossa Abordagem</a>
+                        <!--<a href="#!" class="butn-style3 medium">Nossa Abordagem</a>-->
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                             <li>Comunicação e colaboração eficazes.</li>
                             <li>Promoção de resultados abrangentes e sustentáveis.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Nossas Áreas</a>
+                        <!--<a href="#!" class="butn-style3 medium">Nossas Áreas</a>-->
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
@@ -123,7 +123,7 @@
                             <li>Uso de linguagens artísticas e meios de comunicação.</li>
                             <li>Criação de produtos, serviços, metodologias e experiências inovadoras.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Nossos Projetos</a>
+                        <!--<a href="#!" class="butn-style3 medium">Nossos Projetos</a>-->
                     </div>
                 </div>
             </div>
