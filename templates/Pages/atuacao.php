@@ -71,7 +71,7 @@
             <div class="row align-items-center mb-5 pb-4 wow fadeIn" data-wow-delay="400ms">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/pedagogia-critica.png" alt="Imagem ilustrativa de aprendizado e desenvolvimento crítico." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/pedagogia-critica.jpg" alt="Imagem ilustrativa de aprendizado e desenvolvimento crítico." class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
