@@ -151,6 +151,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center">
                         <i class="ti-heart display-10 mb-4 d-block"></i> <h3 class="h5 mb-3">EIXO 01: Potencialização da capacidade protetiva das famílias em situação de vulnerabilidade social</h3>
                         <p class="mb-0">**Objetivo:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo.</p>
+                        <a href="#!" class="butn-style3 medium">Saiba Mais</a>
                     </div>
                 </a>
             </div>
