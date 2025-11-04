@@ -48,7 +48,7 @@
         
         <div class="row">
 
-            <div class="row align-items-center mb-5 pb-4 wow fadeIn" data-wow-delay="200ms">
+            <div class="row align-items-center mb-9 pb-9 wow fadeIn" data-wow-delay="200ms">
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="pe-0 pe-lg-3 pe-xl-4">
                         <h4 class="mb-3 text-secondary">1. Capacidade Protetiva das Famílias</h4>
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="row align-items-center mb-5 pb-4 wow fadeIn" data-wow-delay="400ms">
+            <div class="row align-items-center mb-9 pb-9 wow fadeIn" data-wow-delay="400ms">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
                         <img src="<?= WWW; ?>/site/img/about/pedagogia-critica.jpg" alt="Imagem ilustrativa de aprendizado e desenvolvimento crítico." class="img-fluid">
@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="row align-items-center mb-5 pb-4 wow fadeIn" data-wow-delay="600ms">
+            <div class="row align-items-center mb-9 pb-9 wow fadeIn" data-wow-delay="600ms">
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="pe-0 pe-lg-3 pe-xl-4">
                         <h4 class="mb-3 text-secondary">3. Processos Intersetoriais</h4>
