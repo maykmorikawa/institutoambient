@@ -91,20 +91,11 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/listar_blogs', ['controller' => 'Posts', 'action' => 'listblog']);
       $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
 
+      $builder->connect('/lado-a-lado', ['controller' => 'Pages', 'action' => 'display', 'ladoalado']);
 
-      // Arquivo: config/routes.php (Dentro do $routes->scope('/', function (RouteBuilder $builder) { ... });)
+      
 
-      $builder->connect(
-         '/pages/projetos[/{template_tipo}]', // 1. Corrigido para 'projetos' (PLURAL) e adicionado '[]' para opcional
-         ['controller' => 'Pages', 'action' => 'projetos'], // 2. Corrigido para a ação 'projetos' (PLURAL)
-         [
-            'template_tipo' => '[a-z0-9\_]+',
-            'pass' => ['template_tipo']      
-         ]
-      );
-
-      // Certifique-se de que esta rota venha ANTES da rota genérica do PagesController:
-      $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+      // 🔥 SUA ROTA PERSONALIZADA AQUI
       $builder->connect('/noticia/:slug', ['controller' => 'Posts', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]);
 
       $builder->connect('/certificados/verificar/:codigo_autenticacao',['controller' => 'Certificados', 'action' => 'verificar']);

@@ -117,32 +117,17 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('site');
             
     }
-    public function projeto() 
+    public function projetos() 
     {
         $this->viewBuilder()->setLayout('site');
             
     }
-
-    public function projetos(?string $template_tipo = null)
+    public function ladoalado() 
     {
-        // 1. Definição do Layout (Mantém o mesmo para ambas as versões)
         $this->viewBuilder()->setLayout('site');
-
-        // 2. Lógica Condicional para Renderização do Template
-        if ($template_tipo === 'lado-a-lado') {
             
-            // Se o URL for /pages/projetos/lado-a-lado, define o template específico.
-            $this->viewBuilder()->setTemplate('projetos_lado_a_lado');
-
-            // O CakePHP 5.1 irá procurar por templates/Pages/projetos_lado_a_lado.php
-            
-        } 
-        
-        // Se a condição acima não for atendida (ex: URL for apenas /pages/projetos), 
-        // o CakePHP automaticamente usará o template padrão: templates/Pages/projetos.php.
-        
-        // DICA: Em CakePHP 5.x, o método render() é frequentemente omitido para renderização automática.
     }
+    
     public function atuacao() 
     {
         $this->viewBuilder()->setLayout('site');
