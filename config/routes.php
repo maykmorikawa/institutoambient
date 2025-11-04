@@ -96,7 +96,7 @@ return function (RouteBuilder $routes): void {
 
       $builder->connect(
          '/pages/projetos[/{template_tipo}]', // 1. Corrigido para 'projetos' (PLURAL) e adicionado '[]' para opcional
-         ['controller' => 'Pages', 'action' => 'projeto'], // 2. Corrigido para a ação 'projetos' (PLURAL)
+         ['controller' => 'Pages', 'action' => 'projetos'], // 2. Corrigido para a ação 'projetos' (PLURAL)
          [
             'template_tipo' => '[a-z0-9\_]+',
             'pass' => ['template_tipo']      

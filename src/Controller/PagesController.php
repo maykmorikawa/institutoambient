@@ -117,13 +117,13 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('site');
             
     }
-    public function projetos() 
+    public function projeto() 
     {
         $this->viewBuilder()->setLayout('site');
             
     }
 
-    public function projeto(?string $template_tipo = null)
+    public function projetos(?string $template_tipo = null)
     {
         // 1. Definição do Layout (Mantém o mesmo para ambas as versões)
         $this->viewBuilder()->setLayout('site');
@@ -132,7 +132,7 @@ class PagesController extends AppController
         if ($template_tipo === 'lado-a-lado') {
             
             // Se o URL for /pages/projetos/lado-a-lado, define o template específico.
-            $this->viewBuilder()->setTemplate('projeto_lado_a_lado');
+            $this->viewBuilder()->setTemplate('projetos_lado_a_lado');
 
             // O CakePHP 5.1 irá procurar por templates/Pages/projetos_lado_a_lado.php
             
