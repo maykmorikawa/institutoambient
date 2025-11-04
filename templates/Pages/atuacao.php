@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/intersetorial.jpg" alt="Imagem ilustrativa de diferentes setores trabalhando em conjunto." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/intersetorial.png" alt="Imagem ilustrativa de diferentes setores trabalhando em conjunto." class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
             <div class="row align-items-center wow fadeIn" data-wow-delay="800ms">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/tecnologia-inovacao.jpg" alt="Imagem ilustrativa de tecnologia e inovação." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/tecnologia-inovacao.png" alt="Imagem ilustrativa de tecnologia e inovação." class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
