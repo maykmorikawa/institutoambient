@@ -91,6 +91,21 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/listar_blogs', ['controller' => 'Posts', 'action' => 'listblog']);
       $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
 
+
+      $builder->connect(
+        '/pages/projeto/{template_tipo}', // Rota que captura o tipo de template
+        ['controller' => 'Pages', 'action' => 'projeto'],
+        [
+            'template_tipo' => '[a-z0-9\_]+', // Regex: Garante que só aceite letras, números e underscore
+            'pass' => ['template_tipo']       // Diz ao CakePHP para passar este parâmetro para o método do Controller
+        ]
+      )->setExtensions(['template_tipo']); // Esta linha é Opcional, mas ajuda a esclarecer o elemento.
+      
+      // DICA: Você também pode usar uma rota mais simples para cobrir o caso sem o parâmetro:
+      // $routes->connect('/pages/projetos', ['controller' => 'Pages', 'action' => 'projetos']);
+      
+      // ...
+
       // 🔥 SUA ROTA PERSONALIZADA AQUI
       $builder->connect('/noticia/:slug', ['controller' => 'Posts', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z0-9\-]+', '_routeClass' => Route::class]);
 
