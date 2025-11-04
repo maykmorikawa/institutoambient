@@ -58,12 +58,12 @@
                             <li>Foco no protagonismo e autonomia familiar.</li>
                             <li>Promoção de ambientes seguros e protetivos.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Saiba Mais</a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/familia-protetiva.jpg" alt="Imagem ilustrativa de uma família unida e protegida." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/familia-protetiva.png" alt="Imagem ilustrativa de uma família unida e protegida." class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                             <li>O foco é o sujeito com faculdade produtiva.</li>
                             <li>Estímulo à dinâmica criativa e ao questionamento.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Nossa Abordagem</a>
+                        
                     </div>
                 </div>
             </div>
@@ -98,12 +98,12 @@
                             <li>Comunicação e colaboração eficazes.</li>
                             <li>Promoção de resultados abrangentes e sustentáveis.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Nossas Áreas</a>
+                       
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/intersetorial.jpg" alt="Imagem ilustrativa de diferentes setores trabalhando em conjunto." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/intersetorial.png" alt="Imagem ilustrativa de diferentes setores trabalhando em conjunto." class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
             <div class="row align-items-center wow fadeIn" data-wow-delay="800ms">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="box-shadow-large">
-                        <img src="<?= WWW; ?>/site/img/about/tecnologia-inovacao.jpg" alt="Imagem ilustrativa de tecnologia e inovação." class="img-fluid">
+                        <img src="<?= WWW; ?>/site/img/about/tecnologia-inovacao.png" alt="Imagem ilustrativa de tecnologia e inovação." class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -123,7 +123,7 @@
                             <li>Uso de linguagens artísticas e meios de comunicação.</li>
                             <li>Criação de produtos, serviços, metodologias e experiências inovadoras.</li>
                         </ul>
-                        <a href="#!" class="butn-style3 medium">Nossos Projetos</a>
+                        
                     </div>
                 </div>
             </div>
