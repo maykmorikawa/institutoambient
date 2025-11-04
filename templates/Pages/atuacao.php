@@ -182,7 +182,7 @@
             </div>
             
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms">
-                <a href="#!" class="card card-style2 border-0 h-100">
+                <a href="/pages/eixos3" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
                         <div>
                             <i class="ti-sharethis display-10 mb-4 d-block"></i> 
@@ -198,7 +198,7 @@
             </div>
             
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
-                <a href="#!" class="card card-style2 border-0 h-100">
+                <a href="/pages/eixos4" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
                         <div>
                              <i class="ti-plus display-10 mb-4 d-block"></i> 
