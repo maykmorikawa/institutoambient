@@ -69,54 +69,54 @@
             
             <div class="col-lg-7 col-xl-8">
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
-                    <h2 class="h3 mb-4">Quick Contact</h2>
+                    <h2 class="h3 mb-4">Formulário Para Contato</h2>
                     <form class="quform" action="quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
                         <div class="quform-elements">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="quform-element form-group">
-                                        <label for="name">Your Name <span class="quform-required">*</span></label>
+                                        <label for="name">Seu Nome <span class="quform-required">*</span></label>
                                         <div class="quform-input">
-                                            <input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+                                            <input class="form-control" id="name" type="text" name="name" placeholder="Seu nome aqui" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="quform-element form-group">
-                                        <label for="email">Your Email <span class="quform-required">*</span></label>
+                                        <label for="email">Seu Email <span class="quform-required">*</span></label>
                                         <div class="quform-input">
-                                            <input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+                                            <input class="form-control" id="email" type="text" name="email" placeholder="Seu email aqui" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="quform-element form-group">
-                                        <label for="subject">Your Subject <span class="quform-required">*</span></label>
+                                        <label for="subject">Seu Assunto <span class="quform-required">*</span></label>
                                         <div class="quform-input">
-                                            <input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
+                                            <input class="form-control" id="subject" type="text" name="subject" placeholder="Seu assunto aqui" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="quform-element form-group">
-                                        <label for="phone">Contact Number</label>
+                                        <label for="phone">Seu Número de Contato</label>
                                         <div class="quform-input">
-                                            <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+                                            <input class="form-control" id="phone" type="text" name="phone" placeholder="Seu telefone aqui" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="quform-element form-group">
-                                        <label for="message">Message <span class="quform-required">*</span></label>
+                                        <label for="message">Mensagem <span class="quform-required">*</span></label>
                                         <div class="quform-input">
-                                            <textarea class="form-control h-auto" id="message" name="message" rows="3" placeholder="Tell us a few words"></textarea>
+                                            <textarea class="form-control h-auto" id="message" name="message" rows="3" placeholder="Diga-nos algumas palavras"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-12">
                                     <div class="quform-submit-inner">
-                                        <button class="butn-style3" type="submit"><span>Send Message</span></button>
+                                        <button class="butn-style3" type="submit"><span>Enviar Mensagem</span></button>
                                     </div>
                                     <div class="quform-loading-wrap text-start"><span class="quform-loading"></span></div>
                                 </div>
