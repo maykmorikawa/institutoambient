@@ -144,4 +144,4 @@
     </div>
 </section>
 
-<iframe class="map" id="gmap_canvas" src="https://maps.google.com/maps?q=-1.411353533477536, -48.47271124597468&z=15&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+<iframe class="map" id="gmap_canvas" src="https://maps.google.com/maps?q=-1.4116184359091022, -48.47273636380031&z=15&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
