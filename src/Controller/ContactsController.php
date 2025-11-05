@@ -19,7 +19,7 @@ class ContactsController extends AppController
 
     public function index()
     {
-        // Renderiza o formulário
+       $this->viewBuilder()->setLayout('site');
     }
 
     public function enviar()

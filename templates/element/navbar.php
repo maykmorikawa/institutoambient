@@ -46,7 +46,7 @@
                                         <li><a href="/conselho">Conselho</a></li>
                                         <li><a href="#">Equipe</a></li>
                                         <li><a href="/transparencia">Transparência</a></li>
-                                        <li><a href="#">Dedução de Imposto de Renda</a></li>
+                                        <li><a href="/documentos">Documentos IA</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
