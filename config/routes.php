@@ -93,7 +93,7 @@ return function (RouteBuilder $routes): void {
 
       $builder->connect('/lado-a-lado', ['controller' => 'Pages', 'action' => 'display', 'ladoalado']);
       $builder->connect('/documentos', ['controller' => 'Pages', 'action' => 'display', 'documentos']);
-      $builder->connect('/contato', ['controller' => 'Pages', 'action' => 'display', 'contato']);
+      //$builder->connect('/contato', ['controller' => 'Pages', 'action' => 'display', 'contato']);
 
       $builder->connect('/contato', ['controller' => 'Contacts', 'action' => 'index']);
       $builder->connect('/contato/enviar', ['controller' => 'Contatos', 'action' => 'enviar']);
