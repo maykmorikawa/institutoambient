@@ -1,40 +1,41 @@
 <?php
 
-namespace App\Controller;
+declare(strict_types=1);
 
-use Cake\Mailer\Mailer;
-use Cake\I18n\Time;
-use Cake\Http\Exception\MethodNotAllowedException; // Usar para métodos não permitidos
+namespace App\Controller;
 
 class ContactsController extends AppController
 {
-    // O CakePHP 4+ exige que você chame o loadModel,
-    // ou defina $this->loadModel('Contacts') na initialize().
     public function initialize(): void
     {
         parent::initialize();
-        // Garante que o modelo Contacts estará disponível no Controller
+
+        // Garante que o modelo Contacts está carregado
         $this->loadModel('Contacts');
+
+        // Permite acesso público (caso esteja usando Authentication)
+        $this->Authentication?->allowUnauthenticated(['index', 'enviar']);
     }
 
     public function index()
     {
-        // Esta action apenas renderiza a view
+        // Renderiza o formulário
     }
 
-    /**
-     * Action responsável por salvar os dados no BD e enviar o e-mail.
-     */
     public function enviar()
     {
         if ($this->request->is('post')) {
-            $contact = $this->Contacts->newEntity($this->request->getData());
+            $contact = $this->Contacts->newEmptyEntity();
+            $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
+
             if ($this->Contacts->save($contact)) {
                 $this->Flash->success('Mensagem enviada com sucesso!');
-            } else {
-                $this->Flash->error('Não foi possível enviar sua mensagem. Tente novamente.');
+                return $this->redirect(['action' => 'index']);
             }
+
+            $this->Flash->error('Não foi possível enviar sua mensagem. Tente novamente.');
         }
+
         return $this->redirect(['action' => 'index']);
     }
 }
