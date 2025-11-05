@@ -10,8 +10,8 @@ class ContactsController extends AppController
     {
         parent::initialize();
 
-        // Garante que o modelo Contacts está carregado
-        $this->loadModel('Contacts');
+      
+      
 
         // Permite acesso público (caso esteja usando Authentication)
         $this->Authentication?->allowUnauthenticated(['index', 'enviar']);
