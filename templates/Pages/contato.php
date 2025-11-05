@@ -3,11 +3,13 @@
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Contato</h1> </div>
+                    <h1>Contato</h1>
+                </div>
                 <div class="col-md-12">
                     <ul class="ps-0">
                         <li><a href="/">Home</a></li>
-                        <li><a href="#!">Contato</a></li> </ul>
+                        <li><a href="#!">Contato</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -19,7 +21,7 @@
         <div class="row">
             <div class="col-lg-5 col-xl-4 mb-2-9 mb-lg-0">
                 <div class="pe-lg-3 mt-n1-9">
-                    
+
                     <div class="card card-style8 mt-1-9">
                         <div class="card-body p-1-9">
                             <div class="media">
@@ -34,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card card-style8 mt-1-9">
                         <div class="card-body p-1-9">
                             <div class="media">
@@ -45,11 +47,11 @@
                                 <div class="media-body">
                                     <h4 class="h5">Telefone</h4>
                                     <span class="d-block">(91) 3086-2129</span>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card card-style8 mt-1-9">
                         <div class="card-body p-1-9">
                             <div class="media">
@@ -60,18 +62,17 @@
                                 <div class="media-body">
                                     <h4 class="h5">E-mail</h4>
                                     <span class="d-block">contato@institutoambient.org.br</span>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-7 col-xl-8">
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Formulário Para Contato</h2>
-                    <form class="quform" action="<?= $this->Url->build(['controller' => 'Contatos', 'action' => 'enviar']) ?>" method="post" enctype="multipart/form-data">
-
+                    <form action="<?= $this->Url->build('/contatos/enviar') ?>" method="post" enctype="multipart/form-data">
                         <div class="quform-elements">
                             <div class="row">
                                 <div class="col-md-6">
@@ -114,14 +115,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-md-12">
                                     <div class="quform-submit-inner">
                                         <button class="butn-style3" type="submit"><span>Enviar Mensagem</span></button>
                                     </div>
                                     <div class="quform-loading-wrap text-start"><span class="quform-loading"></span></div>
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
