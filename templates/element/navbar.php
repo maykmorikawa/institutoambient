@@ -44,7 +44,6 @@
                                         <li><a href="/o_instituto_ambient">O Instituto Ambiente</a></li>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
                                         <li><a href="/conselho">Conselho</a></li>
-                                        <li><a href="#">Equipe</a></li>
                                         <li><a href="/transparencia">Transparência</a></li>
                                         <li><a href="/documentos">Documentos IA</a></li>
                                     </ul>
@@ -52,21 +51,13 @@
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
                                         <li><a href="/atuacao">Áreas de Atuação</a></li>
-                                        <li><a href="#">Assistência Social</a></li>
-                                        <li><a href="#">Educação</a></li>
-                                        <li><a href="#">Meio Ambiente</a></li>
                                         <li><a href="captacao">Projetos/Programas em captação de recursos</a></li>
-                                        <li><a href="#">Projetos/Programas em Execução</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Noticias</a>
                                     <ul>
                                         <li><a href="/listar_blogs">blog</a></li>
-                                        <li><a href="#">Na Mídia</a></li>
-                                        <li><a href="#">Revistas</a></li>
-                                        <li><a href="/galeria_de_videos">Galeria de Vídeos</a></li>
-                                        <li><a href="#">Imprensa</a></li>
-                                        <li><a href="#">Acesso à Informação</a></li>
+                                        <li><a href="/galeria_de_videos">Galeria de Vídeos</a></li>                                        
                                     </ul>
                                 </li>
                                 <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe Agora</a>  
