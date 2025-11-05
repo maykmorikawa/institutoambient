@@ -47,7 +47,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Captação de recursos</h1>
+                    <h1>Porgeto Lado a Lado</h1>
 
                 </div>
 
@@ -57,7 +57,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Captação de recursos</a></li>
+                        <li><a href="#!">Porgeto Lado a Lado</a></li>
 
                     </ul>
 
