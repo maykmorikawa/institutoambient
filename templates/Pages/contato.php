@@ -113,22 +113,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="quform-element">
-                                        <div class="form-group">
-                                            <div class="quform-input">
-                                                <input class="form-control" id="type_the_word" type="text" name="type_the_word" placeholder="Type the below word" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="quform-captcha">
-                                                <div class="quform-captcha-inner">
-                                                    <img src="quform/images/captcha/courier-new-light.png" alt="...">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-md-12">
                                     <div class="quform-submit-inner">
                                         <button class="butn-style3" type="submit"><span>Send Message</span></button>
@@ -144,4 +129,4 @@
     </div>
 </section>
 
-<iframe class="map" id="gmap_canvas" src="https://maps.google.com/maps?q=-1.4116184359091022, -48.47273636380031&z=15&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+<iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.28795043570457!2d-48.472912722671936!3d-1.4117716490946033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48bff1cccc119%3A0x8b7cc84faaba4d48!2sInstituto%20Ambient!5e0!3m2!1spt-BR!2sbr!4v1762305750546!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
