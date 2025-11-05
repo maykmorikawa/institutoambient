@@ -70,6 +70,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe Agora</a>  
+                                <li><a href="/contato">Contato</a>  
                             </ul>
                             <!-- end menu area -->
 
