@@ -76,7 +76,7 @@
                     <?= $this->Form->create(null, [
                         'url' => ['controller' => 'Contacts', 'action' => 'enviar'],
                         'type' => 'post',
-                        'class' => 'quform no-ajax', // ⬅️ adiciona "no-ajax"
+                        'class' => 'contact-form-cakephp', // ⬅️ adiciona "no-ajax"
                         'enctype' => 'multipart/form-data'
                     ]) ?>
 
