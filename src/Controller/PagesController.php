@@ -147,6 +147,11 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('site');
             
     }
+    public function contato() 
+    {
+        $this->viewBuilder()->setLayout('site');
+            
+    }
     
     public function atuacao() 
     {
