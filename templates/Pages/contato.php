@@ -70,7 +70,8 @@
             <div class="col-lg-7 col-xl-8">
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Formulário Para Contato</h2>
-                    <form class="quform" action="quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
+                    <form class="quform" action="<?= $this->Url->build(['controller' => 'Contatos', 'action' => 'enviar']) ?>" method="post" enctype="multipart/form-data">
+
                         <div class="quform-elements">
                             <div class="row">
                                 <div class="col-md-6">
