@@ -73,41 +73,84 @@
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Formulário Para Contato</h2>
 
-                   <?= $this->Flash->render() ?>
+                    <?= $this->Form->create(null, [
+                        'url' => ['controller' => 'Contacts', 'action' => 'enviar'],
+                        'type' => 'post',
+                        'class' => 'quform',
+                        'enctype' => 'multipart/form-data'
+                    ]) ?>
 
-                    <form class="quform" action="<?= $this->Url->build(['action' => 'enviar']) ?>" method="post" enctype="multipart/form-data">
+                    <div class="quform-elements">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Seu Nome <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="name" placeholder="Seu nome aqui" required>
+                                <div class="quform-element form-group">
+                                    <?= $this->Form->control('name', [
+                                        'label' => 'Seu Nome <span class="quform-required">*</span>',
+                                        'escape' => false,
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Seu nome aqui'
+                                    ]) ?>
+                                </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Seu Email <span class="text-danger">*</span></label>
-                                <input class="form-control" type="email" name="email" placeholder="Seu email aqui" required>
+                                <div class="quform-element form-group">
+                                    <?= $this->Form->control('email', [
+                                        'label' => 'Seu Email <span class="quform-required">*</span>',
+                                        'escape' => false,
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Seu email aqui'
+                                    ]) ?>
+                                </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Assunto <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="subject" placeholder="Seu assunto aqui" required>
+                                <div class="quform-element form-group">
+                                    <?= $this->Form->control('subject', [
+                                        'label' => 'Seu Assunto <span class="quform-required">*</span>',
+                                        'escape' => false,
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Seu assunto aqui'
+                                    ]) ?>
+                                </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Telefone</label>
-                                <input class="form-control" type="text" name="phone" placeholder="Seu telefone aqui">
+                                <div class="quform-element form-group">
+                                    <?= $this->Form->control('phone', [
+                                        'label' => 'Seu Número de Contato',
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Seu telefone aqui'
+                                    ]) ?>
+                                </div>
                             </div>
 
                             <div class="col-md-12">
-                                <label>Mensagem <span class="text-danger">*</span></label>
-                                <textarea class="form-control" name="message" rows="3" placeholder="Diga-nos algumas palavras" required></textarea>
+                                <div class="quform-element form-group">
+                                    <?= $this->Form->control('message', [
+                                        'type' => 'textarea',
+                                        'label' => 'Mensagem <span class="quform-required">*</span>',
+                                        'escape' => false,
+                                        'class' => 'form-control h-auto',
+                                        'rows' => 3,
+                                        'placeholder' => 'Diga-nos algumas palavras'
+                                    ]) ?>
+                                </div>
                             </div>
 
-                            <div class="col-md-12 mt-3">
-                                <button class="btn btn-primary" type="submit">Enviar Mensagem</button>
+                            <div class="col-md-12">
+                                <div class="quform-submit-inner">
+                                    <?= $this->Form->button('<span>Enviar Mensagem</span>', [
+                                        'class' => 'butn-style3',
+                                        'escapeTitle' => false
+                                    ]) ?>
+                                </div>
+                                <div class="quform-loading-wrap text-start">
+                                    <span class="quform-loading"></span>
+                                </div>
                             </div>
                         </div>
-                    </form>
-
+                    </div>
                     <?= $this->Form->end() ?>
                 </div>
             </div>
