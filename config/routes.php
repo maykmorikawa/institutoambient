@@ -92,10 +92,9 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
 
       $builder->connect('/lado-a-lado', ['controller' => 'Pages', 'action' => 'display', 'ladoalado']);
-      $builder->connect('/contato', ['controller' => 'Pages', 'action' => 'display', 'contato']);
-
+      
       $builder->connect('/contato', ['controller' => 'Contacts', 'action' => 'index']);
-      $builder->connect('/contato/enviar', ['controller' => 'Contacts', 'action' => 'enviar']);
+      $builder->connect('/contato/enviar', ['controller' => 'Contatos', 'action' => 'enviar']);
 
 
       
