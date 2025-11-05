@@ -72,11 +72,11 @@
             <div class="col-lg-7 col-xl-8">
                 <div class="contact-form p-4 p-md-5 ms-xl-3">
                     <h2 class="h3 mb-4">Formulário Para Contato</h2>
-
+                    <?= $this->Flash->render() ?>
                     <?= $this->Form->create(null, [
                         'url' => ['controller' => 'Contacts', 'action' => 'enviar'],
                         'type' => 'post',
-                        'class' => 'quform',
+                        'class' => 'quform no-ajax', // ⬅️ adiciona "no-ajax"
                         'enctype' => 'multipart/form-data'
                     ]) ?>
 
