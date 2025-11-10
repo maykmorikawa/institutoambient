@@ -37,38 +37,30 @@
 
                             <!-- start menu area -->
                             <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
-                                <!--<li><a href="/">Home</a></li>-->
+                                <li><a href="/">Home</a></li>
                                 <li>
                                     <a href="#">Institucional</a>
                                     <ul>
+                                        <li><a href="/o_instituto_ambient">O Instituto Ambiente</a></li>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
-                                        <li><a href="/o_instituto_ambient">Nossa História</a></li>
-                                        <li><a href="#">Missão, Visão, Valores</a></li>
-                                        <li><a href="/documentos">Compliance/Privacidade</a></li>
-                                       
+                                        <li><a href="/conselho">Conselho</a></li>
+                                        <li><a href="/transparencia">Transparência</a></li>
+                                        <li><a href="/documentos">Documentos IA</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
                                         <li><a href="/atuacao">Áreas de Atuação</a></li>
-                                        <li><a href="captacao">Eixos Estratégicos</a></li>
+                                        <li><a href="captacao">Projetos/Programas em captação de recursos</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#!">Nossos Parceiros e Parceiras</a>
+                                <li><a href="#!">Noticias</a>
                                     <ul>
-                                        <li><a href="/conselho">Governança</a></li>
-                                        <li><a href="#">Nossos Parceiros</a></li>
-                                        <li><a href="#">Trabalhe Conosco</a></li>
-                                        <li><a href="#">Seja Voluntário</a></li>
+                                        <li><a href="/listar_blogs">blog</a></li>
+                                        <li><a href="/galeria_de_videos">Galeria de Vídeos</a></li>                                        
                                     </ul>
                                 </li>
-                                
-                                <li><a href="#!">Doe Agora</a>
-                                <ul>
-                                    <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe</li>
-                                    <li><a href="#">Imposto de Renda</a></li>
-                                </ul>
-                                </li>
+                                <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe Agora</a>  
                                 <li><a href="/contato">Contato</a>  
                             </ul>
                             <!-- end menu area -->
