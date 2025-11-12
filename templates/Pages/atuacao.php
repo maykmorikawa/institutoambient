@@ -35,6 +35,83 @@
     </div>
 
 </section>
+
+<!-- SERVICOS
+        ================================================== -->
+<section class="pt-0">
+    <div class="container">
+        <div class="row mt-n2-2">
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-md-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative"
+                                alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="#!">Instituto</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
+                            transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
+                            de serviços de qualidade, impulsionando mudanças sociais.</p>
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-car.png" class="z-index-9 position-relative"
+                                alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="#!">Saúde</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas
+                            de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo
+                            da gestão com profissionais especializados</p>
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                            <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="600ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-health.png" class="z-index-9 position-relative"
+                                alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="#!">Educação</a></h3>
+                        <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e
+                            capacitação em diversas modalidades educacionais, abrangendo da infância à educação
+                            superior, profissional, digital e socioambiental.</p>
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                            <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="800ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-home.png" class="z-index-9 position-relative"
+                                alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="#!">Sustentabilidade</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
+                            econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
+                            projetos de gestão ambiental e sustentabilidade.</p>
+                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Pressupostos Estratégicos
 ================================================== -->
 
