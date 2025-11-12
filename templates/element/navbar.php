@@ -42,8 +42,7 @@
                                     <a href="#">Institucional</a>
                                     <ul>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
-                                        <li><a href="/o_instituto_ambient">Nossa História</a></li>
-                                        <li><a href="#">Missão, Visão, Valores</a></li>
+                                        <li><a href="/o_instituto_ambient">Nossa História</a></li>                                        
                                         <li><a href="/documentos">Compliance/Privacidade</a></li>
                                        
                                     </ul>
