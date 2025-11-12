@@ -72,7 +72,7 @@
                         <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
                             transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
                             de serviços de qualidade, impulsionando mudanças sociais.</p>
-                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
                                 class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                         <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas
                             de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo
                             da gestão com profissionais especializados</p>
-                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais
                             <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                         <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e
                             capacitação em diversas modalidades educacionais, abrangendo da infância à educação
                             superior, profissional, digital e socioambiental.</p>
-                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais
+                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais
                             <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
                             econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
                             projetos de gestão ambiental e sustentabilidade.</p>
-                        <a href="#!" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
+                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
                                 class="ti-arrow-right ms-2 align-middle display-30"></i></a>
                     </div>
                 </div>
