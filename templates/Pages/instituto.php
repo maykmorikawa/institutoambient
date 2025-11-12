@@ -121,7 +121,7 @@
                             <h2 class="mb-3">Nossas Certificações</h2>
                         </div>
                         <ul class="list-style4">
-                            <li><a href="/uploads/pdfs/certificado-04.pdf" target="_blank">Qualificação de Utilidade Pública Estadual - UPE. N</a></li>
+                            <li><a href="/uploads/pdfs/04_certificado.pdf" target="_blank">Qualificação de Utilidade Pública Estadual - UPE. N</a></li>
                             <li><a href="/uploads/pdfs/05_certificado.pdf" target="_blank">Certificado CEBAS - IA</a></li>
                             <li><a href="/uploads/pdfs/06_certificado.pdf" target="_blank">C. I. Amiga da Criança de Belém - IA</a></li>
                             <li><a href="/uploads/pdfs/07_certificado.pdf" target="_blank">Certificado IA - APRENDIZ</a></li>
