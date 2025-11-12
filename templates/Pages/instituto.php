@@ -4,7 +4,7 @@
     height: 450px; /* Altura maior */
     width: 100%; /* Garante largura total */
     object-fit: cover; /* Mantém proporção sem distorcer */
-    border-radius: 15px;
+    
 }
 
 #certificacoesCarousel {
