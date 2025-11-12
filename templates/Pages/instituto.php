@@ -1,3 +1,13 @@
+
+<style>
+
+#certificacoesCarousel img {
+ height: 350px;
+ object-fit: cover;
+
+}
+
+</style>
 <!-- PAGE TITLE
 
         ================================================== -->
