@@ -9,6 +9,7 @@
 
 #certificacoesCarousel {
     max-width: 100%;
+    margin-top: 75px;
 }
 
 .list-style4 li {
