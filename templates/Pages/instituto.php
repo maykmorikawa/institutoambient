@@ -1,12 +1,29 @@
-
+<!-- CSS personalizado -->
 <style>
-
 #certificacoesCarousel img {
- height: 350px;
- object-fit: cover;
-
+    height: 450px; /* Altura maior */
+    width: 100%; /* Garante largura total */
+    object-fit: cover; /* Mantém proporção sem distorcer */
+    border-radius: 15px;
 }
 
+#certificacoesCarousel {
+    max-width: 100%;
+}
+
+.list-style4 li {
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+
+.list-style4 a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.list-style4 a:hover {
+    text-decoration: underline;
+}
 </style>
 <!-- PAGE TITLE
 
@@ -82,13 +99,12 @@
                 <!-- Texto institucional -->
                 <div class="row">
                     <div class="col-12 mb-2-9">
-                        <img src="<?= WWW; ?>/site/img/service/service-details.webp" alt="..." class="rounded">
+                        <img src="<?= WWW; ?>/site/img/service/service-details.webp" alt="..." class="rounded img-fluid">
                     </div>
 
                     <div class="col-12 mb-2-9">
                         <h2 class="mb-3">O INSTITUTO AMBIENT - IA</h2>
-                        <p>É uma organização da sociedade civil engajada na perspectiva da proteção e defesa dos
-                            direitos fundamentais...</p>
+                        <p>É uma organização da sociedade civil engajada na perspectiva da proteção e defesa dos direitos fundamentais...</p>
                         <p>Diante disso, o IA tem como público prioritário...</p>
                         <p>Os/as colaboradores/as do IA trabalham na expectativa...</p>
                         <p>Para tanto, o IA desenvolve seus processos...</p>
@@ -100,7 +116,7 @@
                 <!-- Seção de certificações + carrossel -->
                 <div class="row align-items-start mt-5">
                     <!-- Coluna esquerda: PDFs -->
-                    <div class="col-md-6 position-relative elements-block mb-4 mb-md-0">
+                    <div class="col-md-5 position-relative elements-block mb-4 mb-md-0">
                         <div class="inner-title">
                             <h2 class="mb-3">Nossas Certificações</h2>
                         </div>
@@ -121,22 +137,20 @@
                     </div>
 
                     <!-- Coluna direita: Carrossel de imagens -->
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div id="certificacoesCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner rounded shadow-sm">
+                            <div class="carousel-inner rounded shadow-lg">
                                 <div class="carousel-item active">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" class="d-block w-100" alt="Certificado 1">
+                                    <img src="/uploads/imgs/certificado1.jpg" class="d-block w-100" alt="Certificado 1">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" class="d-block w-100" alt="Certificado 2">
+                                    <img src="/uploads/imgs/certificado2.jpg" class="d-block w-100" alt="Certificado 2">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_3.jpg" class="d-block w-100" alt="Certificado 3">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_4.jpg" class="d-block w-100" alt="Certificado 3">
+                                    <img src="/uploads/imgs/certificado3.jpg" class="d-block w-100" alt="Certificado 3">
                                 </div>
                             </div>
+
                             <!-- Controles -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -154,3 +168,5 @@
         </div>
     </div>
 </section>
+
+
