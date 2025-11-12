@@ -65,127 +65,81 @@
 
         ================================================== -->
 <section>
-
     <div class="container">
-
         <div class="row">
-
             <div class="col-lg-10 order-1 order-lg-2 mb-2-9 mb-lg-0 wow fadeIn" data-wow-delay="400ms">
 
+                <!-- Texto institucional -->
                 <div class="row">
-
                     <div class="col-12 mb-2-9">
                         <img src="<?= WWW; ?>/site/img/service/service-details.webp" alt="..." class="rounded">
-
                     </div>
 
                     <div class="col-12 mb-2-9">
-
-                        <h2 class="mb-3"> O INSTITUTO AMBIENT - IA</h2>
-
+                        <h2 class="mb-3">O INSTITUTO AMBIENT - IA</h2>
                         <p>É uma organização da sociedade civil engajada na perspectiva da proteção e defesa dos
-                            direitos fundamentais, prioritariamente de pessoas em situação de vulnerabilidade social,
-                            projetando uma sociedade de pessoas mobilizadas em todas as suas capacidades, dentro de um
-                            contexto de justiça ambiental, em que todas as pessoas independentemente da sua raça, classe
-                            social ou etnia, tenham o mesmo acesso a um meio ambiente saudável e seguro.</p>
-                        <p>Diante disso, o IA tem como público prioritário de suas iniciativas crianças, adolescentes,
-                            jovens, mulheres, mulheres negras, idosas, oportunizando processos inclusivos e equitativos,
-                            por meio da educação, educação profissional, arte, tecnologias inovadoras, entre outras em
-                            vivências intergeracionais.</p>
-                        <p>Os/as colaboradores/as do IA trabalham na expectativa de proporcionar direitos humanos e
-                            proteção social, ou seja, com a articulação e ativação de um conjunto de políticas,
-                            programas, projetos, serviços e ações que visam garantir um mínimo de bem-estar e segurança
-                            para os cidadãos, especialmente aqueles em situação de vulnerabilidade social.</p>
-                        <p>Para tanto, o IA desenvolve seus processos por meio de projetos sociais e socioambientais,
-                            como: Oásis, objetivando o cuidado ao envelhecimento com a inclusão de mulheres com 50+;
-                            Flores do Oásis, proporcionando artesanato sustentável e geração de renda; Mariá, com
-                            capacitação em gestão de empreendimentos para mulheres negras; Lado a Lado: oportunizando a
-                            formação e incubação de negócios sociais na periferia amazônica; Projeto “Modelagem de
-                            Negócios para a COP 30”; Projeto Aurora, que efetiva apoio a Mulheres Grávidas Vulneráveis
-                            nos Municípios de Belém e Jacundá; Grávidas Vulneráveis nos Municípios de Belém e Jacundá
-                            (Parceria: Ministério das Mulheres), entre outros.</p>
-                        <p>Outro trajeto efetivado pelo o IA para concretização daquilo que o motiva tem sido ativar
-                            redes de colaboradores e parceiros que tem contribuído em nossos sonhos, como: PERNOH, a
-                            fundação Acolher, Mistério Público do Pará, Fundação Papa João XXIII (FUNPAPA), responsável
-                            pela execução da Política de Assistência Social, em Belém; Conselho Municipal de Assistência
-                            Social (CMAS); Conselho Municipal dos Direitos da Criança e do Adolescente (COMDAC);
-                            Mistério Público, Empresa Suzano, Equatorial Energia,entre outras parcerias.</p>
-
+                            direitos fundamentais...</p>
+                        <p>Diante disso, o IA tem como público prioritário...</p>
+                        <p>Os/as colaboradores/as do IA trabalham na expectativa...</p>
+                        <p>Para tanto, o IA desenvolve seus processos...</p>
+                        <p>Outro trajeto efetivado pelo IA para concretização...</p>
                         <p>Homepage: www.institutoambient.org.br e atuação no território nacional e internacional.</p>
+                    </div>
+                </div>
 
+                <!-- Seção de certificações + carrossel -->
+                <div class="row align-items-start mt-5">
+                    <!-- Coluna esquerda: PDFs -->
+                    <div class="col-md-6 position-relative elements-block mb-4 mb-md-0">
+                        <div class="inner-title">
+                            <h2 class="mb-3">Nossas Certificações</h2>
+                        </div>
+                        <ul class="list-style4">
+                            <li><a href="/uploads/pdfs/certificado-04.pdf" target="_blank">Qualificação de Utilidade Pública Estadual - UPE. N</a></li>
+                            <li><a href="/uploads/pdfs/05_certificado.pdf" target="_blank">Certificado CEBAS - IA</a></li>
+                            <li><a href="/uploads/pdfs/06_certificado.pdf" target="_blank">C. I. Amiga da Criança de Belém - IA</a></li>
+                            <li><a href="/uploads/pdfs/07_certificado.pdf" target="_blank">Certificado IA - APRENDIZ</a></li>
+                            <li><a href="/uploads/pdfs/08_certificado.pdf" target="_blank">Certificado COMDAC - IA</a></li>
+                            <li><a href="/uploads/pdfs/09_certificado.pdf" target="_blank">Certificado - COMDICA - Ananindeua - IA</a></li>
+                            <li><a href="/uploads/pdfs/10_certificado.pdf" target="_blank">Certificação CMAS - BELÉM</a></li>
+                            <li><a href="/uploads/pdfs/11_certificado.pdf" target="_blank">Mapa das OSC - IPEA - Declaração - IA</a></li>
+                            <li><a href="/uploads/pdfs/12_certificado.pdf" target="_blank">Declaração de Experiência e Capacidade Técnica - MPT</a></li>
+                            <li><a href="/uploads/pdfs/13_certificado.pdf" target="_blank">Ofício Certificação Funpapa - IA</a></li>
+                            <li><a href="/uploads/pdfs/14_certificado.pdf" target="_blank">Declaração de Capacidade Técnica - SEMUR - Governo do Pará</a></li>
+                            <li><a href="/uploads/pdfs/15_certificado.pdf" target="_blank">Atestado de Capacidade Técnica - SUZANO - IA</a></li>
+                        </ul>
                     </div>
 
-                    <div class="col-lg-12 mb-2-9">
-                        <div class="row">
-                            <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
-                                <div class="inner-title">
-                                    <h2 class="mb-3">Nossas Certificações</h2>
+                    <!-- Coluna direita: Carrossel de imagens -->
+                    <div class="col-md-6">
+                        <div id="certificacoesCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner rounded shadow-sm">
+                                <div class="carousel-item active">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" class="d-block w-100" alt="Certificado 1">
                                 </div>
-                                <ul class="list-style4">
-                                    <a href="/uploads/pdfs/certificado-04.pdf" target="_blank">
-                                        <li>Qualificação de Utilidade Pública Estadual - UPE. N</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/05_certificado.pdf" target="_blank">
-                                        <li>Certificado CEBAS - IA</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/06_certificado.pdf" target="_blank">
-                                        <li>C. I. Amiga da Criança de Belém - IA</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/07_certificado.pdf" target="_blank">
-                                        <li>Certificado IA - APRENDIZ</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/08_certificado.pdf" target="_blank">
-                                        <li>Certificado COMDAC - IA</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/09_certificado.pdf" target="_blank">
-                                        <li>Certificado - COMDICA - Ananindeua - IA</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/10_certificado.pdf" target="_blank">
-                                        <li>Certificação CMAS - BELÉM</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/11_certificado.pdf" target="_blank">
-                                        <li>Mapa das OSC - IPEA - Declaração - INSTITUTO AMBIENT - IA</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/12_certificado.pdf" target="_blank">
-                                        <li>Declaração de Experiência e Capacidade Técnica - MPT</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/13_certificado.pdf" target="_blank">
-                                        <li>Ofício Certificação Funpapa - IA</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/14_certificado.pdf" target="_blank">
-                                        <li>Declaração de Capacidade Técnica - SEMUR - GOVERNO DO ESTADO DO PARÁ</li>
-                                    </a>
-                                </ul>
-                                <ul class="list-style4" style="margin-top: 10px">
-                                    <a href="/uploads/pdfs/15_certificado.pdf" target="_blank">
-                                        <li>Atestado de Capacidade Técnica - SUZANO - IA</li>
-                                    </a>
-                                </ul>
-                                
+                                <div class="carousel-item">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" class="d-block w-100" alt="Certificado 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_3.jpg" class="d-block w-100" alt="Certificado 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_4.jpg" class="d-block w-100" alt="Certificado 3">
+                                </div>
                             </div>
+                            <!-- Controles -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
                         </div>
                     </div>
                 </div>
+                <!-- Fim seção certificações -->
             </div>
         </div>
     </div>
