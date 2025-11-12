@@ -88,9 +88,9 @@
         </div>
     </div>
 </section>
-<!-- SERVICE DETAILS
-
-        ================================================== -->
+<!-- ============================
+SECTION 1 - SOBRE O INSTITUTO + CERTIFICAÇÕES
+============================ -->
 <section>
     <div class="container">
         <div class="row">
@@ -113,10 +113,9 @@
                     </div>
                 </div>
 
-                <!-- Seção de certificações + carrossel -->
-                <div class="row align-items-start mt-5">
-                    <!-- Coluna esquerda: PDFs -->
-                    <div class="col-md-5 position-relative elements-block mb-4 mb-md-0">
+                <!-- Seção de certificações -->
+                <div class="row mt-5">
+                    <div class="col-md-12 position-relative elements-block mb-4 mb-md-0">
                         <div class="inner-title">
                             <h2 class="mb-3">Nossas Certificações</h2>
                         </div>
@@ -135,38 +134,49 @@
                             <li><a href="/uploads/pdfs/15_certificado.pdf" target="_blank">Atestado de Capacidade Técnica - SUZANO - IA</a></li>
                         </ul>
                     </div>
+                </div>
 
-                    <!-- Coluna direita: Carrossel de imagens -->
-                    <div class="col-md-7">
-                        <div id="certificacoesCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner rounded shadow-lg">
-                                <div class="carousel-item active">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" class="d-block w-100" alt="foto 01">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" class="d-block w-100" alt="foto 02">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_3.jpg" class="d-block w-100" alt="foto 03">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_4.jpg" class="d-block w-100" alt="foto 04">
-                                </div>
-                            </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                            <!-- Controles -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Próximo</span>
-                            </button>
+
+<!-- ============================
+SECTION 2 - CARROSSEL DE IMAGENS
+============================ -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 wow fadeIn" data-wow-delay="200ms">
+                <h2 class="mb-4 text-center">Galeria de Imagens</h2>
+
+                <div id="certificacoesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded shadow-lg">
+                        <div class="carousel-item active">
+                            <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" class="d-block w-100" alt="foto 01">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" class="d-block w-100" alt="foto 02">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?= WWW; ?>/site/img/about/foto_3.jpg" class="d-block w-100" alt="foto 03">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?= WWW; ?>/site/img/about/foto_4.jpg" class="d-block w-100" alt="foto 04">
                         </div>
                     </div>
+
+                    <!-- Controles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#certificacoesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
                 </div>
-                <!-- Fim seção certificações -->
             </div>
         </div>
     </div>
