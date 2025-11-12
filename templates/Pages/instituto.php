@@ -141,16 +141,16 @@
                         <div id="certificacoesCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner rounded shadow-lg">
                                 <div class="carousel-item active">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_01.jpg" class="d-block w-100" alt="foto 01">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" class="d-block w-100" alt="foto 01">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_02.jpg" class="d-block w-100" alt="foto 02">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" class="d-block w-100" alt="foto 02">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_03.jpg" class="d-block w-100" alt="foto 03">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_3.jpg" class="d-block w-100" alt="foto 03">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?= WWW; ?>/site/img/about/foto_04.jpg" class="d-block w-100" alt="foto 04">
+                                    <img src="<?= WWW; ?>/site/img/about/foto_4.jpg" class="d-block w-100" alt="foto 04">
                                 </div>
                             </div>
 
