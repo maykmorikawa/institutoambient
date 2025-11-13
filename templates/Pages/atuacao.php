@@ -12,7 +12,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Como Atuamos</h1>
+                    <h1>Áreas de Atuação Pressupostos</h1>
 
                 </div>
 
@@ -22,7 +22,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Como Atuamos</a></li>
+                        <li><a href="#!">Áreas de Atuação Pressupostos</a></li>
 
                     </ul>
 
