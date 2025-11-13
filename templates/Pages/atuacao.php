@@ -41,23 +41,7 @@
 <section class="pt-3">
     <div class="container">
         <div class="row mt-n2-2">
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
-                <div class="card card-style8">
-                    <div class="card-body px-1-9 py-2-9">
-                        <div class="icon-box mb-1-9 mb-md-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative"
-                                alt="">
-                            <div class="box-circle primary"></div>
-                        </div>
-                        <h3 class="h5 mb-3"><a href="#!">Instituto</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
-                            transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
-                            de serviços de qualidade, impulsionando mudanças sociais.</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
+             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
@@ -73,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="600ms">
+             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
@@ -89,6 +73,24 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="600ms">
+                <div class="card card-style8">
+                    <div class="card-body px-1-9 py-2-9">
+                        <div class="icon-box mb-1-9 mb-md-2-6">
+                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative"
+                                alt="">
+                            <div class="box-circle primary"></div>
+                        </div>
+                        <h3 class="h5 mb-3"><a href="#!">Assistência Social</a></h3>
+                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
+                            transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
+                            de serviços de qualidade, impulsionando mudanças sociais.</p>
+                        
+                    </div>
+                </div>
+            </div>
+           
+           
             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="800ms">
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
@@ -97,7 +99,7 @@
                                 alt="">
                             <div class="box-circle primary"></div>
                         </div>
-                        <h3 class="h5 mb-3"><a href="#!">Sustentabilidade</a></h3>
+                        <h3 class="h5 mb-3"><a href="#!">Meio ambiente</a></h3>
                         <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
                             econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
                             projetos de gestão ambiental e sustentabilidade.</p>
