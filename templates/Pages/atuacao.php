@@ -41,7 +41,7 @@
 <section class="pt-3">
     <div class="container">
         <div class="row mt-n2-2">
-             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
@@ -53,11 +53,11 @@
                         <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas
                             de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo
                             da gestão com profissionais especializados</p>
-                        
+
                     </div>
                 </div>
             </div>
-             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
+            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
                         <div class="icon-box mb-1-9 mb-2-6">
@@ -69,7 +69,7 @@
                         <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e
                             capacitação em diversas modalidades educacionais, abrangendo da infância à educação
                             superior, profissional, digital e socioambiental.</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -85,12 +85,12 @@
                         <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
                             transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
                             de serviços de qualidade, impulsionando mudanças sociais.</p>
-                        
+
                     </div>
                 </div>
             </div>
-           
-           
+
+
             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="800ms">
                 <div class="card card-style8">
                     <div class="card-body px-1-9 py-2-9">
@@ -103,7 +103,7 @@
                         <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
                             econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
                             projetos de gestão ambiental e sustentabilidade.</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -113,14 +113,15 @@
 <!-- Pressupostos Estratégicos
 ================================================== -->
 
-</section><section class="pt-6">
+</section>
+<section class="pt-6">
     <div class="container">
         <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Instituto Ambient</span>
             <h2 class="mb-0 h1">Pressupostos Estratégicos</h2>
             <p class="mt-4 mx-auto w-md-75">Para o direcionamento do presente planejamento estratégico, estamos focados em pressupostos que consideramos fundamentais e que deverão fazer a diferença na vida dos participantes.</p>
         </div>
-        
+
         <div class="row">
 
             <div class="row align-items-center mb-9 pb-9 wow fadeIn" data-wow-delay="200ms">
@@ -133,7 +134,7 @@
                             <li>Foco no protagonismo e autonomia familiar.</li>
                             <li>Promoção de ambientes seguros e protetivos.</li>
                         </ul>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
@@ -158,7 +159,7 @@
                             <li>O foco é o sujeito com faculdade produtiva.</li>
                             <li>Estímulo à dinâmica criativa e ao questionamento.</li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
@@ -173,7 +174,7 @@
                             <li>Comunicação e colaboração eficazes.</li>
                             <li>Promoção de resultados abrangentes e sustentáveis.</li>
                         </ul>
-                       
+
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
@@ -198,96 +199,11 @@
                             <li>Uso de linguagens artísticas e meios de comunicação.</li>
                             <li>Criação de produtos, serviços, metodologias e experiências inovadoras.</li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-</section>
-
- <!-- Eixos Estratégicos de Atuação
-================================================== -->
-<section class="service-block pt-0">
-    <div class="container position-relative z-index-1">
-        <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
-            <div class="col-lg-5 mb-3 mb-lg-0">
-                <span class="d-block mb-2 text-secondary text-uppercase fw-bold">Instituto Ambient</span>
-                <h2 class="mb-0">Eixos Estratégicos de Atuação</h2>
-            </div>
-            <div class="col-lg-7">
-                <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">O trabalho do Instituto Ambient está estruturado em eixos de atuação que se efetivam em projetos sociais e socioambientais, guiando a organização para alcançar seus objetivos estratégicos.</p>
-            </div>
-        </div>
-        
-        <div class="row mt-n1-9">
-            
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                <a href="/pages/eixos1" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
-                        
-                        <div>
-                             <i class="ti-heart display-10 mb-4 d-block"></i> 
-                             <h3 class="h5 mb-3">EIXO 01: Potencialização da capacidade protetiva das famílias em situação de vulnerabilidade social</h3>
-                             <p class="mb-3">**Objetivo:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo.</p>
-                        </div>
-                        
-                        <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="400ms">
-                <a href="/pages/eixos2" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <i class="ti-money display-10 mb-4 d-block"></i> 
-                            <h3 class="h5 mb-3">EIXO 02: Proporcionando Geração de emprego e renda</h3>
-                            <p class="mb-3">**Objetivo:** Promover ações de qualificação e inserção no mundo do trabalho, com fomento a ações e serviços com uso de tecnologias inovadoras e negócios sociais.</p>
-                        </div>
-                        
-                        <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms">
-                <a href="/pages/eixos3" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <i class="ti-sharethis display-10 mb-4 d-block"></i> 
-                            <h3 class="h5 mb-3">EIXO 03: Redes e assessoramento institucional</h3>
-                            <p class="mb-3">**Objetivo:** Prestar serviços de assessoramento voltados ao fortalecimento das organizações da sociedade civil, movimentos sociais e lideranças comunitárias.</p>
-                        </div>
-                        
-                        <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
-                <a href="/pages/eixos4" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
-                        <div>
-                             <i class="ti-plus display-10 mb-4 d-block"></i> 
-                             <h3 class="h5 mb-3">EIXO 04: Saúde e bem estar</h3>
-                             <p class="mb-3">**Objetivo:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida.</p>
-                        </div>
-                        
-                        <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <img src="img/content/dots1.png" class="position-absolute bottom-n40 right d-none d-lg-block wow fadeIn ani-left-right" data-wow-delay="200ms" alt="...">
 </section>

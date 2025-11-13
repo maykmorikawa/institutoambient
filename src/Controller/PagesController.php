@@ -127,6 +127,11 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('site');
             
     }
+    public function eixos() 
+    {
+        $this->viewBuilder()->setLayout('site');
+            
+    }
     public function eixos1() 
     {
         $this->viewBuilder()->setLayout('site');

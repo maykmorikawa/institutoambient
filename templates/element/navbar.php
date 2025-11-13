@@ -42,15 +42,15 @@
                                     <a href="#">Institucional</a>
                                     <ul>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
-                                        <li><a href="/o_instituto_ambient">Nossa História</a></li>                                        
+                                        <li><a href="/o_instituto_ambient">Nossa História</a></li>
                                         <li><a href="/documentos">Compliance/Privacidade</a></li>
-                                       
+
                                     </ul>
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
                                         <li><a href="/atuacao">Áreas de Atuação Pressupostos</a></li>
-                                        <li><a href="captacao">Eixos Estratégicos</a></li>
+                                        <li><a href="/eixos">Eixos Estratégicos</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Nossos Parceiros e Parceiras</a>
@@ -61,18 +61,18 @@
                                         <li><a href="#">Seja Voluntário</a></li>
                                     </ul>
                                 </li>
-                                
+
                                 <li><a href="#!">Doe Agora</a>
-                                <ul>
-                                    <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe</li>
-                                    <li><a href="#">Imposto de Renda</a></li>
-                                </ul>
+                                    <ul>
+                                        <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe</li>
+                                        <li><a href="#">Imposto de Renda</a></li>
+                                    </ul>
                                 </li>
-                                <li><a href="/contato">Contato</a>  
+                                <li><a href="/contato">Contato</a>
                             </ul>
                             <!-- end menu area -->
 
-                            
+
                             <!-- end attribute navigation -->
                         </nav>
                     </div>
