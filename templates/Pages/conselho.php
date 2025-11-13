@@ -56,19 +56,10 @@
 
                         <h2 class="mb-3"> COMO NOS ORGANIZAMOS</h2>
 
-                        <p>O IA é formado por profissionais de diferentes áreas, qualificados e com
-                            experiência no âmbito nacional e internacional,comprovada e reconhecida,
-                            como equipe multidisciplinar de consultores e consultoras especializados (as).
-                            Essa equipe celebra as parcerias entre corporações porque, a partir delas, as
-                            ações promovem o bem-estar social, com geração de renda , acesso à
-                            educação e à alimentação.
+                        <p>O Instituto Ambient (IA) opera sob uma estrutura de governança formalizada, garantindo a separação explicita entre as funções estratégicas, de fiscalização e de execução. A Governança Estratégica e a Fiscalização são exercidas em um nível superior pelo Conselho de Administração (que define as diretrizes institucionais) e pelo Conselho Fiscal (que garante a transparência e a accountability financeira e contábil).
                         </p>
-                        <p>Além disso, constrói cenários, analisa situações, planeja, executa,
-                            acompanha e avalia projetos, de maneira sistêmica e integrada, às
-                            oportunidades estratégicas.
-                        </p>
-
-
+                        <p>No plano da gestão, a Diretoria Estatutária e a Diretoria Executiva lideram a organização no dia a dia, sendo apoiadas pela Secretaria Executiva. Os mecanismos de integridade são priorizados pela DIRETORIA DE COMPLIANCE E RISCO e pelo CONTROLE INTERNO, que atuam para assegurar a conformidade legal e a mitigação de riscos em todas as operações. A execução setorial, fundamental para a entrega dos projetos nas áreas de atuação do IA, é distribuída por diretorias especializadas: DIRETORIA ADMINISTRATIVO-FINANCEIRA, DIRETORIA DE ASSISTÊNCIA SOCIAL, DIRETORIA DE EDUCAÇÃO, DIRETORIA DE MEIO AMBIENTE e DIRETORIA DE SAÚDE.</p>
+                        <p>Essa organização garante que a expertise técnica seja aplicada com eficiência em cada um dos eixos de atuação do Instituto. Em suma, o IA adota um modelo que equilibra visão de longo prazo, rigor fiscal e foco operacional.</p>
                     </div>
                     <div class="col-12 mb-2-9">
                         <div class="col-12 text-center mb-2-9">
@@ -83,7 +74,7 @@
                             <h2>MARIA DA CONCEIÇÃO S.N. FERREIRA</h2>
                             <h5<span class="mb-0 text-primary font-weight-400 h6">DIRETORA ADMINISTRATIVA E FINANCEIRA</span></h5>
                         </div>
-                        
+
                     </div>
                     <div class="col-12 mb-2-9">
 
@@ -91,7 +82,7 @@
 
                     </div>
 
-                   
+
 
 
 
@@ -104,4 +95,3 @@
     </div>
 
 </section>
-
