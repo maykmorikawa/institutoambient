@@ -122,6 +122,11 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('site');
             
     }
+    public function parceiros() 
+    {
+        $this->viewBuilder()->setLayout('site');
+            
+    }
     public function ladoalado() 
     {
         $this->viewBuilder()->setLayout('site');

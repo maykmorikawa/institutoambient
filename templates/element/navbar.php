@@ -56,7 +56,7 @@
                                 <li><a href="#!">Nossos Parceiros e Parceiras</a>
                                     <ul>
                                         <li><a href="/conselho">Governança</a></li>
-                                        <li><a href="#">Nossos Parceiros</a></li>
+                                        <li><a href="/parceiros">Nossos Parceiros</a></li>
                                         <li><a href="#">Trabalhe Conosco</a></li>
                                         <li><a href="#">Seja Voluntário</a></li>
                                     </ul>

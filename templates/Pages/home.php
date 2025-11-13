@@ -286,23 +286,23 @@
                             ?>
                             <?php if ($featuredImage): ?>
                                 <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
-                                     alt="<?= h($post->title) ?>" class="img-fluid rounded-top">
+                                    alt="<?= h($post->title) ?>" class="img-fluid rounded-top">
                             <?php else: ?>
                                 <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>"
-                                     alt="Imagem padrão" class="img-fluid rounded-top">
+                                    alt="Imagem padrão" class="img-fluid rounded-top">
                             <?php endif; ?>
                         </div>
-        
+
                         <div class="card-body p-xl-1-9 p-4">
                             <h3 class="h5 mb-3"><?= h($post->title) ?></h3>
                             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
-        
+
                             <!-- link estendido que cobre todo o card -->
                             <a href="<?= $this->Url->build('/posts/view/' . h($post->slug)) ?>"
-                               class="stretched-link"
-                               aria-label="Abrir postagem: <?= h($post->title) ?>"></a>
+                                class="stretched-link"
+                                aria-label="Abrir postagem: <?= h($post->title) ?>"></a>
                         </div>
-        
+
                         <div class="card-footer bg-white py-4 px-0 mx-4 mx-xl-1-9 border-0">
                             <div class="d-flex justify-content-between">
                                 <span class="display-30">
@@ -323,7 +323,6 @@
 
 <!-- PAREIROS
         ================================================== -->
-
 <section id="features" class="core-features-section bg-light">
     <div class="px-1-6 px-md-6 px-lg-7 px-xl-14 px-xxl-22">
         <div class="text-center mb-6 mb-lg-8">
