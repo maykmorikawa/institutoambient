@@ -112,67 +112,19 @@ class PagesController extends AppController
     public function quemsomos() {}
     public function transparencia() {}
     public function videos() {}
-    public function captacao() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function projetos() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function parceiros() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function ladoalado() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function eixos() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function eixos1() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function eixos2() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function eixos3() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function eixos4() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function contato() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    public function documentos() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
-    
-    public function atuacao() 
-    {
-        $this->viewBuilder()->setLayout('site');
-            
-    }
+    public function captacao() {}
+    public function projetos() {}
+    public function parceiros() {}
+    public function ladoalado() {}
+    public function eixos() {}
+    public function eixos1() {}
+    public function eixos2() {}
+    public function eixos3() {}
+    public function eixos4() {}
+    public function eixos5() {}
+    public function contato() {}
+    public function documentos() {}
+    public function atuacao() {}
     public function conselho() {}
 
 

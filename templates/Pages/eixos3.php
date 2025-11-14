@@ -38,47 +38,42 @@
 <!-- Pressupostos Estratégicos
 ================================================== -->
 
-<section>
+<section class="aboutus">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="mb-6 mb-lg-8 position-relative elements-block">
-                    <div class="inner-title">
-                        <h2 class="mb-0">QUADRO SÍNTESE EIXOS, OBJETIVOS, AÇÕES ESTRATÉGICAS E PROJETOS INSTITUCIONAIS</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
+                    <img src="<?= WWW; ?>/site/img/about/redes_institucional.webp" alt="Reunião de líderes comunitários e OSCs" class="rounded">
+                    <div class="box-left py-4 px-4 px-sm-4 px-md-5">
+                        <h3 class="text-secondary"><span class="countup">23</span></h3>
+                        <p class="lead mb-0 fw-bold text-dark">Organizações Apoiadas</p>
                     </div>
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="width: 30%;">EIXOS E OBJETIVOS</th>
-                                    <th scope="col" style="width: 35%;">AÇÕES ESTRATÉGICAS</th>
-                                    <th scope="col" style="width: 35%;">PROJETOS INSTITUCIONAIS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="align-top">
-                                        **EIXO 03:** Redes e assessoramento institucional
-                                        <hr>
-                                        **OBJETIVO ESTRATÉGICO:** Prestar serviços de assessoramento voltados ao fortalecimento das organizações da sociedade civil, movimentos sociais, lideranças comunitárias, com articulação e atuação permanente em rede pela promoção e defesa dos direitos humanos.
-                                    </td>
-
-                                    <td class="align-top">
-                                        <ul>
-                                            <li>Apoiar o desenvolvimento institucional de 23 Organizações da Sociedade Civil (OSCs), diversas em porte e atuando com diferentes causas sociais, na região metropolitana de Belém (Pará), com o objetivo de alcançar aproximadamente 230 pessoas.</li>
-                                        </ul>
-                                    </td>
-
-                                    <td class="align-top">
-                                        <ul>
-                                            <li>Projeto de Assessoramento do IA para Organizações da Sociedade Civil - OSCs - Parceria: Instituto Antônio Carlos Pipponzi (ACP). (Em andamento)</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <span class="about-img d-none d-lg-inline-block">
+                        <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
+                            class="position-absolute left-n25 bottom-n20 z-index-minus2 ani-left-right">
+                    </span>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                <div class="about-title">
+                    <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Fortalecimento da Sociedade Civil</span>
+                    <h2 class="mb-1-6">EIXO 03: REDES E ASSESSORAMENTO INSTITUCIONAL</h2>
+                    <p class="fst-italic font-weight-600">
+                        **OBJETIVO ESTRATÉGICO:** Prestar serviços de assessoramento voltados ao fortalecimento das Organizações da Sociedade Civil, movimentos sociais e lideranças comunitárias, com atuação permanente em rede pela promoção e defesa dos direitos humanos.
+                    </p>
+                    
+                    <p>
+                        O Instituto Ambient atua como um catalisador, fornecendo o **suporte técnico e estratégico** necessário para que as organizações locais maximizem seu impacto e promovam o desenvolvimento sustentável de forma inclusiva.
+                    </p>
+                    
+                    <h3 class="mb-1-6">AÇÕES E PROJETOS EM DESTAQUE</h3>
+                    
+                    <ul class="list-style1 mb-4">
+                        <li>**Ações Estratégicas:** Apoiar o desenvolvimento institucional de **23 Organizações da Sociedade Civil (OSCs)** na Região Metropolitana de Belém, alcançando aproximadamente **230 pessoas**.</li>
+                        <li>**Projeto Assessoramento OSCs (Parceria: Instituto ACP):** Iniciativa em andamento que mapeou as necessidades de 76 OSCs (via Google Forms) para oferecer **apoio personalizado** em gestão cadastral, documental, captação de recursos e certificações.</li>
+                        <li>**Foco:** Superar desafios, promover a inovação e a integração para um desenvolvimento sustentável e inclusivo das comunidades.</li>
+                    </ul>
                 </div>
             </div>
         </div>
