@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-lg-12 mb-2 wow fadeIn" data-wow-delay="200ms">
                 <div class="mb-4">
-                    <img src="img/carreiras/nossa-equipe.jpg" alt="Equipe do Instituto Ambient trabalhando em conjunto" class="rounded">
+                    <img src="<?= WWW; ?>/site/img/about/trabalheconosco.jpg" alt="Equipe do Instituto Ambient trabalhando em conjunto" class="rounded">
                 </div>
                 <p class="w-95 w-md-85">
                     O **Instituto Ambient** é uma organização dedicada ao desenvolvimento social e ambiental, atuando com foco na **Amazônia Oriental**. Nossa equipe é composta por profissionais multidisciplinares e apaixonados que trabalham diariamente nos 5 Eixos estratégicos (Proteção Familiar, Geração de Renda, Redes Institucionais, Saúde e Educação Ambiental) para promover a sustentabilidade e a cidadania nas comunidades de Belém e região.
