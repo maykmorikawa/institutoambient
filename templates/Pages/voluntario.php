@@ -93,7 +93,7 @@
             <div class="col-lg-8 order-1 order-lg-2 mb-2-9 mb-lg-0 wow fadeIn" data-wow-delay="400ms">
                 <div class="row">
                     <div class="col-12 mb-2-9">
-                        <img src="img/voluntariado/voluntario-em-acao.jpg" alt="Voluntários do Instituto Ambient em atividade social ou ambiental" class="rounded">
+                        <img src="<?= WWW; ?>/site/img/about/voluntario.jpg" alt="Voluntários do Instituto Ambient em atividade social ou ambiental" class="rounded">
                     </div>
                     
                     <div class="col-12 mb-2-9">
