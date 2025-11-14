@@ -77,13 +77,13 @@
                         </div>
                     </div>
                     
-                    <div class="bg-img theme-overlay cover-background rounded" data-overlay-dark="8" data-background="img/bg/bg-contato-voluntario.jpg">
+                    <div class="bg-img theme-overlay cover-background rounded" data-overlay-dark="8" data-background="<?= WWW; ?>/site/img/bg/bg-03.jpg">
                         <div class="position-relative z-index-9 text-center py-5">
                             <i class="fas fa-hand-heart text-white mb-4 display-14"></i>
                             <h5 class="text-white mb-4">Pronto para começar?</h5>
                             <div class="separator-line-horrizontal-full bg-white opacity4 mb-4"></div>
                             <ul class="text-center list-unstyled mb-0 ps-0">
-                                <li class="text-white mb-2"><i class="fa fa-envelope-open small text-white me-2"></i><a href="mailto:voluntariado@institutoambient.org.br" class="text-white">Envie seu currículo/proposta</a></li>
+                                <li class="text-white mb-2"><i class="fa fa-envelope-open small text-white me-2"></i><a href="mailto:voluntariado@institutoambient.org.br" class="text-white">Envie seu currículo</a></li>
                             </ul>
                         </div>
                     </div>
