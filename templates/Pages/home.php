@@ -57,7 +57,7 @@
 
 <!-- SERVICOS
         ================================================== -->
-<section class="pt-0">
+<!--<section class="pt-0">
     <div class="container">
         <div class="row mt-n2-2">
             <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
@@ -130,7 +130,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- BOTÕES 
         ================================================== -->
 
