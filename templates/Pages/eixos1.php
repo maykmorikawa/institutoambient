@@ -97,7 +97,7 @@
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
                     <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" alt="Família sendo assistida" class="rounded">
-                    <div class="box-left py-4 px-4 px-sm-4 px-md-5">
+                    <div class="box-left py-2 px-4 px-sm-4 px-md-5">
                         <h3 class="text-secondary"><span class="countup">08</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Projetos Ativos</p>
                     </div>
@@ -153,7 +153,7 @@
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
                     <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" alt="Crianças e idosos em atividade" class="rounded">
-                    <div class="box-left py-4 px-4 px-sm-4 px-md-5">
+                    <div class="box-left py-2 px-4 px-sm-4 px-md-5">
                         <h3 class="text-secondary"><span class="countup">72</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Famílias Alcançadas</p>
                     </div>
