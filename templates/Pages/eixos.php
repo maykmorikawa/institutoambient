@@ -117,5 +117,25 @@
             </div>
         </div>
     </div>
+    <div class="container position-relative z-index-1">
+        <div class="row mt-n1-9">
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                <a href="/pages/eixos5" class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
+
+                        <div>
+                            <i class="ti-heart display-10 mb-4 d-block"></i>
+                            <h3 class="h5 mb-3">EIXO 05: Educação Ambiental e geração de renda sustentável  Objetivo Estratégico</h3>
+                            <p class="mb-3">**Objetivo:** Difundir conhecimentos socioambientais com grupos locais.Construir estratégias sustentáveis para o desenvolvimento territorial.Fortalecer as diversas territorialidades com ações integradas e participativas.</p>
+                        </div>
+
+                        <div class="mt-4">
+                            <span class="butn-style3 medium">Saiba Mais</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
     <img src="img/content/dots1.png" class="position-absolute bottom-n40 right d-none d-lg-block wow fadeIn ani-left-right" data-wow-delay="200ms" alt="...">
 </section>
