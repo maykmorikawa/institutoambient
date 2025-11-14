@@ -90,3 +90,79 @@
         </div>
     </div>
 </section>
+
+<section class="aboutus">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
+                    <img src="<?= WWW; ?>/site/img/about/foto_1.jpg" alt="Família sendo assistida" class="rounded">
+                    <div class="box-left py-4 px-4 px-sm-4 px-md-5">
+                        <h3 class="text-secondary"><span class="countup">08</span></h3>
+                        <p class="lead mb-0 fw-bold text-dark">Projetos Ativos</p>
+                    </div>
+                    <span class="about-img d-none d-lg-inline-block">
+                        <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
+                            class="position-absolute left-n25 bottom-n20 z-index-minus2 ani-left-right">
+                    </span>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                <div class="about-title">
+                    <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossas Ações de Proteção Social</span>
+                    <h2 class="mb-1-6">EIXO 01: POTENCIALIZAÇÃO DA CAPACIDADE PROTETIVA DAS FAMÍLIAS</h2>
+                    <p class="fst-italic font-weight-600">
+                        **OBJETIVO ESTRATÉGICO:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo na direção do fortalecimento de vínculos familiares, comunitários e pela melhoria da qualidade de suas vidas.
+                    </p>
+                    <p>
+                        **AÇÕES ESTRATÉGICAS EM DESTAQUE:**
+                    </p>
+                    <ul class="list-style1 mb-4">
+                        <li>Trabalho social e orientação individual/coletiva, articulando políticas e programas sociais para ampliação da rede de proteção.</li>
+                        <li>Espaços socioeducativos (lúdicos, culturais e esportivos) para convivência, formação cidadã e prevenção de violências, por ciclos de vida.</li>
+                        <li>Proteção proativa e espaços de convivência para Pessoas com Deficiência e Idosos, prevenindo o rompimento de vínculos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="aboutus bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                <div class="about-title">
+                    <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Resultados na Comunidade</span>
+                    <h2 class="mb-1-6">PROJETOS DO INSTITUTO AMBIENT NO EIXO 01</h2>
+                    
+                    <ul class="list-style1 mb-4">
+                        <li>**1. Convivência e Fortalecimento de Vínculos familiares:** Promoção de memória e cultura amazônica com 40 crianças/adolescentes (Sacramenta/Belém).</li>
+                        <li>**2. SCFV - Parceria FUNPAPA:** Atendimento a crianças (8-11), adolescentes (12-17) e idosos, resultando em maior autonomia dos idosos e 15 encaminhamentos ao Jovem Aprendiz.</li>
+                        <li>**3. VOZES DAS ÁGUAS:** Arte e Educação Ambiental em territórios ribeirinhos (Vila da Barca, Outeiro e Combu).</li>
+                        <li>**4. FLORES DO OÁSIS:** Artesanato sustentável e geração de renda para mulheres 50+ com insumos amazônicos.</li>
+                        <li>**5. OÁSIS:** Envelhecimento ativo (50+) com atividades físicas e socioeducativas para saúde e autonomia.</li>
+                        <li>**7. CRESCER E TRANSFORMAR (Parceria: Equatorial):** Desenvolvimento integral (tecnológico, social, ambiental) de crianças e jovens em áreas periféricas, com foco em COP30 e mercado de trabalho digital.</li>
+                        <li>**8. PROJETO AURORA (Parceria: Ministério das Mulheres):** Proteção da primeira infância com formação profissional, saúde e acompanhamento para 100 gestantes vulneráveis (Belém/Jacundá).</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
+                    <img src="<?= WWW; ?>/site/img/about/foto_2.jpg" alt="Crianças e idosos em atividade" class="rounded">
+                    <div class="box-left py-4 px-4 px-sm-4 px-md-5">
+                        <h3 class="text-secondary"><span class="countup">72</span></h3>
+                        <p class="lead mb-0 fw-bold text-dark">Famílias Alcançadas</p>
+                    </div>
+                    <span class="about-img d-none d-lg-inline-block">
+                        <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
+                            class="position-absolute left-n25 bottom-n20 z-index-minus2 ani-left-right">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
