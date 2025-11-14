@@ -12,7 +12,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Eixo 04</h1>
+                    <h1>Eixo 05</h1>
 
                 </div>
 
@@ -22,7 +22,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Eixo 04</a></li>
+                        <li><a href="#!">Eixo 05</a></li>
 
                     </ul>
 
@@ -43,10 +43,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
-                    <img src="<?= WWW; ?>/site/img/about/saude_bemestar.webp" alt="Pessoas praticando atividade física em grupo" class="rounded">
+                    <img src="<?= WWW; ?>/site/img/about/educacao_ambiental.webp" alt="Jovens em atividade de educação ambiental" class="rounded">
                     <div class="box-left py-4 px-4 px-sm-4 px-md-5">
-                        <h3 class="text-secondary"><span class="countup">01</span></h3>
-                        <p class="lead mb-0 fw-bold text-dark">Iniciativa de Autocuidado</p>
+                        <h3 class="text-secondary"><span class="countup">10+</span></h3>
+                        <p class="lead mb-0 fw-bold text-dark">Ações Socioambientais</p>
                     </div>
                     <span class="about-img d-none d-lg-inline-block">
                         <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
@@ -57,25 +57,25 @@
             
             <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
                 <div class="about-title">
-                    <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Qualidade de Vida e Cuidado Integral</span>
-                    <h2 class="mb-1-6">EIXO 04: SAÚDE E BEM-ESTAR</h2>
+                    <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Conhecimento, Natureza e Inovação</span>
+                    <h2 class="mb-1-6">EIXO 05: EDUCAÇÃO AMBIENTAL E GERAÇÃO DE RENDA SUSTENTÁVEL</h2>
                     <p class="fst-italic font-weight-600">
-                        **OBJETIVO ESTRATÉGICO:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida, o bem-estar físico e mental dos nossos beneficiários.
+                        **OBJETIVO ESTRATÉGICO:** Difundir conhecimentos e habilidades socioambientais para a construção de estratégias sustentáveis para o desenvolvimento territorial, fortalecendo as diversas territorialidades locais.
                     </p>
                     
                     <p>
-                        O Eixo 04 promove o **autocuidado** e a **saúde integral** através de práticas educativas e apoio profissional. Nossas ações visam construir uma cultura de paz e fortalecer a saúde em todos os seus aspectos:
+                        Este Eixo trabalha na intersecção entre a **preservação ambiental** e a **economia local**. Nossas ações são articuladas e participativas, garantindo que o conhecimento socioambiental se traduza em oportunidades reais de renda:
                     </p>
                     
                     <ul class="list-style1 mb-4">
-                        <li>Difusão de práticas educativas para **prevenção** em saúde mental e física, incentivando o **autocuidado**.</li>
-                        <li>Promoção de **atendimento clínico psicológico**, atividades esportivas e laborais para a melhoria da qualidade de vida.</li>
-                        <li>Fomento à **Comunicação Não Violenta (CNV)** para relações de confiança, cooperação e construção de uma cultura de paz.</li>
+                        <li>Realização de **vivências e campanhas** para difusão de conhecimentos socioambientais.</li>
+                        <li>Desenvolvimento de **materiais educativos** (cartilhas, jogos, vídeos) sobre biodiversidade e crise climática para escolas parceiras.</li>
+                        <li>**Capacitação** de comunidades em habilidades baseadas na natureza para fomentar empreendimentos de **renda sustentável**.</li>
                     </ul>
                     
-                    <h3 class="mb-1-6">PROJETO DE DESTAQUE: LUMINAR</h3>
+                    <h3 class="mb-1-6">PROJETO DE DESTAQUE: TECENDO NOVOS RUMOS SUSTENTÁVEIS</h3>
                     <p>
-                        **FINALIDADE:** Transformar a vida de **mulheres de 16 a 50 anos** com foco em saúde e bem-estar. O projeto oferece **atividades físicas** (como danças em grupo, fortalecimento e mobilidade) e **grupos de apoio** acompanhados por profissionais qualificados. O Luminar cria um ambiente de troca, motivação e solidariedade, resultando na melhoria da saúde física e mental das participantes.
+                        **FINALIDADE:** Promover a **Inclusão Produtiva sustentável** de adolescentes de famílias vulneráveis em Belém/PA. O projeto efetiva o desenvolvimento de competências e habilidades baseadas na **natureza e no trabalho tecnológico**, contribuindo diretamente para a **geração de renda sustentável** e para a inovação como ferramenta de superação de desafios na adolescência.
                     </p>
                 </div>
             </div>
