@@ -48,7 +48,7 @@
                     O **Instituto Ambient** é uma organização dedicada ao desenvolvimento social e ambiental, atuando com foco na **Amazônia Oriental**. Nossa equipe é composta por profissionais multidisciplinares e apaixonados que trabalham diariamente nos 5 Eixos estratégicos (Proteção Familiar, Geração de Renda, Redes Institucionais, Saúde e Educação Ambiental) para promover a sustentabilidade e a cidadania nas comunidades de Belém e região.
                 </p>
             </div>
-            
+
             <div class="col-lg-8 mb-1-9 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div>
                     <h2 class="mb-4">Junte-se à Nossa Missão de Transformação</h2>
@@ -58,10 +58,10 @@
                     <p class="mb-1-9">
                         Trabalhar conosco significa estar na linha de frente das grandes questões da Amazônia, contribuindo ativamente para o fortalecimento de comunidades, o enfrentamento à crise climática e a promoção de direitos humanos. Buscamos profissionais comprometidos com nossos valores e prontos para integrar a **bioeconomia, tecnologia e assistência social** em suas práticas diárias.
                     </p>
-                    <a href="#vagas-form" class="butn-style3"><span>Veja as Vagas Abertas (ou Envie Currículo)</span></a>
+                    <a href="mailto:rh@institutoambient.org.br" class="butn-style3"><span>Envie Seu Currículo Agora</span></a>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 wow fadeIn" data-wow-delay="400ms">
                 <div class="bg-light p-4 p-xl-5" id="vagas-form">
                     <div class="title mb-1-9 text-start">
@@ -72,19 +72,19 @@
                     </p>
                     <ul class="mb-0 list-unstyled ps-0">
                         <li class="mb-3">
-                            <span class="text-dark font-weight-700"><i class="ti-email text-primary me-1"></i> Envie seu Currículo:</span> 
+                            <span class="text-dark font-weight-700"><i class="ti-email text-primary me-1"></i> Envie seu Currículo:</span>
                             <span class="float-end display-30"><a href="mailto:rh@institutoambient.org.br">rh@institutoambient.org.br</a></span>
                         </li>
                         <li class="mb-3">
-                            <span class="text-dark font-weight-700"><i class="ti-user text-primary me-1"></i> Formato Aceito:</span> 
+                            <span class="text-dark font-weight-700"><i class="ti-user text-primary me-1"></i> Formato Aceito:</span>
                             <span class="float-end display-30">PDF (Preferencialmente)</span>
                         </li>
                         <li class="mb-3">
-                            <span class="text-dark font-weight-700"><i class="ti-vector text-primary me-1"></i> Assunto do Email:</span> 
+                            <span class="text-dark font-weight-700"><i class="ti-vector text-primary me-1"></i> Assunto do Email:</span>
                             <span class="float-end display-30">CURRÍCULO - [Sua Área]</span>
                         </li>
                         <li class="mb-0">
-                            <span class="text-dark font-weight-700"><i class="ti-location-pin text-primary me-1"></i> Foco da Contratação:</span> 
+                            <span class="text-dark font-weight-700"><i class="ti-location-pin text-primary me-1"></i> Foco da Contratação:</span>
                             <span class="float-end display-30">Belém/PA (Presencial)</span>
                         </li>
                     </ul>
