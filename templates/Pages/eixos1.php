@@ -37,19 +37,6 @@
 </section>
 <!-- Pressupostos Estratégicos
 ================================================== -->
-
-<section>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12"> <div class="mb-6 mb-lg-8 position-relative elements-block">
-                    <div class="inner-title">
-                        <h2 class="mb-0"> PROJETOS INSTITUCIONAIS</h2>
-                    </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="aboutus">
     <div class="container">
         <div class="row align-items-center">
