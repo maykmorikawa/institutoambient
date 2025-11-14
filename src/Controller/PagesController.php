@@ -126,6 +126,7 @@ class PagesController extends AppController
     public function documentos() {}
     public function atuacao() {}
     public function conselho() {}
+    public function voluntario() {}
 
 
 
