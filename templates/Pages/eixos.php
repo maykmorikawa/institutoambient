@@ -119,7 +119,7 @@
     </div>
     <div class="container position-relative z-index-1">
         <div class="row mt-n2-10">
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
                 <a href="/pages/eixos5" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
 
