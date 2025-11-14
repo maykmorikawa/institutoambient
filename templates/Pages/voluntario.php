@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-img theme-overlay cover-background rounded" data-overlay-dark="8" data-background="<?= WWW; ?>/site/img/bg/bg-03.jpg">
+                    <div class="bg-img theme-overlay cover-background rounded" data-overlay-dark="8" data-background="<?= WWW; ?>/site/img/avatar/avatar-02.png">
                         <div class="position-relative z-index-9 text-center py-5">
                             <i class="fa fa-headphones text-white" aria-hidden="true"></i>
                             <h5 class="text-white mb-4">Pronto para começar?</h5>
