@@ -15,7 +15,6 @@
         </div>
     </div>
 </section>
-
 <section>
     <div class="container">
         <div class="row">
@@ -25,50 +24,29 @@
                         <?php foreach ($posts as $post): ?>
                             <div class="col-lg-12 mb-2-3">
                                 <div class="card card-style7 border-0">
-                                    
-                                    <?php $featuredImage = null; foreach (($post->post_images ?? []) as $img) { if ($img->is_featured) {$featuredImage = $img; break; }}?>
-                                    
-                                    <?php if ($featuredImage): ?>
-                                        <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>" 
-                                             class="card-img-top" 
-                                             alt="<?= h($post->title) ?>">
-                                    <?php else: ?>
-                                        <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>" 
-                                             class="card-img-top" 
-                                             alt="Imagem padrão">
-                                    <?php endif; ?>
+
+                                    <?php $featuredImage = null;
+                                    foreach (($post->post_images ?? []) as $img) {
+                                        if ($img->is_featured) {
+                                            $featuredImage = $img;
+                                            break;
+                                        }
+                                    } ?>
+
+                                    <?php $postUrl = $this->Url->build(['controller' => 'Posts', 'action' => 'view', $post->slug]); ?>
+
+                                    <a href="<?= $postUrl ?>" class="text-decoration-none text-dark">
+                                        <?php if ($featuredImage): ?>
+                                            <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
+                                                class="card-img-top"
+                                                alt="<?= h($post->title) ?>">
+                                        <?php else: ?>
+                                            <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>"
+                                                class="card-img-top"
+                                                alt="Imagem padrão">
+                                        <?php endif; ?>
+                                    </a>
                                     <div class="card-body px-4 py-2-3">
-                                        <h2 class="mb-4"><?= h($post->title) ?></h2>
-                                        
-                                        <p class="text-muted">
-                                            Publicado em: 
-                                            <?= $post->published ? $post->published->format('d/m/Y H:i') : 'Data não disponível' ?>
-                                        </p>
-                                        
-                                        <div>
-                                            <?= $this->Text->autoParagraph(h($post->content)) ?>
-                                        </div>
-                                        
-                                        <div class="mt-4">
-                                            <strong>Tags:</strong>
-                                            <?php if (!empty($post->tags)): ?>
-                                                <?php foreach ($post->tags as $tag): ?>
-                                                    <span class="badge bg-secondary"><?= h($tag->name) ?></span>
-                                                <?php endforeach; ?>
-                                            <?php else: ?>
-                                                <span class="text-muted">Nenhuma tag relacionada.</span>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="d-flex justify-content-center align-items-center mx-auto py-1-9 px-3 bg-light">
-                                    <div class="me-3">
-                                        <img class="rounded-circle w-60px" src="<?= $this->Url->build('/site/img/avatar/avatar-01.jpg') ?>" alt="...">
-                                    </div>
-                                    <div class="text-start">
-                                        <h4 class="h6 mb-0">Postado por <?= h($post->user->name ?? 'Equipe Editorial') ?></h4>
-                                        <span class="small text-muted"><?= $post->published ? $post->published->format('d M Y') : 'Data não disponível' ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -81,20 +59,20 @@
 
             <div class="col-lg-4">
                 <div class="sidebar ps-xl-4">
-                    
+
                     <div class="widget mb-1-9 p-4 wow fadeIn" data-wow-delay="400ms">
                         <h3 class="mb-1-6 h5">Postagens Recentes</h3>
                         <?php foreach ($recentes as $r): ?>
-                            <?php 
+                            <?php
                             // Lógica para imagem destacada do post recente
-                            $featuredRecent = null; 
-                            foreach (($r->post_images ?? []) as $img) { 
+                            $featuredRecent = null;
+                            foreach (($r->post_images ?? []) as $img) {
                                 if ($img->is_featured) {
-                                    $featuredRecent = $img; 
-                                    break; 
+                                    $featuredRecent = $img;
+                                    break;
                                 }
                             }
-                            
+
                             $imagePath = $featuredRecent
                                 ? $this->Url->build('/img/uploads/' . $featuredRecent->filename)
                                 // Use a mesma imagem padrão da outra view, se houver
