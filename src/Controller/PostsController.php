@@ -157,7 +157,7 @@ class PostsController extends AppController
             ->matching('Tags', function ($q) use ($slug) {
                 return $q->where(['Tags.slug' => $slug]);
             })
-            ->contain(['Tags']) // ← IMPORTANTE
+            ->contain(['Tags' , 'PostImages']) // ← IMPORTANTE
             ->order(['Posts.published' => 'DESC'])
             ->all();
 
