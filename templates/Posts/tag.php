@@ -244,7 +244,7 @@
                             <div class="media mb-4">
 
 
-                                <img src="<?= $r->imagem ?? $this->Url->image('/img/' . $r->image) ?>"
+                                <img src="<?= $r->imagem ?? $this->Url->image('/img/uploads/' . $r->image) ?>"
 
 
                                      class="rounded img-fluid"
