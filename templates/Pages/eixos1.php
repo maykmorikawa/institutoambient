@@ -59,7 +59,7 @@
                                 <img src="<?= WWW; ?>/site/img/about/foto_7.jpg" class="d-block w-100 rounded" alt="Outra imagem relevante">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_8.jpg" class="d-block w-100 rounded" alt="Mais uma imagem">
+                                <img src="<?= WWW; ?>/site/img/about/foto_11.jpg" class="d-block w-100 rounded" alt="Mais uma imagem">
                             </div>
                         </div>
 
@@ -139,13 +139,13 @@
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="<?= WWW; ?>/site/img/about/foto_9.jpg" class="d-block w-100 rounded" alt="Crianças e idosos em atividade">
+                                <img src="<?= WWW; ?>/site/img/about/foto_12.jpg" class="d-block w-100 rounded" alt="Crianças e idosos em atividade">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_10.jpg" class="d-block w-100 rounded" alt="Outra foto de famílias">
+                                <img src="<?= WWW; ?>/site/img/about/foto_08.jpg" class="d-block w-100 rounded" alt="Outra foto de famílias">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_11.jpg" class="d-block w-100 rounded" alt="Mais uma atividade">
+                                <img src="<?= WWW; ?>/site/img/about/foto_09.jpg" class="d-block w-100 rounded" alt="Mais uma atividade">
                             </div>
                         </div>
 
