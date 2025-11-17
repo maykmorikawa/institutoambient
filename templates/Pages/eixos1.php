@@ -125,15 +125,45 @@
                         <li>**8. PROJETO AURORA (Parceria: Ministério das Mulheres):** Proteção da primeira infância com formação profissional, saúde e acompanhamento para 100 gestantes vulneráveis (Belém/Jacundá).</li>
                     </ul>
                 </div>
-            </div>
-
+            </div>            
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
-                    <img src="<?= WWW; ?>/site/img/about/foto_7.jpg" alt="Crianças e idosos em atividade" class="rounded">
+
+                    <div id="meuCarouselFamilia" class="carousel slide rounded" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="<?= WWW; ?>/site/img/about/foto_9.jpg" class="d-block w-100 rounded" alt="Crianças e idosos em atividade">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?= WWW; ?>/site/img/about/foto_10.jpg" class="d-block w-100 rounded" alt="Outra foto de famílias">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?= WWW; ?>/site/img/about/foto_11.jpg" class="d-block w-100 rounded" alt="Mais uma atividade">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+
+                    </div>
                     <div class="box-left py-2 px-4 px-sm-4 px-md-5">
                         <h3 class="text-secondary"><span class="countup">72</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Famílias Alcançadas</p>
                     </div>
+
                     <span class="about-img d-none d-lg-inline-block">
                         <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
                             class="position-absolute left-n25 bottom-n20 z-index-minus2 ani-left-right">
