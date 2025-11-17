@@ -42,18 +42,49 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
-                    <img src="<?= WWW; ?>/site/img/about/foto_6.jpg" alt="Família sendo assistida" class="rounded">
+
+                    <div id="meuCarouselImagens" class="carousel slide rounded" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#meuCarouselImagens" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#meuCarouselImagens" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#meuCarouselImagens" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="<?= WWW; ?>/site/img/about/foto_6.jpg" class="d-block w-100 rounded" alt="Família sendo assistida">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?= WWW; ?>/site/img/about/foto_7.jpg" class="d-block w-100 rounded" alt="Outra imagem relevante">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?= WWW; ?>/site/img/about/foto_8.jpg" class="d-block w-100 rounded" alt="Mais uma imagem">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#meuCarouselImagens" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#meuCarouselImagens" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+
+                    </div>
                     <div class="box-left py-2 px-4 px-sm-4 px-md-5">
                         <h3 class="text-secondary"><span class="countup">08</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Projetos Ativos</p>
                     </div>
+
                     <span class="about-img d-none d-lg-inline-block">
                         <img src="<?= WWW; ?>/site/img/content/dots1.png" alt="..."
                             class="position-absolute left-n25 bottom-n20 z-index-minus2 ani-left-right">
                     </span>
                 </div>
             </div>
-            
+
             <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
                 <div class="about-title">
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossas Ações de Proteção Social</span>
@@ -78,12 +109,12 @@
 <section class="aboutus bg-light">
     <div class="container">
         <div class="row align-items-center">
-            
+
             <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
                 <div class="about-title">
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Resultados na Comunidade</span>
                     <h2 class="mb-1-6">PROJETOS DO INSTITUTO AMBIENT NO EIXO 01</h2>
-                    
+
                     <ul class="list-style1 mb-4">
                         <li>**1. Convivência e Fortalecimento de Vínculos familiares:** Promoção de memória e cultura amazônica com 40 crianças/adolescentes (Sacramenta/Belém).</li>
                         <li>**2. SCFV - Parceria FUNPAPA:** Atendimento a crianças (8-11), adolescentes (12-17) e idosos, resultando em maior autonomia dos idosos e 15 encaminhamentos ao Jovem Aprendiz.</li>
@@ -95,7 +126,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
                     <img src="<?= WWW; ?>/site/img/about/foto_7.jpg" alt="Crianças e idosos em atividade" class="rounded">
