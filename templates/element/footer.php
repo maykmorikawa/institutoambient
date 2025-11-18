@@ -45,7 +45,7 @@
                     <p class="mb-1-9 text-white opacity9">Estamos sempre à disposição para ajudar e fazer a diferença juntos! 🌿💚</p>
                     <ul class="footer-link list-unstyled mb-0">
                         <li class="mb-3"><a href="#!" class="ps-0"><i
-                                    class="ti-mobile display-28 align-middle text-primary pe-3"></i>(+55)91 98567-7889</a></li>
+                                    class="ti-mobile display-28 align-middle text-primary pe-3"></i>(+55)91 98537-9641</a></li>
                         <li class="mb-3"><a href="#!" class="ps-0"><i
                                     class="ti-email display-28 align-middle text-primary pe-3"></i>institutoambient@gmail.com</a>
                         </li>
