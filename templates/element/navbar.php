@@ -50,7 +50,7 @@
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
                                         <li><a href="/atuacao">Áreas de Atuação Pressupostos</a></li>
-                                        <li><a href="/eixos">Eixos Estratégicos</a></li>
+                                        <li><a href="/eixos">Eixos Estratégicos e Projetos</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#!">Nossos Parceiros e Parceiras</a>

@@ -12,7 +12,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Eixos Estratégicos</h1>
+                    <h1>Eixos e Projetos</h1>
 
                 </div>
 
@@ -22,7 +22,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Eixos Estratégicos</a></li>
+                        <li><a href="#!">Eixos e Projetos</a></li>
 
                     </ul>
 
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <span class="butn-style3 medium">Projetos</span>
                         </div>
                     </div>
                 </a>
@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <span class="butn-style3 medium">Projetos</span>
                         </div>
                     </div>
                 </a>
@@ -94,7 +94,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <span class="butn-style3 medium">Projetos</span>
                         </div>
                     </div>
                 </a>
@@ -110,7 +110,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <span class="butn-style3 medium">Projetos</span>
                         </div>
                     </div>
                 </a>
@@ -130,7 +130,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <span class="butn-style3 medium">Saiba Mais</span>
+                            <span class="butn-style3 medium">Projetos</span>
                         </div>
                     </div>
                 </a>
