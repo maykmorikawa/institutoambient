@@ -72,6 +72,41 @@
                                 <li>Planejamento Institucional 2025 à 2028</li>
                             </a>
                         </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_COMBATE_ASSEDIO.pdf" target="_blank">
+                                <li>COMPLIANCE IA POL COMBATE ASSÉDIO</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_PREVENCAO_LAVAGEM.pdf" target="_blank">
+                                <li>COMPLIANCE IA POL PREVENÇÃO LAVAGEM</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_TRATAMENTO_DENUNCIAS.pdf" target="_blank">
+                                <li>COMPLIANCE IA POL TRATAMENTO DENÚNCIAS</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_VOLUNTARIOS.pdf" target="_blank">
+                                <li>COMPLIANCE IA POL VOLUNTÁRIOS</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_MANUAL_DE_INTEGRIDADE.pdf" target="_blank">
+                                <li>COMPLIANCE IA MANUAL DE INTEGRIDADE</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_MANUAL_PROGRAMA_COMPLIANCE.pdf" target="_blank">
+                                <li>COMPLIANCE IA MANUAL PROGRAMA COMPLIANCE</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_ANTICORRUPCAO_agosto.pdf" target="_blank">
+                                <li>COMPLIANCE IA POL ANTICORRUPÇÃO AGOSTO</li>
+                            </a>
+                        </ul>
                         
                     </div>
                    
