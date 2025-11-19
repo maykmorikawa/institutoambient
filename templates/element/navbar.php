@@ -65,6 +65,7 @@
                                 <li><a href="#!">Doe Agora</a>
                                     <ul>
                                         <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe</li>
+                                        <li><a href="/captacao">Captação de Recursos</a></li>
                                         <li><a href="#">Imposto de Renda</a></li>
                                     </ul>
                                 </li>
