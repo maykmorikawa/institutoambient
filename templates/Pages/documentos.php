@@ -81,7 +81,7 @@
                 <div class="row">
                     <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
                         <div class="inner-title">
-                            <h2 class="mb-0">Ducumentos do IA</h2>
+                            <h2 class="mb-0">Relatório IA</h2>
                         </div>
                         <ul class="list-style4">
                             <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
