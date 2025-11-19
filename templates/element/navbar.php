@@ -43,7 +43,7 @@
                                     <ul>
                                         <li><a href="/quem_somos">Quem Somos</a></li>
                                         <li><a href="/o_instituto_ambient">Nossa História</a></li>
-                                        <li><a href="/documentos">Compliance/Privacidade</a></li>
+                                        <li><a href="/documentos">Compliance/Transparencia</a></li>
 
                                     </ul>
                                 </li>
