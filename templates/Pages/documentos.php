@@ -41,7 +41,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="row">
                     <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
                         <div class="inner-title">
@@ -73,6 +73,36 @@
                             </a>
                         </ul>
                         
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-4 position-relative elements-block mb-6 mb-md-0">
+                        <div class="inner-title">
+                            <h2 class="mb-0">Ducumentos do IA</h2>
+                        </div>
+                        <ul class="list-style4">
+                            <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank">
+                                <li>DRE e Balanco IA 2022 2023</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank">
+                                <li>Relatório de Atividades 2024 com Balanço</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank">
+                                <li>Relatório de Atividades IA 2023</li>
+                            </a>
+                        </ul>
+                        <ul class="list-style4" style="margin-top: 10px">
+                            <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_do_Auditor_Independente_Inst_Ambient_2024_assinado.pdf" target="_blank">
+                                <li>Relatório do Auditor Independente Instituto Ambiente 2024 Assinado</li>
+                            </a>
+                        </ul>
                     </div>
                    
                 </div>
