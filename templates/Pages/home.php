@@ -1,3 +1,27 @@
+<style>
+    /* Wrapper da logo sobre o banner */
+.logo-home-wrapper {
+    position: absolute;
+    top: 50%;            /* centraliza vertical (ajustar se quiser mais alto) */
+    left: 50%;           /* centraliza horizontal */
+    transform: translate(-50%, -50%);
+    z-index: 10;         /* fica acima do banner */
+    text-align: center;
+}
+
+/* Imagem da logo */
+.logo-home-img {
+    width: 200px;        /* tamanho padrão */
+    max-width: 60vw;     /* responsivo no mobile */
+    height: auto;
+}
+
+/* Corrige scroll horizontal forçado por outros elementos */
+html, body {
+    overflow-x: hidden;
+}
+
+</style>
 <!-- BANNER
         ================================================== -->
 <section class="p-0 top-position1">
@@ -40,17 +64,13 @@
         ================================================== -->
 <section class="p-0">
     <div class="container">
-        <div class="processo">
-            <div class="row">
-                <div class="col-auto text-center" style="margin-left: 186px;">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
-                        style="width: 450px; height: auto;">
-                    <div class="mt-3">
-                        <!-- Conteúdo adicional aqui -->
-                    </div>
-                </div>
+        <div class="row">
+            <div class="logo-home-wrapper">
+                <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambient"
+                    class="logo-home-img">
             </div>
         </div>
+
     </div>
 </section>
 <!-- INSCRIÇÕES
