@@ -1,78 +1,88 @@
 <style>
-    /* Wrapper da logo sobre o banner */
-.logo-home-wrapper {
-    position: absolute;
-    top: 50%;            /* centraliza vertical (ajustar se quiser mais alto) */
-    left: 50%;           /* centraliza horizontal */
-    transform: translate(-50%, -50%);
-    z-index: 10;         /* fica acima do banner */
-    text-align: center;
-}
+  /* garante que o slider seja referência para posicionamento absoluto */
+  .slider-fade {
+    position: relative; /* IMPORTANTE */
+    overflow: visible;
+  }
 
-/* Imagem da logo */
-.logo-home-img {
-    width: 200px;        /* tamanho padrão */
+  /* Wrapper da logo sobre o banner */
+  .logo-home-wrapper {
+    position: absolute;
+    top: 50%;                 /* ajustar para subir/descer */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;            /* ficar acima de tudo */
+    text-align: center;
+    pointer-events: none;     /* evita bloquear cliques no slider; remover se precisar clicar na logo */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Imagem da logo */
+  .logo-home-img {
+    width: 220px;        /* tamanho padrão em desktop */
     max-width: 60vw;     /* responsivo no mobile */
     height: auto;
-}
+    display: block;
+  }
 
-/* Corrige scroll horizontal forçado por outros elementos */
-html, body {
+  /* Evitar scroll horizontal causado por largura de elementos */
+  html, body {
     overflow-x: hidden;
-}
+  }
 
+  /* Ajustes finos para mobile: reduz a logo */
+  @media (max-width: 480px) {
+    .logo-home-img { width: 140px; max-width: 50vw; }
+    .logo-home-wrapper { top: 55%; } /* descer um pouco no mobile se necessário */
+  }
 </style>
-<!-- BANNER
-        ================================================== -->
+
+<!-- BANNER ================================================== -->
 <section class="p-0 top-position1">
-    <div class="slider-fade owl-carousel owl-theme w-100">
-        <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg left-overlay-dark"
-            data-overlay-dark="1" data-background="<?= WWW; ?>/site/img/banner/slide-03.webp">
-            <div class="container pt-6 pt-md-0">
-                <div class="row align-items-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                        <span
-                            class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Desenvolvimento</span>
-                        <h1
-                            class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">
-                            Social com
-                            Sustentabilidade</h1>
-                        <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg left-overlay-dark"
-            data-overlay-dark="85" data-background="<?= WWW; ?>/site/img/banner/slide-04.webp">
-            <div class="container pt-6 pt-md-0">
-                <div class="row align-items-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Valorizamos
-                            a colaboração </span>
-                        <h1
-                            class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">
-                            Para melhorar a vida dos cidadãos.</h1>
-                        <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="slider-fade owl-carousel owl-theme w-100">
+    <!-- LOGO INSERIDA AQUI como filha direta do slider -->
+    <div class="logo-home-wrapper" aria-hidden="true">
+      <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambient" class="logo-home-img">
     </div>
-</section>
-<!-- LOGO
-        ================================================== -->
-<section class="p-0">
-    <div class="container">
-        <div class="row">
-            <div class="logo-home-wrapper">
-                <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambient"
-                    class="logo-home-img">
-            </div>
-        </div>
 
+    <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg left-overlay-dark"
+         data-overlay-dark="1" data-background="<?= WWW; ?>/site/img/banner/slide-03.webp">
+      <div class="container pt-6 pt-md-0">
+        <div class="row align-items-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
+            <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Desenvolvimento</span>
+            <h1 class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">
+              Social com Sustentabilidade
+            </h1>
+            <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80">&nbsp;</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg left-overlay-dark"
+         data-overlay-dark="85" data-background="<?= WWW; ?>/site/img/banner/slide-04.webp">
+      <div class="container pt-6 pt-md-0">
+        <div class="row align-items-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
+            <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-8 mb-4">Valorizamos a colaboração</span>
+            <h1 class="text-white display-16 display-md-9 display-lg-7 display-xl-4 mb-1-6 font-weight-700 text-shadow">
+              Para melhorar a vida dos cidadãos.
+            </h1>
+            <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-80">&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<!-- FIM BANNER -->
+
 <!-- INSCRIÇÕES
         ================================================== -->
 <section>
