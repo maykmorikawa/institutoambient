@@ -1,50 +1,55 @@
 <style>
     /* Contêiner geral do banner */
-.section-banner {
-    position: relative;
-}
-
-/* Wrapper da logo */
-.logo-home-wrapper {
-    position: absolute;
-    bottom: -60px; /* metade para fora do banner */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-    text-align: center;
-}
-
-/* Imagem da logo */
-.logo-home-img {
-    width: 180px;
-    max-width: 50vw;
-    height: auto;
-}
-
-/* Evitar scroll horizontal */
-html, body {
-    overflow-x: hidden;
-}
-.section-banner {
-    margin-bottom: 100px; /* Afastar bem por causa da logo */
-}
-
-@media (max-width: 480px) {
     .section-banner {
-        margin-bottom: 70px;
+        position: relative;
     }
-}
 
-
-/* Ajuste no mobile */
-@media (max-width: 480px) {
+    /* Wrapper da logo */
     .logo-home-wrapper {
-        bottom: -40px;
+        position: absolute;
+        bottom: -60px;
+        /* metade para fora do banner */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        text-align: center;
     }
+
+    /* Imagem da logo */
     .logo-home-img {
-        width: 130px;
+        width: 180px;
+        max-width: 50vw;
+        height: auto;
     }
-}
+
+    /* Evitar scroll horizontal */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .section-banner {
+        margin-bottom: 100px;
+        /* Afastar bem por causa da logo */
+    }
+
+    @media (max-width: 480px) {
+        .section-banner {
+            margin-bottom: 70px;
+        }
+    }
+
+
+    /* Ajuste no mobile */
+    @media (max-width: 480px) {
+        .logo-home-wrapper {
+            bottom: -40px;
+        }
+
+        .logo-home-img {
+            width: 130px;
+        }
+    }
 </style>
 <!-- BANNER
         ================================================== -->
@@ -83,14 +88,14 @@ html, body {
             </div>
         </div>
     </div>
-    <!-- LOGO SOBREPOSTA NO FINAL DO BANNER -->
+</section>
+<!-- LOGO SOBREPOSTA NO FINAL DO BANNER -->
+<section>
     <div class="logo-home-wrapper">
         <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" class="logo-home-img" alt="Logo do Instituto Ambient">
     </div>
+
 </section>
-<br>
-<br>
-<br>
 <!-- INSCRIÇÕES
         ================================================== -->
 <section class="pt-0">
