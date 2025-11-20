@@ -81,7 +81,7 @@ html, body {
 
 <!-- INSCRIÇÕES
         ================================================== -->
-<section>
+<section class="pt-6">
     <div class="container">
         <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <div class="col-lg-5 mb-3 mb-lg-0">
