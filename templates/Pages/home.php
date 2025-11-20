@@ -78,10 +78,12 @@ html, body {
         <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" class="logo-home-img" alt="Logo do Instituto Ambient">
     </div>
 </section>
-
+<br>
+<br>
+<br>
 <!-- INSCRIÇÕES
         ================================================== -->
-<section class="pt-6">
+<section class="pt-0">
     <div class="container">
         <div class="row align-items-center mb-1-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <div class="col-lg-5 mb-3 mb-lg-0">
