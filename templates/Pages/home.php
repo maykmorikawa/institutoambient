@@ -1,10 +1,5 @@
 <style>
-    /* Contêiner geral do banner */
-    .section-banner {
-        position: relative;
-    }
-
-    /* Wrapper da logo */
+       /* Wrapper da logo */
     .logo-home-wrapper {
         position: absolute;
         bottom: -60px;
@@ -21,25 +16,6 @@
         max-width: 50vw;
         height: auto;
     }
-
-    /* Evitar scroll horizontal */
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
-    .section-banner {
-        margin-bottom: 100px;
-        /* Afastar bem por causa da logo */
-    }
-
-    @media (max-width: 480px) {
-        .section-banner {
-            margin-bottom: 70px;
-        }
-    }
-
-
     /* Ajuste no mobile */
     @media (max-width: 480px) {
         .logo-home-wrapper {
