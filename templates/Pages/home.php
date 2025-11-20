@@ -1,3 +1,41 @@
+<style>
+    /* Contêiner geral do banner */
+.section-banner {
+    position: relative;
+}
+
+/* Wrapper da logo */
+.logo-home-wrapper {
+    position: absolute;
+    bottom: -60px; /* metade para fora do banner */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    text-align: center;
+}
+
+/* Imagem da logo */
+.logo-home-img {
+    width: 180px;
+    max-width: 50vw;
+    height: auto;
+}
+
+/* Evitar scroll horizontal */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Ajuste no mobile */
+@media (max-width: 480px) {
+    .logo-home-wrapper {
+        bottom: -40px;
+    }
+    .logo-home-img {
+        width: 130px;
+    }
+}
+</style>
 <!-- BANNER
         ================================================== -->
 <section class="p-0 top-position1">
@@ -35,115 +73,11 @@
             </div>
         </div>
     </div>
-</section>
-<!-- LOGO
-        ================================================== -->
-<section class="p-0 overflow-visible">
-    <div class="container">
-        <div class="processo">
-            <div class="row justify-content-center">
-                <div class="col-auto text-center" style="margin-left: 186px;">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
-                        style="width: 450px; height: auto;">
-                    <div class="mt-3">
-                        <!-- Conteúdo adicional aqui -->
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- LOGO SOBREPOSTA NO FINAL DO BANNER -->
+    <div class="logo-home-wrapper">
+        <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" class="logo-home-img" alt="Logo do Instituto Ambient">
     </div>
 </section>
-
-
-<!-- SERVICOS
-        ================================================== -->
-<!--<section class="pt-0">
-    <div class="container">
-        <div class="row mt-n2-2">
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="200ms">
-                <div class="card card-style8">
-                    <div class="card-body px-1-9 py-2-9">
-                        <div class="icon-box mb-1-9 mb-md-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-life.png" class="z-index-9 position-relative"
-                                alt="">
-                            <div class="box-circle primary"></div>
-                        </div>
-                        <h3 class="h5 mb-3"><a href="#!">Instituto</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O INSTITUTO AMBIENT fortalece a base social com
-                            transparência, promovendo governança e cooperação. Assim, gera autonomia e amplia a oferta
-                            de serviços de qualidade, impulsionando mudanças sociais.</p>
-                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
-                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="400ms">
-                <div class="card card-style8">
-                    <div class="card-body px-1-9 py-2-9">
-                        <div class="icon-box mb-1-9 mb-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-car.png" class="z-index-9 position-relative"
-                                alt="">
-                            <div class="box-circle primary"></div>
-                        </div>
-                        <h3 class="h5 mb-3"><a href="#!">Saúde</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O IA gerencia hospitais, pronto-atendimentos e programas
-                            de saúde, garantindo serviços qualificados. Atua no desenvolvimento e aprimoramento contínuo
-                            da gestão com profissionais especializados</p>
-                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais
-                            <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="600ms">
-                <div class="card card-style8">
-                    <div class="card-body px-1-9 py-2-9">
-                        <div class="icon-box mb-1-9 mb-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-health.png" class="z-index-9 position-relative"
-                                alt="">
-                            <div class="box-circle primary"></div>
-                        </div>
-                        <h3 class="h5 mb-3"><a href="#!">Educação</a></h3>
-                        <p class="mb-1-9 text-color-light-blue"> IA estabelece parcerias para oferecer ensino e
-                            capacitação em diversas modalidades educacionais, abrangendo da infância à educação
-                            superior, profissional, digital e socioambiental.</p>
-                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais
-                            <i class="ti-arrow-right ms-2 align-middle display-30"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 mt-2-2 wow fadeIn" data-wow-delay="800ms">
-                <div class="card card-style8">
-                    <div class="card-body px-1-9 py-2-9">
-                        <div class="icon-box mb-1-9 mb-2-6">
-                            <img src="<?= WWW; ?>/site/img/content/icon-home.png" class="z-index-9 position-relative"
-                                alt="">
-                            <div class="box-circle primary"></div>
-                        </div>
-                        <h3 class="h5 mb-3"><a href="#!">Sustentabilidade</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O IA promove ações socioambientais, culturais e
-                            econômicas, defendendo recursos naturais e direitos coletivos. Além disso, elabora planos e
-                            projetos de gestão ambiental e sustentabilidade.</p>
-                        <a href="/atuacao" class="text-dark text-primary-hover font-weight-600">Saiba Mais<i
-                                class="ti-arrow-right ms-2 align-middle display-30"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->
-<!-- BOTÕES 
-        ================================================== -->
-
-<!--<section class="botoes-section">
-    <div class="container">
-        <div class="botoes-container">
-            <button class="botao botao-azul">Instituto</button>
-            <button class="botao botao-amarelo">Saúde</button>
-            <button class="botao botao-amarelo">Cultura</button>
-            <button class="botao botao-azul">Sustentabilidade</button>
-        </div>
-    </div>
-</section>-->
 
 <!-- INSCRIÇÕES
         ================================================== -->
