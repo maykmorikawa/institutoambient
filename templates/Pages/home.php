@@ -90,7 +90,7 @@
     </div>
 </section>
 <!-- LOGO SOBREPOSTA NO FINAL DO BANNER -->
-<section>
+<section class="pt-6">
     <div class="logo-home-wrapper">
         <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" class="logo-home-img" alt="Logo do Instituto Ambient">
     </div>
