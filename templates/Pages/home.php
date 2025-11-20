@@ -38,7 +38,21 @@
 </section>
 <!-- LOGO
         ================================================== -->
-
+<section class="p-0">
+    <div class="container">
+        <div class="processo">
+            <div class="row">
+                <div class="col-auto text-center" style="margin-left: 186px;">
+                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
+                        style="width: 450px; height: auto;">
+                    <div class="mt-3">
+                        <!-- Conteúdo adicional aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- INSCRIÇÕES
         ================================================== -->
 <section>
