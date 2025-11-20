@@ -25,6 +25,16 @@
 html, body {
     overflow-x: hidden;
 }
+.section-banner {
+    margin-bottom: 100px; /* Afastar bem por causa da logo */
+}
+
+@media (max-width: 480px) {
+    .section-banner {
+        margin-bottom: 70px;
+    }
+}
+
 
 /* Ajuste no mobile */
 @media (max-width: 480px) {
