@@ -1,11 +1,10 @@
 <style>
        /* Wrapper da logo */
     .logo-home-wrapper {
-        position: absolute;
         bottom: -60px;
         z-index: 20;
         text-align: center;
-        margin-left: 186px;
+        
     }
 
    
