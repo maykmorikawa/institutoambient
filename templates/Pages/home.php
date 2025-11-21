@@ -3,29 +3,19 @@
     .logo-home-wrapper {
         position: absolute;
         bottom: -60px;
-        /* metade para fora do banner */
-        left: 50%;
-        transform: translateX(-50%);
         z-index: 20;
         text-align: center;
+        margin-left: 186px;
     }
 
-    /* Imagem da logo */
-    .logo-home-img {
-        width: 180px;
-        max-width: 50vw;
-        height: auto;
-    }
+   
     /* Ajuste no mobile */
     @media (max-width: 480px) {
         .logo-home-wrapper {
             bottom: -40px;
         }
-
-        .logo-home-img {
-            width: 130px;
-        }
     }
+    
 </style>
 <!-- BANNER
         ================================================== -->
@@ -71,7 +61,7 @@
     <div class="container">
         <div class="processo">
             <div class="row justify-content-center">
-                <div class="col-auto text-center" style="margin-left: 186px;">
+                <div class="logo-home-wrapper" style="margin-left: 186px;">
                     <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
                         style="width: 450px; height: auto;">
                     <div class="mt-3">
