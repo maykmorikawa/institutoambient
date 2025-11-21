@@ -1,9 +1,11 @@
 <style>
        /* Wrapper da logo */
     .logo-home-wrapper {
-        bottom: -60px;
+        margin-top: -85px;
         z-index: 20;
         text-align: center;
+        width: 250px; 
+        height: auto;
         
     }
 
