@@ -59,15 +59,11 @@
         ================================================== -->
 <section class="p-0 overflow-visible">
     <div class="container">
-        <div class="processo">
-            <div class="row justify-content-center">
-                <div class="logo-home-wrapper" style="margin-left: 186px;">
+            <div class="row">
+                <div class="logo-home-wrapper">
                     <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
                         style="width: 450px; height: auto;">
-                    <div class="mt-3">
-                        <!-- Conteúdo adicional aqui -->
                     </div>
-                </div>
             </div>
         </div>
     </div>
