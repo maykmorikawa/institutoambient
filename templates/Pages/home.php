@@ -1,12 +1,10 @@
 <style>
        /* Wrapper da logo */
     .logo-home-wrapper {
-        margin-top: -85px;
-        z-index: 20;
-        text-align: center;
         width: 250px; 
         height: auto;
-        
+        margin-top: -85px;
+        z-index: 20;
     }
 
    
@@ -62,8 +60,7 @@
     <div class="container">
             <div class="row">
                 <div class="logo-home-wrapper">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
-                        style="width: 450px; height: auto;">
+                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid">
                     </div>
             </div>
         </div>
