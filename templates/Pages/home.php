@@ -65,12 +65,22 @@
         </div>
     </div>
 </section>
-<!-- LOGO SOBREPOSTA NO FINAL DO BANNER -->
-<section class="pt-6">
-    <div class="logo-home-wrapper">
-        <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" class="logo-home-img" alt="Logo do Instituto Ambient">
+<!-- LOGO
+        ================================================== -->
+<section class="p-0 overflow-visible">
+    <div class="container">
+        <div class="processo">
+            <div class="row justify-content-center">
+                <div class="col-auto text-center" style="margin-left: 186px;">
+                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid"
+                        style="width: 450px; height: auto;">
+                    <div class="mt-3">
+                        <!-- Conteúdo adicional aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 <!-- INSCRIÇÕES
         ================================================== -->
