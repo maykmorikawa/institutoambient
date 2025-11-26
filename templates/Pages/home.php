@@ -1,20 +1,26 @@
 <style>
-       /* Wrapper da logo */
+    /* Wrapper da logo */
     .logo-home-wrapper {
-        width: 250px; 
+        width: 250px;
         height: auto;
         margin-top: -85px;
         z-index: 20;
+
+        /* Mantém sempre no centro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-   
     /* Ajuste no mobile */
     @media (max-width: 480px) {
         .logo-home-wrapper {
-            bottom: -40px;
+            margin-top: -40px;
         }
     }
-    
+
 </style>
 <!-- BANNER
         ================================================== -->
@@ -58,10 +64,11 @@
         ================================================== -->
 <section class="p-0 overflow-visible">
     <div class="container">
-            <div class="row">
-                <div class="logo-home-wrapper">
-                    <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo do Instituto Ambienet" class="img-fluid">
-                    </div>
+        <div class="row justify-content-center">
+            <div class="logo-home-wrapper text-center">
+                <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" 
+                     alt="Logo do Instituto Ambiental"
+                     class="img-fluid">
             </div>
         </div>
     </div>
