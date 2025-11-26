@@ -35,7 +35,7 @@
                     <h3 class="text-primary mb-1-9 h5">Links Úteis</h3>
                     <ul class="footer-link list-unstyled mb-0">
                         <li class="mb-3"><a href="/admin">IA System</a></li>
-                        
+                        <li class="mb-3"><a href="https://reportfacil.com.br">Canal de Ética</a></li>
                     </ul>
                 </div>
             </div>
