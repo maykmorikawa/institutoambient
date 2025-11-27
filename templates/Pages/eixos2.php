@@ -2,14 +2,15 @@
 // Carrossel superior
 $carouselSuperior = [
     'foto_10.jpg',
-    
+    'ldald_1.jpg',
+    'ldald_2.jpg',
+   
 ];
 
 // Carrossel inferior
 $carouselInferior = [
-    'foto_12.jpg',
-    'foto_08.jpg',
-    'foto_09.jpg',
+    'maria.jpg',
+    'tdc.jpg',
 ];
 ?>
 <!-- TOPO
