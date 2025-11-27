@@ -1,3 +1,20 @@
+<?php
+// Carrossel superior
+$carouselSuperior = [
+    'foto_6.jpg',
+    'foto_7.jpg',
+    'foto_11.jpg',
+    
+];
+
+// Carrossel inferior
+$carouselInferior = [
+    'foto_12.jpg',
+    'foto_08.jpg',
+    'foto_09.jpg',
+];
+?>
+
 <!-- TOPO
 ================================================== -->
 
@@ -43,36 +60,34 @@
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
 
-                    <div id="meuCarouselImagens" class="carousel slide rounded" data-bs-ride="carousel">
+                    <div id="carouselSuperior" class="carousel slide" data-bs-ride="carousel">
 
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#meuCarouselImagens" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#meuCarouselImagens" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#meuCarouselImagens" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <?php foreach ($carouselSuperior as $i => $img): ?>
+                                <button type="button"
+                                        data-bs-target="#carouselSuperior"
+                                        data-bs-slide-to="<?= $i ?>"
+                                        class="<?= $i === 0 ? 'active' : '' ?>"
+                                        aria-label="Slide <?= $i + 1 ?>"></button>
+                            <?php endforeach; ?>
                         </div>
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="<?= WWW; ?>/site/img/about/foto_6.jpg" class="d-block w-100 rounded" alt="Família sendo assistida">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_7.jpg" class="d-block w-100 rounded" alt="Outra imagem relevante">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_11.jpg" class="d-block w-100 rounded" alt="Mais uma imagem">
-                            </div>
+                            <?php foreach ($carouselSuperior as $i => $img): ?>
+                                <div class="carousel-item <?= $i === 0 ? 'active' : '' ?>">
+                                    <img src="<?= WWW; ?>/site/img/about/<?= $img ?>" class="d-block w-100 rounded">
+                                </div>
+                            <?php endforeach; ?>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#meuCarouselImagens" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSuperior" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#meuCarouselImagens" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Próximo</span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSuperior" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
                         </button>
-
                     </div>
+
                     <div class="box-left py-2 px-4 px-sm-4 px-md-5">
                         <h3 class="text-secondary"><span class="countup">08</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Projetos Ativos</p>
@@ -129,36 +144,34 @@
             <div class="col-lg-6 mb-2-2 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                 <div class="pe-lg-1-9 pe-xl-2-9 position-relative z-index-1">
 
-                    <div id="meuCarouselFamilia" class="carousel slide rounded" data-bs-ride="carousel">
+                    <div id="carouselInferior" class="carousel slide" data-bs-ride="carousel">
 
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <?php foreach ($carouselInferior as $i => $img): ?>
+                                <button type="button"
+                                        data-bs-target="#carouselInferior"
+                                        data-bs-slide-to="<?= $i ?>"
+                                        class="<?= $i === 0 ? 'active' : '' ?>"
+                                        aria-label="Slide <?= $i + 1 ?>"></button>
+                            <?php endforeach; ?>
                         </div>
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="<?= WWW; ?>/site/img/about/foto_12.jpg" class="d-block w-100 rounded" alt="Crianças e idosos em atividade">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_08.jpg" class="d-block w-100 rounded" alt="Outra foto de famílias">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="<?= WWW; ?>/site/img/about/foto_09.jpg" class="d-block w-100 rounded" alt="Mais uma atividade">
-                            </div>
+                            <?php foreach ($carouselInferior as $i => $img): ?>
+                                <div class="carousel-item <?= $i === 0 ? 'active' : '' ?>">
+                                    <img src="<?= WWW; ?>/site/img/about/<?= $img ?>" class="d-block w-100 rounded">
+                                </div>
+                            <?php endforeach; ?>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselInferior" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#meuCarouselFamilia" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Próximo</span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselInferior" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
                         </button>
-
                     </div>
+
                     <div class="box-left py-2 px-4 px-sm-4 px-md-5">
                         <h3 class="text-secondary"><span class="countup">72</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Famílias Alcançadas</p>
