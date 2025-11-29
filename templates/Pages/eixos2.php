@@ -168,7 +168,7 @@ $carouselInferior = [
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-                    <div class="box-left py-2 px-4 px-sm-4 px-md-5" style="margin-bottom: -62px;">
+                    <div class="box-left py-2 px-4 px-sm-4 px-md-5" style="margin-bottom: -150px; left: -9px;">
                         <h3 class="text-secondary">+<span class="countup">240</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Capacitados para o Mercado</p>
                     </div>
