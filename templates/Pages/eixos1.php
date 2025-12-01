@@ -4,6 +4,8 @@ $carouselSuperior = [
     'foto_6.jpg',
     'foto_7.jpg',
     'foto_11.jpg',
+    'ct_bale.jpg',
+    'ct_infor.jpg',
     
 ];
 
@@ -12,6 +14,9 @@ $carouselInferior = [
     'foto_12.jpg',
     'foto_08.jpg',
     'foto_09.jpg',
+    'ct_musica.jpg',
+    'ct_sport.jpg',
+
 ];
 ?>
 
