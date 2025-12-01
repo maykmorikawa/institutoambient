@@ -93,7 +93,7 @@ $carouselInferior = [
                         </button>
                     </div>
 
-                    <div class="box-left py-2 px-4 px-sm-4 px-md-5">
+                    <div class="box-left py-2 px-4 px-sm-4 px-md-5" style="margin-bottom: -150px; left: -9px;">
                         <h3 class="text-secondary"><span class="countup">08</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Projetos Ativos</p>
                     </div>
@@ -177,7 +177,7 @@ $carouselInferior = [
                         </button>
                     </div>
 
-                    <div class="box-left py-2 px-4 px-sm-4 px-md-5">
+                    <div class="box-left py-2 px-4 px-sm-4 px-md-5" style="margin-bottom: -150px; left: -9px;">
                         <h3 class="text-secondary"><span class="countup">72</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Famílias Alcançadas</p>
                     </div>
