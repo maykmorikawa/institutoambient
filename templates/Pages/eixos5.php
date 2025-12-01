@@ -2,7 +2,9 @@
 <?php
 // Carrossel superior
 $carouselSuperior = [
-    'pda.jpg',
+    'intersetorial.png',
+    'foto_4.jpg',
+    'foto_5.jpg',
    
     
 ];
@@ -81,7 +83,7 @@ $carouselSuperior = [
                         </button>
                     </div>
                     <div class="box-left py-2 px-4 px-sm-4 px-md-5">
-                        <h3 class="text-secondary"><span class="countup">10+</span></h3>
+                        <h3 class="text-secondary">+<span class="countup">10</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Ações Socioambientais</p>
                     </div>
                     <span class="about-img d-none d-lg-inline-block">
