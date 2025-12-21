@@ -233,8 +233,8 @@ class InscricoesController extends AppController
      */
     public function view($id = null)
     {
-        $inscrico = $this->Inscricoes->get($id, contain: ['Alunos', 'Atividades', 'Users', 'Responsavels']);
-        $this->set(compact('inscrico'));
+        $inscricao = $this->Inscricoes->get($id, contain: ['Alunos', 'Atividades', 'Users', 'Responsavels']);
+        $this->set(compact('inscricao'));
     }
 
     /**
@@ -244,21 +244,21 @@ class InscricoesController extends AppController
      */
     public function add()
     {
-        $inscrico = $this->Inscricoes->newEmptyEntity();
+        $inscricao = $this->Inscricoes->newEmptyEntity();
         if ($this->request->is('post')) {
-            $inscrico = $this->Inscricoes->patchEntity($inscrico, $this->request->getData());
-            if ($this->Inscricoes->save($inscrico)) {
-                $this->Flash->success(__('The inscrico has been saved.'));
+            $inscricao = $this->Inscricoes->patchEntity($inscricao, $this->request->getData());
+            if ($this->Inscricoes->save($inscricao)) {
+                $this->Flash->success(__('A inscrição foi salva com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The inscrico could not be saved. Please, try again.'));
+            $this->Flash->error(__('A inscrição não pôde ser salva. Por favor, tente novamente.'));
         }
         $alunos = $this->Inscricoes->Alunos->find('list', limit: 200)->all();
         $atividades = $this->Inscricoes->Atividades->find('list', limit: 200)->all();
         $users = $this->Inscricoes->Users->find('list', limit: 200)->all();
         $responsavels = $this->Inscricoes->Responsavels->find('list', limit: 200)->all();
-        $this->set(compact('inscrico', 'alunos', 'atividades', 'users', 'responsavels'));
+        $this->set(compact('inscricao', 'alunos', 'atividades', 'users', 'responsavels'));
     }
 
     /**
@@ -270,21 +270,21 @@ class InscricoesController extends AppController
      */
     public function edit($id = null)
     {
-        $inscrico = $this->Inscricoes->get($id, contain: []);
+        $inscricao = $this->Inscricoes->get($id, contain: []);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $inscrico = $this->Inscricoes->patchEntity($inscrico, $this->request->getData());
-            if ($this->Inscricoes->save($inscrico)) {
-                $this->Flash->success(__('The inscrico has been saved.'));
+            $inscricao = $this->Inscricoes->patchEntity($inscricao, $this->request->getData());
+            if ($this->Inscricoes->save($inscricao)) {
+                $this->Flash->success(__('A inscrição foi salva com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The inscrico could not be saved. Please, try again.'));
+            $this->Flash->error(__('A inscrição não pôde ser salva. Por favor, tente novamente.'));
         }
         $alunos = $this->Inscricoes->Alunos->find('list', limit: 200)->all();
         $atividades = $this->Inscricoes->Atividades->find('list', limit: 200)->all();
         $users = $this->Inscricoes->Users->find('list', limit: 200)->all();
         $responsavels = $this->Inscricoes->Responsavels->find('list', limit: 200)->all();
-        $this->set(compact('inscrico', 'alunos', 'atividades', 'users', 'responsavels'));
+        $this->set(compact('inscricao', 'alunos', 'atividades', 'users', 'responsavels'));
     }
 
     /**
@@ -298,10 +298,10 @@ class InscricoesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $inscrico = $this->Inscricoes->get($id);
-        if ($this->Inscricoes->delete($inscrico)) {
-            $this->Flash->success(__('The inscrico has been deleted.'));
+        if ($this->Inscricoes->delete($inscricao)) {
+            $this->Flash->success(__('A inscrição foi deletada com sucesso.'));
         } else {
-            $this->Flash->error(__('The inscrico could not be deleted. Please, try again.'));
+            $this->Flash->error(__('A inscrição não pôde ser deletada. Por favor, tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);
