@@ -19,7 +19,7 @@
                 <div class="col-md-12">
 
 
-                    <h1>Blogs</h1>
+                    <h1>Notícias</h1>
 
 
                 </div>
@@ -34,7 +34,7 @@
                         <li><a href="<?= $this->Url->build('/') ?>">Home</a></li>
 
 
-                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Notícias</a></li>
 
 
                     </ul>
