@@ -44,7 +44,7 @@
                                         <li><a href="/quem_somos">Quem Somos</a></li>
                                         <li><a href="/o_instituto_ambient">Nossa História</a></li>
                                         <li><a href="/documentos">Compliance/Transparencia</a></li>
-                                         <li><a href="https://reportfacil.com.br">Canal de Ética</a></li>
+                                         <li><a href="/reportfacil">Canal de Ética</a></li>
 
                                     </ul>
                                 </li>
