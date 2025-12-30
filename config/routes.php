@@ -92,7 +92,7 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/parceiros', ['controller' => 'Pages', 'action' => 'display', 'parceiros']);
       $builder->connect('/transparencia', ['controller' => 'Pages', 'action' => 'display', 'transparencia']);
       $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
-      $builder->connect('/listar_Noticias', ['controller' => 'Posts', 'action' => 'listblog']);
+      $builder->connect('/listar_noticias', ['controller' => 'Posts', 'action' => 'listblog']);
       $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
 
       $builder->connect('/lado-a-lado', ['controller' => 'Pages', 'action' => 'display', 'ladoalado']);
