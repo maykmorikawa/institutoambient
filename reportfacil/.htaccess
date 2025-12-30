@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^$ https://reportfacil.com.br/ [R=302,L]
