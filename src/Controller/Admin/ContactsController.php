@@ -10,8 +10,31 @@ class ContactsController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        // Aqui podes adicionar lógica de autenticação 
-        // para garantir que só o admin acede a esta classe
+        $this->fetchTable('Contacts'); // Garante que o controller usa a tabela certa
+    }
+       
+
+    public function index()
+    {
+        // Paginação para não carregar tudo de uma vez se tiveres muitas mensagens
+        $query = $this->Contacts->find()->order(['created' => 'DESC']);
+        $contacts = $this->paginate($query);
+
+        $this->set(compact('contacts'));
+    }
+
+    // Ver uma mensagem detalhada
+    public function view($id = null)
+    {
+        $contact = $this->Contacts->get($id);
+
+        // Lógica importante: Ao abrir a mensagem, marcamos como lida (viewed = 1)
+        if ($contact->viewed == 0) {
+            $contact->viewed = 1;
+            $this->Contacts->save($contact);
+        }
+
+        $this->set(compact('contact'));
     }
 
     public function checkNewMessages()
@@ -36,14 +59,5 @@ class ContactsController extends AppController
         $this->viewBuilder()->setOption('serialize', ['count', 'messages']);
     }
 
-    public function view($id = null)
-    {
-        $contact = $this->Contacts->get($id);
-        
-        // Quando o admin visualiza, marcamos como lida
-        $contact->viewed = 1;
-        $this->Contacts->save($contact);
-
-        $this->set(compact('contact'));
-    }
+   
 }
