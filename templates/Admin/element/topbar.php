@@ -60,11 +60,12 @@
 
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="dropdown-item text-center small text-gray-500" 
-                href="https://titan.hostgator.com.br/login/?email=contato@institutoambient.org.br" 
-                target="_blank">
-                Aceder ao Webmail Oficial
+            <a class="nav-link dropdown-toggle" href="https://titan.hostgator.com.br/login/" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter"></span>
             </a>
+           
            
         </li>
 
