@@ -136,7 +136,7 @@ function refreshAlerts() {
                     let msgDate = new Date(msg.created).toLocaleDateString('pt-PT');
                     
                     let itemHtml = `
-                        <a class="dropdown-item d-flex align-items-center" href="admin/contacts/view/${msg.id}">
+                        <a class="dropdown-item d-flex align-items-center" href="/admin/contacts/view/${msg.id}">
                             <div class="mr-3">
                                 <div class="icon-circle bg-primary">
                                     <i class="fas fa-user text-white"></i>
