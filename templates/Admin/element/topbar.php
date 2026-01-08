@@ -54,7 +54,7 @@
                 <div id="alerts-container">
                     </div>
 
-                <a class="dropdown-item text-center small text-gray-500" href="/contacts">Ver todas as mensagens</a>
+                <a class="dropdown-item text-center small text-gray-500" href="/admin/contacts">Ver todas as mensagens</a>
             </div>
         </li>
 
