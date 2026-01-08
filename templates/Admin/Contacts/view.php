@@ -1,8 +1,25 @@
+<?php
+// 1. Preparamos o assunto e o corpo do e-mail de forma organizada
+$assuntoEncaminhar = "Fwd: " . $contact->subject;
+$corpoEmail = "Detalhes da Mensagem:\r\n" . 
+              "Nome: " . $contact->name . "\r\n" .
+              "E-mail: " . $contact->email . "\r\n" .
+              "Mensagem: " . $contact->message;
+
+// 2. Formatamos para que o link entenda espaços e quebras de linha
+$linkMailto = "mailto:?subject=" . rawurlencode($assuntoEncaminhar) . "&body=" . rawurlencode($corpoEmail);
+?>
+
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3 d-flex justify-content-between">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">Detalhes da Mensagem #<?= $contact->id ?></h6>
-            <?= $this->Html->link('Voltar', ['action' => 'index'], ['class' => 'btn btn-sm btn-secondary']) ?>
+            <div>
+                <a href="<?= $linkMailto ?>" class="btn btn-sm btn-success">
+                    <i class="fas fa-envelope"></i> Encaminhar por E-mail
+                </a>
+                <?= $this->Html->link('Voltar', ['action' => 'index'], ['class' => 'btn btn-sm btn-secondary']) ?>
+            </div>
         </div>
         <div class="card-body">
             <div class="row">
