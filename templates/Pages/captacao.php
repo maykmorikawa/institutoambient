@@ -26,7 +26,7 @@
           Projetos/Programas em Captação de Recursos
         </span>
         <h2 class="mb-0">
-          O Instituto Ambiente é essencial na captação de recursos, promovendo projetos sustentáveis que fortalecem o desenvolvimento social e ambiental.
+          O Instituto Ambient é essencial na captação de recursos, promovendo projetos sustentáveis que fortalecem o desenvolvimento social e ambiental.
 
         </h2>
       </div>
@@ -35,7 +35,7 @@
 
           O Instituto Ambient desempenha um papel fundamental na captação de recursos, conectando ideias inovadoras a oportunidades reais de investimento.
 
-          Por meio de seus projetos e programas, promove ações que impactam positivamente comunidades e o meio ambiente.
+          Por meio de seus projetos e programas, promove ações que impactam positivamente comunidades e o meio Ambiente.
 
           Sua atuação fortalece redes de parceria e garante a continuidade de iniciativas sustentáveis e transformadoras.
 
