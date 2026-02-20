@@ -33,7 +33,7 @@
       <div class="col-lg-7">
         <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">
 
-          O Instituto Ambiente desempenha um papel fundamental na captação de recursos, conectando ideias inovadoras a oportunidades reais de investimento.
+          O Instituto Ambient desempenha um papel fundamental na captação de recursos, conectando ideias inovadoras a oportunidades reais de investimento.
 
           Por meio de seus projetos e programas, promove ações que impactam positivamente comunidades e o meio ambiente.
 
