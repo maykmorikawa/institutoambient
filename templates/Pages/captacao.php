@@ -84,13 +84,19 @@
             <a href="https://institutoambient.org.br/uploads/pdfs/02_PC_Projeto_Lado_a_Lado_IA_FIA.pdf"
               target="_blank" class="stretched-link" aria-label="Abrir PDF - Projeto Trabalho Lado a Lado"></a>
           </div>
-          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
             <div class="d-flex justify-content-between align-items-center">
+
               <span class="display-30">
+
                 <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
               </span>
+
             </div>
-          </div>
+
+          </div>-->
         </article>
       </div>
       <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
@@ -121,7 +127,7 @@
 
 
 
-          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
 
             <div class="d-flex justify-content-between align-items-center">
 
@@ -133,7 +139,7 @@
 
             </div>
 
-          </div>
+          </div>-->
 
         </article>
       </div>
@@ -165,7 +171,7 @@
 
 
 
-          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
 
             <div class="d-flex justify-content-between align-items-center">
 
@@ -177,7 +183,7 @@
 
             </div>
 
-          </div>
+          </div>-->
 
         </article>
       </div>
@@ -189,7 +195,7 @@
           </div>
           <div class="card-body p-4 p-xl-1-9">
             <h3 class="h5 mb-3">
-              Projeto Crescer e Transformar
+              Projeto Cozinha Cidadã Itinerante
             </h3>
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
@@ -209,7 +215,7 @@
 
 
 
-          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+           <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
 
             <div class="d-flex justify-content-between align-items-center">
 
@@ -221,25 +227,25 @@
 
             </div>
 
-          </div>
+          </div>-->
 
         </article>
       </div>
       <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
         <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
           <div class="card-img position-relative">
-            <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
+            <img src="<?= $this->Url->build('/site/img/avatar/Passo_Empreendedor_IA_LEI_SEMEAR.jpg') ?>"
               alt="Imagem padrão" class="img-fluid rounded-top">
           </div>
           <div class="card-body p-4 p-xl-1-9">
             <h3 class="h5 mb-3">
-              Projeto Crescer e Transformar
+             Projeto Passo Empreendedor IA LEI SEMEAR
             </h3>
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
             <!-- link estendido que cobre todo o card -->
 
-            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/05_PC_Projeto_Passo_Empreendedor_IA_LEI_SEMEAR.pdf"
 
               target="_blank"
 
@@ -253,7 +259,7 @@
 
 
 
-          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
 
             <div class="d-flex justify-content-between align-items-center">
 
@@ -265,10 +271,54 @@
 
             </div>
 
-          </div>
+          </div>-->
 
         </article>
       </div>
     </div>
+    <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/Passo_Empreendedor_IA_LEI_SEMEAR.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+             Projeto Passo Empreendedor IA LEI SEMEAR
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
+
+            <!-- link estendido que cobre todo o card -->
+
+            <a href="https://institutoambient.org.br/uploads/pdfs/05_PC_Projeto_Passo_Empreendedor_IA_LEI_SEMEAR.pdf"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
+
+          </div>
+
+
+
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="display-30">
+
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
+              </span>
+
+            </div>
+
+          </div>-->
+
+        </article>
+      </div>
   </div>
 </section>
