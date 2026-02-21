@@ -17,7 +17,6 @@
   </div>
 </section>
 <!-- CAPTAÇÃO ================================================== -->
-
 <section class="pt-0 my-5">
   <div class="container">
     <div class="row align-items-center mb-5 wow fadeIn" data-wow-delay="100ms">
@@ -33,53 +32,81 @@
       <div class="col-lg-7">
         <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">
 
-          O Instituto Ambient desempenha um papel fundamental na captação de recursos, conectando ideias inovadoras a oportunidades reais de investimento.
+         IA informa que seus principais projetos sociais encontram-se oficialmente aprovados nas Leis de Incentivo Fiscal, estando aptos a receber aportes de pessoas físicas e jurídicas.
 
-          Por meio de seus projetos e programas, promove ações que impactam positivamente comunidades e o meio Ambiente.
-
-          Sua atuação fortalece redes de parceria e garante a continuidade de iniciativas sustentáveis e transformadoras.
+        ✅ Fundo da Infância (FIA)
+        Projetos aprovados para atendimento de crianças e adolescentes:
+        •	Crescer e Transformar (já com aproximadamente 25% do valor captado)
+        •	Lado a Lado
+        •	Tô no Combú!!
+        •	Cozinha Cidadã Itinerante
+        
+        👵 Fundo do Idoso
+        •	Projeto OÁSIS 60+ – promoção do envelhecimento ativo e fortalecimento comunitário.
+        
+        🎭 Lei Rouanet
+        •	Imagens que Tocam – formação artística intergeracional em música e fotografia.
+        
+        🌿 Lei Semear (ICMS – PA)
+        •	Passo Empreendedor
+        •	Vivências em Família
+        Empresas tributadas pelo Lucro Real e contribuintes de ICMS no Pará podem destinar parte do imposto devido, transformando tributo em impacto social, com segurança jurídica e prestação de contas transparente.
+        
+        📩 Contato para aporte e informações:
+        institutoambient@gmail.com | (91) 3086-2129 | 98157-8193
+        Transforme seu imposto em desenvolvimento social na Amazônia.
 
         </p>
-
       </div>
-
     </div>
-
-
-
     <div class="row mt-4 g-xl-5">
-
       <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
-
         <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
-
           <div class="card-img position-relative">
-
             <img src="<?= $this->Url->build('/site/img/avatar/trabalho_lado_a_lado.jpg') ?>"
-
               alt="Imagem padrão" class="img-fluid rounded-top">
-
           </div>
-
-
-
           <div class="card-body p-4 p-xl-1-9">
-
             <h3 class="h5 mb-3">
-
               Projeto Trabalho Lado a Lado
-
             </h3>
-
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
-
-
+            <!-- link estendido que cobre todo o card -->
+            <a href="https://institutoambient.org.br/uploads/pdfs/Proposta_Comercial_Projeto_Lado_a_Lado.pdf"
+              target="_blank" class="stretched-link" aria-label="Abrir PDF - Projeto Trabalho Lado a Lado"></a>
+          </div>
+          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="display-30">
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+              Projeto Crescer e Transformar
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
             <!-- link estendido que cobre todo o card -->
 
-            <a href="https://institutoambient.org.br/uploads/pdfs/Proposta_Comercial_Projeto_Lado_a_Lado.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
 
-              target="_blank" class="stretched-link" aria-label="Abrir PDF - Projeto Trabalho Lado a Lado"></a>
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
 
           </div>
 
@@ -100,36 +127,106 @@
           </div>
 
         </article>
-
       </div>
-
-
-
       <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
-
         <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
-
           <div class="card-img position-relative">
-
             <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
-
               alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+              Projeto Crescer e Transformar
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
+
+            <!-- link estendido que cobre todo o card -->
+
+            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
 
           </div>
 
 
 
+          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="display-30">
+
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
           <div class="card-body p-4 p-xl-1-9">
-
             <h3 class="h5 mb-3">
-
               Projeto Crescer e Transformar
-
             </h3>
-
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
+            <!-- link estendido que cobre todo o card -->
 
+            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
+
+          </div>
+
+
+
+          <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="display-30">
+
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+              Projeto Crescer e Transformar
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
             <!-- link estendido que cobre todo o card -->
 
