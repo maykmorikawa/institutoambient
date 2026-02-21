@@ -107,7 +107,7 @@
 
             <!-- link estendido que cobre todo o card -->
 
-            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/01_PC_Crescer_e_Transformar _IA _FIA.pdf"
 
               target="_blank"
 
@@ -151,7 +151,7 @@
 
             <!-- link estendido que cobre todo o card -->
 
-            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/01_PC_Crescer_e_Transformar _IA _FIA.pdf"
 
               target="_blank"
 
