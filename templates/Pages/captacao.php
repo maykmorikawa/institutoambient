@@ -81,7 +81,7 @@
             </h3>
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
             <!-- link estendido que cobre todo o card -->
-            <a href="https://institutoambient.org.br/uploads/pdfs/Proposta_Comercial_Projeto_Lado_a_Lado.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/02_PC_Projeto_Lado_a_Lado_IA_FIA.pdf"
               target="_blank" class="stretched-link" aria-label="Abrir PDF - Projeto Trabalho Lado a Lado"></a>
           </div>
           <div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
@@ -140,18 +140,18 @@
       <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
         <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
           <div class="card-img position-relative">
-            <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
+            <img src="<?= $this->Url->build('/site/img/avatar/Projeto_To_no_Combu.jpg') ?>"
               alt="Imagem padrão" class="img-fluid rounded-top">
           </div>
           <div class="card-body p-4 p-xl-1-9">
             <h3 class="h5 mb-3">
-              Projeto Crescer e Transformar
+              Projeto Tô no Combú!
             </h3>
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
             <!-- link estendido que cobre todo o card -->
 
-            <a href="https://institutoambient.org.br/uploads/pdfs/01_PC_Crescer_e_Transformar _IA _FIA.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/03_PC_Projeto_To_no_Combu!!_IA_FIA.pdf"
 
               target="_blank"
 
