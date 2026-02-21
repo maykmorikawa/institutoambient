@@ -184,7 +184,7 @@
       <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
         <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
           <div class="card-img position-relative">
-            <img src="<?= $this->Url->build('/site/img/avatar/crescer_transformar.jpg') ?>"
+            <img src="<?= $this->Url->build('/site/img/avatar/Cozinha_Cidada_Itinerante.jpg') ?>"
               alt="Imagem padrão" class="img-fluid rounded-top">
           </div>
           <div class="card-body p-4 p-xl-1-9">
@@ -195,7 +195,7 @@
 
             <!-- link estendido que cobre todo o card -->
 
-            <a href="https://institutoambient.org.br/uploads/pdfs/PROPOSTA_COMERCIAL_CRESCER_E_TRANSFORMAR.pdf"
+            <a href="https://institutoambient.org.br/uploads/pdfs/04_Cozinha_Cidada_Itinerante_IA_FIA.pdf"
 
               target="_blank"
 
