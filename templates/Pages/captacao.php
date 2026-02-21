@@ -367,7 +367,7 @@
         <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
           <div class="card-img position-relative">
             <img src="<?= $this->Url->build('/site/img/avatar/OASIS_60.jpg') ?>"
-              alt="Imagem padrão" class="img-fluid rounded-top">OASIS_60
+              alt="Imagem padrão" class="img-fluid rounded-top">
           </div>
           <div class="card-body p-4 p-xl-1-9">
             <h3 class="h5 mb-3">
