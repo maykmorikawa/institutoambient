@@ -33,25 +33,34 @@
         <p class="mb-0 border-lg-start border-width-4 border-secondary-color py-lg-4 ps-lg-6">
 
          IA informa que seus principais projetos sociais encontram-se oficialmente aprovados nas Leis de Incentivo Fiscal, estando aptos a receber aportes de pessoas físicas e jurídicas.
-
+        <br>
         ✅ Fundo da Infância (FIA)
+        <br>
         Projetos aprovados para atendimento de crianças e adolescentes:
+        <br>
         •	Crescer e Transformar (já com aproximadamente 25% do valor captado)
+        <br>
         •	Lado a Lado
+        <br>
         •	Tô no Combú!!
+        <br>
         •	Cozinha Cidadã Itinerante
-        
+        <br>
         👵 Fundo do Idoso
+        <br>
         •	Projeto OÁSIS 60+ – promoção do envelhecimento ativo e fortalecimento comunitário.
-        
+        <br>
         🎭 Lei Rouanet
         •	Imagens que Tocam – formação artística intergeracional em música e fotografia.
-        
+        <br>
         🌿 Lei Semear (ICMS – PA)
+        <br>
         •	Passo Empreendedor
+        <br>
         •	Vivências em Família
+        <br>
         Empresas tributadas pelo Lucro Real e contribuintes de ICMS no Pará podem destinar parte do imposto devido, transformando tributo em impacto social, com segurança jurídica e prestação de contas transparente.
-        
+        <br>
         📩 Contato para aporte e informações:
         institutoambient@gmail.com | (91) 3086-2129 | 98157-8193
         Transforme seu imposto em desenvolvimento social na Amazônia.
