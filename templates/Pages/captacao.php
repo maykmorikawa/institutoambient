@@ -165,7 +165,7 @@
 
               class="stretched-link"
 
-              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
+              aria-label="Abrir PDF - Projeto Tô no Combú!"></a>
 
           </div>
 
@@ -209,7 +209,7 @@
 
               class="stretched-link"
 
-              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
+              aria-label="Abrir PDF - Projeto Cozinha Cidadã Itinerante"></a>
 
           </div>
 
@@ -239,7 +239,7 @@
           </div>
           <div class="card-body p-4 p-xl-1-9">
             <h3 class="h5 mb-3">
-             Projeto Passo Empreendedor IA LEI SEMEAR
+             Projeto Passo Empreendedor - IA - LEI SEMEAR
             </h3>
             <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
 
@@ -253,7 +253,139 @@
 
               class="stretched-link"
 
-              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
+              aria-label="Abrir PDF - Projeto Passo Empreendedor - IA - LEI SEMEAR"></a>
+
+          </div>
+
+
+
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="display-30">
+
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
+              </span>
+
+            </div>
+
+          </div>-->
+
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/Vivencias_em_Família.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+              Projeto Vivências em Família - IA - LEI SEMEAR
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
+
+            <!-- link estendido que cobre todo o card -->
+
+            <a href="https://institutoambient.org.br/uploads/pdfs/06_PC_Projeto_Vivencias_em_Família_IA_LEI_SEMEAR.pdf"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - Projeto Vivências em Família - IA - LEI SEMEAR"></a>
+
+          </div>
+
+
+
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="display-30">
+
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
+              </span>
+
+            </div>
+
+          </div>-->
+
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/Imagens_que_Tocam.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+              Projeto Imagens que Tocam - IA - Lei Rouanet
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
+
+            <!-- link estendido que cobre todo o card -->
+
+            <a href="https://institutoambient.org.br/uploads/pdfs/07_PC_Imagens_que_Tocam_IA_Lei_Rouanet.pdf"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - Projeto Imagens que Tocam - IA - Lei Rouanet"></a>
+
+          </div>
+
+
+
+          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="display-30">
+
+                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
+
+              </span>
+
+            </div>
+
+          </div>-->
+
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
+        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
+          <div class="card-img position-relative">
+            <img src="<?= $this->Url->build('/site/img/avatar/OASIS_60.jpg') ?>"
+              alt="Imagem padrão" class="img-fluid rounded-top">OASIS_60
+          </div>
+          <div class="card-body p-4 p-xl-1-9">
+            <h3 class="h5 mb-3">
+              PROJETO OÁSIS 60+ - Fundo do Idoso
+            </h3>
+            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
+
+            <!-- link estendido que cobre todo o card -->
+
+            <a href="https://institutoambient.org.br/uploads/pdfs/08_PC_PROJETO_OASIS_60+_Fundo_do_Idoso.pdf"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              class="stretched-link"
+
+              aria-label="Abrir PDF - PROJETO OÁSIS 60+ - Fundo do Idoso"></a>
 
           </div>
 
@@ -276,49 +408,5 @@
         </article>
       </div>
     </div>
-    <div class="col-md-6 col-lg-4 mt-4 wow fadeIn" data-wow-delay="200ms">
-        <article class="card card-style3 border-0 h-100 shadow-sm position-relative">
-          <div class="card-img position-relative">
-            <img src="<?= $this->Url->build('/site/img/avatar/Passo_Empreendedor_IA_LEI_SEMEAR.jpg') ?>"
-              alt="Imagem padrão" class="img-fluid rounded-top">
-          </div>
-          <div class="card-body p-4 p-xl-1-9">
-            <h3 class="h5 mb-3">
-             Projeto Passo Empreendedor IA LEI SEMEAR
-            </h3>
-            <p class="fw-bold text-primary text-secondary-hover">Saiba mais</p>
-
-            <!-- link estendido que cobre todo o card -->
-
-            <a href="https://institutoambient.org.br/uploads/pdfs/05_PC_Projeto_Passo_Empreendedor_IA_LEI_SEMEAR.pdf"
-
-              target="_blank"
-
-              rel="noopener noreferrer"
-
-              class="stretched-link"
-
-              aria-label="Abrir PDF - Projeto Crescer e Transformar"></a>
-
-          </div>
-
-
-
-          <!--<div class="card-footer bg-white py-3 px-4 mx-4 mx-xl-1-9 border-0">
-
-            <div class="d-flex justify-content-between align-items-center">
-
-              <span class="display-30">
-
-                <i class="ti-calendar me-1 text-primary"></i> Outubro 2025
-
-              </span>
-
-            </div>
-
-          </div>-->
-
-        </article>
-      </div>
   </div>
 </section>
