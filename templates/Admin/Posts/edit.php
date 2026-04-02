@@ -12,7 +12,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?= __('Editar Post') ?></h1>
         <div class="btn-group shadow-sm">
-            <?= $this->Html->link('<i class="fas fa-arrow-left fa-sm mr-2 text-white-50"></i> Voltar', ['action' => 'index'], ['class' => btn btn-sm btn-secondary', 'escape' => false]) ?>
+            <?= $this->Html->link('<i class="fas fa-arrow-left fa-sm mr-2 text-white-50"></i> Voltar', ['action' => 'index'], ['class' => 'btn btn-sm btn-secondary', 'escape' => false]) ?>
             <?= $this->Html->link('<i class="fas fa-eye fa-sm mr-2 text-white-50"></i> Ver no Site', ['prefix' => false, 'controller' => 'Posts', 'action' => 'view', $post->slug], ['class' => 'btn btn-sm btn-info', 'target' => '_blank', 'escape' => false]) ?>
         </div>
     </div>
