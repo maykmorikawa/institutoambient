@@ -182,26 +182,26 @@
 </style>
 
 <?php $this->Html->scriptStart(['block' => 'script_bottom']); ?>
-$(document).ready(function() {
+jQuery(document).ready(function($) {
+    console.log('Tentando carregar Summernote Lite...');
     if (typeof $.fn.summernote !== 'undefined') {
         $('#summernote').summernote({
-            placeholder: 'Escreva o conteúdo do seu post aqui. DICA: Use o ícone de corrente (Link) para adicionar botões de inscrição ou outros sites.',
+            placeholder: 'Use o ícone de corrente para links. Ex: Clique aqui para se inscrever.',
             tabsize: 2,
             height: 400,
             lang: 'pt-BR',
             toolbar: [
                 ['style', ['style']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['fontname', ['fontname']],
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['table', ['table']],
-                ['insert', ['link', 'picture', 'video', 'hr']],
+                ['insert', ['link', 'picture', 'video']],
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
         });
     } else {
-        console.error('Summernote não foi carregado corretamente.');
+        console.error('Summernote Lite não carregado.');
     }
 });
 <?php $this->Html->scriptEnd(); ?>

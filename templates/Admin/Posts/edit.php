@@ -12,7 +12,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?= __('Editar Post') ?></h1>
         <div class="btn-group shadow-sm">
-            <?= $this->Html->link('<i class="fas fa-arrow-left fa-sm mr-2 text-white-50"></i> Voltar', ['action' => 'index'], ['class' => 'btn btn-sm btn-secondary', 'escape' => false]) ?>
+            <?= $this->Html->link('<i class="fas fa-arrow-left fa-sm mr-2 text-white-50"></i> Voltar', ['action' => 'index'], ['class' => btn btn-sm btn-secondary', 'escape' => false]) ?>
             <?= $this->Html->link('<i class="fas fa-eye fa-sm mr-2 text-white-50"></i> Ver no Site', ['prefix' => false, 'controller' => 'Posts', 'action' => 'view', $post->slug], ['class' => 'btn btn-sm btn-info', 'target' => '_blank', 'escape' => false]) ?>
         </div>
     </div>
@@ -219,26 +219,25 @@
 </style>
 
 <?php $this->Html->scriptStart(['block' => 'script_bottom']); ?>
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     if (typeof $.fn.summernote !== 'undefined') {
         $('#summernote').summernote({
-            placeholder: 'Escreva o conteúdo do seu post aqui. DICA: Use o ícone de corrente (Link) para adicionar botões de inscrição ou outros sites.',
+            placeholder: 'Use o ícone de corrente para links. Ex: Clique aqui para se inscrever.',
             tabsize: 2,
             height: 500,
             lang: 'pt-BR',
             toolbar: [
                 ['style', ['style']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['fontname', ['fontname']],
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['table', ['table']],
-                ['insert', ['link', 'picture', 'video', 'hr']],
+                ['insert', ['link', 'picture', 'video']],
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
         });
     } else {
-        console.error('Summernote não foi carregado corretamente.');
+        console.error('Summernote Lite não carregado no edit.');
     }
 });
 <?php $this->Html->scriptEnd(); ?>
