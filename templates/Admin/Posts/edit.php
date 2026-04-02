@@ -218,25 +218,27 @@
     .shadow-xs { shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important; }
 </style>
 
-<script>
-    $(document).ready(function() {
-        if (typeof $.fn.summernote !== 'undefined') {
-            $('#summernote').summernote({
-                placeholder: 'Escreva o conteúdo do seu post aqui. DICA: Use o ícone de corrente (Link) para adicionar botões de inscrição ou outros sites.',
-                tabsize: 2,
-                height: 500,
-                lang: 'pt-BR',
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'underline', 'clear']],
-                    ['fontname', ['fontname']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video', 'hr']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                ]
-            });
-        }
-    });
-</script>
+<?php $this->Html->scriptStart(['block' => 'script_bottom']); ?>
+$(document).ready(function() {
+    if (typeof $.fn.summernote !== 'undefined') {
+        $('#summernote').summernote({
+            placeholder: 'Escreva o conteúdo do seu post aqui. DICA: Use o ícone de corrente (Link) para adicionar botões de inscrição ou outros sites.',
+            tabsize: 2,
+            height: 500,
+            lang: 'pt-BR',
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['fontname', ['fontname']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video', 'hr']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    } else {
+        console.error('Summernote não foi carregado corretamente.');
+    }
+});
+<?php $this->Html->scriptEnd(); ?>

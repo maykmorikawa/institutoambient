@@ -29,14 +29,6 @@ $cakeDescription = 'Instituto Ambient - Admin';
 
   <?= $this->Html->css(['admin_modern']) ?>
 
-  <!-- jQuery e Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Summernote JS -->
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-pt-BR.min.js"></script>
-
   <?= $this->fetch('meta') ?>
   <?= $this->fetch('css') ?>
   <?= $this->fetch('script') ?>
@@ -93,6 +85,13 @@ $cakeDescription = 'Instituto Ambient - Admin';
         <a class="nav-link" href="<?= $this->Url->build(['controller' => 'Atividades', 'action' => 'index']) ?>">
           <i class="fas fa-fw fa-calendar-alt"></i>
           <span>Atividades</span>
+        </a>
+      </li>
+
+      <li class="nav-item <?= $this->request->getParam('controller') == 'Posts' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'index']) ?>">
+          <i class="fas fa-fw fa-newspaper"></i>
+          <span>Postagens</span>
         </a>
       </li>
 
@@ -194,9 +193,15 @@ $cakeDescription = 'Instituto Ambient - Admin';
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <script>
-    // Simple script to toggle sidebar if needed, though hidden on mobile by default css
-  </script>
+  <!-- jQuery e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Summernote JS -->
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-pt-BR.min.js"></script>
+
+  <?= $this->fetch('script_bottom') ?>
 
 </body>
 
