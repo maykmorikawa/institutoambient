@@ -21,13 +21,8 @@ $cakeDescription = 'Instituto Ambient - Admin';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   
-  <!-- Bootstrap 4 (Base para o layout funcional) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  
-  <!-- Summernote LITE CSS (Independente de BS para evitar conflitos) -->
-  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-
-  <?= $this->Html->css(['admin_modern']) ?>
+  <!-- CSS Locais -->
+  <?= $this->Html->css(['bootstrap.min', '/summernote/summernote-lite', 'admin_modern']) ?>
 
   <?= $this->fetch('meta') ?>
   <?= $this->fetch('css') ?>
@@ -193,13 +188,8 @@ $cakeDescription = 'Instituto Ambient - Admin';
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Scripts Essenciais (jQuery FIRST) -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Summernote LITE JS (Independente) -->
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-pt-BR.min.js"></script>
+  <!-- Scripts Locais -->
+  <?= $this->Html->script(['jquery.min', 'bootstrap.bundle.min', '/summernote/summernote-lite', '/summernote/summernote-pt-BR']) ?>
 
   <?= $this->fetch('script_bottom') ?>
 
