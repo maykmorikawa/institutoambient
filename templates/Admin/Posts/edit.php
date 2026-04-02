@@ -75,13 +75,13 @@
                                                 <span class="badge badge-primary position-absolute m-2 shadow-sm" style="top:0; left:0;"><i class="fas fa-star mr-1"></i>Destaque</span>
                                             <?php endif; ?>
                                         </div>
-                                        <div class="card-body p-2 bg-light border-top">
-                                            <div class="custom-control custom-radio mb-2 p-2 bg-white rounded border shadow-xs px-4">
+                                        <div class="card-body p-3 bg-light border-top">
+                                            <div class="custom-control custom-radio mb-2 p-2 bg-white rounded border shadow-xs px-4 mx-2">
                                                 <input type="radio" class="custom-control-input" name="featured_image_id" 
                                                        value="<?= $img->id ?>" id="featured_<?= $img->id ?>" <?= $img->is_featured ? 'checked' : '' ?>>
                                                 <label class="custom-control-label small font-weight-bold" for="featured_<?= $img->id ?>">Destaque</label>
                                             </div>
-                                            <div class="custom-control custom-checkbox p-2 bg-white rounded border shadow-xs px-4">
+                                            <div class="custom-control custom-checkbox p-2 bg-white rounded border shadow-xs px-4 mx-2">
                                                 <input type="checkbox" class="custom-control-input" name="delete_images[<?= $img->id ?>]" 
                                                        value="1" id="delete_<?= $img->id ?>">
                                                 <label class="custom-control-label small text-danger font-weight-bold" for="delete_<?= $img->id ?>">Remover</label>
