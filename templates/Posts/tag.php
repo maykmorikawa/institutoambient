@@ -1,4 +1,5 @@
-<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6" data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
+<section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
+    data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
     <div class="container position-unset">
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
             <div class="row">
@@ -38,12 +39,10 @@
                                     <a href="<?= $postUrl ?>" class="text-decoration-none text-dark">
                                         <?php if ($featuredImage): ?>
                                             <img src="<?= $this->Url->build('/img/uploads/' . $featuredImage->filename) ?>"
-                                                class="card-img-top"
-                                                alt="<?= h($post->title) ?>">
+                                                class="card-img-top" alt="<?= h($post->title) ?>">
                                         <?php else: ?>
                                             <img src="<?= $this->Url->build('/site/img/avatar/avatar-02.png') ?>"
-                                                class="card-img-top"
-                                                alt="Imagem padrão">
+                                                class="card-img-top" alt="Imagem padrão">
                                         <?php endif; ?>
                                     </a>
                                     <div class="card-body px-4 py-2-3">
@@ -78,18 +77,17 @@
                                 : $this->Url->build('/site/img/blog/1.jpg');
                             ?>
                             <div class="media mb-4">
-                                <img src="<?= $imagePath ?>"
-                                    class="rounded img-fluid"
-                                    alt="<?= h($r->title) ?>"
-                                    width="80" height="80"
-                                    style="object-fit: cover;">
+                                <img src="<?= $imagePath ?>" class="rounded img-fluid" alt="<?= h($r->title) ?>" width="80"
+                                    height="80" style="object-fit: cover;">
                                 <div class="media-body ms-3">
                                     <h4 class="h6">
-                                        <a href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'view', $r->slug]) ?>">
+                                        <a
+                                            href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'view', $r->slug]) ?>">
                                             <?= h($r->title) ?>
                                         </a>
                                     </h4>
-                                    <span class="small text-muted"><?= $r->published ? $r->published->format('d M Y') : 'Data não disponível' ?></span>
+                                    <span
+                                        class="small text-muted"><?= $r->published ? $r->published->format('d M Y') : 'Data não disponível' ?></span>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -100,7 +98,8 @@
                             <h3 class="mb-1-6 h5">Tags</h3>
                             <div class="tags">
                                 <?php foreach ($tags as $tag): ?>
-                                    <a href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'tag', $tag->slug]) ?>">
+                                    <a
+                                        href="<?= $this->Url->build(['controller' => 'Posts', 'action' => 'tag', $tag->slug]) ?>">
                                         <?= h($tag->name) ?>
                                     </a>
                                 <?php endforeach; ?>
