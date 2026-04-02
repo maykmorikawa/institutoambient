@@ -46,6 +46,15 @@
                                         <?php endif; ?>
                                     </a>
                                     <div class="card-body px-4 py-2-3">
+                                        <h3 class="h5 mb-2">
+                                            <a href="<?= $postUrl ?>" class="text-decoration-none text-dark">
+                                                <?= h($post->title) ?>
+                                            </a>
+                                        </h3>
+                                        <span class="small text-muted">
+                                            <i class="far fa-calendar-alt me-1"></i>
+                                            <?= $post->published ? $post->published->format('d/m/Y') : 'Data não disponível' ?>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
