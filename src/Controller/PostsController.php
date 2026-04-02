@@ -163,7 +163,7 @@ class PostsController extends AppController
 
         // Recentes e todas as tags para sidebar
         $recentes = $this->Posts->find()
-            ->contain([])
+            ->contain(['PostImages'])
             ->order(['published' => 'DESC'])
             ->limit(3)
             ->all();

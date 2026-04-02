@@ -135,7 +135,7 @@
 
                             $imagePath = $featured
                                 ? $this->Url->build('/img/uploads/' . $featured->filename)
-                                : $this->Url->build('/site/img/blog/blog-default.jpg');
+                                : $this->Url->build('/site/img/blog/1.jpg');
                             ?>
                             <div class="media mb-4">
                                 <img src="<?= $imagePath ?>" class="rounded img-fluid" alt="<?= h($r->title) ?>" width="80" height="80" style="object-fit: cover;">

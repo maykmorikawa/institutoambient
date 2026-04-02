@@ -75,8 +75,7 @@
 
                             $imagePath = $featuredRecent
                                 ? $this->Url->build('/img/uploads/' . $featuredRecent->filename)
-                                // Use a mesma imagem padrão da outra view, se houver
-                                : $this->Url->build('/site/img/blog/blog-default.jpg');
+                                : $this->Url->build('/site/img/blog/1.jpg');
                             ?>
                             <div class="media mb-4">
                                 <img src="<?= $imagePath ?>"
