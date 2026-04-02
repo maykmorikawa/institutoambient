@@ -28,7 +28,12 @@ $this->Paginator->setTemplates([
         <h6 class="m-0 font-weight-bold text-primary">
             <i class="fas fa-newspaper me-2"></i><?= __('Gerenciar Posts') ?>
         </h6>
-        <?= $this->Html->link('<i class="fas fa-plus me-1"></i> ' . __('Novo Post'), ['action' => 'add'], ['class' => 'btn btn-primary btn-icon-split', 'escape' => false]) ?>
+        <a href="<?= $this->Url->build(['action' => 'add']) ?>" class="btn btn-primary btn-icon-split btn-sm">
+            <span class="icon text-white-50">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span class="text"><?= __('Novo Post') ?></span>
+        </a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -38,7 +43,7 @@ $this->Paginator->setTemplates([
                         <th style="width: 50px;">Min.</th>
                         <th><?= $this->Paginator->sort('title', 'Título') ?></th>
                         <th style="width: 150px;"><?= $this->Paginator->sort('category_id', 'Categoria') ?></th>
-                        <th style="width: 120px;"><?= $this->Paginator->sort('status') ?></th>
+                        <th style="width: 120px;" class="text-center"><?= $this->Paginator->sort('status') ?></th>
                         <th style="width: 120px;"><?= $this->Paginator->sort('created', 'Data') ?></th>
                         <th class="text-center" style="width: 180px;"><?= __('Ações') ?></th>
                     </tr>
@@ -70,22 +75,22 @@ $this->Paginator->setTemplates([
                             </td>
                             <td>
                                 <?php if ($post->hasValue('category')): ?>
-                                    <span class="badge rounded-pill bg-light text-primary border border-primary-subtle px-3">
+                                    <span class="badge badge-light border border-primary-subtile text-primary px-3">
                                         <?= h($post->category->name) ?>
                                     </span>
                                 <?php else: ?>
                                     <span class="text-muted small">-</span>
                                 <?php endif; ?>
                             </td>
-                            <td>
+                            <td class="text-center">
                                 <?php if ($post->status === 'publicado'): ?>
-                                    <span class="badge bg-success bg-opacity-10 text-success border border-success-subtle fw-normal">
+                                    <div class="badge badge-success px-3 py-2" style="font-size: 0.7rem; min-width: 90px;">
                                         <i class="fas fa-check-circle me-1"></i> Publicado
-                                    </span>
+                                    </div>
                                 <?php else: ?>
-                                    <span class="badge bg-warning bg-opacity-10 text-warning border border-warning-subtle fw-normal">
+                                    <div class="badge badge-warning px-3 py-2 text-dark" style="font-size: 0.7rem; min-width: 90px;">
                                         <i class="fas fa-clock me-1"></i> Rascunho
-                                    </span>
+                                    </div>
                                 <?php endif; ?>
                             </td>
                             <td>
