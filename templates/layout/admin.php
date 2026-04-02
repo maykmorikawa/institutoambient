@@ -189,7 +189,10 @@ $cakeDescription = 'Instituto Ambient - Admin';
   </a>
 
   <!-- Scripts Locais -->
-  <?= $this->Html->script(['jquery.min', 'bootstrap.bundle.min', '/summernote/summernote-lite', '/summernote/summernote-pt-BR']) ?>
+  <script src="<?= $this->Url->build('/js/jquery.min.js') ?>"></script>
+  <script src="<?= $this->Url->build('/js/bootstrap.bundle.min.js') ?>"></script>
+  <script src="<?= $this->Url->build('/summernote/summernote-lite.js') ?>"></script>
+  <script src="<?= $this->Url->build('/summernote/summernote-pt-BR.js') ?>"></script>
 
   <?= $this->fetch('script_bottom') ?>
 

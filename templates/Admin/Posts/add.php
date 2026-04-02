@@ -182,26 +182,31 @@
 </style>
 
 <?php $this->Html->scriptStart(['block' => 'script_bottom']); ?>
-jQuery(document).ready(function($) {
-    console.log('Tentando carregar Summernote Lite...');
-    if (typeof $.fn.summernote !== 'undefined') {
-        $('#summernote').summernote({
-            placeholder: 'Use o ícone de corrente para links. Ex: Clique aqui para se inscrever.',
-            tabsize: 2,
-            height: 400,
-            lang: 'pt-BR',
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
-            ]
-        });
-    } else {
-        console.error('Summernote Lite não carregado.');
-    }
-});
+(function($) {
+    alert('Teste JS');
+    console.log('Script bottom carregado');
+    $(document).ready(function() {
+        console.log('DOM pronto');
+        if (typeof $.fn.summernote !== 'undefined') {
+            $('#summernote').summernote({
+                placeholder: 'Use o ícone de corrente para links. Ex: Clique aqui para se inscrever.',
+                tabsize: 2,
+                height: 400,
+                lang: 'pt-BR',
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+        } else {
+            console.error('Summernote não definido no jQuery.');
+            alert('Atenção: O editor de texto não carregou. Verifique se o arquivo summernote-lite.js é acessível.');
+        }
+    });
+})(jQuery);
 <?php $this->Html->scriptEnd(); ?>
