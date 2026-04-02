@@ -24,7 +24,7 @@ class PostsController extends AppController
     public function index()
     {
         $query = $this->Posts->find()
-            ->contain(['Categories', 'Users'])
+            ->contain(['Categories', 'Users', 'PostImages'])
             ->orderBy(['Posts.created' => 'DESC']); // ou 'Posts.published' => 'DESC'
 
         $posts = $this->paginate($query);

@@ -1,81 +1,151 @@
 <?php
-
 /**
  * @var \App\View\AppView $this
  * @var iterable<\App\Model\Entity\Post> $posts
  */
+
+// Configuração do Paginator para Bootstrap 4/5
+$this->Paginator->setTemplates([
+    'nextActive' => '<li class="page-item"><a class="page-link" rel="next" href="{{url}}">{{text}}</a></li>',
+    'nextDisabled' => '<li class="page-item disabled"><span class="page-link">{{text}}</span></li>',
+    'prevActive' => '<li class="page-item"><a class="page-link" rel="prev" href="{{url}}">{{text}}</a></li>',
+    'prevDisabled' => '<li class="page-item disabled"><span class="page-link">{{text}}</span></li>',
+    'counterRange' => '{{start}} - {{end}} of {{count}}',
+    'counterPages' => '{{page}} of {{pages}}',
+    'first' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+    'last' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+    'number' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
+    'current' => '<li class="page-item active"><span class="page-link">{{text}}</span></li>',
+    'ellipsis' => '<li class="page-item disabled"><span class="page-link">...</span></li>',
+    'sort' => '<a class="text-primary" href="{{url}}">{{text}} <i class="fas fa-sort-down ms-1 small"></i></a>',
+    'sortAsc' => '<a class="text-primary asc" href="{{url}}">{{text}} <i class="fas fa-sort-up ms-1 small"></i></a>',
+    'sortDesc' => '<a class="text-primary desc" href="{{url}}">{{text}} <i class="fas fa-sort-down ms-1 small"></i></a>',
+]);
 ?>
+
 <div class="card shadow mb-4">
-    <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <h6 class="m-0 font-weight-bold text-primary"><?= __('Posts') ?></h6>
-        <?= $this->Html->link(__('Novo Post'), ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
+    <div class="card-header py-3 d-flex justify-content-between align-items-center bg-white border-bottom-primary">
+        <h6 class="m-0 font-weight-bold text-primary">
+            <i class="fas fa-newspaper me-2"></i><?= __('Gerenciar Posts') ?>
+        </h6>
+        <?= $this->Html->link('<i class="fas fa-plus me-1"></i> ' . __('Novo Post'), ['action' => 'add'], ['class' => 'btn btn-primary btn-icon-split', 'escape' => false]) ?>
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
+            <table class="table table-hover align-middle mb-0" id="dataTable" width="100%" cellspacing="0">
+                <thead class="bg-light text-dark">
                     <tr>
-                        <th><?= $this->Paginator->sort('id') ?></th>
-                        <th><?= $this->Paginator->sort('title') ?></th>
-                        <th><?= $this->Paginator->sort('category_id', 'Categoria') ?></th>
-                        <th><?= $this->Paginator->sort('user_id', 'Autor') ?></th>
-                        <th><?= $this->Paginator->sort('created', 'Criado em') ?></th>
-                        <th><?= $this->Paginator->sort('status') ?></th>
-                       
-                        <th><?= __('Ações') ?></th>
+                        <th style="width: 50px;">Min.</th>
+                        <th><?= $this->Paginator->sort('title', 'Título') ?></th>
+                        <th style="width: 150px;"><?= $this->Paginator->sort('category_id', 'Categoria') ?></th>
+                        <th style="width: 120px;"><?= $this->Paginator->sort('status') ?></th>
+                        <th style="width: 120px;"><?= $this->Paginator->sort('created', 'Data') ?></th>
+                        <th class="text-center" style="width: 180px;"><?= __('Ações') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($posts as $post): ?>
                         <tr>
-                            <td><?= $this->Number->format($post->id) ?></td>
-                            <td><?= h($post->title) ?></td>
                             <td>
-                                <?= $post->hasValue('category')
-                                    ? $this->Html->link($post->category->name, ['controller' => 'Categories', 'action' => 'view', $post->category->id], ['class' => 'text-decoration-none'])
-                                    : '<span class="text-muted">-</span>' ?>
+                                <?php 
+                                    $featured = null;
+                                    foreach ($post->post_images as $img) {
+                                        if ($img->is_featured) {
+                                            $featured = $img;
+                                            break;
+                                        }
+                                    }
+                                    if ($featured): ?>
+                                    <img src="<?= $this->Url->build('/img/uploads/' . $featured->filename) ?>" 
+                                         class="rounded shadow-sm" style="width: 45px; height: 45px; object-fit: cover;" alt="Min.">
+                                <?php else: ?>
+                                    <div class="rounded bg-light d-flex align-items-center justify-content-center border" style="width: 45px; height: 45px;">
+                                        <i class="fas fa-image text-muted small"></i>
+                                    </div>
+                                <?php endif; ?>
                             </td>
                             <td>
-                                <?= $post->hasValue('user')
-                                    ? $this->Html->link($post->user->name, ['controller' => 'Users', 'action' => 'view', $post->user->id], ['class' => 'text-decoration-none'])
-                                    : '<span class="text-muted">-</span>' ?>
+                                <div class="fw-bold text-dark mb-0"><?= h($post->title) ?></div>
+                                <small class="text-muted"><i class="fas fa-user me-1"></i><?= h($post->user->name ?? '-') ?></small>
                             </td>
-                            <td><?= h($post->created->format('d/m/Y H:i')) ?></td>
-                            
                             <td>
-                                <?= $post->status === 'publicado'
-                                    ? '<span class="badge bg-primary text-white"><strong>Sim</strong></span>'
-                                    : '<span class="badge bg-warning text-dark"><strong>Não</strong></span>' ?>
+                                <?php if ($post->hasValue('category')): ?>
+                                    <span class="badge rounded-pill bg-light text-primary border border-primary-subtle px-3">
+                                        <?= h($post->category->name) ?>
+                                    </span>
+                                <?php else: ?>
+                                    <span class="text-muted small">-</span>
+                                <?php endif; ?>
                             </td>
-
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['action' => 'view', $post->id], ['class' => 'btn btn-sm btn-outline-secondary']) ?>
-                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $post->id], ['class' => 'btn btn-sm btn-outline-primary']) ?>
-                                <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['action' => 'delete', $post->id],
-                                    [
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $post->id),
-                                        'class' => 'btn btn-sm btn-outline-danger'
-                                    ]
-                                ) ?>
+                            <td>
+                                <?php if ($post->status === 'publicado'): ?>
+                                    <span class="badge bg-success bg-opacity-10 text-success border border-success-subtle fw-normal">
+                                        <i class="fas fa-check-circle me-1"></i> Publicado
+                                    </span>
+                                <?php else: ?>
+                                    <span class="badge bg-warning bg-opacity-10 text-warning border border-warning-subtle fw-normal">
+                                        <i class="fas fa-clock me-1"></i> Rascunho
+                                    </span>
+                                <?php endif; ?>
                             </td>
-
+                            <td>
+                                <div class="small">
+                                    <?= $post->created->format('d/m/Y') ?><br>
+                                    <span class="text-muted small"><?= $post->created->format('H:i') ?></span>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group shadow-sm">
+                                    <?= $this->Html->link('<i class="fas fa-eye"></i>', ['action' => 'view', $post->id], ['class' => 'btn btn-sm btn-white', 'title' => 'Visualizar', 'escape' => false]) ?>
+                                    <?= $this->Html->link('<i class="fas fa-edit text-primary"></i>', ['action' => 'edit', $post->id], ['class' => 'btn btn-sm btn-white', 'title' => 'Editar', 'escape' => false]) ?>
+                                    <?= $this->Form->postLink('<i class="fas fa-trash text-danger"></i>', ['action' => 'delete', $post->id], [
+                                        'confirm' => __('Deseja realmente excluir este post?'),
+                                        'class' => 'btn btn-sm btn-white',
+                                        'title' => 'Excluir',
+                                        'escape' => false
+                                    ]) ?>
+                                </div>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-        <div class="paginator mt-3">
-            <ul class="pagination justify-content-center">
-                <?= $this->Paginator->first('<< ' . __('first'), ['class' => 'page-link']) ?>
-                <?= $this->Paginator->prev('< ' . __('previous'), ['class' => 'page-link']) ?>
-                <?= $this->Paginator->numbers(['class' => 'page-link']) ?>
-                <?= $this->Paginator->next(__('next') . ' >', ['class' => 'page-link']) ?>
-                <?= $this->Paginator->last(__('last') . ' >>', ['class' => 'page-link']) ?>
-            </ul>
-            <p class="text-center">
-                <?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?>
-            </p>
+        
+        <!-- Paginação Melhorada -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 border-top">
+            <div class="mb-3 mb-md-0 small text-muted">
+                <?= $this->Paginator->counter('Mostrando de {{start}} a {{end}} de um total de {{count}} registros') ?>
+            </div>
+            <nav aria-label="Navegação de posts">
+                <ul class="pagination pagination-sm mb-0">
+                    <?= $this->Paginator->first('<i class="fas fa-angle-double-left"></i>', ['escape' => false]) ?>
+                    <?= $this->Paginator->prev('<i class="fas fa-angle-left"></i>', ['escape' => false]) ?>
+                    <?= $this->Paginator->numbers() ?>
+                    <?= $this->Paginator->next('<i class="fas fa-angle-right"></i>', ['escape' => false]) ?>
+                    <?= $this->Paginator->last('<i class="fas fa-angle-double-right"></i>', ['escape' => false]) ?>
+                </ul>
+            </nav>
         </div>
     </div>
+</div>
+
+<style>
+    .btn-white {
+        background: #fff;
+        border: 1px solid #e3e6f0;
+    }
+    .btn-white:hover {
+        background: #f8f9fc;
+    }
+    .table th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+    }
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.5em 0.8em;
+    }
+</style>
