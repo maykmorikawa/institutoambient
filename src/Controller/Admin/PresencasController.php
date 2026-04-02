@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
-use App\Controller\AppController;
+
 use Cake\I18n\FrozenDate; // Certifique-se de que está importado
 use Cake\Http\Exception\NotFoundException; // Importar para exceções de record not found
 use Cake\Datasource\ConnectionManager;

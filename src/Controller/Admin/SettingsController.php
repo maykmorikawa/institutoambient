@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
-use App\Controller\AppController;
+
 use Cake\Filesystem\Utility\File;   // CORREÇÃO: Namespace correto para File
 use Cake\Filesystem\Utility\Folder; // CORREÇÃO: Namespace correto para Folder
 use Cake\Http\Exception\NotFoundException;
