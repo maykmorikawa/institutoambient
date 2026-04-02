@@ -131,12 +131,15 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 'password' => 'password',
             ],
             'loginUrl' => '/admin/login', // URL para o formulário de login
-            // 'urlChecker' => 'Authentication.Callback', // Para controlar onde o form authenticator deve agir
-            // 'urlChecker' => [
-            //     'loginUrl' => '/admin/login',
-            //     'checkAll' => false,
-            //     'allowedUris' => [],
-            // ],
+        ]);
+
+        // 3. CookieAuthenticator: Para a funcionalidade "Lembrar-me"
+        $service->loadAuthenticator('Authentication.Cookie', [
+            'fields' => [
+                'username' => 'email',
+                'password' => 'password',
+            ],
+            'loginUrl' => '/admin/login',
         ]);
 
         return $service;

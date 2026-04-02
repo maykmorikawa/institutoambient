@@ -38,7 +38,10 @@
                                 <?= $this->Flash->render() ?>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox small">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                                        <?= $this->Form->checkbox('remember_me', [
+                                            'class' => 'custom-control-input',
+                                            'id' => 'customCheck'
+                                        ]) ?>
                                         <label class="custom-control-label" for="customCheck">Lembrar-me</label>
                                     </div>
                                 </div>
