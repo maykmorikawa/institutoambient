@@ -54,7 +54,7 @@
                                 <p class="text-muted">Publicado em: <?= $post->published->format('d/m/Y H:i') ?></p>
 
                                 <div>
-                                    <?= $this->Text->autoParagraph(h($post->content)) ?>
+                                    <?= $post->content ?>
                                 </div>
 
                                 <div class="mt-4">

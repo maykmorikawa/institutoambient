@@ -43,7 +43,7 @@
                     <?php endif; ?>
 
                     <div class="post-body text-gray-800" style="line-height: 1.8; font-size: 1.1rem;">
-                        <?= $this->Text->autoParagraph($post->content); ?>
+                        <?= $post->content ?>
                     </div>
                 </div>
             </div>
