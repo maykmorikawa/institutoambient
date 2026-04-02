@@ -147,7 +147,12 @@
                     </div>
                 </div>
                 <div class="card-footer bg-white py-3 border-top-0">
-                    <?= $this->Form->button('<i class="fas fa-save mr-1"></i> ' . __('Atualizar Post'), ['class' => 'btn btn-primary btn-block shadow font-weight-bold py-2', 'escape' => false]) ?>
+                    <button type="submit" class="btn btn-primary btn-icon-split btn-block shadow font-weight-bold">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-save"></i>
+                        </span>
+                        <span class="text w-100"><?= __('Atualizar Postagem') ?></span>
+                    </button>
                     <?= $this->Html->link(__('Descartar Alterações'), ['action' => 'index'], ['class' => 'btn btn-link btn-block btn-sm text-secondary decoration-none']) ?>
                 </div>
             </div>

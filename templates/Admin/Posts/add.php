@@ -113,7 +113,12 @@
                     </div>
                 </div>
                 <div class="card-footer bg-light border-top-0 py-3">
-                    <?= $this->Form->button('<i class="fas fa-save mr-1"></i> ' . __('Salvar Post'), ['class' => 'btn btn-primary btn-block shadow-sm font-weight-bold', 'escape' => false]) ?>
+                    <button type="submit" class="btn btn-primary btn-icon-split btn-block shadow-sm">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-save"></i>
+                        </span>
+                        <span class="text font-weight-bold w-100"><?= __('Salvar Postagem') ?></span>
+                    </button>
                     <?= $this->Html->link(__('Cancelar'), ['action' => 'index'], ['class' => 'btn btn-link btn-block btn-sm text-secondary decoration-none']) ?>
                 </div>
             </div>
