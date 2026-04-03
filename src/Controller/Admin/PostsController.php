@@ -36,7 +36,7 @@ class PostsController extends AppController
             ->limit(5)
             ->all();
         
-        $totalViews = $this->Posts->find()->sumOf('view_count');
+        $totalViews = $this->Posts->find()->all()->sumOf('view_count');
 
         $this->set(compact('posts', 'totalPosts', 'topPosts', 'totalViews'));
     }
