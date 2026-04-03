@@ -46,13 +46,14 @@
                     </div>
 
                     <div class="form-group mb-0">
-                        <label class="font-weight-bold small text-uppercase"><?= __('Resumo (Excerpt)') ?></label>
+                        <label class="font-weight-bold small text-uppercase"><?= __('Resumo / Link de Inscrição') ?></label>
                         <?= $this->Form->control('excerpt', [
                             'label' => false,
                             'class' => 'form-control border-left-secondary',
                             'rows' => 3,
-                            'placeholder' => 'Uma breve descrição para as listagens...'
+                            'placeholder' => 'Para Cursos/Editais, cole o link do Google Forms aqui. Para outros, digite um resumo.'
                         ]) ?>
+                        <small class="text-muted">Dica: Se for um curso, o link colado aqui será o destino do card na Home Page.</small>
                     </div>
                 </div>
             </div>

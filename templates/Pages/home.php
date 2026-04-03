@@ -106,18 +106,22 @@
                     : $this->Url->build('/site/img/blog/blog-default.jpg');
                 ?>
                 <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="<?= $delay ?>ms">
-                    <div class="card card-style3 border-0 text-center">
+                    <div class="card card-style3 border-0 text-center shadow-sm h-100">
                         <a href="<?= $this->Url->build(h($post->excerpt)) ?>" class="text-decoration-none text-dark">
                             <div class="card-img position-relative">
                                 <img src="<?= $imagePath ?>" class="card-img-top" alt="<?= h($post->title) ?>">
-
                             </div>
                         </a>
-                        <div class="card-body p-1-9">
-                            <h3 class="h5"><?= h($post->title) ?></h3>
-                            <p class="text-primary mb-0">
-                                <?= $post->content ?? 'Sem descrição' ?>
-                            </p>
+                        <div class="card-body p-1-9 d-flex flex-column">
+                            <h3 class="h5 mb-3"><?= h($post->title) ?></h3>
+                            <div class="text-muted small mb-4 flex-grow-1">
+                                <?= $post->content ?? 'Clique para saber mais e se inscrever.' ?>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="<?= $this->Url->build(h($post->excerpt)) ?>" class="btn btn-secondary btn-sm px-4 rounded-pill shadow-sm">
+                                    Inscrever-se <i class="fas fa-arrow-right ms-1 small"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
