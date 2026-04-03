@@ -17,7 +17,7 @@ class AppController extends Controller
         
     }
 
-    public function beforeFilter(EventInterface $event): void: void
+    public function beforeFilter(EventInterface $event): void
     {
         parent::beforeFilter($event);
 
