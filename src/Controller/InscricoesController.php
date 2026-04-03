@@ -20,7 +20,7 @@ class InscricoesController extends AppController
         $this->loadComponent('Authentication.Authentication');
     }
 
-    public function beforeFilter(EventInterface $event): void
+    public function beforeFilter(EventInterface $event): void: void
     {
         parent::beforeFilter($event);
         $this->Authentication->addUnauthenticatedActions(['verificar', 'processarInscricao', 'confirmacao', 'comprovante']);

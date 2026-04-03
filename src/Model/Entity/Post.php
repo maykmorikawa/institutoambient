@@ -49,6 +49,7 @@ class Post extends Entity
         'image' => true,
         'status' => true,
         'published' => true,
+        'view_count' => true,
         'category' => true,
         'user' => true,
         'comments' => true,

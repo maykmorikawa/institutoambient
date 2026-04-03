@@ -23,10 +23,78 @@ $this->Paginator->setTemplates([
 ]);
 ?>
 
+<?php
+$this->assign('title', 'Postagens');
+?>
+
+<!-- Post Dashboard -->
+<div class="row mb-4">
+    <!-- Total Posts Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total de Postagens</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= number_format($totalPosts) ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-newspaper fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Views Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                            Total de Visualizações</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= number_format($totalViews) ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-eye fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top View Tags Card -->
+    <div class="col-xl-6 col-md-12 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                            Top 3 Mais Vistos</div>
+                        <div class="small mt-2">
+                            <?php foreach ($topPosts->take(3) as $top): ?>
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="text-truncate mr-2" style="max-width: 250px;"><?= h($top->title) ?></span>
+                                    <span class="badge badge-warning"><?= $top->view_count ?> vistas</span>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between align-items-center bg-white border-bottom-primary">
         <h6 class="m-0 font-weight-bold text-primary">
-            <i class="fas fa-newspaper me-2"></i><?= __('Gerenciar Posts') ?>
+            <i class="fas fa-list me-2"></i><?= __('Listagem de Postagens') ?>
         </h6>
         <a href="<?= $this->Url->build(['action' => 'add']) ?>" class="btn btn-primary btn-icon-split btn-sm">
             <span class="icon text-white-50">
@@ -43,6 +111,7 @@ $this->Paginator->setTemplates([
                         <th style="width: 50px;">Min.</th>
                         <th><?= $this->Paginator->sort('title', 'Título') ?></th>
                         <th style="width: 150px;"><?= $this->Paginator->sort('category_id', 'Categoria') ?></th>
+                        <th style="width: 100px;" class="text-center"><?= $this->Paginator->sort('view_count', 'Vistas') ?></th>
                         <th style="width: 120px;" class="text-center"><?= $this->Paginator->sort('status') ?></th>
                         <th style="width: 120px;"><?= $this->Paginator->sort('created', 'Data') ?></th>
                         <th class="text-center" style="width: 180px;"><?= __('Ações') ?></th>
@@ -81,6 +150,11 @@ $this->Paginator->setTemplates([
                                 <?php else: ?>
                                     <span class="text-muted small">-</span>
                                 <?php endif; ?>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-info shadow-sm" style="font-size: 0.8rem;">
+                                    <i class="fas fa-eye me-1"></i> <?= number_format($post->view_count ?? 0) ?>
+                                </span>
                             </td>
                             <td class="text-center">
                                 <?php if ($post->status === 'publicado'): ?>

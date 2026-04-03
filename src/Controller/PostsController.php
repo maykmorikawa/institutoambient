@@ -59,6 +59,10 @@ class PostsController extends AppController
             throw new NotFoundException(__('Post não encontrado.'));
         }
 
+        // Incrementar contador de visualizações
+        $post->view_count = ($post->view_count ?? 0) + 1;
+        $postsTable->save($post);
+
         // =============================
         // Buscar posts recentes de subcategorias de "blog"
         // =============================

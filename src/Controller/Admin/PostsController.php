@@ -24,11 +24,21 @@ class PostsController extends AppController
     {
         $query = $this->Posts->find()
             ->contain(['Categories', 'Users', 'PostImages'])
-            ->orderBy(['Posts.created' => 'DESC']); // ou 'Posts.published' => 'DESC'
+            ->orderBy(['Posts.created' => 'DESC']);
 
         $posts = $this->paginate($query);
 
-        $this->set(compact('posts'));
+        // Métricas para o Dashboard
+        $totalPosts = $this->Posts->find()->count();
+        $topPosts = $this->Posts->find()
+            ->select(['id', 'title', 'view_count'])
+            ->orderBy(['view_count' => 'DESC'])
+            ->limit(5)
+            ->all();
+        
+        $totalViews = $this->Posts->find()->sumOf('view_count');
+
+        $this->set(compact('posts', 'totalPosts', 'topPosts', 'totalViews'));
     }
     /**
      * View method
@@ -145,14 +155,14 @@ class PostsController extends AppController
                 if (!empty($toDelete)) {
                     foreach ($toDelete as $imageId => $value) {
                         if ($value == '1') {
-                            $image = $this->Posts->PostImages->get($imageId);
-                            $filePath = WWW_ROOT . 'img/uploads/' . $image->filename;
+                            $imgEntity = $this->Posts->PostImages->get($imageId);
+                            $filePath = WWW_ROOT . 'img/uploads/' . $imgEntity->filename;
 
                             if (file_exists($filePath)) {
-                                unlink($filePath);
+                                @unlink($filePath);
                             }
 
-                            $this->Posts->PostImages->delete($image);
+                            $this->Posts->PostImages->delete($imgEntity);
                         }
                     }
                 }

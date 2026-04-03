@@ -8,7 +8,7 @@ use Cake\Event\EventInterface;
 
 class AppController extends BaseController // 👈 agora extende o alias
 {
-    public function beforeFilter(EventInterface $event): void
+    public function beforeFilter(EventInterface $event): void: void
     {
         parent::beforeFilter($event);
         $this->viewBuilder()->setLayout('admin');
