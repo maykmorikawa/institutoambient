@@ -44,7 +44,7 @@ $this->Paginator->setTemplates([
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if ($tags->isEmpty()): ?>
+                    <?php if ($tags->items()->isEmpty()): ?>
                         <tr>
                             <td colspan="5" class="text-center py-4 text-muted">
                                 <i class="fas fa-info-circle me-1"></i> Nenhuma tag encontrada.
