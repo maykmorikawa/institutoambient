@@ -12,11 +12,18 @@ class AppController extends BaseController // 👈 agora extende o alias
     {
         parent::beforeFilter($event);
         $this->viewBuilder()->setLayout('admin');
+
+        // Permitir acesso à tela de login sem verificação de perfil
+        if ($this->request->getParam('action') === 'login') {
+            return;
+        }
+
         $user = $this->request->getAttribute('identity');
 
-        if (!$user || $user->profile_id !== 1) {
+        if (!$user || $user->get('profile_id') !== 1) {
             $this->Flash->error('Acesso não autorizado.');
-            $this->redirect('/');
+            $event->setResponse($this->redirect('/'));
+            return;
         }
     }
 }
