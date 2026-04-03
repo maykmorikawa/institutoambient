@@ -84,22 +84,18 @@
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="<?= $identity ? $this->Url->build(['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'edit', $identity->id]) : '#' ?>">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
+                    <?= __('Meu Perfil') ?>
                 </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Activity Log
+                <a class="dropdown-item disabled text-muted" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-300"></i>
+                    <?= __('Configurações (Em Breve)') ?>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Logout
+                <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-danger"></i>
+                    <strong><?= __('Sair da Conta') ?></strong>
                 </a>
             </div>
         </li>
