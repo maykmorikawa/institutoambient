@@ -6,53 +6,77 @@
  */
 ?>
 
-<div class="row">
-    <div class="col-md-8 offset-md-2">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="mb-0"><?= __('Edit Category') ?></h4>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow mb-4 border-left-info">
+            <div class="card-header py-3 bg-white d-flex justify-content-between align-items-center border-bottom-info">
+                <h6 class="m-0 font-weight-bold text-info">
+                    <i class="fas fa-edit me-2"></i><?= __('Editar Categoria') ?>: <span class="text-dark"><?= h($category->name) ?></span>
+                </h6>
+                <div class="btn-group">
+                    <?= $this->Html->link('<i class="fas fa-arrow-left me-1"></i> Voltar', ['action' => 'index'], ['class' => 'btn btn-sm btn-secondary shadow-sm', 'escape' => false]) ?>
+                    <?= $this->Form->postLink(
+                        '<i class="fas fa-trash me-1"></i> Excluir',
+                        ['action' => 'delete', $category->id],
+                        [
+                            'confirm' => __('Deseja realmente excluir a categoria "{0}"?', $category->name),
+                            'class' => 'btn btn-sm btn-danger shadow-sm ms-2',
+                            'escape' => false
+                        ]
+                    ) ?>
+                </div>
             </div>
-            <div class="card-body">
-                <?= $this->Form->create($category) ?>
-
-                <div class="mb-3">
-                    <?= $this->Form->control('name', ['class' => 'form-control']) ?>
+            <div class="card-body py-4">
+                <?= $this->Form->create($category, ['class' => 'user']) ?>
+                
+                <div class="row">
+                    <div class="col-md-6 form-group mb-4">
+                        <label class="font-weight-bold text-dark small text-uppercase"><?= __('Nome da Categoria') ?></label>
+                        <?= $this->Form->control('name', [
+                            'label' => false,
+                            'class' => 'form-control border-left-info shadow-sm'
+                        ]) ?>
+                    </div>
+                    <div class="col-md-6 form-group mb-4">
+                        <label class="font-weight-bold text-dark small text-uppercase"><?= __('Slug (URL)') ?></label>
+                        <?= $this->Form->control('slug', [
+                            'label' => false,
+                            'class' => 'form-control shadow-sm'
+                        ]) ?>
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <?= $this->Form->control('slug', ['class' => 'form-control']) ?>
+                <div class="form-group mb-4">
+                    <label class="font-weight-bold text-dark small text-uppercase"><?= __('Categoria Pai') ?></label>
+                    <?= $this->Form->control('parent_id', [
+                        'label' => false,
+                        'options' => $parentCategories,
+                        'empty' => 'Nenhuma (Categoria Principal)',
+                        'class' => 'form-control custom-select shadow-sm'
+                    ]) ?>
                 </div>
 
-                <div class="mb-3">
+                <div class="form-group mb-4">
+                    <label class="font-weight-bold text-dark small text-uppercase"><?= __('Descrição') ?></label>
                     <?= $this->Form->control('description', [
-                        'class' => 'form-control',
+                        'label' => false,
+                        'class' => 'form-control shadow-sm',
                         'rows' => 3
                     ]) ?>
                 </div>
 
-                <div class="mb-3">
-                    <?= $this->Form->control('parent_id', [
-                        'options' => $parentCategories,
-                        'empty' => 'Sem categoria pai',
-                        'class' => 'form-control'
-                    ]) ?>
-                </div>
+                <hr class="my-4">
 
-                <div class="d-grid">
-                    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-info btn-icon-split shadow-sm">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-save"></i>
+                        </span>
+                        <span class="text font-weight-bold px-4"><?= __('Atualizar Categoria') ?></span>
+                    </button>
                 </div>
-
                 <?= $this->Form->end() ?>
             </div>
-        </div>
-
-        <div class="mt-3">
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $category->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $category->id), 'class' => 'btn btn-danger']
-            ) ?>
-            <?= $this->Html->link(__('Back to Categories'), ['action' => 'index'], ['class' => 'btn btn-secondary ms-2']) ?>
         </div>
     </div>
 </div>
