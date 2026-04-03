@@ -17,7 +17,7 @@ use Cake\Controller\Controller;
 class UsersController extends AppController
 {
 
-    public function beforeFilter(\Cake\Event\EventInterface $event): void
+    public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
 

@@ -8,22 +8,21 @@ use Cake\Event\EventInterface;
 
 class AppController extends BaseController // 👈 agora extende o alias
 {
-    public function beforeFilter(EventInterface $event): void
+    public function beforeFilter(EventInterface $event)
     {
         parent::beforeFilter($event);
         $this->viewBuilder()->setLayout('admin');
 
         // Permitir acesso à tela de login sem verificação de perfil
         if ($this->request->getParam('action') === 'login') {
-            return;
+            return null;
         }
 
         $user = $this->request->getAttribute('identity');
 
         if (!$user || $user->get('profile_id') !== 1) {
             $this->Flash->error('Acesso não autorizado.');
-            $event->setResponse($this->redirect('/'));
-            return;
+            return $this->redirect('/');
         }
     }
 }

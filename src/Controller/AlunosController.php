@@ -14,7 +14,7 @@ use Cake\Event\EventInterface;
 class AlunosController extends AppController
 {
 
-    public function beforeFilter(EventInterface $event): void
+    public function beforeFilter(EventInterface $event)
     {
         parent::beforeFilter($event);
         $this->Authentication->addUnauthenticatedActions(['add']);
