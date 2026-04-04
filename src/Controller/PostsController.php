@@ -103,15 +103,81 @@ class PostsController extends AppController
     {
         $this->viewBuilder()->setLayout('site');
 
-        // Consulta todos os posts com status 'publicado', trazendo relacionamentos
-        $query = $this->Posts->find()
-            ->contain(['Categories', 'Users', 'PostImages']) // carrega imagens e usuários
-            ->where([
-                'Posts.status' => 'publicado'
-            ])
-            ->order(['Posts.published' => 'DESC']);
+        $categoriesTable = TableRegistry::getTableLocator()->get('Categories');
 
-        // Paginação ativa com 9 itens por tela
+        // Encontra a categoria "blog"
+        $blogCategory = $categoriesTable->find()
+            ->where(['slug' => 'blog'])
+            ->first();
+
+        // Consulta base
+        $query = $this->Posts->find()
+            ->contain(['Categories', 'Users', 'PostImages']);
+
+        if ($blogCategory) {
+            $subCategoryIds = (new Collection(
+                $categoriesTable->find()
+                    ->where([
+                        'lft >=' => $blogCategory->lft,
+                        'rght <=' => $blogCategory->rght
+                    ])
+                    ->all()
+            ))->extract('id')->toList();
+
+            $query->where([
+                'Posts.status' => 'publicado',
+                'Posts.category_id IN' => $subCategoryIds
+            ]);
+        } else {
+             $query->where(['Posts.status' => 'publicado']);
+        }
+
+        $query->order(['Posts.published' => 'DESC']);
+
+        $this->paginate = [
+            'limit' => 9
+        ];
+        
+        $posts = $this->paginate($query);
+
+        $this->set(compact('posts'));
+    }
+
+    public function listprojetos()
+    {
+        $this->viewBuilder()->setLayout('site');
+
+        $categoriesTable = TableRegistry::getTableLocator()->get('Categories');
+
+        // Encontra a categoria "projetos" ou "projeto"
+        $projetosCategory = $categoriesTable->find()
+            ->where(['slug IN' => ['projetos', 'projeto']])
+            ->first();
+
+        // Consulta base
+        $query = $this->Posts->find()
+            ->contain(['Categories', 'Users', 'PostImages']);
+
+        if ($projetosCategory) {
+            $subCategoryIds = (new Collection(
+                $categoriesTable->find()
+                    ->where([
+                        'lft >=' => $projetosCategory->lft,
+                        'rght <=' => $projetosCategory->rght
+                    ])
+                    ->all()
+            ))->extract('id')->toList();
+
+            $query->where([
+                'Posts.status' => 'publicado',
+                'Posts.category_id IN' => $subCategoryIds
+            ]);
+        } else {
+             $query->where(['Posts.status' => 'publicado', 'Posts.slug IS NULL']); // força zero caso n exista a categoria projetos
+        }
+
+        $query->order(['Posts.published' => 'DESC']);
+
         $this->paginate = [
             'limit' => 9
         ];

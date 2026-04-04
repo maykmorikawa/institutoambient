@@ -28,8 +28,8 @@
                         <nav class="navbar navbar-expand-lg navbar-light p-0">
                             <div class="navbar-header navbar-header-custom">
                                 <!-- start logo -->
-                                <a href="/home" class="navbar-brand"><img id="logo" src="<?= WWW; ?>/site/img/logos/logo-inner.png"
-                                        alt="logo" /></a>
+                                <a href="/home" class="navbar-brand"><img id="logo"
+                                        src="<?= WWW; ?>/site/img/logos/logo-inner.png" alt="logo" /></a>
                                 <!-- end logo -->
                             </div>
 
@@ -44,7 +44,7 @@
                                         <li><a href="/quem_somos">Quem Somos</a></li>
                                         <li><a href="/o_instituto_ambient">Nossa História</a></li>
                                         <li><a href="/documentos">Compliance/Transparencia</a></li>
-                                         <li><a href="/reportfacil">Canal de Ética</a></li>
+                                        <li><a href="/reportfacil">Canal de Ética</a></li>
 
                                     </ul>
                                 </li>
@@ -65,12 +65,20 @@
 
                                 <li><a href="#!">Doe Agora</a>
                                     <ul>
-                                        <li><a href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe</li>
+                                        <li><a
+                                                href="https://www.every.org/instituto-ambient-ia?donateTo=instituto-ambient-ia#/donate/card">Doe
+                                        </li>
                                         <li><a href="/captacao">Captação de Recursos</a></li>
                                         <li><a href="#">Imposto de Renda</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="/posts/listblog">Publicações</a></li>
+                                <li><a href="#!">Publicações</a>
+                                    <ul>
+                                        <li><a href="/posts/listprojetos">Inscrições</a></li>
+                                        <li><a href="/posts/listblog">Blog & Notícias</a></li>
+                                    </ul>
+
+                                </li>
                                 <li><a href="/contato">Contato</a>
                             </ul>
                             <!-- end menu area -->
