@@ -103,40 +103,20 @@ class PostsController extends AppController
     {
         $this->viewBuilder()->setLayout('site');
 
-        $categoriesTable = TableRegistry::getTableLocator()->get('Categories');
+        // Consulta todos os posts com status 'publicado', trazendo relacionamentos
+        $query = $this->Posts->find()
+            ->contain(['Categories', 'Users', 'PostImages']) // carrega imagens e usuários
+            ->where([
+                'Posts.status' => 'publicado'
+            ])
+            ->order(['Posts.published' => 'DESC']);
 
-        // Encontra a categoria "blog"
-        $blogCategory = $categoriesTable->find()
-            ->where(['slug' => 'blog'])
-            ->first();
-
-        $posts = [];
-
-        if ($blogCategory) {
-            // Busca todas as subcategorias de "blog"
-            $subCategoryIds = (new Collection(
-                $categoriesTable->find()
-                    ->where([
-                        'lft >=' => $blogCategory->lft,
-                        'rght <=' => $blogCategory->rght
-                    ])
-                    ->all()
-            ))->extract('id')->toList();
-
-            // Consulta os posts com imagem destaque
-            $query = $this->Posts->find()
-                ->leftJoinWith('PostImages', function ($q) {
-                    return $q->where(['PostImages.is_featured' => true]);
-                })
-                ->contain(['Categories', 'Users', 'PostImages']) // carrega imagens e usuários
-                ->where([
-                    'Posts.status' => 'publicado',
-                    'Posts.category_id IN' => $subCategoryIds
-                ])
-                ->order(['Posts.published' => 'DESC']);
-
-            $posts = $this->paginate($query);
-        }
+        // Paginação ativa com 9 itens por tela
+        $this->paginate = [
+            'limit' => 9
+        ];
+        
+        $posts = $this->paginate($query);
 
         $this->set(compact('posts'));
     }

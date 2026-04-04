@@ -19,7 +19,7 @@
                 <div class="col-md-12">
 
 
-                    <h1>Notícias</h1>
+                    <h1>Publicações</h1>
 
 
                 </div>
@@ -34,7 +34,7 @@
                         <li><a href="<?= $this->Url->build('/') ?>">Home</a></li>
 
 
-                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#">Publicações do Site</a></li>
 
 
                     </ul>
@@ -73,7 +73,7 @@
             <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Instituto Ambient</span>
 
 
-            <h2 class="mb-0 h1">Lista de Novidades &amp; Notícias</h2>
+            <h2 class="mb-0 h1">Todas as Postagens do Sistema</h2>
 
 
         </div>

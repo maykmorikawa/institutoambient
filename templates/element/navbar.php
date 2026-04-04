@@ -70,6 +70,7 @@
                                         <li><a href="#">Imposto de Renda</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="/posts/listblog">Publicações</a></li>
                                 <li><a href="/contato">Contato</a>
                             </ul>
                             <!-- end menu area -->
