@@ -45,7 +45,7 @@ if ($this->request->getAttribute('identity')) {
     <div class="col-xl-9 col-lg-8">
         <div class="card shadow mb-4">
             <div class="card-body p-5">
-                <?= $this->Form->create($aluno) ?>
+                <?= $this->Form->create($aluno, ['novalidate' => true]) ?>
                 
                 <div class="tab-content" id="aluno-pills-tabContent">
                     

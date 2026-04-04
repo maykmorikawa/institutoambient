@@ -52,7 +52,7 @@ if ($this->request->getAttribute('identity')) {
     <div class="col-xl-9 col-lg-8">
         <div class="card shadow mb-4">
             <div class="card-body p-5">
-                <?= $this->Form->create($aluno) ?>
+                <?= $this->Form->create($aluno, ['novalidate' => true]) ?>
                 
                 <div class="tab-content" id="aluno-pills-tabContent">
                     
@@ -111,6 +111,7 @@ if ($this->request->getAttribute('identity')) {
                     <!-- Aba: Endereço => ID = pills-endereco -->
                     <div class="tab-pane fade" id="pills-endereco" role="tabpanel" aria-labelledby="pills-endereco-tab">
                         <h5 class="text-dark font-weight-bold border-bottom pb-3 mb-4">Mapeamento Residencial</h5>
+                        <?= $this->Form->hidden('enderecos.0.id') ?>
 
                         <div class="row">
                             <div class="col-md-4 mb-3">
@@ -166,6 +167,7 @@ if ($this->request->getAttribute('identity')) {
                     <!-- Aba: Escolaridade => ID = pills-escolaridade -->
                     <div class="tab-pane fade" id="pills-escolaridade" role="tabpanel" aria-labelledby="pills-escolaridade-tab">
                         <h5 class="text-dark font-weight-bold border-bottom pb-3 mb-4">Instrução Pedagógica Atual</h5>
+                        <?= $this->Form->hidden('escolaridades.0.id') ?>
 
                         <div class="row">
                             <div class="col-md-6 mb-4">
