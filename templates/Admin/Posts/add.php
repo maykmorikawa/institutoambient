@@ -145,7 +145,8 @@
                         <?= $this->Form->control('slug', [
                             'label' => false,
                             'class' => 'form-control form-control-sm',
-                            'placeholder' => 'deixe em branco para gerar automático'
+                            'placeholder' => 'deixe em branco para gerar automático',
+                            'required' => false
                         ]) ?>
                     </div>
                 </div>

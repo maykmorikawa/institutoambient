@@ -179,6 +179,7 @@
                         <?= $this->Form->control('slug', [
                             'label' => false,
                             'class' => 'form-control form-control-sm text-muted',
+                            'required' => false
                         ]) ?>
                         <small class="form-text text-info mt-2"><i class="fas fa-info-circle mr-1"></i>O slug é gerado automaticamente a partir do título.</small>
                     </div>
