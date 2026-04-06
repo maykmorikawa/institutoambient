@@ -13,6 +13,8 @@ class ContactsTable extends Table
     public function initialize(array $config): void
     {
         parent::initialize($config);
+        $this->addBehavior('SoftDelete');
+        $this->addBehavior('SystemLog');
 
         $this->setTable('contacts'); // Define o nome da tabela no BD
         $this->setDisplayField('name');

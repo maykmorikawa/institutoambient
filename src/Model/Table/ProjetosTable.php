@@ -41,6 +41,8 @@ class ProjetosTable extends Table
     public function initialize(array $config): void
     {
         parent::initialize($config);
+        $this->addBehavior('SoftDelete');
+        $this->addBehavior('SystemLog');
 
         $this->setTable('projetos');
         $this->setDisplayField('titulo');

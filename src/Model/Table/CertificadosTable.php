@@ -13,6 +13,8 @@ class CertificadosTable extends Table
     public function initialize(array $config): void
     {
         parent::initialize($config);
+        $this->addBehavior('SoftDelete');
+        $this->addBehavior('SystemLog');
 
         $this->setTable('certificados');
         $this->setDisplayField('codigo_autenticacao'); // Ou outro campo representativo

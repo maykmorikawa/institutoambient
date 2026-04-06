@@ -21,6 +21,11 @@ class AppController extends Controller
     {
         parent::beforeFilter($event);
 
+        $identity = $this->Authentication->getIdentity();
+        if ($identity) {
+            \Cake\Core\Configure::write('CurrentUser', $identity->getIdentifier());
+        }
+
         // Liberar acesso à página pública
         $this->Authentication->addUnauthenticatedActions([
             'display',
