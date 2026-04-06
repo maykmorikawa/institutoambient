@@ -116,6 +116,12 @@ return function (RouteBuilder $routes): void {
 
 
 
+      // Rota POST para restaurar itens da lixeira
+      $builder->post('/settings/restore/:table/:id', [
+         'controller' => 'Settings',
+         'action'     => 'restore',
+      ])->setPass(['table', 'id']);
+
       // ✅ CHAME O Fallbacks **DENTRO** do escopo
       $builder->fallbacks(DashedRoute::class);
 

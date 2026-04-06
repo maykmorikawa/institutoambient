@@ -78,9 +78,9 @@ class SettingsController extends AppController
         $userId  = $this->request->getQuery('user_id');
 
         $conditions = [];
-        if (!empty($model))  { $conditions['SystemLogs.model']   = $model; }
-        if (!empty($action)) { $conditions['SystemLogs.action']  = $action; }
-        if (!empty($userId)) { $conditions['SystemLogs.user_id'] = $userId; }
+        if (!empty($model))  { $conditions['SystemLogs.target_model'] = $model; }
+        if (!empty($action)) { $conditions['SystemLogs.action']       = $action; }
+        if (!empty($userId)) { $conditions['SystemLogs.user_id']      = $userId; }
 
         $this->paginate = [
             'limit'      => 30,
@@ -92,16 +92,16 @@ class SettingsController extends AppController
         $logs = $this->paginate($systemLogs);
 
         $models = $systemLogs->find()
-            ->select(['model'])
-            ->distinct(['model'])
-            ->orderBy(['model' => 'ASC'])
+            ->select(['target_model'])
+            ->distinct(['target_model'])
+            ->orderBy(['target_model' => 'ASC'])
             ->all()
-            ->extract('model')
+            ->extract('target_model')
             ->toArray();
 
         $users = TableRegistry::getTableLocator()->get('Users')
-            ->find('list', keyField: 'id', valueField: 'name')
-            ->orderBy(['name' => 'ASC'])
+            ->find('list', keyField: 'id', valueField: 'email')
+            ->orderBy(['email' => 'ASC'])
             ->toArray();
 
         $this->set(compact('logs', 'models', 'users'));
@@ -113,29 +113,29 @@ class SettingsController extends AppController
     public function trash()
     {
         $tables = [
-            'Alunos', 'Students', 'Users', 'Profiles',
-            'Projetos', 'Atividades', 'Posts',
-            'Categories', 'Tags', 'Comments',
-            'Inscricoes', 'Presencas', 'Certificados',
-            'Contacts', 'Enderecos',
+            'Posts', 'Users', 'Alunos',
+            'Projetos', 'Atividades', 'Inscricoes',
+            'Categories', 'Tags',
         ];
 
-        $tableFilter = $this->request->getQuery('table') ?? 'Users';
+        $tableFilter = $this->request->getQuery('table') ?? 'Posts';
         $trashItems  = [];
+        $hasTrash    = false;
 
         if (in_array($tableFilter, $tables)) {
             $tableObj = TableRegistry::getTableLocator()->get($tableFilter);
-            if ($tableObj->getSchema()->hasColumn('deleted')) {
+            if ($tableObj->getSchema()->hasColumn('deleted_at')) {
+                $hasTrash = true;
                 $this->paginate = [
                     'limit'      => 20,
-                    'order'      => [$tableFilter . '.deleted' => 'DESC'],
-                    'conditions' => [$tableFilter . '.deleted IS NOT' => null],
+                    'order'      => [$tableFilter . '.deleted_at' => 'DESC'],
+                    'conditions' => [$tableFilter . '.deleted_at IS NOT' => null],
                 ];
                 $trashItems = $this->paginate($tableObj->find('withDeleted'));
             }
         }
 
-        $this->set(compact('trashItems', 'tables', 'tableFilter'));
+        $this->set(compact('trashItems', 'tables', 'tableFilter', 'hasTrash'));
     }
 
     /**
@@ -146,15 +146,13 @@ class SettingsController extends AppController
         $this->request->allowMethod(['post']);
 
         $allowedTables = [
-            'Alunos', 'Students', 'Users', 'Profiles',
-            'Projetos', 'Atividades', 'Posts',
-            'Categories', 'Tags', 'Comments',
-            'Inscricoes', 'Presencas', 'Certificados',
-            'Contacts', 'Enderecos',
+            'Posts', 'Users', 'Alunos',
+            'Projetos', 'Atividades', 'Inscricoes',
+            'Categories', 'Tags',
         ];
 
         if (!in_array($table, $allowedTables)) {
-            $this->Flash->error('Tabela invalida.');
+            $this->Flash->error('Tabela inválida para restauração.');
             return $this->redirect(['action' => 'trash']);
         }
 
@@ -163,11 +161,11 @@ class SettingsController extends AppController
             ->where([$table . '.id' => $id])
             ->firstOrFail();
 
-        $entity->set('deleted', null);
+        $entity->set('deleted_at', null);
         if ($tableObj->save($entity)) {
             $this->Flash->success('Registro restaurado com sucesso!');
         } else {
-            $this->Flash->error('Nao foi possivel restaurar o registro.');
+            $this->Flash->error('Não foi possível restaurar o registro.');
         }
 
         return $this->redirect(['action' => 'trash', '?' => ['table' => $table]]);

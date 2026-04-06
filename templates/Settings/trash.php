@@ -8,21 +8,14 @@
 $this->assign('title', 'Lixeira');
 
 $tableLabels = [
-    'Alunos'       => 'Alunos',
-    'Students'     => 'Alunos (Students)',
-    'Users'        => 'Usuários',
-    'Profiles'     => 'Perfis',
-    'Projetos'     => 'Projetos',
-    'Atividades'   => 'Atividades',
-    'Posts'        => 'Postagens',
-    'Categories'   => 'Categorias',
-    'Tags'         => 'Tags',
-    'Comments'     => 'Comentários',
-    'Inscricoes'   => 'Inscrições',
-    'Presencas'    => 'Presenças',
-    'Certificados' => 'Certificados',
-    'Contacts'     => 'Contatos',
-    'Enderecos'    => 'Endereços',
+    'Posts'      => 'Postagens',
+    'Users'      => 'Usuários',
+    'Alunos'     => 'Alunos',
+    'Projetos'   => 'Projetos',
+    'Atividades' => 'Atividades',
+    'Inscricoes' => 'Inscrições',
+    'Categories' => 'Categorias',
+    'Tags'       => 'Tags',
 ];
 ?>
 
@@ -71,9 +64,8 @@ $tableLabels = [
               <td>
                 <code class="text-muted" style="font-size:.78rem;">
                   <?php
-                    // Exibe os 3 primeiros campos do objeto de forma genérica
                     $arr = $item->toArray();
-                    unset($arr['deleted'], $arr['password']);
+                    unset($arr['deleted_at'], $arr['password']);
                     $preview = array_slice($arr, 0, 3, true);
                     foreach ($preview as $k => $v) {
                         echo h($k) . ': <strong>' . h(is_string($v) ? $v : json_encode($v)) . '</strong> &nbsp;';
@@ -82,11 +74,11 @@ $tableLabels = [
                 </code>
               </td>
               <td>
-                <span class="text-danger">
+              <span class="text-danger">
                   <i class="fas fa-clock me-1"></i>
-                  <?= $item->deleted instanceof \Cake\I18n\DateTime
-                    ? $item->deleted->format('d/m/Y H:i')
-                    : h($item->deleted) ?>
+                  <?= $item->deleted_at instanceof \Cake\I18n\DateTime
+                    ? $item->deleted_at->format('d/m/Y H:i')
+                    : h($item->deleted_at) ?>
                 </span>
               </td>
               <td class="text-end pe-3">

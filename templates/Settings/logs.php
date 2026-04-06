@@ -104,8 +104,8 @@ $this->assign('title', 'Logs do Sistema');
                 <i class="fas <?= $b[1] ?> me-1"></i><?= $b[2] ?>
               </span>
             </td>
-            <td><code><?= h($log->model) ?></code></td>
-            <td><?= $log->entity_id ?></td>
+            <td><code><?= h($log->target_model) ?></code></td>
+            <td><?= h($log->target_id) ?></td>
             <td class="text-muted" style="font-size:.8rem"><?= h($log->ip_address) ?></td>
             <td>
               <button type="button"
@@ -126,7 +126,7 @@ $this->assign('title', 'Logs do Sistema');
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                  <pre style="background:#1e1e1e; color:#d4d4d4; border-radius:8px; padding:1rem; max-height:400px; overflow-y:auto; font-size:.8rem;"><?= h(json_encode(json_decode($log->data), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) ?></pre>
+                  <pre style="background:#1e1e1e; color:#d4d4d4; border-radius:8px; padding:1rem; max-height:400px; overflow-y:auto; font-size:.8rem;"><?= h(json_encode(json_decode($log->data_changes), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) ?></pre>
                 </div>
               </div>
             </div>
