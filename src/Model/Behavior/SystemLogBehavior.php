@@ -42,11 +42,13 @@ class SystemLogBehavior extends Behavior
         $userId = Configure::read('CurrentUser');
 
         // Captura apenas campos que mudaram (ou todos se for novo)
-        $data = $entity->isNew()
-            ? $entity->toArray()
-            : $entity->getDirty()
-                ? array_intersect_key($entity->toArray(), array_flip($entity->getDirty()))
-                : [];
+        if ($entity->isNew()) {
+            $data = $entity->toArray();
+        } elseif (!empty($entity->getDirty())) {
+            $data = array_intersect_key($entity->toArray(), array_flip($entity->getDirty()));
+        } else {
+            $data = [];
+        }
 
         // Remove senha do log por segurança
         unset($data['password'], $data['password_confirm']);
