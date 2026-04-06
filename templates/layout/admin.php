@@ -104,10 +104,24 @@ $cakeDescription = 'Instituto Ambient - Admin';
         Configurações
       </div>
 
-      <li class="nav-item <?= $this->request->getParam('controller') == 'Settings' ? 'active' : '' ?>">
+      <li class="nav-item <?= $this->request->getParam('controller') == 'Settings' && $this->request->getParam('action') == 'index' ? 'active' : '' ?>">
         <a class="nav-link" href="<?= $this->Url->build(['controller' => 'Settings', 'action' => 'index']) ?>">
           <i class="fas fa-fw fa-cogs"></i>
           <span>Sistema</span>
+        </a>
+      </li>
+
+      <li class="nav-item <?= $this->request->getParam('action') == 'logs' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?= $this->Url->build(['controller' => 'Settings', 'action' => 'logs']) ?>">
+          <i class="fas fa-fw fa-clipboard-list"></i>
+          <span>Logs do Sistema</span>
+        </a>
+      </li>
+
+      <li class="nav-item <?= $this->request->getParam('action') == 'trash' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?= $this->Url->build(['controller' => 'Settings', 'action' => 'trash']) ?>">
+          <i class="fas fa-fw fa-trash-restore"></i>
+          <span>Lixeira</span>
         </a>
       </li>
 
