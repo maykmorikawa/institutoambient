@@ -61,11 +61,14 @@ class SystemLogBehavior extends Behavior
         $ip = $request ? $request->clientIp() : '127.0.0.1';
         $agent = $request ? $request->getHeaderLine('User-Agent') : 'CLI/System';
 
+        $primaryKey = $this->_table->getPrimaryKey();
+        $targetId   = is_array($primaryKey) ? $entity->get(current($primaryKey)) : $entity->get($primaryKey);
+
         $logData = [
             'user_id'      => $userId,
             'action'       => $action,
             'target_model' => $this->_table->getAlias(),
-            'target_id'    => (string) $entity->get($this->_table->getPrimaryKey()),
+            'target_id'    => (string)$targetId,
             'data_changes' => json_encode($data, JSON_UNESCAPED_UNICODE),
             'ip_address'   => $ip,
             'user_agent'   => substr($agent, 0, 255),
