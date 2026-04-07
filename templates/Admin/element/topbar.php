@@ -88,11 +88,11 @@
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     <?= __('Meu Perfil') ?>
                 </a>
-                <a class="dropdown-item" href="<?= $this->Url->build(['prefix' => false, 'controller' => 'Settings', 'action' => 'logs']) ?>">
+                <a class="dropdown-item" href="<?= $this->Url->build(['prefix' => 'Admin', 'controller' => 'Settings', 'action' => 'logs']) ?>">
                     <i class="fas fa-clipboard-list fa-sm fa-fw mr-2 text-primary"></i>
                     <?= __('Logs do Sistema') ?>
                 </a>
-                <a class="dropdown-item" href="<?= $this->Url->build(['prefix' => false, 'controller' => 'Settings', 'action' => 'trash']) ?>">
+                <a class="dropdown-item" href="<?= $this->Url->build(['prefix' => 'Admin', 'controller' => 'Settings', 'action' => 'trash']) ?>">
                     <i class="fas fa-trash-restore fa-sm fa-fw mr-2 text-danger"></i>
                     <?= __('Lixeira') ?>
                 </a>
