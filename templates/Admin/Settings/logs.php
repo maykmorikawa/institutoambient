@@ -70,12 +70,13 @@ $this->assign('title', 'Logs do Sistema');
           <th>Ação</th>
           <th>Tabela</th>
           <th>ID</th>
+          <th>IP</th>
           <th style="width:60px;"></th>
         </tr>
       </thead>
       <tbody>
         <?php if (empty($logs->toArray())): ?>
-          <tr><td colspan="7" class="text-center py-4 text-muted"><i class="fas fa-inbox me-2"></i>Nenhum log encontrado.</td></tr>
+          <tr><td colspan="8" class="text-center py-4 text-muted"><i class="fas fa-inbox me-2"></i>Nenhum log encontrado.</td></tr>
         <?php else: ?>
           <?php foreach ($logs as $log): ?>
           <tr>
@@ -105,6 +106,7 @@ $this->assign('title', 'Logs do Sistema');
             </td>
             <td><code><?= h($log->target_model) ?></code></td>
             <td><?= h($log->target_id) ?></td>
+            <td class="text-muted" style="font-size:.8rem;"><?= h($log->ip_address) ?></td>
             <td>
               <button type="button"
                 class="btn btn-sm btn-outline-secondary"
@@ -124,6 +126,11 @@ $this->assign('title', 'Logs do Sistema');
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
+                  <div class="mb-3">
+                    <small class="text-muted fw-bold">Dispositivo/Browser:</small><br>
+                    <small class="text-secondary"><?= h($log->user_agent) ?></small>
+                  </div>
+                  <small class="text-muted fw-bold">Alterações (JSON):</small>
                   <pre style="background:#1e1e1e; color:#d4d4d4; border-radius:8px; padding:1rem; max-height:400px; overflow-y:auto; font-size:.8rem;"><?= h(json_encode(json_decode($log->data_changes), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) ?></pre>
                 </div>
               </div>

@@ -120,14 +120,14 @@ class SettingsController extends AppController
         if (!empty($action)) { $conditions['SystemLogs.action']       = $action; }
         if (!empty($userId)) { $conditions['SystemLogs.user_id']      = $userId; }
 
-        $this->paginate = [
-            'limit'      => 30,
-            'order'      => ['SystemLogs.created' => 'DESC'],
-            'contain'    => ['Users'],
-            'conditions' => $conditions,
-        ];
+        $query = $systemLogs->find()
+            ->contain(['Users'])
+            ->where($conditions)
+            ->orderBy(['SystemLogs.created' => 'DESC']);
 
-        $logs = $this->paginate($systemLogs);
+        $logs = $this->paginate($query, [
+            'limit' => 30
+        ]);
 
         $models = $systemLogs->find()
             ->select(['target_model'])
@@ -165,12 +165,14 @@ class SettingsController extends AppController
             $tableObj = TableRegistry::getTableLocator()->get($tableFilter);
             if ($tableObj->getSchema()->hasColumn('deleted_at')) {
                 $hasTrash = true;
-                $this->paginate = [
-                    'limit'      => 20,
-                    'order'      => [$tableFilter . '.deleted_at' => 'DESC'],
-                    'conditions' => [$tableFilter . '.deleted_at IS NOT' => null],
-                ];
-                $trashItems = $this->paginate($tableObj->find('withDeleted'));
+                
+                $query = $tableObj->find('withDeleted')
+                    ->where([$tableFilter . '.deleted_at IS NOT' => null])
+                    ->orderBy([$tableFilter . '.deleted_at' => 'DESC']);
+
+                $trashItems = $this->paginate($query, [
+                    'limit' => 20
+                ]);
             }
         }
 
