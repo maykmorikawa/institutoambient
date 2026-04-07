@@ -221,10 +221,10 @@ class PostsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $post = $this->Posts->get($id);
-        if ($this->Posts->delete($post)) {
-            $this->Flash->success(__('The post has been deleted.'));
+        if ($this->Posts->softDelete($post)) {
+            $this->Flash->success(__('O post foi movido para a lixeira.'));
         } else {
-            $this->Flash->error(__('The post could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Não foi possível excluir o post. Tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

@@ -114,10 +114,10 @@ class InscricoesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $inscrico = $this->Inscricoes->get($id);
-        if ($this->Inscricoes->delete($inscrico)) {
-            $this->Flash->success(__('The inscrico has been deleted.'));
+        if ($this->Inscricoes->softDelete($inscrico)) {
+            $this->Flash->success(__('A inscrição foi movida para a lixeira.'));
         } else {
-            $this->Flash->error(__('The inscrico could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Não foi possível excluir a inscrição. Tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

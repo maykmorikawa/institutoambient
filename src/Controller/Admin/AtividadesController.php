@@ -105,10 +105,10 @@ class AtividadesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $atividade = $this->Atividades->get($id);
-        if ($this->Atividades->delete($atividade)) {
-            $this->Flash->success(__('The atividade has been deleted.'));
+        if ($this->Atividades->softDelete($atividade)) {
+            $this->Flash->success(__('A atividade foi movida para a lixeira.'));
         } else {
-            $this->Flash->error(__('The atividade could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Não foi possível excluir a atividade. Tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

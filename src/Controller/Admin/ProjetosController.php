@@ -94,10 +94,10 @@ class ProjetosController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $projeto = $this->Projetos->get($id);
-        if ($this->Projetos->delete($projeto)) {
-            $this->Flash->success(__('The projeto has been deleted.'));
+        if ($this->Projetos->softDelete($projeto)) {
+            $this->Flash->success(__('O projeto foi movido para a lixeira.'));
         } else {
-            $this->Flash->error(__('The projeto could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Não foi possível excluir o projeto. Tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);
