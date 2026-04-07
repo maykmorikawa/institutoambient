@@ -153,6 +153,15 @@ return function (RouteBuilder $routes): void {
 
       $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
       $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
+
+      // Rotas de Auditoria (Admin)
+      $builder->connect('/settings/logs',  ['controller' => 'Settings', 'action' => 'logs']);
+      $builder->connect('/settings/trash', ['controller' => 'Settings', 'action' => 'trash']);
+      $builder->post('/settings/restore/:table/:id', [
+         'controller' => 'Settings',
+         'action'     => 'restore',
+      ])->setPass(['table', 'id']);
+
       $builder->fallbacks(DashedRoute::class);
    });
 

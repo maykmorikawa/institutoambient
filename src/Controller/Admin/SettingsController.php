@@ -110,7 +110,6 @@ class SettingsController extends AppController
     public function logs()
     {
         $systemLogs = TableRegistry::getTableLocator()->get('SystemLogs');
-        $systemLogs->belongsTo('Users', ['foreignKey' => 'user_id']);
 
         $model  = $this->request->getQuery('model');
         $action = $this->request->getQuery('action');
