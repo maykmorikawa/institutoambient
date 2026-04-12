@@ -154,4 +154,31 @@
     .shadow-xs { shadow: 0 .125rem .25rem rgba(0,0,0,.08) !important; }
     .italic { font-style: italic; }
     .opacity-75 { opacity: 0.75; }
+
+    /* Estilos para o conteúdo renderizado pelo Summernote */
+    .post-body p {
+        margin-bottom: 1.5rem;
+    }
+    .post-body blockquote {
+        border-left: 4px solid var(--primary-color);
+        padding-left: 1rem;
+        color: #6c757d;
+        background: #f8f9fa;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+    }
+    .post-body ul, .post-body ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+    }
+    .post-body li {
+        margin-bottom: 0.5rem;
+    }
+    .post-body img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
 </style>
