@@ -18,6 +18,10 @@ class SystemLogBehavior extends Behavior
      */
     public function afterSave(EventInterface $event, EntityInterface $entity, ArrayObject $options)
     {
+        if (isset($options['system_log']) && $options['system_log'] === false) {
+            return;
+        }
+
         $action = $entity->isNew() ? 'insert' : 'update';
         // Se for um update mas nada mudou, não salva nada
         if ($action === 'update' && empty($entity->getDirty())) {
@@ -31,6 +35,10 @@ class SystemLogBehavior extends Behavior
      */
     public function afterDelete(EventInterface $event, EntityInterface $entity, ArrayObject $options)
     {
+        if (isset($options['system_log']) && $options['system_log'] === false) {
+            return;
+        }
+        
         $this->_logAction('delete', $entity);
     }
 

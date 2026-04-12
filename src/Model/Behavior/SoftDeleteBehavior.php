@@ -27,30 +27,6 @@ class SoftDeleteBehavior extends Behavior
         }
     }
 
-    /**
-     * Intercepta o delete real e substitui por um soft delete (preenche deleted_at).
-     */
-    public function beforeDelete(EventInterface $event, EntityInterface $entity, ArrayObject $options)
-    {
-        if (!$this->_table->getSchema()->hasColumn('deleted_at')) {
-            return true;
-        }
-
-        $entity->set('deleted_at', date('Y-m-d H:i:s'));
-
-        if ($this->_table->save($entity)) {
-            // Dispara afterDelete manualmente para o log ser registrado
-            $afterDeleteEvent = new Event('Model.afterDelete', $this->_table, [
-                'entity'  => $entity,
-                'options' => $options,
-            ]);
-            $this->_table->getEventManager()->dispatch($afterDeleteEvent);
-        }
-
-        // Impede o DELETE real no banco
-        $event->stopPropagation();
-        return false;
-    }
 
     /**
      * Finder especial para buscar inclusive registros da lixeira.
@@ -77,9 +53,10 @@ class SoftDeleteBehavior extends Behavior
 
         $entity->set('deleted_at', date('Y-m-d H:i:s'));
 
-        // Salva a alteração diretamente sem disparar a exclusão física.
-        if ($this->_table->save($entity)) {
-            // Dispara afterDelete manualmente para o SystemLog poder registrar a ação.
+        // Salva a alteração diretamente sem disparar a exclusão física, e evita o
+        // log duplo (pois o SystemLogBehavior capturaria como 'update').
+        if ($this->_table->save($entity, ['system_log' => false])) {
+            // Dispara afterDelete manualmente para o SystemLog registrar a ação corretamente como 'delete'.
             $afterDeleteEvent = new Event('Model.afterDelete', $this->_table, [
                 'entity'  => $entity,
                 'options' => new ArrayObject(),
