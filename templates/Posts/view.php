@@ -53,9 +53,34 @@
                                 <h2 class="mb-4"><?= h($post->title) ?></h2>
                                 <p class="text-muted">Publicado em: <?= $post->published->format('d/m/Y H:i') ?></p>
 
-                                <div>
+                                <div class="post-content-body">
                                     <?= $post->content ?>
                                 </div>
+                                
+                                <style>
+                                    .post-content-body {
+                                        white-space: pre-line;
+                                        line-height: 1.8;
+                                        font-size: 1.05rem;
+                                    }
+                                    .post-content-body p {
+                                        margin-bottom: 1.5rem;
+                                    }
+                                    .post-content-body ul, .post-content-body ol {
+                                        margin-bottom: 1.5rem;
+                                        padding-left: 2rem;
+                                    }
+                                    .post-content-body a {
+                                        text-decoration: underline;
+                                        color: var(--primary-color, #0d6efd);
+                                    }
+                                    .post-content-body img {
+                                        max-width: 100%;
+                                        height: auto;
+                                        border-radius: 8px;
+                                        margin: 1.5rem 0;
+                                    }
+                                </style>
 
                                 <div class="mt-4">
                                     <strong>Tags:</strong>
