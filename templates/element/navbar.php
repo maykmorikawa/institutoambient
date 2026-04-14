@@ -76,6 +76,7 @@
                                     <ul>
                                         <li><a href="/posts/listprojetos">Inscrições</a></li>
                                         <li><a href="/posts/listblog">Blog & Notícias</a></li>
+                                        <li><a href="/galeria_de_videos">Galeria de Videos</a></li>
                                     </ul>
 
                                 </li>
