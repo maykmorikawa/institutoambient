@@ -103,6 +103,7 @@
                     <a class="collapse-item" href="/admin/categories">Categorias</a>
                     <a class="collapse-item" href="/admin/posts">Posts</a>
                     <a class="collapse-item" href="/admin/tags">Tags</a>
+                    <a class="collapse-item" href="/admin/contacts">contacts</a>
                     <div class="collapse-divider"></div>
                     <h6 class="collapse-header">Outros</h6>
                     <a class="collapse-item" href="/manutencao">Manutenção</a>
