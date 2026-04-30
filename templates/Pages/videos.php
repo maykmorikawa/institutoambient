@@ -56,19 +56,18 @@ $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
                     </div>
                     <div class="height-300">
                         <?php 
-                        $bgImage = $video->background_image ? WWW . '/img/uploads/' . $video->background_image : WWW . '/site/img/bg/bg-08.jpg';
-                        
-                        // Converter URL do YouTube para formato Embed
-                        $videoUrl = $video->video_url;
-                        if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $videoUrl, $match)) {
-                            $videoUrl = "https://www.youtube.com/embed/" . $match[1];
+                        $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
+                        $url = $video->video_url;
+                        // Garantir que a URL tenha o protocolo
+                        if ($url && !preg_match("~^(?:f|ht)tps?://~i", $url)) {
+                            $url = "https://" . $url;
                         }
                         ?>
                         <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= $bgImage ?>">
                             <div class="opacity-extra-medium bg-black"></div>
                             <div class="inner-border"></div>
                             <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                <a class="video video_btn" href="<?= h($videoUrl) ?>">
+                                <a class="video video_btn" href="<?= h($url) ?>">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
@@ -89,3 +88,16 @@ $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
         </div>
     </div>
 </section>
+
+<!-- Script para garantir que o player funcione nos novos vídeos -->
+<script src="/site/js/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    if ($.fn.magnificPopup) {
+        $('.story-video').magnificPopup({
+            delegate: '.video',
+            type: 'iframe'
+        });
+    }
+});
+</script>
