@@ -38,15 +38,11 @@
 </section>
 <!-- VIDEO SECTION -->
 <?php
-// Busca dos vídeos no banco de dados (CakePHP)
+// Busca dos vídeos
 $videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
 $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
 
-/**
- * MÉTODO EDUCATIVO: Função para extrair o ID do vídeo.
- * Não importa se o link é longo, curto ou com parâmetros extras,
- * ela retorna apenas o código de 11 dígitos.
- */
+// Função para limpar o ID do Youtube
 function extrairIdYoutube($url)
 {
     $pattern = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i';
@@ -63,35 +59,46 @@ function extrairIdYoutube($url)
             <div class="col-lg-9">
 
                 <?php foreach ($videos as $video): ?>
-                    <div class="mb-5 position-relative">
-                        <h2 class="h4 mb-3">
-                            <?= h($video->title) ?>
-                        </h2>
+                    <div class="mb-5 position-relative elements-block">
 
-                        <div
-                            style="height: 450px; position: relative; background-color: #000; border-radius: 12px; overflow: hidden;">
+                        <!-- Título do Vídeo -->
+                        <div class="inner-title mb-2">
+                            <h2 class="h5 mb-0" style="color: #2c3e50;">
+                                <?= h($video->title) ?>
+                            </h2>
+                        </div>
+
+                        <!-- CONTAINER COM A ALTURA ORIGINAL (300px) -->
+                        <div class="height-300"
+                            style="height: 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
                             <?php
                             $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
-
-                            // Extraímos o ID (ex: TpS6aNGI4xs)
                             $videoId = extrairIdYoutube($video->video_url);
-
-                            // Montamos a URL de embed perfeita
-                            $urlFinal = "https://www.youtube.com/embed/" . $videoId . "?rel=0&amp;showinfo=0";
+                            $urlFinal = "https://www.youtube.com/embed/" . $videoId . "?rel=0";
                             ?>
 
-                            <!-- Imagem de Capa -->
-                            <div class="h-100"
-                                style="background: url('<?= $bgImage ?>') center/cover no-repeat; opacity: 0.8;"></div>
+                            <!-- Imagem de Fundo Ajustada -->
+                            <div class="story-video h-100" style="background-image: url('<?= $bgImage ?>'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    background-repeat: no-repeat;">
 
-                            <!-- Botão Play -->
-                            <div class="position-absolute top-50 start-50 translate-middle">
-                                <!-- A classe 'popup-youtube' ativa o script abaixo -->
-                                <a class="popup-youtube" href="<?= $urlFinal ?>"
-                                    style="cursor: pointer; text-decoration: none;">
-                                    <i class="fa fa-play-circle"
-                                        style="font-size: 80px; color: #fff; text-shadow: 0px 4px 15px rgba(0,0,0,0.5);"></i>
-                                </a>
+                                <!-- Máscara escura para dar destaque ao play -->
+                                <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.2);"></div>
+
+                                <!-- Botão de Play Centralizado -->
+                                <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 10;">
+                                    <a class="popup-youtube" href="<?= $urlFinal ?>">
+                                        <img src="/site/img/icons/play-icon.png" alt="Play"
+                                            style="width: 70px; transition: transform 0.3s;"
+                                            onmouseover="this.style.transform='scale(1.1)'"
+                                            onmouseout="this.style.transform='scale(1)'">
+                                        <!-- Caso não tenha a imagem do ícone, use o ícone abaixo: -->
+                                        <!-- <i class="fa fa-play-circle" style="font-size: 70px; color: #fff;"></i> -->
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -102,28 +109,4 @@ function extrairIdYoutube($url)
     </div>
 </section>
 
-<!-- SCRIPTS DE SUPORTE -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('.popup-youtube').magnificPopup({
-            type: 'iframe',
-            iframe: {
-                markup: '<div class="mfp-iframe-scaler">' +
-                    '<div class="mfp-close"></div>' +
-                    '<iframe class="mfp-iframe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' +
-                    '</div>',
-                patterns: {
-                    youtube: {
-                        index: 'youtube.com/',
-                        id: null, // Deixamos nulo pois já tratamos a URL no PHP
-                        src: '%id%'
-                    }
-                }
-            }
-        });
-    });
-</script>
+<!-- Mantenha os scripts do Magnific Popup que configuramos antes -->
