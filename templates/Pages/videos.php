@@ -1,74 +1,80 @@
-<!-- PAGE TITLE
-
-        ================================================== -->
-
+<!-- PAGE TITLE ================================================== -->
 <section class="page-title-section bg-img cover-background left-overlay-dark" data-overlay-dark="6"
     data-background="<?= WWW; ?>/site/img/banner/page-title.jpg">
-
     <div class="container position-unset">
-
         <div class="page-title mx-1-6 mx-lg-2-0 mx-xl-2-6 mx-xxl-2-9">
-
             <div class="row">
-
                 <div class="col-md-12">
-
                     <h1>Galeria de vídeos</h1>
-
                 </div>
-
                 <div class="col-md-12">
-
                     <ul class="ps-0">
-
                         <li><a href="home">Home</a></li>
-
                         <li><a href="#!">Galeria de vídeos</a></li>
-
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-<!-- VIDEO
-        ================================================== -->
+
+<!-- VIDEO SECTION ================================================== -->
 <?php
 $videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
 $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
+
+/**
+ * Função para converter qualquer link do YouTube no formato Embed aceito pelo Iframe
+ */
+function getYouTubeEmbedUrl($url)
+{
+    $videoId = '';
+    // Expressão regular para capturar o ID do vídeo em links curtos (youtu.be) ou longos (watch?v=)
+    $pattern = '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i';
+
+    if (preg_match($pattern, $url, $matches)) {
+        $videoId = $matches[1];
+    }
+
+    if (!empty($videoId)) {
+        // Retorna a URL no formato correto para incorporação
+        return "https://www.youtube.com/embed/" . $videoId . "?rel=0&amp;autoplay=1";
+    }
+    return $url;
+}
 ?>
+
 <section>
     <div class="container">
         <div class="row justify-content-center">
-
             <div class="col-lg-9">
 
                 <?php foreach ($videos as $video): ?>
                     <!-- Bloco Vídeo -->
                     <div class="mb-6 mb-lg-8 position-relative elements-block">
-                        <div class="inner-title">
+                        <div class="inner-title mb-3">
                             <h2 class="mb-0"><?= h($video->title) ?></h2>
                         </div>
-                        <div class="height-300">
+
+                        <div class="height-300"
+                            style="height: 300px; position: relative; overflow: hidden; border-radius: 10px;">
                             <?php
                             $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
-                            $url = $video->video_url;
-                            // Garantir que a URL tenha o protocolo
-                            if ($url && !preg_match("~^(?:f|ht)tps?://~i", $url)) {
-                                $url = "https://" . $url;
-                            }
+                            // Aplicamos a correção da URL aqui
+                            $urlCorrigida = getYouTubeEmbedUrl($video->video_url);
                             ?>
+
+                            <!-- A imagem de fundo é aplicada via style e data-background para garantir compatibilidade -->
                             <div class="story-video bg-img cover-background h-100" data-overlay-dark="0"
-                                data-background="<?= $bgImage ?>">
+                                data-background="<?= $bgImage ?>"
+                                style="background-image: url('<?= $bgImage ?>'); background-size: cover; background-position: center;">
+
                                 <div class="opacity-extra-medium bg-black"></div>
                                 <div class="inner-border"></div>
+
                                 <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                    <a class="video video_btn" href="<?= h($url) ?>">
+                                    <!-- O link agora usa a URL corrigida -->
+                                    <a class="video video_btn" href="<?= h($urlCorrigida) ?>">
                                         <i class="fa fa-play"></i>
                                     </a>
                                 </div>
@@ -85,19 +91,24 @@ $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
                 <?php endif; ?>
 
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- Script para garantir que o player funcione nos novos vídeos -->
+<!-- Scripts para garantir que o player funcione -->
 <script src="/site/js/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
         if ($.fn.magnificPopup) {
             $('.story-video').magnificPopup({
                 delegate: '.video',
-                type: 'iframe'
+                type: 'iframe',
+                iframe: {
+                    markup: '<div class="mfp-iframe-scaler">' +
+                        '<div class="mfp-close"></div>' +
+                        '<iframe class="mfp-iframe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' +
+                        '</div>'
+                }
             });
         }
     });
