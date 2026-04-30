@@ -36,77 +36,69 @@
     </div>
 
 </section>
-<!-- VIDEO SECTION -->
+<!-- VIDEO
+        ================================================== -->
 <?php
-// Busca dos vídeos
 $videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
 $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
-
-// Função para limpar o ID do Youtube
-function extrairIdYoutube($url)
-{
-    $pattern = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i';
-    if (preg_match($pattern, $url, $matches)) {
-        return $matches[1];
-    }
-    return null;
-}
 ?>
-
-<section class="py-5">
+<section>
     <div class="container">
         <div class="row justify-content-center">
+
             <div class="col-lg-9">
 
                 <?php foreach ($videos as $video): ?>
-                    <div class="mb-5 position-relative elements-block">
-
-                        <!-- Título do Vídeo -->
-                        <div class="inner-title mb-2">
-                            <h2 class="h5 mb-0" style="color: #2c3e50;">
-                                <?= h($video->title) ?>
-                            </h2>
+                    <!-- Bloco Vídeo -->
+                    <div class="mb-6 mb-lg-8 position-relative elements-block">
+                        <div class="inner-title">
+                            <h2 class="mb-0"><?= h($video->title) ?></h2>
                         </div>
-
-                        <!-- CONTAINER COM A ALTURA ORIGINAL (300px) -->
-                        <div class="height-300"
-                            style="height: 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-
+                        <div class="height-300">
                             <?php
                             $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
-                            $videoId = extrairIdYoutube($video->video_url);
-                            $urlFinal = "https://www.youtube.com/embed/" . $videoId . "?rel=0";
+                            $url = $video->video_url;
+                            // Garantir que a URL tenha o protocolo
+                            if ($url && !preg_match("~^(?:f|ht)tps?://~i", $url)) {
+                                $url = "https://" . $url;
+                            }
                             ?>
-
-                            <!-- Imagem de Fundo Ajustada -->
-                            <div class="story-video h-100" style="background-image: url('<?= $bgImage ?>'); 
-                                    background-size: cover; 
-                                    background-position: center; 
-                                    background-repeat: no-repeat;">
-
-                                <!-- Máscara escura para dar destaque ao play -->
-                                <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.2);"></div>
-
-                                <!-- Botão de Play Centralizado -->
-                                <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 10;">
-                                    <a class="popup-youtube" href="<?= $urlFinal ?>">
-                                        <img src="/site/img/icons/play-icon.png" alt="Play"
-                                            style="width: 70px; transition: transform 0.3s;"
-                                            onmouseover="this.style.transform='scale(1.1)'"
-                                            onmouseout="this.style.transform='scale(1)'">
-                                        <!-- Caso não tenha a imagem do ícone, use o ícone abaixo: -->
-                                        <!-- <i class="fa fa-play-circle" style="font-size: 70px; color: #fff;"></i> -->
+                            <div class="story-video bg-img cover-background h-100" data-overlay-dark="0"
+                                data-background="<?= $bgImage ?>">
+                                <div class="opacity-extra-medium bg-black"></div>
+                                <div class="inner-border"></div>
+                                <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
+                                    <a class="video video_btn" href="<?= h($url) ?>">
+                                        <i class="fa fa-play"></i>
                                     </a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
 
+                <?php if ($videos->count() === 0): ?>
+                    <div class="text-center py-5">
+                        <h3>Nenhum vídeo disponível no momento.</h3>
+                        <p>Em breve traremos novidades para você!</p>
+                    </div>
+                <?php endif; ?>
+
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- Mantenha os scripts do Magnific Popup que configuramos antes -->
+<!-- Script para garantir que o player funcione nos novos vídeos -->
+<script src="/site/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        if ($.fn.magnificPopup) {
+            $('.story-video').magnificPopup({
+                delegate: '.video',
+                type: 'iframe'
+            });
+        }
+    });
+</script>
