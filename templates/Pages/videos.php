@@ -38,33 +38,22 @@
 </section>
 <!-- VIDEO SECTION -->
 <?php
-// 1. Busca os vídeos (Mantendo sua estrutura CakePHP)
+// Busca dos vídeos no banco de dados (CakePHP)
 $videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
 $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
 
 /**
- * MÉTODO EDUCATIVO: Esta função limpa o link do YouTube.
- * Ela aceita links do tipo: youtu.be/ID ou youtube.com/watch?v=ID
+ * MÉTODO EDUCATIVO: Função para extrair o ID do vídeo.
+ * Não importa se o link é longo, curto ou com parâmetros extras,
+ * ela retorna apenas o código de 11 dígitos.
  */
-function prepararLinkYoutube($url)
+function extrairIdYoutube($url)
 {
-    // Remove espaços em branco
-    $url = trim($url);
-
-    // Se o link for do tipo youtu.be (como o da sua foto)
-    if (strpos($url, 'youtu.be/') !== false) {
-        $partes = explode('youtu.be/', $url);
-        $idVideo = $partes[1];
-        return "https://www.youtube.com/embed/" . $idVideo;
+    $pattern = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i';
+    if (preg_match($pattern, $url, $matches)) {
+        return $matches[1];
     }
-
-    // Se o link for do tipo comum youtube.com/watch?v=...
-    if (strpos($url, 'v=') !== false) {
-        parse_str(parse_url($url, PHP_URL_QUERY), $vars);
-        return "https://www.youtube.com/embed/" . $vars['v'];
-    }
-
-    return $url; // Retorna original se não identificar YouTube
+    return null;
 }
 ?>
 
@@ -83,19 +72,25 @@ function prepararLinkYoutube($url)
                             style="height: 450px; position: relative; background-color: #000; border-radius: 12px; overflow: hidden;">
                             <?php
                             $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
-                            // Chamada da nossa função educativa
-                            $linkLimpo = prepararLinkYoutube($video->video_url);
+
+                            // Extraímos o ID (ex: TpS6aNGI4xs)
+                            $videoId = extrairIdYoutube($video->video_url);
+
+                            // Montamos a URL de embed perfeita
+                            $urlFinal = "https://www.youtube.com/embed/" . $videoId . "?rel=0&amp;showinfo=0";
                             ?>
 
                             <!-- Imagem de Capa -->
                             <div class="h-100"
-                                style="background: url('<?= $bgImage ?>') center/cover no-repeat; opacity: 0.7;"></div>
+                                style="background: url('<?= $bgImage ?>') center/cover no-repeat; opacity: 0.8;"></div>
 
                             <!-- Botão Play -->
                             <div class="position-absolute top-50 start-50 translate-middle">
-                                <a class="btn-popup-video" href="<?= h($linkLimpo) ?>" style="cursor: pointer;">
+                                <!-- A classe 'popup-youtube' ativa o script abaixo -->
+                                <a class="popup-youtube" href="<?= $urlFinal ?>"
+                                    style="cursor: pointer; text-decoration: none;">
                                     <i class="fa fa-play-circle"
-                                        style="font-size: 80px; color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);"></i>
+                                        style="font-size: 80px; color: #fff; text-shadow: 0px 4px 15px rgba(0,0,0,0.5);"></i>
                                 </a>
                             </div>
                         </div>
@@ -107,21 +102,27 @@ function prepararLinkYoutube($url)
     </div>
 </section>
 
-<!-- Scripts Necessários -->
+<!-- SCRIPTS DE SUPORTE -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
 <script>
     $(document).ready(function () {
-        // Configuração do Magnific Popup para carregar o link como um IFRAME
-        $('.btn-popup-video').magnificPopup({
+        $('.popup-youtube').magnificPopup({
             type: 'iframe',
             iframe: {
                 markup: '<div class="mfp-iframe-scaler">' +
                     '<div class="mfp-close"></div>' +
                     '<iframe class="mfp-iframe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' +
-                    '</div>'
+                    '</div>',
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/',
+                        id: null, // Deixamos nulo pois já tratamos a URL no PHP
+                        src: '%id%'
+                    }
+                }
             }
         });
     });
