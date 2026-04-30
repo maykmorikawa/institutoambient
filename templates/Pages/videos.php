@@ -38,94 +38,90 @@
 </section>
 <!-- VIDEO SECTION -->
 <?php
+// 1. Busca os vídeos (Mantendo sua estrutura CakePHP)
 $videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
 $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
 
 /**
- * Função simples para converter URLs do YouTube para o formato embed
- * Exemplo: youtube.com/watch?v=123 -> youtube.com/embed/123
+ * MÉTODO EDUCATIVO: Esta função limpa o link do YouTube.
+ * Ela aceita links do tipo: youtu.be/ID ou youtube.com/watch?v=ID
  */
-function formatVideoUrl($url)
+function prepararLinkYoutube($url)
 {
-    if (strpos($url, 'youtube.com/watch?v=') !== false) {
-        return str_replace('watch?v=', 'embed/', $url);
-    }
+    // Remove espaços em branco
+    $url = trim($url);
+
+    // Se o link for do tipo youtu.be (como o da sua foto)
     if (strpos($url, 'youtu.be/') !== false) {
-        $id = substr(parse_url($url, PHP_URL_PATH), 1);
-        return "https://www.youtube.com/embed/" . $id;
+        $partes = explode('youtu.be/', $url);
+        $idVideo = $partes[1];
+        return "https://www.youtube.com/embed/" . $idVideo;
     }
-    return $url;
+
+    // Se o link for do tipo comum youtube.com/watch?v=...
+    if (strpos($url, 'v=') !== false) {
+        parse_str(parse_url($url, PHP_URL_QUERY), $vars);
+        return "https://www.youtube.com/embed/" . $vars['v'];
+    }
+
+    return $url; // Retorna original se não identificar YouTube
 }
 ?>
 
-<section>
+<section class="py-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
 
                 <?php foreach ($videos as $video): ?>
-                    <div class="mb-6 mb-lg-8 position-relative elements-block">
-                        <div class="inner-title">
-                            <h2 class="mb-0">
-                                <?= h($video->title) ?>
-                            </h2>
-                        </div>
-                        <div class="height-300">
+                    <div class="mb-5 position-relative">
+                        <h2 class="h4 mb-3">
+                            <?= h($video->title) ?>
+                        </h2>
+
+                        <div
+                            style="height: 450px; position: relative; background-color: #000; border-radius: 12px; overflow: hidden;">
                             <?php
                             $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
-
-                            // 1. Pegamos a URL original
-                            $originalUrl = $video->video_url;
-
-                            // 2. Garantimos o protocolo https
-                            if ($originalUrl && !preg_match("~^(?:f|ht)tps?://~i", $originalUrl)) {
-                                $originalUrl = "https://" . $originalUrl;
-                            }
-
-                            // 3. Convertemos para o formato que o YouTube aceita em IFRAMES
-                            $finalUrl = formatVideoUrl($originalUrl);
+                            // Chamada da nossa função educativa
+                            $linkLimpo = prepararLinkYoutube($video->video_url);
                             ?>
 
-                            <div class="story-video bg-img cover-background h-100" data-overlay-dark="0"
-                                style="background-image: url('<?= $bgImage ?>');">
-                                <div class="opacity-extra-medium bg-black"></div>
-                                <div class="inner-border"></div>
-                                <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                    <!-- Usamos a URL convertida aqui -->
-                                    <a class="video video_btn" href="<?= h($finalUrl) ?>">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
+                            <!-- Imagem de Capa -->
+                            <div class="h-100"
+                                style="background: url('<?= $bgImage ?>') center/cover no-repeat; opacity: 0.7;"></div>
+
+                            <!-- Botão Play -->
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <a class="btn-popup-video" href="<?= h($linkLimpo) ?>" style="cursor: pointer;">
+                                    <i class="fa fa-play-circle"
+                                        style="font-size: 80px; color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-                <?php if ($videos->count() === 0): ?>
-                    <div class="text-center py-5">
-                        <h3>Nenhum vídeo disponível no momento.</h3>
-                    </div>
-                <?php endif; ?>
 
             </div>
         </div>
     </div>
 </section>
 
-<!-- Script corrigido para forçar o tipo iframe -->
+<!-- Scripts Necessários -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 <script>
     $(document).ready(function () {
-        $('.story-video').magnificPopup({
-            delegate: '.video',
+        // Configuração do Magnific Popup para carregar o link como um IFRAME
+        $('.btn-popup-video').magnificPopup({
             type: 'iframe',
             iframe: {
-                patterns: {
-                    youtube: {
-                        index: 'youtube.com/',
-                        id: 'embed/',
-                        src: '%id%'
-                    }
-                }
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' +
+                    '</div>'
             }
         });
     });
