@@ -24,19 +24,18 @@ $videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
 $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
 
 /**
- * Função para converter qualquer link do YouTube no formato Embed aceito pelo Iframe
+ * Função simplificada para extrair o ID do vídeo e gerar o link Embed mais compatível
  */
 function getYouTubeEmbedUrl($url)
 {
     $videoId = '';
-    // Captura o ID do vídeo (11 caracteres)
     if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $url, $matches)) {
         $videoId = $matches[1];
     }
 
     if (!empty($videoId)) {
-        // Retorna a URL embed simples. O MagnificPopup cuidará do restante.
-        return "https://www.youtube.com/embed/" . $videoId . "?rel=0";
+        // Usamos youtube-nocookie para evitar bloqueios e garantir maior compatibilidade
+        return "https://www.youtube-nocookie.com/embed/" . $videoId . "?rel=0&autoplay=1";
     }
     return $url;
 }
@@ -57,7 +56,7 @@ function getYouTubeEmbedUrl($url)
                         <div class="height-300" style="height: 300px; position: relative; overflow: hidden; border-radius: 10px;">
                             <?php
                             $bgImage = $video->background_image ? '/img/uploads/' . $video->background_image : '/site/img/bg/bg-08.jpg';
-                            $urlCorrigida = getYouTubeEmbedUrl($video->video_url);
+                            $urlEmbed = getYouTubeEmbedUrl($video->video_url);
                             ?>
 
                             <div class="story-video bg-img cover-background h-100" data-overlay-dark="0"
@@ -68,7 +67,7 @@ function getYouTubeEmbedUrl($url)
                                 <div class="inner-border"></div>
 
                                 <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                    <a class="video video_btn" href="<?= h($urlCorrigida) ?>">
+                                    <a class="video video_btn" href="<?= h($urlEmbed) ?>">
                                         <i class="fa fa-play"></i>
                                     </a>
                                 </div>
@@ -98,11 +97,15 @@ function getYouTubeEmbedUrl($url)
                 delegate: '.video',
                 type: 'iframe',
                 iframe: {
+                    markup: '<div class="mfp-iframe-scaler">' +
+                        '<div class="mfp-close"></div>' +
+                        '<iframe class="mfp-iframe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' +
+                        '</div>',
                     patterns: {
                         youtube: {
                             index: 'youtube.com/',
                             id: 'v=',
-                            src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+                            src: 'https://www.youtube-nocookie.com/embed/%id%?autoplay=1&rel=0'
                         }
                     }
                 }
