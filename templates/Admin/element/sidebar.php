@@ -102,6 +102,7 @@
                     <h6 class="collapse-header">Site</h6>
                     <a class="collapse-item" href="/admin/categories">Categorias</a>
                     <a class="collapse-item" href="/admin/posts">Posts</a>
+                    <a class="collapse-item" href="/admin/videos">Galeria de Vídeos</a>
                     <a class="collapse-item" href="/admin/tags">Tags</a>
                     <a class="collapse-item" href="/admin/contacts">contacts</a>
                     <div class="collapse-divider"></div>

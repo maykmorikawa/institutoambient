@@ -38,47 +38,45 @@
 </section>
 <!-- VIDEO
         ================================================== -->
+<?php
+$videosTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Videos');
+$videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
+?>
 <section>
     <div class="container">
         <div class="row justify-content-center">
 
             <div class="col-lg-9">
 
-                <!-- Bloco 1 -->
+                <?php foreach ($videos as $video): ?>
+                <!-- Bloco Vídeo -->
                 <div class="mb-6 mb-lg-8 position-relative elements-block">
                     <div class="inner-title">
-                        <h2 class="mb-0">Apresentação</h2>
+                        <h2 class="mb-0"><?= h($video->title) ?></h2>
                     </div>
                     <div class="height-300">
-                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/bg/bg-08.jpg">
+                        <?php 
+                        $bgImage = $video->background_image ? WWW . '/img/uploads/' . $video->background_image : WWW . '/site/img/bg/bg-08.jpg';
+                        ?>
+                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= $bgImage ?>">
                             <div class="opacity-extra-medium bg-black"></div>
                             <div class="inner-border"></div>
                             <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                <a class="video video_btn" href="https://www.youtube.com/watch?v=U2SBh3FlMcc">
+                                <a class="video video_btn" href="<?= h($video->video_url) ?>">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
 
-                <!-- Bloco 2-->
-                <div class="mb-6 mb-lg-8 position-relative elements-block">
-                    <div class="inner-title">
-                        <h2 class="mb-0">Vídeo Institucional</h2>
+                <?php if ($videos->count() === 0): ?>
+                    <div class="text-center py-5">
+                        <h3>Nenhum vídeo disponível no momento.</h3>
+                        <p>Em breve traremos novidades para você!</p>
                     </div>
-                    <div class="height-300">
-                        <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= WWW; ?>/site/img/bg/bg-09.jpg">
-                            <div class="opacity-extra-medium bg-black"></div>
-                            <div class="inner-border"></div>
-                            <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                <a class="video video_btn" href="https://www.youtube.com/watch?v=dkqoYzu4TB0">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
 
             </div>
 
