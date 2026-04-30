@@ -57,12 +57,18 @@ $videos = $videosTable->find()->orderBy(['created' => 'DESC'])->all();
                     <div class="height-300">
                         <?php 
                         $bgImage = $video->background_image ? WWW . '/img/uploads/' . $video->background_image : WWW . '/site/img/bg/bg-08.jpg';
+                        
+                        // Converter URL do YouTube para formato Embed
+                        $videoUrl = $video->video_url;
+                        if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $videoUrl, $match)) {
+                            $videoUrl = "https://www.youtube.com/embed/" . $match[1];
+                        }
                         ?>
                         <div class="story-video bg-img cover-background h-100" data-overlay-dark="0" data-background="<?= $bgImage ?>">
                             <div class="opacity-extra-medium bg-black"></div>
                             <div class="inner-border"></div>
                             <div class="text-center position-absolute top-50 start-50 translate-middle z-index-1">
-                                <a class="video video_btn" href="<?= h($video->video_url) ?>">
+                                <a class="video video_btn" href="<?= h($videoUrl) ?>">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
