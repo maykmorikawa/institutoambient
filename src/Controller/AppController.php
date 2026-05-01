@@ -35,6 +35,7 @@ class AppController extends Controller
             'tag',
             'view',
             'captacao',
+            'listprojetos',
             'manutencao' // libera /pages/display/*, inclusive /pages/home
         ]);
     }
