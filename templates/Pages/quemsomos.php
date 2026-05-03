@@ -55,9 +55,7 @@
 
                         </div>
                         <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Missão</a></h3>
-                        <p class="mb-0 position-relative">Atuar na promoção e defesa dos direitos fundamentais,
-                            prioritariamente de pessoas em situação de vulnerabilidade social, com vista a uma sociedade
-                            economicamente justa e ambientalmente sustentável.</p>
+                        <p class="mb-0 position-relative">Atuar na promoção dos direitos fundamentais de famílias vulneráveis.</p>
                     </div>
                 </div>
             </div>
@@ -70,9 +68,7 @@
                                 class="fas fa-hand-sparkles display-25 display-sm-22 display-lg-20 position-relative"></i>
                         </div>
                         <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Visão</a></h3>
-                        <p class="mb-0 position-relative">Ser uma entidade reconhecida na promoção e defesa dos direitos
-                            fundamentais, por meio de ações educativas, qualificação profissional e fomento de geração
-                            emprego e renda.</p>
+                        <p class="mb-0 position-relative">Ser uma entidade reconhecida na promoção dos direitos fundamentais, por meiodeações educativas, qualificação profissional e fomento de geração emprego e renda.</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +92,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-hand-open display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Equidade</h3>
-                        <p class="mb-0">Em todos os níveis e serviços, proporcionando o cuidado com a diferença.</p>
+                        
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="300ms"> <a
@@ -104,7 +100,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-check-box display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Ética</h3>
-                        <p class="mb-0">Para uma gestão comprometida com a conduta reta e com integridade para o sucesso, valorizando os colaboradores e respeitando a diversidade e/ou os métodos de trabalho.</p>
+                        
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="400ms"> <a
@@ -112,7 +108,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-heart display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Humanização</h3>
-                        <p class="mb-0">Um posicionamento de respeito à vida humana, abrangendo circunstâncias sociais, éticas educacionais e psíquicas em todo relacionamento humano.</p>
+                        
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="500ms"> <a
@@ -120,7 +116,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-star display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Qualidade dos Serviços</h3>
-                        <p class="mb-0">como um dever inerente aos servidores públicos, construída conscientemente por agregar esforços de todos os níveis da organização, onde os servidores merecem respeito e confiança dos/as cidadãos/ãs.</p>
+                        
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms"> <a
@@ -128,7 +124,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-world display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Responsabilidade Social</h3>
-                        <p class="mb-0">Atuando em consonância com os paradigmas da sustentabilidade, considerando as influências e consequências sociais, econômicas, culturais, tecnológicas e ambientais.</p>
+                       
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="700ms"> <a
@@ -136,8 +132,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-light-bulb display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Valorização do Conhecimento</h3>
-                        <p class="mb-0">Investimento na capacitação contínua de pessoas, incentivando e valorizando
-                            competências.</p>
+                        
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms"> <a
@@ -145,7 +140,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-briefcase display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Valorização Profissional</h3>
-                        <p class="mb-0">Com ações que proporcionem o bemestar, a qualidade de vida e o desenvolvimento profissional, bem como uma ambiência organizacional motivadora, com respeito e reconhecimento.</p>
+                        
                     </div>
                 </a> </div>
             <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="900ms"> <a
@@ -153,7 +148,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
                             class="ti-thumb-up display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Desenvolvimento Sustentável</h3>
-                        <p class="mb-0">Promovendo mudança de atitude e conduta em relação à utilização dos recursos naturais e a vida, incorporando o conceito de sustentabilidade nos processos produtivos e nas ações cotidianas.</p>
+                        
                     </div>
                 </a> </div>
         </div>
