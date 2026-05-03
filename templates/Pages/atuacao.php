@@ -50,9 +50,6 @@
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="#!">Saúde</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O Instituto Ambient promove a saúde integral via Eixo 4: Saúde e Bem-Estar.
-                             As ações incluem prevenção física e mental, apoio psicológico e CNV. Projetos como Luminar oferecem atividades 
-                             físicas e grupos de apoio a mulheres. A saúde também é transversal (Ex: Projeto Aurora para gestantes e Oásis para envelhecimento ativo).</p>
 
                     </div>
                 </div>
@@ -66,9 +63,6 @@
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="#!">Educação</a></h3>
-                        <p class="mb-1-9 text-color-light-blue"> A atuação educacional do Instituto Ambient é ampla: foca na formação cidadã, profissional, 
-                            digital e ambiental em Belém. Projetos como SCFV (informática/robótica), Convivência (arte-educação) e Crescer e Transformar 
-                            (inclusão digital) garantem qualificação, letramento digital e promovem o desenvolvimento de habilidades essenciais para a sustentabilidade.</p>
 
                     </div>
                 </div>
@@ -82,10 +76,6 @@
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="#!">Assistência Social</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O Instituto Ambient atua em Belém/PA, fortalecendo famílias vulneráveis via 
-                            proteção social preventiva e proativa. As ações focam em Trabalho Social com Famílias, Espaços Socioeducativos 
-                            (convivência e prevenção de violência) e Proteção a Idosos/PCD. Projetos como SCFV, Flores do Oásis e Crescer e 
-                            Transformar usam arte, tecnologia e renda para a inclusão social.</p>
                     </div>
                 </div>
             </div>
@@ -100,10 +90,6 @@
                             <div class="box-circle primary"></div>
                         </div>
                         <h3 class="h5 mb-3"><a href="#!">Meio ambiente</a></h3>
-                        <p class="mb-1-9 text-color-light-blue">O Instituto Ambient foca no desenvolvimento sustentável da Amazônia,
-                             em que seu Eixo 5 - Educação Ambiental e Renda Sustentável,  capacita comunidades em habilidades baseadas 
-                             na natureza. Projetos transversais, como Vozes das Águas, Cozinha Amazônica e Modelagem de Negócios, 
-                             integram bioeconomia e sustentabilidade.</p>
                     </div>
                 </div>
             </div>
