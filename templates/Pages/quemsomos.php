@@ -43,9 +43,9 @@
     <div class="container">
         <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossa</span>
-            <h2 class="mb-0 h1">Missão, Visão e Valores</h2>
+            <h2 class="mb-0 h1">Missão e Visão</h2>
         </div>
-        <div class="row mt-n1-3">
+        <div class="row mt-n1-3 justify-content-center">
             <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="200ms">
                 <div class="card card-style1 border-color-light-black h-100">
                     <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
@@ -73,20 +73,6 @@
                         <p class="mb-0 position-relative">Ser uma entidade reconhecida na promoção e defesa dos direitos
                             fundamentais, por meio de ações educativas, qualificação profissional e fomento de geração
                             emprego e renda.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="500ms">
-                <div class="card card-style1 border-color-light-black h-100">
-                    <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
-                        <div class="hover-bg"><img src="<?= WWW; ?>/site/img/service/service-3.jpg" alt="..."></div>
-                        <div class="service-icon text-center display-20">
-                            <i class="icon-heart display-25 display-sm-22 display-lg-20 position-relative"></i>
-                        </div>
-                        <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Valores</a></h3>
-                        <p class="mb-0 position-relative">Os valores de governança institucional demarcam os elementos
-                            ético-políticos que balizam a atuação da entidade em todas as suas dimensões de prática
-                            social.</p>
                     </div>
                 </div>
             </div>
