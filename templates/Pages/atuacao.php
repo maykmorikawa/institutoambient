@@ -12,7 +12,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Áreas de Atuação Pressupostos</h1>
+                    <h1>Áreas de Atuação Institucional</h1>
 
                 </div>
 
