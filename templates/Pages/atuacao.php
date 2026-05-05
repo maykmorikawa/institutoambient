@@ -113,12 +113,14 @@
             <div class="row align-items-center mb-9 pb-9 wow fadeIn" data-wow-delay="200ms">
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="pe-0 pe-lg-3 pe-xl-4">
-                        <h4 class="mb-3 text-secondary">1. Capacidade Protetiva das Famílias</h4>
-                        <p>As famílias desenvolvem uma **vital habilidade protetiva**, agregando processos dinâmicos de vínculos sociais e territoriais que qualificam suas relações familiares.</p>
-                        <p>Esta capacidade protetiva conjuga o protagonismo na efetivação de processos, condições e ambientes seguros e protetivos para todos.</p>
+                        <h4 class="mb-3 text-secondary">1. CAPACIDADE PROTETIVA DAS FAMÍLIAS</h4>
+                        <p>FINALIDADES</p>
+                        
                         <ul class="list-style1 mb-4">
-                            <li>Foco no protagonismo e autonomia familiar.</li>
-                            <li>Promoção de ambientes seguros e protetivos.</li>
+                            <li>1. Promover o trabalho social proativo com famílias vulneráveis, articulandooacesso a redes de proteção e serviços sociais para assegurar seus direitosfundamentais.</li>
+                            <li>2. Oportunizar espaços socioeducativos e intergeracionais de convivência e lazer, fortalecendo vínculos e o protagonismo para prevenir violências e promover a cidadania.</li>
+                            <li>3. Viabilizar o acompanhamento social proativo de idosos e pessoas com deficiência, fomentando a convivência comunitária para prevenir o isolamento e o rompimento de vínculos.</li>
+                
                         </ul>
 
                     </div>
@@ -138,12 +140,14 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="ps-0 ps-lg-3 ps-xl-4">
-                        <h4 class="mb-3 text-secondary">2. Pedagogia Sociocultural Crítica</h4>
-                        <p>Adotamos abordagens em conformidade com uma **pedagogia sociocultural crítica**, que percebe o indivíduo como **sujeito**, nunca como objeto. Este sujeito é constituinte de faculdade produtiva.</p>
-                        <p>Ele tem potencial de engajamento nos processos e capacidades de questionar, investigar, planejar, corrigir e sistematizar a vida, levando em conta seu contexto social.</p>
+                        <h4 class="mb-3 text-secondary">2.EDUCAÇÃO, GERAÇÃO DE EMPREGO E RENDA</h4>
+                        <p>FINALIDADES</p>
                         <ul class="list-style1 mb-4">
-                            <li>O foco é o sujeito com faculdade produtiva.</li>
-                            <li>Estímulo à dinâmica criativa e ao questionamento.</li>
+                            <li>1. Garantir qualificação e formação em temáticas a respeito de direitos, cidadania e arco ocupacional, para acesso ao mundo do trabalho.</li>
+                            <li>2. Promover ações na área da bioeconomia, com finalidade de criar produtos e serviços mais sustentáveis.</li>
+                            <li>3. Efetivar Tecnologias Digitais¹, de Informação² e da Comunicação³, letramento digital⁴ e pensamento Computacional⁵, na perspectiva de ampliação do ensino e aprendizagem relacionando a tecnologia e inovação.</li>
+                            <li>4. Executar ações e serviços de tecnologias sociais, para garantia de sustentabilidade local.</li>
+                            <li>5. Capacitar comunidades em habilidades baseadas na natureza para a criação de empreendimentos individuais ou coletivos que gerem renda sustentável.</li>
                         </ul>
 
                     </div>
@@ -153,12 +157,11 @@
             <div class="row align-items-center mb-9 pb-9 wow fadeIn" data-wow-delay="600ms">
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="pe-0 pe-lg-3 pe-xl-4">
-                        <h4 class="mb-3 text-secondary">3. Processos Intersetoriais</h4>
-                        <p>Os **processos intersetoriais** são uma premissa fundamental, correspondendo à necessidade intrínseca de colaboração e comunicação eficaz entre diferentes setores.</p>
-                        <p>Essa colaboração é vital para alcançar objetivos complexos e promover resultados mais abrangentes e sustentáveis em nossas áreas de atuação (Saúde, Educação, Assistência Social e Meio Ambiente).</p>
+                        <h4 class="mb-3 text-secondary">3. REDES E ASSESSORAMENTO INSTITUCIONAL</h4>
+                        <p>FINALIDADE</p>
                         <ul class="list-style1 mb-4">
-                            <li>Comunicação e colaboração eficazes.</li>
-                            <li>Promoção de resultados abrangentes e sustentáveis.</li>
+                            <li>Apoiar o desenvolvimento institucional de Organizações da Sociedade Civil (OSCs), diversas em porte e atuando com diferentes causas sociais, na região metropolitanadeBelém (Pará), com o objetivo de alcançar aproximadamente 230 pessoas.</li>
+                            
                         </ul>
 
                     </div>
@@ -178,12 +181,12 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="ps-0 ps-lg-3 ps-xl-4">
-                        <h4 class="mb-3 text-secondary">4. Tecnologia e Inovação</h4>
-                        <p>Implementamos **processos e procedimentos tecnológicos** que potencializam a transformação de ideias inovadoras em realidades, por meio de linguagens artísticas e meios de comunicação.</p>
-                        <p>Isso permite a criação de produtos, serviços, metodologias e experiências que promovem a nossa missão.</p>
+                        <h4 class="mb-3 text-secondary">4.  SAÚDE E BEM ESTAR</h4>
+                        <p>FINALIDADE</p>
                         <ul class="list-style1 mb-4">
-                            <li>Uso de linguagens artísticas e meios de comunicação.</li>
-                            <li>Criação de produtos, serviços, metodologias e experiências inovadoras.</li>
+                            <li>Difundir práticas educativas de prevenção a saúde mental e física, de incentivo ao autocuidado e a valorização da vida.</li>
+                            <li>Promover ações atendimento clínico psicológico, esportivos e laborais, contribuindo para qualidade de vida.</li>
+                            <li>Fomentar práticas de comunicação não violenta para a construção de relações com base na confiança e cooperação, visando o autoconhecimento e a postura da cultura de paz.</li>
                         </ul>
 
                     </div>
