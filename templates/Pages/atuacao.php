@@ -22,7 +22,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Áreas de Atuação Pressupostos</a></li>
+                        <li><a href="#!">Áreas de Atuação Institucional</a></li>
 
                     </ul>
 
@@ -104,7 +104,7 @@
     <div class="container">
         <div class="text-center mb-2-9 mb-lg-6 wow fadeIn" data-wow-delay="100ms">
             <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Instituto Ambient</span>
-            <h2 class="mb-0 h1">Pressupostos Estratégicos</h2>
+            <h2 class="mb-0 h1">Nossos Pilares</h2>
             <p class="mt-4 mx-auto w-md-75">Para o direcionamento do presente planejamento estratégico, estamos focados em pressupostos que consideramos fundamentais e que deverão fazer a diferença na vida dos participantes.</p>
         </div>
 
