@@ -58,7 +58,7 @@
                         <div>
                             <i class="ti-heart display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 01:CAPACIDADE PROTETIVA DAS FAMÍLIAS</h3>
-                            <p class="mb-3">**Objetivo:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo.</p>
+                            <p class="mb-3"></p>
                         </div>
 
                         <div class="mt-4">
@@ -74,7 +74,7 @@
                         <div>
                             <i class="ti-money display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 02: EDUCAÇÃO, GERAÇÃO DE EMPREGO E RENDA</h3>
-                            <p class="mb-3">**Objetivo:** Promover ações de qualificação e inserção no mundo do trabalho, com fomento a ações e serviços com uso de tecnologias inovadoras e negócios sociais.</p>
+                            <p class="mb-3"></p>
                         </div>
 
                         <div class="mt-4">
@@ -90,7 +90,7 @@
                         <div>
                             <i class="ti-sharethis display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 03: REDES E ASSESSORAMENTO INSTITUCIONAL</h3>
-                            <p class="mb-3">**Objetivo:** Prestar serviços de assessoramento voltados ao fortalecimento das organizações da sociedade civil, movimentos sociais e lideranças comunitárias.</p>
+                            <p class="mb-3"></p>
                         </div>
 
                         <div class="mt-4">
@@ -106,7 +106,7 @@
                         <div>
                             <i class="ti-plus display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 04: SAÚDE E BEM ESTAR</h3>
-                            <p class="mb-3">**Objetivo:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida.</p>
+                            <p class="mb-3"></p>
                         </div>
 
                         <div class="mt-4">
