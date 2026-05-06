@@ -94,7 +94,7 @@ $carouselInferior = [
                     </div>
 
                     <div class="box-left py-2 px-4 px-sm-4 px-md-5" style="margin-bottom: -150px; left: -9px;">
-                        <h3 class="text-secondary"><span class="countup">08</span></h3>
+                        <h3 class="text-secondary"><span class="countup">06</span></h3>
                         <p class="lead mb-0 fw-bold text-dark">Projetos Ativos</p>
                     </div>
 
@@ -110,15 +110,24 @@ $carouselInferior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Nossas Ações de Proteção Social</span>
                     <h2 class="mb-1-6">EIXO 01: POTENCIALIZAÇÃO DA CAPACIDADE PROTETIVA DAS FAMÍLIAS</h2>
                     <p class="fst-italic font-weight-600">
-                        **OBJETIVO ESTRATÉGICO:** Contribuir no desenvolvimento da capacidade protetiva das famílias em situação de vulnerabilidade social, com ações de caráter preventivo, protetivo e proativo na direção do fortalecimento de vínculos familiares, comunitários e pela melhoria da qualidade de suas vidas.
-                    </p>
-                    <p>
-                        **AÇÕES ESTRATÉGICAS EM DESTAQUE:**
+                        FINALIDADES
+                    </p>                    
+                    <ul class="list-style1 mb-4">
+                        <li>Promover o trabalho social proativo com famílias vulneráveis, articulando o acesso a redes de proteção e serviços sociais para assegurar seus direitos fundamentais.</li>
+                        <li>Oportunizar espaços socioeducativos e intergeracionais de convivência e lazer, fortalecendo vínculos e o protagonismo para prevenir violências e promover a cidadania.</li>
+                        <li>Viabilizar o acompanhamento social proativo de idosos e pessoas com deficiência, fomentando a convivência comunitária para prevenir o isolamento e o rompimento de vínculos.</li>
+                    </ul>
+
+                    <p class="fst-italic font-weight-600">
+                        RESULTADOS
                     </p>
                     <ul class="list-style1 mb-4">
-                        <li>Trabalho social e orientação individual/coletiva, articulando políticas e programas sociais para ampliação da rede de proteção.</li>
-                        <li>Espaços socioeducativos (lúdicos, culturais e esportivos) para convivência, formação cidadã e prevenção de violências, por ciclos de vida.</li>
-                        <li>Proteção proativa e espaços de convivência para Pessoas com Deficiência e Idosos, prevenindo o rompimento de vínculos.</li>
+                        <li>1. Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
+                        <li>2. VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
+                        <li>3. FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>
+                        <li>4. OÁSIS: Envelhecimento ativo e inclusão de mulheres 50+.</li>
+                        <li>5. CRESCER E TRANSFORMAR: Construindo um Futuro Digital</li>
+                        <li>6. PROJETO AURORA: Apoio a Mulheres Grávidas Vulneráveis nos Municípios de Belém e Jacundá.</li>
                     </ul>
                 </div>
             </div>
