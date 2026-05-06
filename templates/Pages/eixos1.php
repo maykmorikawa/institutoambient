@@ -121,7 +121,7 @@ $carouselInferior = [
                     <p class="fst-italic font-weight-600">
                         RESULTADOS
                     </p>
-                    <ul class="list-style1 mb-4">
+                    <ul class="list-style2 mb-4">
                         <li>1. Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
                         <li>2. VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
                         <li>3. FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>
