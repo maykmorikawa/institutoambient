@@ -117,18 +117,6 @@ $carouselInferior = [
                         <li>Oportunizar espaços socioeducativos e intergeracionais de convivência e lazer, fortalecendo vínculos e o protagonismo para prevenir violências e promover a cidadania.</li>
                         <li>Viabilizar o acompanhamento social proativo de idosos e pessoas com deficiência, fomentando a convivência comunitária para prevenir o isolamento e o rompimento de vínculos.</li>
                     </ul>
-
-                    <p class="fst-italic font-weight-600">
-                        RESULTADOS
-                    </p>
-                    <ul class="list-style3 mb-4">
-                        <li>Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
-                        <li>VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
-                        <li>FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>
-                        <li>OÁSIS: Envelhecimento ativo e inclusão de mulheres 50+.</li>
-                        <li>CRESCER E TRANSFORMAR: Construindo um Futuro Digital</li>
-                        <li>PROJETO AURORA: Apoio a Mulheres Grávidas Vulneráveis nos Municípios de Belém e Jacundá.</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -144,14 +132,13 @@ $carouselInferior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Resultados na Comunidade</span>
                     <h2 class="mb-1-6">PROJETOS DO INSTITUTO AMBIENT NO EIXO 01</h2>
 
-                    <ul class="list-style1 mb-4">
-                        <li>**1. Convivência e Fortalecimento de Vínculos familiares:** Promoção de memória e cultura amazônica com 40 crianças/adolescentes (Sacramenta/Belém).</li>
-                        <li>**2. SCFV - Parceria FUNPAPA:** Atendimento a crianças (8-11), adolescentes (12-17) e idosos, resultando em maior autonomia dos idosos e 15 encaminhamentos ao Jovem Aprendiz.</li>
-                        <li>**3. VOZES DAS ÁGUAS:** Arte e Educação Ambiental em territórios ribeirinhos (Vila da Barca, Outeiro e Combu).</li>
-                        <li>**4. FLORES DO OÁSIS:** Artesanato sustentável e geração de renda para mulheres 50+ com insumos amazônicos.</li>
-                        <li>**5. OÁSIS:** Envelhecimento ativo (50+) com atividades físicas e socioeducativas para saúde e autonomia.</li>
-                        <li>**7. CRESCER E TRANSFORMAR (Parceria: Equatorial):** Desenvolvimento integral (tecnológico, social, ambiental) de crianças e jovens em áreas periféricas, com foco em COP30 e mercado de trabalho digital.</li>
-                        <li>**8. PROJETO AURORA (Parceria: Ministério das Mulheres):** Proteção da primeira infância com formação profissional, saúde e acompanhamento para 100 gestantes vulneráveis (Belém/Jacundá).</li>
+                    <ul class="list-style3 mb-4">
+                        <li>Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
+                        <li>VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
+                        <li>FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>
+                        <li>OÁSIS: Envelhecimento ativo e inclusão de mulheres 50+.</li>
+                        <li>CRESCER E TRANSFORMAR: Construindo um Futuro Digital</li>
+                        <li>PROJETO AURORA: Apoio a Mulheres Grávidas Vulneráveis nos Municípios de Belém e Jacundá.</li>
                     </ul>
                 </div>
             </div>            
