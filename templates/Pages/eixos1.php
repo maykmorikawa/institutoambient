@@ -121,13 +121,13 @@ $carouselInferior = [
                     <p class="fst-italic font-weight-600">
                         RESULTADOS
                     </p>
-                    <ul class="list-style2 mb-4">
-                        <li>1. Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
-                        <li>2. VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
-                        <li>3. FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>
-                        <li>4. OÁSIS: Envelhecimento ativo e inclusão de mulheres 50+.</li>
-                        <li>5. CRESCER E TRANSFORMAR: Construindo um Futuro Digital</li>
-                        <li>6. PROJETO AURORA: Apoio a Mulheres Grávidas Vulneráveis nos Municípios de Belém e Jacundá.</li>
+                    <ul class="list-style3 mb-4">
+                        <li>Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
+                        <li>VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
+                        <li>FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>
+                        <li>OÁSIS: Envelhecimento ativo e inclusão de mulheres 50+.</li>
+                        <li>CRESCER E TRANSFORMAR: Construindo um Futuro Digital</li>
+                        <li>PROJETO AURORA: Apoio a Mulheres Grávidas Vulneráveis nos Municípios de Belém e Jacundá.</li>
                     </ul>
                 </div>
             </div>
