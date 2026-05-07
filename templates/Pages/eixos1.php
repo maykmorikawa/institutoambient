@@ -132,7 +132,7 @@ $carouselInferior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Resultados na Comunidade</span>
                     <h2 class="mb-1-6">PROJETOS DO INSTITUTO AMBIENT NO EIXO 01</h2>
 
-                    <ul class="list-style4 mb-4">
+                    <ul class="list-style2 mb-4">
                         <li>Serviço de Convivência e FortalecimentodeVínculos (SCFV)</li>
                         <li>VOZES DAS ÁGUAS: Arte e Educação nos territórios ribeirinhos de Belém/Pará.</li>
                         <li>FLORES DO OÁSIS: Artesanato sustentável e geração de renda.</li>

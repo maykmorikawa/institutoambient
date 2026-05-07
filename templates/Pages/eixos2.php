@@ -126,7 +126,7 @@ $carouselInferior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Iniciativas de Destaque</span>
                     <h2 class="mb-1-6">PROJETOS DO INSTITUTO AMBIENT NO EIXO 02</h2>
 
-                    <ul class="list-style1 mb-4">
+                    <ul class="list-style2 mb-4">
                         <li>Amazônia em Palavras: Aventuras Literárias com Crianças e Jovens</li>
                         <li>TECENDO NOVOS RUMOS SUSTENTÁVEIS: Inclusão Produtiva sustentável de adolescentes.</li>
                         <li>ESCREVENDO E REESCREVENDO NOSSA HISTÓRIA (PERNOH)</li>
