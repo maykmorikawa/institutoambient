@@ -92,23 +92,19 @@ $carouselSuperior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Qualidade de Vida e Cuidado Integral</span>
                     <h2 class="mb-1-6">EIXO 04: SAÚDE E BEM-ESTAR</h2>
                     <p class="fst-italic font-weight-600">
-                        **OBJETIVO ESTRATÉGICO:** Proporcionar noções de cuidados de forma integrativa, promovendo a qualidade de vida, o bem-estar físico e mental dos nossos beneficiários.
-                    </p>
-                    
-                    <p>
-                        O Eixo 04 promove o **autocuidado** e a **saúde integral** através de práticas educativas e apoio profissional. Nossas ações visam construir uma cultura de paz e fortalecer a saúde em todos os seus aspectos:
-                    </p>
-                    
+                       FINALIDADE
+                    </p>             
                     <ul class="list-style1 mb-4">
-                        <li>Difusão de práticas educativas para **prevenção** em saúde mental e física, incentivando o **autocuidado**.</li>
-                        <li>Promoção de **atendimento clínico psicológico**, atividades esportivas e laborais para a melhoria da qualidade de vida.</li>
-                        <li>Fomento à **Comunicação Não Violenta (CNV)** para relações de confiança, cooperação e construção de uma cultura de paz.</li>
+                        <li>Difundir práticas educativas de prevenção a saúde mental e física, de incentivo ao autocuidado e a valorização da vida.</li>
+                        <li>Promover ações atendimento clínico psicológico, esportivos e laborais, contribuindo para qualidade de vida.</li>
+                        <li>Fomentar práticas de comunicação não violenta para a construção de relações com base na confiança e cooperação, visando o autoconhecimento e a postura da cultura de paz.</li>
                     </ul>
                     
                     <h3 class="mb-1-6">PROJETO DE DESTAQUE: LUMINAR</h3>
-                    <p>
-                        **FINALIDADE:** Transformar a vida de **mulheres de 16 a 50 anos** com foco em saúde e bem-estar. O projeto oferece **atividades físicas** (como danças em grupo, fortalecimento e mobilidade) e **grupos de apoio** acompanhados por profissionais qualificados. O Luminar cria um ambiente de troca, motivação e solidariedade, resultando na melhoria da saúde física e mental das participantes.
-                    </p>
+                    <ul class="list-style2 mb-4">
+                        <li>PROJETO LUMINAR</li>
+                        <li>BAILARTE: a dança de salão</li>
+                    </ul>
                 </div>
             </div>
         </div>

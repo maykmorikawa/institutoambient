@@ -102,16 +102,14 @@ $carouselInferior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Inclusão, Tecnologia e Bioeconomia</span>
                     <h2 class="mb-1-6">EIXO 02: PROPORCIONANDO GERAÇÃO DE EMPREGO E RENDA</h2>
                     <p class="fst-italic font-weight-600">
-                        **OBJETIVO ESTRATÉGICO:** Promover ações de qualificação e inserção no mundo do trabalho, com fomento a tecnologias inovadoras e negócios sociais, visando práticas sociais empreendedoras e sustentáveis.
-                    </p>
-                    <p>
-                        O Eixo 02 investe na transformação de vidas através da formação profissional e do **empreendedorismo sustentável**. Nossas ações focam no futuro do trabalho e na valorização da bioeconomia local:
-                    </p>
+                        FINALIDADE
+                    </p>                    
                     <ul class="list-style1 mb-4">
-                        <li>Garantia de **qualificação** em cidadania, direitos e arco ocupacional para acesso ao emprego.</li>
-                        <li>Fomento à **bioeconomia** para criação de produtos e serviços mais sustentáveis.</li>
-                        <li>Uso de **Tecnologias Digitais** e **Letramento Digital** para ampliar o ensino e a inovação.</li>
-                        <li>Implantação de ações institucionais e tecnologias sociais voltadas às **práticas sustentáveis**.</li>
+                        <li>Garantir qualificação e formação em temáticas a respeito de direitos, cidadania e arco ocupacional, para acesso ao mundo do trabalho.</li>
+                        <li>Promover ações na área da bioeconomia, com finalidade de criar produtos e serviços mais sustentáveis.</li>
+                        <li>Efetivar Tecnologias Digitais, de Informação e da Comunicação, letramento digital e pensamento Computacional, na perspectiva de ampliação do ensino e aprendizagem relacionando a tecnologia e inovação.</li>
+                        <li>Executar ações e serviços de tecnologias sociais, para garantia de sustentabilidade local.</li>
+                        <li>Capacitar comunidades em habilidades baseadas na natureza para a criação de empreendimentos individuais ou coletivos que gerem renda sustentável.</li>
                     </ul>
                 </div>
             </div>
@@ -129,11 +127,13 @@ $carouselInferior = [
                     <h2 class="mb-1-6">PROJETOS DO INSTITUTO AMBIENT NO EIXO 02</h2>
 
                     <ul class="list-style1 mb-4">
-                        <li>**1. Mariá: Construindo Negócios Femininos Sustentáveis:** Capacitação em gestão e mentoria para **120 mulheres** (prioritariamente negras) em Belém, com foco em formalização e sustentabilidade.</li>
-                        <li>**2. Projeto Lado a Lado (Parceria: Equatorial Energia):** Criação de um espaço **Coworking** e cursos (incluindo informática e beleza) para 100 adolescentes, jovens e famílias vulneráveis no Barreiro, incentivando a inovação.</li>
-                        <li>**3. Talentos da Cozinha Amazônica - Rumo à COP 30 (Parceria: Suzano):** Capacitação de **120 jovens/adultos** em culinária sustentável, com meta de encaminhar 20% ao mercado formal, valorizando a gastronomia local para a COP30.</li>
-                        <li>**4. Modelagem de Negócios para a COP 30 (Parceria: Suzano):** Capacitação de pequenos empreendedores em **negócios sustentáveis**, gestão financeira e práticas ambientais, aproveitando as oportunidades da Conferência em Belém.</li>
-                        <li>**5. Programa ACESSUAS Trabalho:** Promove a inclusão social e econômica de cidadãos vulneráveis em Belém-PA através de qualificação profissional e acesso a recursos tecnológicos.</li>
+                        <li>Amazônia em Palavras: Aventuras Literárias com Crianças e Jovens</li>
+                        <li>TECENDO NOVOS RUMOS SUSTENTÁVEIS: Inclusão Produtiva sustentável de adolescentes.</li>
+                        <li>ESCREVENDO E REESCREVENDO NOSSA HISTÓRIA (PERNOH)</li>
+                        <li>Mariá: Construindo Negócios Femininos Sustentáveis</li>
+                        <li>LADO A LADO</li>
+                        <li>TALENTOS DA COZINHA AMAZÔNICA.</li>
+                        <li>MODELAGEM DE NEGÓCIOS.</li>
                     </ul>
                 </div>
             </div>

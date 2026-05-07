@@ -95,19 +95,16 @@ $carouselSuperior = [
                     <span class="text-secondary mb-2 d-block fw-bold text-uppercase">Fortalecimento da Sociedade Civil</span>
                     <h2 class="mb-1-6">EIXO 03: REDES E ASSESSORAMENTO INSTITUCIONAL</h2>
                     <p class="fst-italic font-weight-600">
-                        **OBJETIVO ESTRATÉGICO:** Prestar serviços de assessoramento voltados ao fortalecimento das Organizações da Sociedade Civil, movimentos sociais e lideranças comunitárias, com atuação permanente em rede pela promoção e defesa dos direitos humanos.
+                       FINALIDADE
                     </p>
-                    
                     <p>
-                        O Instituto Ambient atua como um catalisador, fornecendo o **suporte técnico e estratégico** necessário para que as organizações locais maximizem seu impacto e promovam o desenvolvimento sustentável de forma inclusiva.
+                       Apoiar o desenvolvimento institucional de 23 Organizações da Sociedade Civil (OSCs), diversas em porte e atuando com diferentes causas sociais, na região metropolitana de Belém (Pará), com o objetivo de alcançar aproximadamente 230 pessoas.
                     </p>
                     
-                    <h3 class="mb-1-6">AÇÕES E PROJETOS EM DESTAQUE</h3>
+                    <h3 class="mb-1-6">PROJETOS INSTITUCIONAIS</h3>
                     
-                    <ul class="list-style1 mb-4">
-                        <li>**Ações Estratégicas:** Apoiar o desenvolvimento institucional de **23 Organizações da Sociedade Civil (OSCs)** na Região Metropolitana de Belém, alcançando aproximadamente **230 pessoas**.</li>
-                        <li>**Projeto Assessoramento OSCs (Parceria: Instituto ACP):** Iniciativa em andamento que mapeou as necessidades de 76 OSCs (via Google Forms) para oferecer **apoio personalizado** em gestão cadastral, documental, captação de recursos e certificações.</li>
-                        <li>**Foco:** Superar desafios, promover a inovação e a integração para um desenvolvimento sustentável e inclusivo das comunidades.</li>
+                    <ul class="list-style2 mb-4">
+                        <li>Projeto de Assessoramento do IA para Organizações da Sociedade Civil - OSCs - Parceria: Instituto Antônio Carlos Pipponzi (ACP). (Em andamento)</li>
                     </ul>
                 </div>
             </div>
