@@ -12,7 +12,7 @@
 
                 <div class="col-md-12">
 
-                    <h1>Áreas de Atuação Institucional</h1>
+                    <h1>Áreas de Atuação e Nossos Pilares</h1>
 
                 </div>
 
@@ -22,7 +22,7 @@
 
                         <li><a href="home">Home</a></li>
 
-                        <li><a href="#!">Áreas de Atuação Institucional</a></li>
+                        <li><a href="#!">Áreas de Atuação e Nossos Pilares</a></li>
 
                     </ul>
 

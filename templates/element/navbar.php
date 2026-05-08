@@ -50,7 +50,7 @@
                                 </li>
                                 <li><a href="#!">Como Atuamos</a>
                                     <ul>
-                                        <li><a href="/atuacao">Áreas de Atuação Institucional</a></li>
+                                        <li><a href="/atuacao">Áreas de Atuação e Nossos Pilares</a></li>
                                         <li><a href="/eixos">Eixos Estratégicos e Projetos</a></li>
                                     </ul>
                                 </li>
