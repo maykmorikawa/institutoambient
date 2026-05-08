@@ -45,6 +45,7 @@
                                         <li><a href="/o_instituto_ambient">Nossa História</a></li>
                                         <li><a href="/documentos">Compliance/Transparencia</a></li>
                                         <li><a href="/reportfacil">Canal de Ética</a></li>
+                                        <li><a href="/indicadores">Indicadores</a></li>
 
                                     </ul>
                                 </li>

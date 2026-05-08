@@ -94,6 +94,7 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/galeria_de_videos', ['controller' => 'Pages', 'action' => 'display', 'videos']);
       $builder->connect('/listar_noticias', ['controller' => 'Posts', 'action' => 'listblog']);
       $builder->connect('/manutencao', ['controller' => 'Pages', 'action' => 'manutencao']);
+      $builder->connect('/indicadores', ['controller' => 'Pages', 'action' => 'display', 'indicadores']);
 
       $builder->connect('/lado-a-lado', ['controller' => 'Pages', 'action' => 'display', 'ladoalado']);
       $builder->connect('/documentos', ['controller' => 'Pages', 'action' => 'display', 'documentos']);
