@@ -56,7 +56,7 @@
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
 
                         <div>
-                            <i class="ti-heart display-10 mb-4 d-block"></i>
+                            <i class="fas fa-home display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 01:CAPACIDADE PROTETIVA DAS FAMÍLIAS</h3>
                             <p class="mb-3"></p>
                         </div>
@@ -72,7 +72,7 @@
                 <a href="/pages/eixos2" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
                         <div>
-                            <i class="ti-money display-10 mb-4 d-block"></i>
+                            <i class="fas fa-briefcase display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 02: EDUCAÇÃO, GERAÇÃO DE EMPREGO E RENDA</h3>
                             <p class="mb-3"></p>
                         </div>
@@ -88,7 +88,7 @@
                 <a href="/pages/eixos3" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
                         <div>
-                            <i class="ti-sharethis display-10 mb-4 d-block"></i>
+                            <i class="fas fa-network-wired display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 03: REDES E ASSESSORAMENTO INSTITUCIONAL</h3>
                             <p class="mb-3"></p>
                         </div>
@@ -104,7 +104,7 @@
                 <a href="/pages/eixos4" class="card card-style2 border-0 h-100">
                     <div class="card-body px-1-9 py-5 py-sm-6 text-center d-flex flex-column justify-content-between">
                         <div>
-                            <i class="ti-plus display-10 mb-4 d-block"></i>
+                            <i class="fas fa-heartbeat display-10 mb-4 d-block"></i>
                             <h3 class="h5 mb-3">EIXO 04: SAÚDE E BEM ESTAR</h3>
                             <p class="mb-3"></p>
                         </div>
