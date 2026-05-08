@@ -30,8 +30,44 @@
         </div>
 
         <div class="row mt-n4">
+            <!-- PCD -->
+            <div class="col-lg-4 mb-4 wow fadeIn" data-wow-delay="150ms">
+                <div class="card border-0 box-shadow-large h-100">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="h5 mb-0"><i class="fas fa-wheelchair me-2"></i>PCD</h4>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="pcdChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Escolaridade -->
+            <div class="col-lg-4 mb-4 wow fadeIn" data-wow-delay="200ms">
+                <div class="card border-0 box-shadow-large h-100">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="h5 mb-0"><i class="fas fa-graduation-cap me-2"></i>Escolaridade</h4>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="educationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Município -->
+            <div class="col-lg-4 mb-4 wow fadeIn" data-wow-delay="250ms">
+                <div class="card border-0 box-shadow-large h-100">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="h5 mb-0"><i class="fas fa-map-marker-alt me-2"></i>Município</h4>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="cityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
             <!-- Gênero -->
-            <div class="col-lg-6 mb-4 wow fadeIn" data-wow-delay="200ms">
+            <div class="col-lg-6 mb-4 wow fadeIn" data-wow-delay="300ms">
                 <div class="card border-0 box-shadow-large h-100">
                     <div class="card-header bg-primary text-white py-3">
                         <h4 class="h5 mb-0"><i class="fas fa-venus-mars me-2"></i>Gênero</h4>
@@ -171,6 +207,69 @@
             '#0026a2', '#003eb3', '#0056c4', '#3377d6', '#6699e7', '#99bbf8'
         ];
 
+        // Gráfico de PCD (Doughnut)
+        const ctxPcd = document.getElementById('pcdChart').getContext('2d');
+        new Chart(ctxPcd, {
+            type: 'doughnut',
+            data: {
+                labels: ['Sim', 'Não'],
+                datasets: [{
+                    data: [2.59, 97.41],
+                    backgroundColor: [secondaryColor, primaryColor]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // Gráfico de Escolaridade (Horizontal Bar)
+        const ctxEdu = document.getElementById('educationChart').getContext('2d');
+        new Chart(ctxEdu, {
+            type: 'bar',
+            data: {
+                labels: ['M. Completo', 'M. Incompleto', 'F. Incompleto', 'N.I.', 'S. Completo', 'S. Incompleto', 'F. Completo'],
+                datasets: [{
+                    label: 'Percentual (%)',
+                    data: [36.31, 24.29, 21.13, 8.57, 6.01, 2.13, 1.56],
+                    backgroundColor: primaryColor,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // Gráfico de Município (Horizontal Bar)
+        const ctxCity = document.getElementById('cityChart').getContext('2d');
+        new Chart(ctxCity, {
+            type: 'bar',
+            data: {
+                labels: ['Belém', 'N.I.', 'Ananindeua', 'Outros'],
+                datasets: [{
+                    label: 'Percentual (%)',
+                    data: [94.78, 2.62, 2.19, 0.41],
+                    backgroundColor: primaryColor,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
         // Gráfico de Gênero (Horizontal Bar)
         const ctxGender = document.getElementById('genderChart').getContext('2d');
         new Chart(ctxGender, {
@@ -245,6 +344,11 @@
 <style>
     .card-header.bg-primary {
         background-color: #0026a2 !important;
+        color: #ffffff !important;
+    }
+    .card-header.bg-primary h4, 
+    .card-header.bg-primary i {
+        color: #ffffff !important;
     }
     .text-primary {
         color: #0026a2 !important;
