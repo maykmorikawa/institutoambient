@@ -51,10 +51,9 @@
                     <div class="card-body text-center px-4 px-xl-5 py-5 py-md-6">
                         <div class="hover-bg"><img src="<?= WWW; ?>/site/img/service/service-1.jpg" alt="..."></div>
                         <div class="service-icon text-center display-20">
-                            <i class="ti-thumb-up display-25 display-sm-22 display-lg-20 position-relative"></i>
-
+                            <i class="fas fa-bullseye display-25 display-sm-22 display-lg-20 position-relative"></i>
                         </div>
-                        <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Missão</a></h3>
+                        <h3 class="h5 mb-3 mt-2 position-relative">Missão</h3>
                         <p class="mb-0 position-relative">Atuar na promoção dos direitos fundamentais de famílias vulneráveis.</p>
                     </div>
                 </div>
@@ -65,9 +64,9 @@
                         <div class="hover-bg"><img src="i<?= WWW; ?>/site/img/service/service-2.jpg" alt="..."></div>
                         <div class="service-icon text-center display-20">
                             <i
-                                class="fas fa-hand-sparkles display-25 display-sm-22 display-lg-20 position-relative"></i>
+                                class="fas fa-eye display-25 display-sm-22 display-lg-20 position-relative"></i>
                         </div>
-                        <h3 class="h5 mb-3 mt-2 position-relative"><a href="#!">Visão</a></h3>
+                        <h3 class="h5 mb-3 mt-2 position-relative">Visão</h3>
                         <p class="mb-0 position-relative">Ser uma entidade reconhecida na promoção dos direitos fundamentais, por meiodeações educativas, qualificação profissional e fomento de geração emprego e renda.</p>
                     </div>
                 </div>
@@ -87,70 +86,70 @@
             <h2 class="mb-0 h1">A seguir apresentamos brevemente:</h2>
         </div>
         <div class="row mt-n1-9">
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-hand-open display-10 mb-4 d-block"></i>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-balance-scale display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Equidade</h3>
-                        
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="300ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-check-box display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="300ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-user-shield display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Ética</h3>
-                        
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="400ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-heart display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="400ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-hand-holding-heart display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Humanização</h3>
-                        
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="500ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-star display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="500ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-award display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Qualidade dos Serviços</h3>
-                        
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-world display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="600ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-globe-americas display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Responsabilidade Social</h3>
-                       
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="700ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-light-bulb display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="700ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-lightbulb display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Valorização do Conhecimento</h3>
-                        
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-briefcase display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-user-tie display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Valorização Profissional</h3>
-                        
                     </div>
-                </a> </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="900ms"> <a
-                    href="service-details.html" class="card card-style2 border-0 h-100">
-                    <div class="card-body px-1-9 py-5 py-sm-6 text-center"> <i
-                            class="ti-thumb-up display-10 mb-4 d-block"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="900ms">
+                <div class="card card-style2 border-0 h-100">
+                    <div class="card-body px-1-9 py-5 py-sm-6 text-center">
+                        <i class="fas fa-seedling display-10 mb-4 d-block"></i>
                         <h3 class="h5 mb-3">Desenvolvimento Sustentável</h3>
-                        
                     </div>
-                </a> </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
