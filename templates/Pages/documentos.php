@@ -50,51 +50,51 @@
                     </div>
                     <ul class="list-style4 ps-0">
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/ESTATUTO_IA.pdf" target="_blank" class="text-dark fw-bold hover-primary">Estatuto do Instituto Ambient</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/PLANO_DE_COMUNICAO_E_MARKETING_INSTITUTO_AMBIENTE_OFICIAL.pdf" target="_blank" class="text-dark fw-bold hover-primary">Plano de Comunicação e Marketing</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_CODIGO_DE_CONDURA_E_ETICA.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Código de Conduta e Ética</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/PLANO_DE_CAPTACAO_DE_REUCURSOS.pdf" target="_blank" class="text-dark fw-bold hover-primary">Plano de Captação de Recursos</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/PLANEJAMENTO_INSTITUCIONAL_2025_2028.pdf" target="_blank" class="text-dark fw-bold hover-primary">Planejamento Institucional 2025 à 2028</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_COMBATE_ASSEDIO.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Política Combate Assédio</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_PREVENCAO_LAVAGEM.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Política Prevenção Lavagem</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_TRATAMENTO_DENUNCIAS.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Política Tratamento Denúncias</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_VOLUNTARIOS.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Política Voluntários</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_MANUAL_DE_INTEGRIDADE.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Manual de Integridade</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_MANUAL_PROGRAMA_COMPLIANCE.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Manual Programa Compliance</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/COMPLIANCE_IA_POL_ANTICORRUPCAO_agosto.pdf" target="_blank" class="text-dark fw-bold hover-primary">Compliance IA Política Anticorrupção (Agosto)</a>
                         </li>
                     </ul>
@@ -110,19 +110,19 @@
                     </div>
                     <ul class="list-style4 ps-0">
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/DRE_e_Balanco_IA_2022_2023.pdf" target="_blank" class="text-dark fw-bold hover-primary">DRE e Balanço IA 2022 2023</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_2024_com_Balanco.pdf" target="_blank" class="text-dark fw-bold hover-primary">Relatório de Atividades 2024 com Balanço</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_de_Atividades_IA_2023.pdf" target="_blank" class="text-dark fw-bold hover-primary">Relatório de Atividades IA 2023</a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="fa fa-file-pdf-o text-danger me-3 h4 mb-0"></i>
+                            <i class="ti-file text-danger me-3 h4 mb-0"></i>
                             <a href="<?= WWW; ?>/uploads/pdfs/Relatorio_do_Auditor_Independente_Inst_Ambient_2024_assinado.pdf" target="_blank" class="text-dark fw-bold hover-primary">Relatório do Auditor Independente 2024 (Assinado)</a>
                         </li>
                     </ul>
