@@ -125,6 +125,8 @@ class PagesController extends AppController
     public function contato() {}
     public function documentos()
     {
+        $this->viewBuilder()->setLayout('site');
+        
         $documentsTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Documents');
         
         $docsIA = $documentsTable->find()

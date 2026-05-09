@@ -97,7 +97,7 @@ return function (RouteBuilder $routes): void {
       $builder->connect('/indicadores', ['controller' => 'Pages', 'action' => 'display', 'indicadores']);
 
       $builder->connect('/lado-a-lado', ['controller' => 'Pages', 'action' => 'display', 'ladoalado']);
-      $builder->connect('/documentos', ['controller' => 'Pages', 'action' => 'display', 'documentos']);
+      $builder->connect('/documentos', ['controller' => 'Pages', 'action' => 'documentos']);
       //$builder->connect('/contato', ['controller' => 'Pages', 'action' => 'display', 'contato']);
 
       $builder->connect('/contato', ['controller' => 'Contacts', 'action' => 'index']);
