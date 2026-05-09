@@ -123,7 +123,22 @@ class PagesController extends AppController
     public function eixos4() {}
     public function eixos5() {}
     public function contato() {}
-    public function documentos() {}
+    public function documentos()
+    {
+        $documentsTable = \Cake\ORM\TableRegistry::getTableLocator()->get('Documents');
+        
+        $docsIA = $documentsTable->find()
+            ->where(['category' => 'documento'])
+            ->order(['created' => 'DESC'])
+            ->all();
+            
+        $docsRelatorio = $documentsTable->find()
+            ->where(['category' => 'relatorio'])
+            ->order(['created' => 'DESC'])
+            ->all();
+
+        $this->set(compact('docsIA', 'docsRelatorio'));
+    }
     public function atuacao() {}
     public function conselho() {}
     public function voluntario() {}
