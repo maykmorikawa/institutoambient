@@ -447,8 +447,8 @@
             animateOut: 'fadeOut',
             responsive: {
                 992: {
-                nav: true,
-                dots: false
+                    nav: false,
+                    dots: true
                 }
             }
             
