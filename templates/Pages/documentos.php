@@ -89,6 +89,56 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row mt-5">
+            <!-- Compliance -->
+            <div class="col-lg-6 mb-1-9 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                <div class="pe-lg-1-9 pe-xl-5">
+                    <div class="inner-title mb-4">
+                        <h2 class="h3 mb-0 text-secondary">Compliance</h2>
+                        <div class="title-border bg-primary mt-2"></div>
+                    </div>
+                    <ul class="list-style4 ps-0">
+                        <?php if (!empty($docsCompliance) && !$docsCompliance->isEmpty()): ?>
+                            <?php foreach ($docsCompliance as $doc): ?>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="ti-files text-danger me-3 h4 mb-0" style="font-family: 'themify' !important;"></i>
+                                    <a href="<?= $this->Url->build('/uploads/pdfs/' . h($doc->filename)) ?>" target="_blank" class="text-dark fw-bold hover-primary">
+                                        <?= h($doc->title) ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <li class="mb-3 p-3 text-muted border-0 bg-transparent">Nenhum documento de compliance disponível no momento.</li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Arquivos de Anos Anteriores -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                <div class="ps-lg-1-9 ps-xl-5">
+                    <div class="inner-title mb-4">
+                        <h2 class="h3 mb-0 text-secondary">Arquivos de Anos Anteriores</h2>
+                        <div class="title-border bg-primary mt-2"></div>
+                    </div>
+                    <ul class="list-style4 ps-0">
+                        <?php if (!empty($docsAnosAnteriores) && !$docsAnosAnteriores->isEmpty()): ?>
+                            <?php foreach ($docsAnosAnteriores as $doc): ?>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="ti-files text-danger me-3 h4 mb-0" style="font-family: 'themify' !important;"></i>
+                                    <a href="<?= $this->Url->build('/uploads/pdfs/' . h($doc->filename)) ?>" target="_blank" class="text-dark fw-bold hover-primary">
+                                        <?= h($doc->title) ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <li class="mb-3 p-3 text-muted border-0 bg-transparent">Nenhum arquivo de anos anteriores disponível no momento.</li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <style>

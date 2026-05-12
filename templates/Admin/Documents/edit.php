@@ -41,7 +41,9 @@
                             'type' => 'select',
                             'options' => [
                                 'documento' => 'Documentos do IA',
-                                'relatorio' => 'Relatórios de Atividades'
+                                'relatorio' => 'Relatórios de Atividades',
+                                'compliance' => 'Compliance',
+                                'anos_anteriores' => 'Arquivos de Anos Anteriores'
                             ],
                             'class' => 'form-control',
                         ]) ?>

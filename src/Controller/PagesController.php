@@ -139,7 +139,17 @@ class PagesController extends AppController
             ->order(['created' => 'DESC'])
             ->all();
 
-        $this->set(compact('docsIA', 'docsRelatorio'));
+        $docsCompliance = $documentsTable->find()
+            ->where(['category' => 'compliance'])
+            ->order(['created' => 'DESC'])
+            ->all();
+
+        $docsAnosAnteriores = $documentsTable->find()
+            ->where(['category' => 'anos_anteriores'])
+            ->order(['created' => 'DESC'])
+            ->all();
+
+        $this->set(compact('docsIA', 'docsRelatorio', 'docsCompliance', 'docsAnosAnteriores'));
     }
     public function atuacao() {}
     public function conselho() {}
