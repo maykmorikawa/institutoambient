@@ -27,7 +27,7 @@
 <section class="p-0 top-position1 main-banner-section">
     <div class="slider-fade owl-carousel owl-theme w-100">
         <!-- Slide 1 -->
-        <div class="item pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24">
+        <div class="item pt-4 pb-10 py-md-12 py-lg-14 py-xxl-16">
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-1-9 mb-lg-0 py-5">
@@ -59,7 +59,7 @@
             </div>
         </div>
         <!-- Slide 2 -->
-        <div class="item pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24">
+        <div class="item pt-4 pb-10 py-md-12 py-lg-14 py-xxl-16">
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-1-9 mb-lg-0 py-5">
@@ -91,7 +91,7 @@
             </div>
         </div>
         <!-- Slide 3 -->
-        <div class="item pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24">
+        <div class="item pt-4 pb-10 py-md-12 py-lg-14 py-xxl-16">
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-1-9 mb-lg-0 py-5">
