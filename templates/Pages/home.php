@@ -38,7 +38,7 @@
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-90">
                             Programas integrados de assistência e capacitação para fortalecer o núcleo familiar e promover a autonomia.
                         </p>
-                        <a href="#!" class="btn-banner-custom">
+                        <a href="/pages/eixos1" class="btn-banner-custom">
                             Conhecer Projeto <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
@@ -70,7 +70,7 @@
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-90">
                             Promovendo qualidade de vida e atenção especializada para os idosos da nossa comunidade.
                         </p>
-                        <a href="#!" class="btn-banner-custom">
+                        <a href="/pages/eixos4" class="btn-banner-custom">
                             Saiba Mais <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
@@ -102,7 +102,7 @@
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-90">
                             Transformação social através da música, proporcionando novos horizontes e desenvolvimento artístico para crianças.
                         </p>
-                        <a href="#!" class="btn-banner-custom">
+                        <a href="pages/eixos2" class="btn-banner-custom">
                             Ver Projeto <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
