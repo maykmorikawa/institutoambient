@@ -63,12 +63,12 @@
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-14 mb-3 d-block text-uppercase fw-bold">Sustentabilidade</span>
+                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-14 mb-3 d-block text-uppercase fw-bold">Saúde</span>
                         <h1 class="text-white display-16 display-md-9 display-lg-6 display-xl-3 mb-1-6 font-weight-700">
-                            Meio <span class="text-primary">Ambiente</span>
+                            Cuidado e <span class="text-primary">Bem-estar</span>
                         </h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-90">
-                            Ações para melhorar a vida dos cidadãos através da preservação e consciência ecológica.
+                            Promovendo qualidade de vida e atenção especializada para os idosos da nossa comunidade.
                         </p>
                         <a href="#!" class="btn-banner-custom">
                             Saiba Mais <i class="fas fa-arrow-right ms-2"></i>
@@ -77,7 +77,7 @@
                     <div class="col-lg-6">
                         <div class="banner-image-wrapper">
                             <div class="banner-image-frame">
-                                <img src="<?= WWW; ?>/site/img/banner/slide-002.webp" alt="Meio Ambiente">
+                                <img src="<?= WWW; ?>/site/img/banner/slide-002.webp" alt="Saúde e Bem-estar">
                                 <div class="banner-logos-bar">
                                     <img src="<?= WWW; ?>/site/img/icons/icon-4.png" alt="Parceiro">
                                     <img src="<?= WWW; ?>/site/img/icons/icon-5.png" alt="Parceiro">
@@ -95,25 +95,25 @@
             <div class="container pt-6 pt-md-0">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-1-9 mb-lg-0 py-5">
-                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-14 mb-3 d-block text-uppercase fw-bold">Sustentabilidade</span>
+                        <span class="text-primary display-21 display-sm-19 display-md-17 display-lg-14 mb-3 d-block text-uppercase fw-bold">Cultura</span>
                         <h1 class="text-white display-16 display-md-9 display-lg-6 display-xl-3 mb-1-6 font-weight-700">
-                            Meio <span class="text-primary">Ambiente</span>
+                            Música e <span class="text-primary">Inclusão</span>
                         </h1>
                         <p class="text-white mb-2-3 opacity8 display-md-28 w-lg-90">
-                            Ações para melhorar a vida dos cidadãos através da preservação e consciência ecológica.
+                            Transformação social através da música, proporcionando novos horizontes e desenvolvimento artístico para crianças.
                         </p>
                         <a href="#!" class="btn-banner-custom">
-                            Saiba Mais <i class="fas fa-arrow-right ms-2"></i>
+                            Ver Projeto <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
                     <div class="col-lg-6">
                         <div class="banner-image-wrapper">
                             <div class="banner-image-frame">
-                                <img src="<?= WWW; ?>/site/img/banner/slide-003.webp" alt="Meio Ambiente">
+                                <img src="<?= WWW; ?>/site/img/banner/slide-003.webp" alt="Música e Inclusão">
                                 <div class="banner-logos-bar">
-                                    <img src="<?= WWW; ?>/site/img/icons/icon-4.png" alt="Parceiro">
-                                    <img src="<?= WWW; ?>/site/img/icons/icon-5.png" alt="Parceiro">
-                                    <img src="<?= WWW; ?>/site/img/icons/icon-6.png" alt="Parceiro">
+                                    <img src="<?= WWW; ?>/site/img/icons/icon-7.png" alt="Parceiro">
+                                    <img src="<?= WWW; ?>/site/img/icons/icon-8.png" alt="Parceiro">
+                                    <img src="<?= WWW; ?>/site/img/icons/icon-9.png" alt="Parceiro">
                                     <img src="<?= WWW; ?>/site/img/avatar/avatar-02.png" alt="Logo">
                                 </div>
                             </div>
