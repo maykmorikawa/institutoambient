@@ -273,6 +273,10 @@
     width: 30px !important;
 }
 
+.main-banner-section .container {
+    margin-top: 20px;
+}
+
 @media (max-width: 991px) {
     .banner-image-frame {
         transform: none;
