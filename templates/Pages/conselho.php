@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="col-12 text-center">
-                        <img src="<?= WWW; ?>/site/img/bg/bg-01.jpg" alt="Diretoria Instituto Ambient" class="rounded shadow-lg img-fluid">
+                        <img src="<?= WWW; ?>/site/img/bg/bg-01.jpg" alt="Diretoria Instituto Ambient" class="rounded img-fluid">
                     </div>
                 </div>
             </div>
