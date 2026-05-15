@@ -31,7 +31,7 @@ $carouselSuperior = [
 
                     <ul class="ps-0">
 
-                        <li><a href="home">Home</a></li>
+                        <li><a href="<?= $this->Url->build('/') ?>">Home</a></li>
 
                         <li><a href="#!">Eixo 05</a></li>
 
